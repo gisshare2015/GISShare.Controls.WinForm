@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GISShare.Controls.WinForm.WFNew.BaseButtonExItem" Collapsed="true">
+    <Position X="6.25" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>FACAgQAAAAAAAgAAAEBBSKAgAQAICAAABAAIAoAAABA=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Button\BaseButtonExItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.DescriptionButtonItem" Collapsed="true">
+    <Position X="11.25" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAhAiASAQAEBAQEAgBAACAAAAAAAAAABAAQA=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Button\DescriptionButtonItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.BaseButtonItem" Collapsed="true">
+    <Position X="11.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAAgCAwABgCEkgIAkBCSKggAQgIGCACAgMIAoAAABM=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Button\BaseButtonItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.ButtonExItem" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FACAgQgAAAAEIgICAMBBSaQgAQAICAAAJgAIAoAoABA=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Button\ButtonExItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.ButtonItem" Collapsed="true">
+    <Position X="1.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>VYHigqm40gzWs0qLApROSa4sI54YGCgqIkMIE5SvoBM=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Button\ButtonItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.CheckButtonExItem" Collapsed="true">
+    <Position X="8.75" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>FACAgQAAAAAAAgAAAEBBSKAgAQAICAAABAAIAoAAABA=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Button\CheckButtonExItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.CheckButtonItem" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>FAAAgAAAAAAAAgAAAABASCAAAQAICAAAAAAIAoACABA=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Button\CheckButtonItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.DropDownButtonExItem" Collapsed="true">
+    <Position X="13" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>FACAgQAAAAAAAgIAAEBBSKAgAQAICAAABAAIAoAgABA=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Button\DropDownButtonExItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.TabButtonItem" Collapsed="true">
+    <Position X="6.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>lYIaywAIgBBsUpm4CxJESOE+ARBKKAEAKnYIC9ACIFY=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Button\TabButtonItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.DropDownButtonItem" Collapsed="true">
+    <Position X="14" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>FQDigoAIkATAggIIAARESSAsIxgYGAAoIgAIE4QtoBA=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Button\DropDownButtonItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.MdiFormListButtonItem" Collapsed="true">
+    <Position X="22.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>FQBKgoAIEADAAgIAAAQESSAEAQgYGBAIIgAIG4QlgBA=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Button\MdiFormListButtonItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.MenuButtonItem" Collapsed="true">
+    <Position X="3" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Button\MenuButtonItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.RibbonStartButtonItem2007" Collapsed="true">
+    <Position X="16.75" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>FABCgYAIGBDAAlAAIgBESSAMAQgYGQAAIAQIE4QFoBA=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Button\RibbonStartButtonItem2007.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.RibbonStartButtonItem2010" Collapsed="true">
+    <Position X="19.5" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AABCAYAIGADIAFAAIgBEAQAMAAgQEQAAIAQAEQQFoAA=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Button\RibbonStartButtonItem2010.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.SplitButtonExItem" Collapsed="true">
+    <Position X="16" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>FACAgQgAAAAEIgICAMBBSaQgAQAICAAAJgAIAoAoABA=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Button\SplitButtonExItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.SplitButtonItem" Collapsed="true">
+    <Position X="16" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>VYFCgqmIQgBUIgKDAJBISSYAARYICAgAIkAIApCqABA=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Button\SplitButtonItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

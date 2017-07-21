@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IDoubleInputBoxItem" Collapsed="true">
+    <Position X="0.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAIAAgAAAAAAQ=</HashCode>
+      <FileName>Controls\WFNew\Interface\Input\IDoubleInputBoxItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ITextBoxItem" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Controls\WFNew\Interface\Input\ITextBoxItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IInputObject" Collapsed="true">
+    <Position X="2.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAACAAEAAAAAAAQgA=</HashCode>
+      <FileName>Controls\WFNew\Interface\Input\IInputObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IIntegerInputBoxItem" Collapsed="true">
+    <Position X="5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAIAAgAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\Interface\Input\IIntegerInputBoxItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ITextBoxItem2" Collapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\Interface\Input\ITextBoxItem2.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

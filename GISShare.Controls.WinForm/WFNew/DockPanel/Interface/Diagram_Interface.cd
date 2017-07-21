@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.IBaseNode" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAQAAAAAAAAAAAEACAAAAAA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\IBaseNode.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.IRootNode" Collapsed="true">
+    <Position X="11.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\IRootNode.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.IBasePanel" Collapsed="true">
+    <Position X="8.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAYAQEAAAQgAAAUAAAAgggIiAQgAGCAAA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\IBasePanel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.IBinaryNode" Collapsed="true">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAABAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\IBinaryNode.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.IBottomNode" Collapsed="true">
+    <Position X="2.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\IBottomNode.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.IDock" Collapsed="true">
+    <Position X="12.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\IDock.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.IDockArea" Collapsed="true">
+    <Position X="14.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAgAAAAIIAADAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\IDockArea.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.IDockPanel" Collapsed="true">
+    <Position X="10.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAQAAAAQgAAABAAAJAICIQAABA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\IDockPanel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.IDockPanelContainer" Collapsed="true">
+    <Position X="8" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAEAAAAQAAAAAABAAAAAAAAACAAA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\IDockPanelContainer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.IMultipleNode" Collapsed="true">
+    <Position X="1" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAAAAQAAA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\IMultipleNode.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.IPanelNode" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\IPanelNode.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.IDockPanelFloatForm" Collapsed="true">
+    <Position X="14.5" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAACAAAEAAAAAAAAAECAAQE=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\IDockPanelFloatForm.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.IDockPanel2" Collapsed="true">
+    <Position X="10.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAABAAAAAAABAAAAACAAACABAQAAAAAEAAAWA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\IDockPanel2.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.IDockPanelContainer2" Collapsed="true">
+    <Position X="6.75" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\IDockPanelContainer2.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.IBasePanel2" Collapsed="true">
+    <Position X="2.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\IBasePanel2.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.ISetPanelNodeStateHelper" Collapsed="true">
+    <Position X="14.75" Y="7.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\Helper\ISetPanelNodeStateHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.ISetDockPanelManagerHelper" Collapsed="true">
+    <Position X="14.75" Y="8.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\Helper\ISetDockPanelManagerHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.ISetBasePanelHelper" Collapsed="true">
+    <Position X="14.75" Y="9.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAEA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\Helper\ISetBasePanelHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.ISetDockPanelHelper" Collapsed="true">
+    <Position X="14.75" Y="10" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\Helper\ISetDockPanelHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.IDockPanelButtonItem" Collapsed="true">
+    <Position X="0.5" Y="11" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAACAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\IDockPanelButtonItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.IDockButtonItem" Collapsed="true">
+    <Position X="0.5" Y="12" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\IDockButtonItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.DockPanel.IDockPanelFloatFormButtonItem" Collapsed="true">
+    <Position X="0.5" Y="13" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>WFNew\DockPanel\Interface\IDockPanelFloatFormButtonItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

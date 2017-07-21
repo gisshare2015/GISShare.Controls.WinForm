@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GISShare.Controls.WinForm.WFNew.ImageLabelItem" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>1ACAgQASghgIQiAQAkBBSCAsAQAYCDAABAAIAoAAABw=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Label\ImageLabelItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.LinkLabelItem" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAAgAAAACAAAkAAAABASCAAAQgICAAAAAAIAoAAABI=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Label\LinkLabelItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.ImageLinkLabelItem" Collapsed="true">
+    <Position X="3.25" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>FAAAgAAAACAAAkAAAABASCAAAQgICAAAAAAIAoAAABI=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Label\ImageLinkLabelItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.LabelItem" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FACAgAAAAAAAAiAAAEBASCAkAQAICAAABAAIAoAAABA=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Label\LabelItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.LabelExItem" Collapsed="true">
+    <Position X="7" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FACAgAAAAAAABiAAAEBASCAkAQAICBAABAAIAoAAABA=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\Label\LabelExItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

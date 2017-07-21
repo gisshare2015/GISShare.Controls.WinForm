@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="宋体" Size="9" />
+  <Class Name="GISShare.Controls.WinForm.WFNew.BaseItemCollection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Controls\WFNew\Collection\BaseItemCollection\BaseItemCollection.cs</FileName>
+      <HashCode>AkIAAEAgCYAFwBgBCQABhCQQQQWAgQBACgIAAABQAAM=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.ButtonGroupItemCollection" Collapsed="true">
+    <Position X="5" Y="1.75" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WFNew\Collection\BaseItemCollection\ButtonGroupItemCollection.cs</FileName>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.RibbonBarItemCollection" Collapsed="true">
+    <Position X="1" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <FileName>Controls\WFNew\Collection\BaseItemCollection\RibbonBarItemCollection.cs</FileName>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

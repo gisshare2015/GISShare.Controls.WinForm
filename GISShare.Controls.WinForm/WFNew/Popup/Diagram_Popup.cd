@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GISShare.Controls.WinForm.WFNew.BasePopup" Collapsed="true">
+    <Position X="2.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQSAAgAAQAjLAQCAAIBkCgIwAIAEMAgEEAABAACAABI=</HashCode>
+      <FileName>Controls\WFNew\Popup\BasePopup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.InputRegion" Collapsed="true">
+    <Position X="5.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABgAABgGRgAABgQhAAAAAEAEECIAAACBSAAAABI=</HashCode>
+      <FileName>Controls\WFNew\Popup\InputBox\InputRegion.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.RibbonBarPopup" Collapsed="true">
+    <Position X="4.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IACAIAAAAAgDAAAAAAEgAAAAAAAAEACACACAAAAAABI=</HashCode>
+      <FileName>Controls\WFNew\Popup\RibbonBarPopup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.ContextPopup" Collapsed="true">
+    <Position X="1" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAqDCAAAIAAAAAAIAACAMACgCACAAACAoBI=</HashCode>
+      <FileName>Controls\WFNew\Popup\ContextPopup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.DropDownPopup" Collapsed="true">
+    <Position X="0.75" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAABAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\Popup\DropDownPopup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.RibbonApplicationPopup" Collapsed="true">
+    <Position X="4.5" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAACAAAAAAoDgBAAIgEAABQIgACAMACACAKEAACAoBI=</HashCode>
+      <FileName>Controls\WFNew\Popup\RibbonApplicationPopup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.RibbonGalleryPopup" Collapsed="true">
+    <Position X="4.5" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgCAQAAAAAgAAAAAAAAEACACACAAAAAABI=</HashCode>
+      <FileName>Controls\WFNew\Popup\RibbonGalleryPopup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.CustomizePopup" Collapsed="true">
+    <Position X="4.5" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>JAAAABAIEAgDgAAAAAHoAIAAABAAEAAAIACREAACUBM=</HashCode>
+      <FileName>Controls\WFNew\Popup\CustomizePopup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.ToolTipPopup" Collapsed="true">
+    <Position X="4.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgCAAAAEAAgAgAAAAAAEACACACAAAAAABI=</HashCode>
+      <FileName>Controls\WFNew\Popup\ToolTipPopup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

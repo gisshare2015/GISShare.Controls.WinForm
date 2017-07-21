@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GISShare.Controls.WinForm.WFNew.BaseItemControl" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>A43AAgGZMADIAQaMBFBVDgIwBppBAgiSI0sBAgQSEFE=</HashCode>
+      <FileName>Controls\WFNew\Control\AbstractObject\BaseItemControl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.BaseItemControlCC" Collapsed="true">
+    <Position X="3" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>A42AAgGZMADIAQaMBFBVDgIwBppBAgiSI0sBAgQSAFE=</HashCode>
+      <FileName>Controls\WFNew\Control\AbstractObject\BaseItemControlCC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.AreaControl" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAABAAAAAQAAABIEAAAAAAACAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Controls\WFNew\Control\AbstractObject\AreaControl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.AreaControlCC" Collapsed="true">
+    <Position X="3" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AACACAAABAAAAAAAAABIEAAAAAAACAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Controls\WFNew\Control\AbstractObject\AreaControlCC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

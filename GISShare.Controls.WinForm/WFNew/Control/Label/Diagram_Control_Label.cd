@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GISShare.Controls.WinForm.WFNew.ImageLabel" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>1ACAgQASghgIQyAQAkBBSCAMAYAYCDAABAAIAoAAABw=</HashCode>
+      <FileName>Controls\WFNew\Control\Label\ImageLabel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.LinkLabelN" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAAgAAAACAAAkAAAABASCAAAQgICAAAAAAIAoAAABI=</HashCode>
+      <FileName>Controls\WFNew\Control\Label\LinkLabelN.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.ImageLinkLabel" Collapsed="true">
+    <Position X="3.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAAgAAAACAAAkAAAABASCAAAQgICAAAAAAIAoAAABI=</HashCode>
+      <FileName>Controls\WFNew\Control\Label\ImageLinkLabel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.LabelN" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FACAgAAAAAAAAiAAAEBASCAEAQAICAAABAAIAoAAABA=</HashCode>
+      <FileName>Controls\WFNew\Control\Label\LabelN.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.LabelNEx" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FACAgAAAAAAABiAAAEBASCAEAQAICBAABAAIAoAAABA=</HashCode>
+      <FileName>Controls\WFNew\Control\Label\LabelNEx.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

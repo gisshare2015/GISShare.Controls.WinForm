@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F12767D1-2264-4587-BE76-D06486DB3440}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GISShare.Controls.Plugin.WinForm.Demo.PluginDLL</RootNamespace>
+    <AssemblyName>GISShare.Controls.Plugin.WinForm.Demo.PluginDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\GISShare.Controls.Plugin.WinForm.Demo\bin\Debug\Plugin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GISShare.Win32">
+      <HintPath>..\DLL\GISShare.Win32.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WFNew\ContextPopup\BaseItem\BaseButtonAbout.cs" />
+    <Compile Include="WFNew\ContextPopup\BaseItem\BaseButtonExist.cs" />
+    <Compile Include="WFNew\ContextPopup\BaseItem\BaseButtonNew.cs" />
+    <Compile Include="WFNew\ContextPopup\BaseItem\BaseButtonOpen.cs" />
+    <Compile Include="WFNew\ContextPopup\BaseItem\BaseButtonSave.cs" />
+    <Compile Include="WFNew\ContextPopup\BaseItem\SeparatorItem1.cs" />
+    <Compile Include="WFNew\ContextPopup\BaseItem\SeparatorItem2.cs" />
+    <Compile Include="WFNew\ContextPopup\ContextPopupDocument.cs" />
+    <Compile Include="WFNew\DockPanel\BaseItem\BasePanelLister.cs" />
+    <Compile Include="WFNew\DockPanel\DockPanelLister.cs" />
+    <Compile Include="WFNew\Forms\BaseItem\NCBaseButtonAbout.cs" />
+    <Compile Include="WFNew\Forms\BaseItem\NCBaseButtonExist.cs" />
+    <Compile Include="WFNew\Forms\BaseItem\NCBaseButtonNew.cs" />
+    <Compile Include="WFNew\Forms\BaseItem\NCBaseButtonOpen.cs" />
+    <Compile Include="WFNew\Forms\BaseItem\NCBaseButtonSave.cs" />
+    <Compile Include="WFNew\Forms\BaseItem\NCSeparatorItem1.cs" />
+    <Compile Include="WFNew\Forms\BaseItem\NCSeparatorItem2.cs" />
+    <Compile Include="WFNew\Forms\TBForm_NCToolbarItems_SubItem.cs" />
+    <Compile Include="WFNew\InsertSubItem\BaseItem\BaseButtonAppendPlugin.cs" />
+    <Compile Include="WFNew\InsertSubItem\BaseItem\BaseButtonPluginCategoryDictionary.cs" />
+    <Compile Include="WFNew\InsertSubItem\BaseItem\BaseButtonUIView.cs" />
+    <Compile Include="WFNew\InsertSubItem\BaseItem\SeparatorItem1.cs" />
+    <Compile Include="WFNew\InsertSubItem\InsertSubItem_RibbonBarDockPanelManager.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ApplicationPopup_MenuItems\BaseItem\MenuButtonAbout.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ApplicationPopup_MenuItems\BaseItem\MenuButtonExist.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ApplicationPopup_MenuItems\BaseItem\MenuButtonNew.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ApplicationPopup_MenuItems\BaseItem\MenuButtonSaveAs.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ApplicationPopup_MenuItems\BaseItem\MenuButtonOpen.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ApplicationPopup_MenuItems\BaseItem\MenuButtonSave.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ApplicationPopup_MenuItems\BaseItem\SaveAs_BaseItem\DescriptionButtonSaveAsOther.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ApplicationPopup_MenuItems\BaseItem\SaveAs_BaseItem\DescriptionButtonSaveAsTXT.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ApplicationPopup_MenuItems\RibbonControlEx_ApplicationPopup_MenuItems_SubItem.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ApplicationPopup_MenuItems\BaseItem\SeparatorItem1.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ApplicationPopup_OperationItems\BaseItem\BaseButtonExist.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ApplicationPopup_OperationItems\RibbonControlEx_ApplicationPopup_OperationItems_SubItem.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ApplicationPopup_RecordItems\BaseItem\BaseButtonDefaultDOC.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ApplicationPopup_RecordItems\RibbonControlEx_ApplicationPopup_RecordItems_SubItem.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_PageContents\BaseItem\ComboBoxItemSkin.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_PageContents\BaseItem\LabelSkinInfo.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_PageContents\RibbonControlEx_RibbonPages_SubItem.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_RibbonPages\BaseItem\RibbonPageAbout.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_RibbonPages\BaseItem\RibbonPageAbout_BaseItem\RibbonBarAbout.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_RibbonPages\BaseItem\RibbonPageAbout_BaseItem\RibbonBarAbout_BaseItem\BaseButtonLZHControlInfo.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_RibbonPages\BaseItem\RibbonPageAbout_BaseItem\RibbonBarAbout_BaseItem\BaseButtonLZHPluginInfo.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_RibbonPages\BaseItem\RibbonPageFile.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_RibbonPages\BaseItem\RibbonPageFile_BaseItem\RibbonBarDockPanelManager.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_RibbonPages\BaseItem\RibbonPageFile_BaseItem\RibbonBarDockPanelManager_BaseItem\BaseButtonDockPanelManager.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_RibbonPages\BaseItem\RibbonPageFile_BaseItem\RibbonBarFile_BaseItem\BaseButtonExist.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_RibbonPages\BaseItem\RibbonPageFile_BaseItem\RibbonBarFile_BaseItem\BaseButtonSaveAs.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_RibbonPages\BaseItem\RibbonPageFile_BaseItem\RibbonBarFile.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_RibbonPages\BaseItem\RibbonPageFile_BaseItem\RibbonBarFile_BaseItem\BaseButtonNew.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_RibbonPages\BaseItem\RibbonPageFile_BaseItem\RibbonBarFile_BaseItem\BaseButtonOpen.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_RibbonPages\BaseItem\RibbonPageFile_BaseItem\RibbonBarFile_BaseItem\BaseButtonSave.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_RibbonPages\BaseItem\RibbonPageFile_BaseItem\RibbonBarFile_BaseItem\SeparatorItem1.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_RibbonPages\RibbonControlEx_RibbonPages_SubItem.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ToolbarItems\BaseItem\BaseButtonExist.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ToolbarItems\BaseItem\BaseButtonAbout.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ToolbarItems\BaseItem\BaseButtonNew.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ToolbarItems\BaseItem\BaseButtonOpen.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ToolbarItems\BaseItem\BaseButtonSave.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ToolbarItems\BaseItem\SeparatorItem1.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ToolbarItems\BaseItem\SeparatorItem2.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonControlEx_ToolbarItems\RibbonControlEx_ToolbarItems_SubItem.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonStatusBar_BaseItems\BaseItem\LabelInfo.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonStatusBar_BaseItems\RibbonStatusBar_BaseItems_SubItem.cs" />
+    <Compile Include="WinForm\DockBar\ContextMenu\ContextMenuDocument.cs" />
+    <Compile Include="WinForm\DockBar\ContextMenu\Item\MenuItemExist.cs" />
+    <Compile Include="WinForm\DockBar\ContextMenu\Item\MenuItemNew.cs" />
+    <Compile Include="WinForm\DockBar\ContextMenu\Item\MenuItemOpen.cs" />
+    <Compile Include="WinForm\DockBar\ContextMenu\Item\MenuItemSave.cs" />
+    <Compile Include="WinForm\DockBar\ContextMenu\Item\MenuItemAbout.cs" />
+    <Compile Include="WinForm\DockBar\ContextMenu\Item\SeparatorItem1.cs" />
+    <Compile Include="WinForm\DockBar\ContextMenu\Item\SeparatorItem2.cs" />
+    <Compile Include="WinForm\DockBar\InsertSubItem\InsertSubItem_ToolBarDockPanelManager.cs" />
+    <Compile Include="WinForm\DockBar\InsertSubItem\Item\ButtonItemAppendPlugin.cs" />
+    <Compile Include="WinForm\DockBar\InsertSubItem\Item\ButtonItemPluginCategoryDictionary.cs" />
+    <Compile Include="WinForm\DockBar\InsertSubItem\Item\ButtonItemUIView.cs" />
+    <Compile Include="WinForm\DockBar\InsertSubItem\Item\SeparatorItem1.cs" />
+    <Compile Include="WinForm\DockBar\MenuBar\Item\MenuItemAbout.cs" />
+    <Compile Include="WinForm\DockBar\ToolBar\ToolBarAbout_Item\ButtonItemLZHControlInfo.cs" />
+    <Compile Include="WinForm\DockBar\ToolBar\ToolBarAbout_Item\ButtonItemLZHPluginInfo.cs" />
+    <Compile Include="WinForm\DockBar\ToolBar\ToolBarDockPanelManager_Item\ButtonItemDockPanelManager.cs" />
+    <Compile Include="WinForm\DockBar\MenuBar\Item\MenuItemAbout_Item\MenuItemLZHControlInfo.cs" />
+    <Compile Include="WinForm\DockBar\MenuBar\Item\MenuItemAbout_Item\MenuItemLZHPluginInfo.cs" />
+    <Compile Include="WinForm\DockBar\MenuBar\Item\MenuItemFile.cs" />
+    <Compile Include="WinForm\DockBar\MenuBar\Item\MenuItemFile_Item\MenuItemExist.cs" />
+    <Compile Include="WinForm\DockBar\MenuBar\Item\MenuItemFile_Item\MenuItemNew.cs" />
+    <Compile Include="WinForm\DockBar\MenuBar\Item\MenuItemFile_Item\MenuItemOpen.cs" />
+    <Compile Include="WinForm\DockBar\MenuBar\Item\MenuItemFile_Item\MenuItemSave.cs" />
+    <Compile Include="WinForm\DockBar\MenuBar\Item\MenuItemFile_Item\MenuItemSaveAs.cs" />
+    <Compile Include="WinForm\DockBar\MenuBar\Item\MenuItemFile_Item\SeparatorItem1.cs" />
+    <Compile Include="WinForm\DockBar\MenuBar\MenuBarMainMenu.cs" />
+    <Compile Include="WinForm\DockBar\StatusBar\Item\LabelInfo.cs" />
+    <Compile Include="WinForm\DockBar\StatusBar\StatusBarStatus.cs" />
+    <Compile Include="WinForm\DockBar\ToolBar\ToolBarDockPanelManager.cs" />
+    <Compile Include="WinForm\DockBar\ToolBar\ToolBarAbout.cs" />
+    <Compile Include="WinForm\DockBar\ToolBar\ToolBarFile.cs" />
+    <Compile Include="WinForm\DockBar\ToolBar\ToolBarFile_Item\ButtonItemExist.cs" />
+    <Compile Include="WinForm\DockBar\ToolBar\ToolBarFile_Item\ButtonItemNew.cs" />
+    <Compile Include="WinForm\DockBar\ToolBar\ToolBarFile_Item\ButtonItemOpen.cs" />
+    <Compile Include="WinForm\DockBar\ToolBar\ToolBarFile_Item\ButtonItemSave.cs" />
+    <Compile Include="WinForm\DockBar\ToolBar\ToolBarFile_Item\ButtonItemSaveAs.cs" />
+    <Compile Include="WinForm\DockBar\ToolBar\ToolBarFile_Item\SeparatorItem1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GISShare.Controls.Plugin.WinForm.Demo.Hook\GISShare.Controls.Plugin.WinForm.Demo.Hook.csproj">
+      <Project>{907D66FC-216D-43D2-9EE7-C2A2B7E59C5A}</Project>
+      <Name>GISShare.Controls.Plugin.WinForm.Demo.Hook</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISShare.Controls.Plugin.WinForm\GISShare.Controls.Plugin.WinForm.csproj">
+      <Project>{BD690766-A81D-4BED-B439-315B5E10E2B3}</Project>
+      <Name>GISShare.Controls.Plugin.WinForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISShare.Controls.Plugin\GISShare.Controls.Plugin.csproj">
+      <Project>{3F22674F-2B1B-4A07-B509-DC294FA025AF}</Project>
+      <Name>GISShare.Controls.Plugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISShare.Controls.WinForm\GISShare.Controls.WinForm.csproj">
+      <Project>{A720C1A3-9A9C-41C7-AB51-A2C011451914}</Project>
+      <Name>GISShare.Controls.WinForm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Image\Exist.ico" />
+    <EmbeddedResource Include="Image\Exist32.ico" />
+    <EmbeddedResource Include="Image\Info.ico" />
+    <EmbeddedResource Include="Image\New32.ico" />
+    <EmbeddedResource Include="Image\Open.ico" />
+    <EmbeddedResource Include="Image\Open32.ico" />
+    <EmbeddedResource Include="Image\Save.ico" />
+    <EmbeddedResource Include="Image\Save32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Image\New.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Image\About32.ico" />
+    <EmbeddedResource Include="Image\SaveAs.ico" />
+    <EmbeddedResource Include="Image\SaveAs32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Image\D32D.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

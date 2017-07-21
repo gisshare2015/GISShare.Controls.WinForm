@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GISShare.Controls.WinForm.WFNew.ViewInfo" Collapsed="true">
+    <Position X="8.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAEAAAAAIAAAABAAAIAAAEAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\Interface\MessageChain\IMessageChain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.MessageInfo" Collapsed="true">
+    <Position X="6.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEABAAAACAAAAAAAIBABAAAAAoAAA=</HashCode>
+      <FileName>Controls\WFNew\Interface\MessageChain\IMessageChain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IMessageChain" Collapsed="true">
+    <Position X="1.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\Interface\MessageChain\IMessageChain.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IReset" Collapsed="true">
+    <Position X="1.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\Interface\MessageChain\IReset.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IMessagePermeate" Collapsed="true">
+    <Position X="4.25" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\Interface\MessageChain\IMessagePermeate.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="GISShare.Controls.WinForm.WFNew.MessageStyle" Collapsed="true">
+    <Position X="6.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgCAAAAAIAAEAEgSIAAgMAwBhAAAAAAEDAAAIIAA=</HashCode>
+      <FileName>Controls\WFNew\Interface\MessageChain\IMessageChain.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

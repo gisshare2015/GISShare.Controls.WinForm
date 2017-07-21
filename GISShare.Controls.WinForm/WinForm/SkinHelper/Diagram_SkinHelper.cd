@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="微软雅黑" Size="9" />
+  <Class Name="GISShare.Controls.WinForm.ControlSkinHelper" Collapsed="true">
+    <Position X="10" Y="1" Width="2" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\SkinHelper\ControlSkinHelper.cs</FileName>
+      <HashCode>IBAAAQAERADgoIEAAYIEAERUAIAIEAAKQCIISUADAQA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.ButtonXSkinHelper" Collapsed="true">
+    <Position X="2.75" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\SkinHelper\ButtonXSkinHelper.cs</FileName>
+      <HashCode>AACJACACghgKUEGYKkBDSgAcAAEAEDgABAAJQAAEAE8=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.ListBoxXSkinHelper" Collapsed="true">
+    <Position X="5" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\SkinHelper\ListBoxXSkinHelper.cs</FileName>
+      <HashCode>YQQQcSACQqhACgMABUAEgEYoAABBQAghBvKASgAQAAE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.RadioButtonXSkinHelper" Collapsed="true">
+    <Position X="7.25" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\SkinHelper\RadioButtonXSkinHelper.cs</FileName>
+      <HashCode>AASIAAEggAAAAAGAKEBACgAQAAEAAAAAAAAAQAAEAEA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.CheckBoxXSkinHelper" Collapsed="true">
+    <Position X="10" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\SkinHelper\CheckBoxXSkinHelper.cs</FileName>
+      <HashCode>AASIAAEgAAAAAAGAKEBACgAQAAEAAAAAAAIAQAQEAEA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.LinkLabelXSkinHelper" Collapsed="true">
+    <Position X="12.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\SkinHelper\LinkLabelXSkinHelper.cs</FileName>
+      <HashCode>AACIAAAAAiAAAAEAKEBACgAQAAEAAAAAAAAAQAAEAEI=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.TreeViewXSkinHelper" Collapsed="true">
+    <Position X="15" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\SkinHelper\TreeViewXSkinHelper.cs</FileName>
+      <HashCode>QUAwYSAIQGDAgkEAAEAMoUQIAAgAACAFRugDaAAQDAE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.CheckedListBoxXSkinHelper" Collapsed="true">
+    <Position X="17.5" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\SkinHelper\CheckedListBoxXSkinHelper.cs</FileName>
+      <HashCode>YQTScSQCYihACgEABEAEgEIoBIBJSAgBBvKASgAQAAE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.UpDownButtonsXSkinHelper" Collapsed="true">
+    <Position X="23" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\SkinHelper\UpDownButtonsXSkinHelper.cs</FileName>
+      <HashCode>AECAAQAAAEAEEAAABEBAAgAIAAAAAAAIAQAAQQEGCBA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.NumericUpDownXSkinHelper" Collapsed="true">
+    <Position X="28.75" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\SkinHelper\NumericUpDownXSkinHelper.cs</FileName>
+      <HashCode>AIAAAgAAAAAAAAEAKAAECAASAAEAAAAAAAAAAAAAAAE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.DomainUpDownXSkinHelper" Collapsed="true">
+    <Position X="32" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\SkinHelper\DomainUpDownXSkinHelper.cs</FileName>
+      <HashCode>AIAAAgEAAAAAAAEAKAAECAAQAAEAAAAAAAAAAAAAAAE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.DataGridViewXSkinHelper" Collapsed="true">
+    <Position X="35" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\SkinHelper\DataGridViewXSkinHelper.cs</FileName>
+      <HashCode>EAAARQUABABAAEEQAAEEIACACIEAQAAABAAAAAwAAME=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.ListViewXSkinHelper" Collapsed="true">
+    <Position X="37.75" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\SkinHelper\ListViewXSkinHelper.cs</FileName>
+      <HashCode>QRCYYTEAYAhAmgUAAEEEgkQoAYJDACiAV4giSgoUAAE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.TabControlXSkinHelper" Collapsed="true">
+    <Position X="40.25" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\SkinHelper\TabControlXSkinHelper.cs</FileName>
+      <HashCode>AACQJSDAQAJEAAEQAGBEg0UIEYAAABAQBoAETwAUAHE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+</ClassDiagram>

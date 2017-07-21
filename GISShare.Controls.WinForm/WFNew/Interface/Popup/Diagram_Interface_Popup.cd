@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBasePopup" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAFAAAAAAAAEEAAgAAABBQFAAEkAAAAAAMAACAAAA=</HashCode>
+      <FileName>Controls\WFNew\Interface\Popup\IBasePopup.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBasePopup2" Collapsed="true">
+    <Position X="2.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgCAAAAAAAgAAAAAAAQEAAAAAAAAAQAAAI=</HashCode>
+      <FileName>Controls\WFNew\Interface\Popup\IBasePopup2.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ISimplyPopup" Collapsed="true">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAACAIAAAAAAAAACAgAA=</HashCode>
+      <FileName>Controls\WFNew\Interface\Popup\ISimplyPopup.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IPanelPopup" Collapsed="true">
+    <Position X="2.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\Interface\Popup\IPanelPopup.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IApplicationPopup" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAIgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\Interface\Popup\IApplicationPopup.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ICustomizePopup" Collapsed="true">
+    <Position X="5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAEAAAgAAAQAAIAAAAAAAAAAAAAAAQAAAAAAE=</HashCode>
+      <FileName>Controls\WFNew\Interface\Popup\ICustomizePopup.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IInputRegion" Collapsed="true">
+    <Position X="5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\Interface\Popup\IInputRegion.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IDropDownPopup" Collapsed="true">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\Interface\Popup\IDropDownPopup.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IToolTipPopup" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\Interface\Popup\IToolTipPopup.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="宋体" Size="9" />
+</ClassDiagram>

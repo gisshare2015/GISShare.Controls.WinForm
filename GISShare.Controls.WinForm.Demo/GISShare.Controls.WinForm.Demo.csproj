@@ -1,0 +1,818 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FE0CA4C3-755D-4B84-BB2E-8446024B816D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GISShare.Controls.WinForm.Demo</RootNamespace>
+    <AssemblyName>GISShare.Controls.WinForm.Demo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GISShare.Win32, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\GISShare.Win32.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DemoCenterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoCenterForm.Designer.cs">
+      <DependentUpon>DemoCenterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WFNew\DemoOfCollapsableSplitPanelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\DemoOfCollapsableSplitPanelForm.Designer.cs">
+      <DependentUpon>DemoOfCollapsableSplitPanelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\DemoOfCompnonentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\DemoOfCompnonentForm.Designer.cs">
+      <DependentUpon>DemoOfCompnonentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\DemoOfDockPanelManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\DemoOfDockPanelManagerForm.Designer.cs">
+      <DependentUpon>DemoOfDockPanelManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\DemoOfExpandableCaptionPanelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\DemoOfExpandableCaptionPanelForm.designer.cs">
+      <DependentUpon>DemoOfExpandableCaptionPanelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\DemoOfExpandableNodePanelContainerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\DemoOfExpandableNodePanelContainerForm.designer.cs">
+      <DependentUpon>DemoOfExpandableNodePanelContainerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\DemoOfExpandablePanelContainerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\DemoOfExpandablePanelContainerForm.Designer.cs">
+      <DependentUpon>DemoOfExpandablePanelContainerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\DemoOfNodeViewTreeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\DemoOfNodeViewTreeForm.Designer.cs">
+      <DependentUpon>DemoOfNodeViewTreeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\DemoOfRibbonControlExForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\DemoOfRibbonControlExForm.Designer.cs">
+      <DependentUpon>DemoOfRibbonControlExForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\DemoOfRibbonControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\DemoOfRibbonControlForm.Designer.cs">
+      <DependentUpon>DemoOfRibbonControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\DemoOfTabControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\DemoOfTabControlForm.Designer.cs">
+      <DependentUpon>DemoOfTabControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\DemoOfViewItemListBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\DemoOfViewItemListBoxForm.Designer.cs">
+      <DependentUpon>DemoOfViewItemListBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\RibbonControlExForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\RibbonControlExForm.Designer.cs">
+      <DependentUpon>RibbonControlExForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfBaseButtonExForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfBaseButtonExForm.Designer.cs">
+      <DependentUpon>DemoOfBaseButtonExForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfBaseButtonNForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfBaseButtonNForm.Designer.cs">
+      <DependentUpon>DemoOfBaseButtonNForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfButtonExForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfButtonExForm.Designer.cs">
+      <DependentUpon>DemoOfButtonExForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfButtonGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfButtonGroupForm.Designer.cs">
+      <DependentUpon>DemoOfButtonGroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfButtonNForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfButtonNForm.Designer.cs">
+      <DependentUpon>DemoOfButtonNForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfButtonTextBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfButtonTextBoxForm.Designer.cs">
+      <DependentUpon>DemoOfButtonTextBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfCanvasControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfCanvasControlForm.Designer.cs">
+      <DependentUpon>DemoOfCanvasControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfCheckBoxNForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfCheckBoxNForm.Designer.cs">
+      <DependentUpon>DemoOfCheckBoxNForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfCheckButtonExForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfCheckButtonExForm.Designer.cs">
+      <DependentUpon>DemoOfCheckButtonExForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfCheckButtonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfCheckButtonForm.Designer.cs">
+      <DependentUpon>DemoOfCheckButtonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfComboBoxNForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfComboBoxNForm.Designer.cs">
+      <DependentUpon>DemoOfComboBoxNForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfComboDateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfComboDateForm.Designer.cs">
+      <DependentUpon>DemoOfComboDateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfComboTreeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfComboTreeForm.Designer.cs">
+      <DependentUpon>DemoOfComboTreeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfContextPopupPanelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfContextPopupPanelForm.Designer.cs">
+      <DependentUpon>DemoOfContextPopupPanelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfDescriptionButtonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfDescriptionButtonForm.Designer.cs">
+      <DependentUpon>DemoOfDescriptionButtonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfDoubleInputBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfDoubleInputBoxForm.Designer.cs">
+      <DependentUpon>DemoOfDoubleInputBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfDropDownButtonExForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfDropDownButtonExForm.Designer.cs">
+      <DependentUpon>DemoOfDropDownButtonExForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfDropDownButtonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfDropDownButtonForm.Designer.cs">
+      <DependentUpon>DemoOfDropDownButtonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfGlyphButtonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfGlyphButtonForm.Designer.cs">
+      <DependentUpon>DemoOfGlyphButtonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfImageAreaBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfImageAreaBoxForm.Designer.cs">
+      <DependentUpon>DemoOfImageAreaBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfImageBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfImageBoxForm.Designer.cs">
+      <DependentUpon>DemoOfImageBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfImageCheckBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfImageCheckBoxForm.Designer.cs">
+      <DependentUpon>DemoOfImageCheckBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfImageLabelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfImageLabelForm.Designer.cs">
+      <DependentUpon>DemoOfImageLabelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfImageLinkLabelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfImageLinkLabelForm.Designer.cs">
+      <DependentUpon>DemoOfImageLinkLabelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfImageRadioButtonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfImageRadioButtonForm.Designer.cs">
+      <DependentUpon>DemoOfImageRadioButtonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfIntegerInputBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfIntegerInputBoxForm.Designer.cs">
+      <DependentUpon>DemoOfIntegerInputBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfLabelNExForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfLabelNExForm.Designer.cs">
+      <DependentUpon>DemoOfLabelNExForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfLabelNForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfLabelNForm.Designer.cs">
+      <DependentUpon>DemoOfLabelNForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfLabelSeparatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfLabelSeparatorForm.Designer.cs">
+      <DependentUpon>DemoOfLabelSeparatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfLinkLabelNForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfLinkLabelNForm.Designer.cs">
+      <DependentUpon>DemoOfLinkLabelNForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfProcessBarNForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfProcessBarNForm.Designer.cs">
+      <DependentUpon>DemoOfProcessBarNForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfRadioButtonNForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfRadioButtonNForm.Designer.cs">
+      <DependentUpon>DemoOfRadioButtonNForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfRibbonBarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfRibbonBarForm.Designer.cs">
+      <DependentUpon>DemoOfRibbonBarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfRibbonGalleryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfRibbonGalleryForm.Designer.cs">
+      <DependentUpon>DemoOfRibbonGalleryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfRibbonPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfRibbonPageForm.Designer.cs">
+      <DependentUpon>DemoOfRibbonPageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfScrollBarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfScrollBarForm.Designer.cs">
+      <DependentUpon>DemoOfScrollBarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfSeparatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfSeparatorForm.Designer.cs">
+      <DependentUpon>DemoOfSeparatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfSliderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfSliderForm.Designer.cs">
+      <DependentUpon>DemoOfSliderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfSplitButtonExForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfSplitButtonExForm.Designer.cs">
+      <DependentUpon>DemoOfSplitButtonExForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfSplitButtonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfSplitButtonForm.Designer.cs">
+      <DependentUpon>DemoOfSplitButtonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfStarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfStarForm.Designer.cs">
+      <DependentUpon>DemoOfStarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfStartButton2007Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfStartButton2007Form.Designer.cs">
+      <DependentUpon>DemoOfStartButton2007Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfStartButton2010Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfStartButton2010Form.Designer.cs">
+      <DependentUpon>DemoOfStartButton2010Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfTextBoxNForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfTextBoxNForm.Designer.cs">
+      <DependentUpon>DemoOfTextBoxNForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfToolBarNForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\WFNew_JDKJJH\DemoOfToolBarNForm.Designer.cs">
+      <DependentUpon>DemoOfToolBarNForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\DemoOfButtonXForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\DemoOfButtonXForm.Designer.cs">
+      <DependentUpon>DemoOfButtonXForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\DemoOfCheckBoxXForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\DemoOfCheckBoxXForm.Designer.cs">
+      <DependentUpon>DemoOfCheckBoxXForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\DemoOfCheckedListBoxXForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\DemoOfCheckedListBoxXForm.Designer.cs">
+      <DependentUpon>DemoOfCheckedListBoxXForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\DemoOfDataGridViewXForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\DemoOfDataGridViewXForm.Designer.cs">
+      <DependentUpon>DemoOfDataGridViewXForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\DemoOfDockBarManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\DemoOfDockBarManagerForm.Designer.cs">
+      <DependentUpon>DemoOfDockBarManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\DemoOfListBoxXForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\DemoOfListBoxXForm.Designer.cs">
+      <DependentUpon>DemoOfListBoxXForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\DemoOfListViewXForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\DemoOfListViewXForm.Designer.cs">
+      <DependentUpon>DemoOfListViewXForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\DemoOfRadioButtonXForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\DemoOfRadioButtonXForm.Designer.cs">
+      <DependentUpon>DemoOfRadioButtonXForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\DemoOfTabControlXForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\DemoOfTabControlXForm.Designer.cs">
+      <DependentUpon>DemoOfTabControlXForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\DemoOfTreeViewXForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\DemoOfTreeViewXForm.Designer.cs">
+      <DependentUpon>DemoOfTreeViewXForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DemoCenterForm.resx">
+      <DependentUpon>DemoCenterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="WFNew\DemoOfCollapsableSplitPanelForm.resx">
+      <DependentUpon>DemoOfCollapsableSplitPanelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\DemoOfCompnonentForm.resx">
+      <DependentUpon>DemoOfCompnonentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\DemoOfDockPanelManagerForm.resx">
+      <DependentUpon>DemoOfDockPanelManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\DemoOfExpandableCaptionPanelForm.resx">
+      <DependentUpon>DemoOfExpandableCaptionPanelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\DemoOfExpandableNodePanelContainerForm.resx">
+      <DependentUpon>DemoOfExpandableNodePanelContainerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\DemoOfExpandablePanelContainerForm.resx">
+      <DependentUpon>DemoOfExpandablePanelContainerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\DemoOfNodeViewTreeForm.resx">
+      <DependentUpon>DemoOfNodeViewTreeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\DemoOfRibbonControlExForm.resx">
+      <DependentUpon>DemoOfRibbonControlExForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\DemoOfRibbonControlForm.resx">
+      <DependentUpon>DemoOfRibbonControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\DemoOfTabControlForm.resx">
+      <DependentUpon>DemoOfTabControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\DemoOfViewItemListBoxForm.resx">
+      <DependentUpon>DemoOfViewItemListBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\RibbonControlExForm.resx">
+      <DependentUpon>RibbonControlExForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfBaseButtonExForm.resx">
+      <DependentUpon>DemoOfBaseButtonExForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfBaseButtonNForm.resx">
+      <DependentUpon>DemoOfBaseButtonNForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfButtonExForm.resx">
+      <DependentUpon>DemoOfButtonExForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfButtonGroupForm.resx">
+      <DependentUpon>DemoOfButtonGroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfButtonNForm.resx">
+      <DependentUpon>DemoOfButtonNForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfButtonTextBoxForm.resx">
+      <DependentUpon>DemoOfButtonTextBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfCanvasControlForm.resx">
+      <DependentUpon>DemoOfCanvasControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfCheckBoxNForm.resx">
+      <DependentUpon>DemoOfCheckBoxNForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfCheckButtonExForm.resx">
+      <DependentUpon>DemoOfCheckButtonExForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfCheckButtonForm.resx">
+      <DependentUpon>DemoOfCheckButtonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfComboBoxNForm.resx">
+      <DependentUpon>DemoOfComboBoxNForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfComboDateForm.resx">
+      <DependentUpon>DemoOfComboDateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfComboTreeForm.resx">
+      <DependentUpon>DemoOfComboTreeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfContextPopupPanelForm.resx">
+      <DependentUpon>DemoOfContextPopupPanelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfDescriptionButtonForm.resx">
+      <DependentUpon>DemoOfDescriptionButtonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfDoubleInputBoxForm.resx">
+      <DependentUpon>DemoOfDoubleInputBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfDropDownButtonExForm.resx">
+      <DependentUpon>DemoOfDropDownButtonExForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfDropDownButtonForm.resx">
+      <DependentUpon>DemoOfDropDownButtonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfGlyphButtonForm.resx">
+      <DependentUpon>DemoOfGlyphButtonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfImageAreaBoxForm.resx">
+      <DependentUpon>DemoOfImageAreaBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfImageBoxForm.resx">
+      <DependentUpon>DemoOfImageBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfImageCheckBoxForm.resx">
+      <DependentUpon>DemoOfImageCheckBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfImageLabelForm.resx">
+      <DependentUpon>DemoOfImageLabelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfImageLinkLabelForm.resx">
+      <DependentUpon>DemoOfImageLinkLabelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfImageRadioButtonForm.resx">
+      <DependentUpon>DemoOfImageRadioButtonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfIntegerInputBoxForm.resx">
+      <DependentUpon>DemoOfIntegerInputBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfLabelNExForm.resx">
+      <DependentUpon>DemoOfLabelNExForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfLabelNForm.resx">
+      <DependentUpon>DemoOfLabelNForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfLabelSeparatorForm.resx">
+      <DependentUpon>DemoOfLabelSeparatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfLinkLabelNForm.resx">
+      <DependentUpon>DemoOfLinkLabelNForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfProcessBarNForm.resx">
+      <DependentUpon>DemoOfProcessBarNForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfRadioButtonNForm.resx">
+      <DependentUpon>DemoOfRadioButtonNForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfRibbonBarForm.resx">
+      <DependentUpon>DemoOfRibbonBarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfRibbonGalleryForm.resx">
+      <DependentUpon>DemoOfRibbonGalleryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfRibbonPageForm.resx">
+      <DependentUpon>DemoOfRibbonPageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfScrollBarForm.resx">
+      <DependentUpon>DemoOfScrollBarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfSeparatorForm.resx">
+      <DependentUpon>DemoOfSeparatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfSliderForm.resx">
+      <DependentUpon>DemoOfSliderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfSplitButtonExForm.resx">
+      <DependentUpon>DemoOfSplitButtonExForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfSplitButtonForm.resx">
+      <DependentUpon>DemoOfSplitButtonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfStarForm.resx">
+      <DependentUpon>DemoOfStarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfStartButton2007Form.resx">
+      <DependentUpon>DemoOfStartButton2007Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfStartButton2010Form.resx">
+      <DependentUpon>DemoOfStartButton2010Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfTextBoxNForm.resx">
+      <DependentUpon>DemoOfTextBoxNForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\WFNew_JDKJJH\DemoOfToolBarNForm.resx">
+      <DependentUpon>DemoOfToolBarNForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\DemoOfButtonXForm.resx">
+      <DependentUpon>DemoOfButtonXForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\DemoOfCheckBoxXForm.resx">
+      <DependentUpon>DemoOfCheckBoxXForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\DemoOfCheckedListBoxXForm.resx">
+      <DependentUpon>DemoOfCheckedListBoxXForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\DemoOfDataGridViewXForm.resx">
+      <DependentUpon>DemoOfDataGridViewXForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\DemoOfDockBarManagerForm.resx">
+      <DependentUpon>DemoOfDockBarManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\DemoOfListBoxXForm.resx">
+      <DependentUpon>DemoOfListBoxXForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\DemoOfListViewXForm.resx">
+      <DependentUpon>DemoOfListViewXForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\DemoOfRadioButtonXForm.resx">
+      <DependentUpon>DemoOfRadioButtonXForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\DemoOfTabControlXForm.resx">
+      <DependentUpon>DemoOfTabControlXForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\DemoOfTreeViewXForm.resx">
+      <DependentUpon>DemoOfTreeViewXForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\DockPanelManager.bmp" />
+    <Content Include="Image\Folder.ico" />
+    <EmbeddedResource Include="Image\Image.ico" />
+    <Content Include="Image\Info.ico" />
+    <Content Include="Image\Key.ico" />
+    <Content Include="Image\New.ico" />
+    <Content Include="Image\Open.ico" />
+    <Content Include="Image\Output.ico" />
+    <Content Include="Image\Pointer.bmp" />
+    <Content Include="Image\Project.ico" />
+    <Content Include="Image\Properties.jpg" />
+    <Content Include="Image\Property.ico" />
+    <Content Include="Image\Reference.ico" />
+    <Content Include="Image\References.ico" />
+    <Content Include="Image\Save.png" />
+    <Content Include="Image\Solution.ico" />
+    <Content Include="Image\Toolbox.ico" />
+    <Content Include="WFNew\Image\About32.ico" />
+    <Content Include="WFNew\Image\Chart.ico" />
+    <Content Include="WFNew\Image\Chart\Chart.ico" />
+    <Content Include="WFNew\Image\Chart\ChartA.ico" />
+    <Content Include="WFNew\Image\Chart\ChartB.ico" />
+    <Content Include="WFNew\Image\Chart\ChartC.ico" />
+    <Content Include="WFNew\Image\Chart\ChartD.ico" />
+    <Content Include="WFNew\Image\Chart\ChartE.ico" />
+    <Content Include="WFNew\Image\Chart\ChartF.ico" />
+    <Content Include="WFNew\Image\Chart\ChartG.ico" />
+    <Content Include="WFNew\Image\Chart\ChartH.ico" />
+    <Content Include="WFNew\Image\Chart\ChartI.ico" />
+    <Content Include="WFNew\Image\Chart\ChartJ.ico" />
+    <Content Include="WFNew\Image\Chart\ChartK.ico" />
+    <Content Include="WFNew\Image\Chart\ChartL.ico" />
+    <Content Include="WFNew\Image\Command.ico" />
+    <Content Include="WFNew\Image\D32A.ico" />
+    <Content Include="WFNew\Image\D32B.ico" />
+    <Content Include="WFNew\Image\D32C.ico" />
+    <Content Include="WFNew\Image\D32D.ico" />
+    <Content Include="WFNew\Image\D32F.ico" />
+    <Content Include="WFNew\Image\Document.ico" />
+    <Content Include="WFNew\Image\Exist.ico" />
+    <Content Include="WFNew\Image\Exit32.ico" />
+    <Content Include="WFNew\Image\Info.ico" />
+    <Content Include="WFNew\Image\New32.ico" />
+    <Content Include="WFNew\Image\Open.ico" />
+    <Content Include="WFNew\Image\Open32.ico" />
+    <Content Include="WFNew\Image\Output.ico" />
+    <Content Include="WFNew\Image\P32A.ico" />
+    <Content Include="WFNew\Image\P32B.ico" />
+    <Content Include="WFNew\Image\P32C.ico" />
+    <Content Include="WFNew\Image\Print32.ico" />
+    <Content Include="WFNew\Image\Property.ico" />
+    <Content Include="WFNew\Image\Save.ico" />
+    <Content Include="WFNew\Image\Save32.ico" />
+    <Content Include="WFNew\Image\SaveAs.ico" />
+    <Content Include="WFNew\Image\SaveAs32.ico" />
+    <Content Include="WFNew\Image\SendEmail32.ico" />
+    <Content Include="WFNew\Image\SetPrint32.ico" />
+    <Content Include="WFNew\Image\Solution.ico" />
+    <Content Include="WFNew\Image\Toolbox.ico" />
+    <Content Include="WinForm\Image\ANNOTATION16.ico" />
+    <Content Include="WinForm\Image\ANNOTATION32.ico" />
+    <Content Include="WinForm\Image\Exist.ico" />
+    <Content Include="WinForm\Image\Help.ico" />
+    <Content Include="WinForm\Image\Info.ico" />
+    <Content Include="WinForm\Image\Information.ico" />
+    <Content Include="WinForm\Image\Key.ico" />
+    <Content Include="WinForm\Image\MenuBar.ico" />
+    <Content Include="WinForm\Image\OpenFile.ico" />
+    <Content Include="WinForm\Image\POINT16.ico" />
+    <Content Include="WinForm\Image\POINT32.ico" />
+    <Content Include="WinForm\Image\POLYGON16.ico" />
+    <Content Include="WinForm\Image\POLYGON32.ico" />
+    <Content Include="WinForm\Image\POLYLINE16.ico" />
+    <Content Include="WinForm\Image\POLYLINE32.ico" />
+    <Content Include="WinForm\Image\RASTERBAND16.ico" />
+    <Content Include="WinForm\Image\RASTERBAND32.ico" />
+    <Content Include="WinForm\Image\SaveFile.ico" />
+    <Content Include="WinForm\Image\TABLE16.ico" />
+    <Content Include="WinForm\Image\TABLE32.ico" />
+    <Content Include="WinForm\Image\TXT16.ico" />
+    <Content Include="WinForm\Image\TXT32.ico" />
+    <Content Include="WinForm\Image\Write.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GISShare.Controls.WinForm\GISShare.Controls.WinForm.csproj">
+      <Project>{A720C1A3-9A9C-41C7-AB51-A2C011451914}</Project>
+      <Name>GISShare.Controls.WinForm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

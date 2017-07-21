@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GISShare.Controls.WinForm.WFNew.BaseBarItem" Collapsed="true">
+    <Position X="5.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FACAgCAABAgCEkQAAABGSCAAAQAIGCAAAAAoAoQAABM=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\UICollection\BaseBarItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.ButtonGroupItem" Collapsed="true">
+    <Position X="3.25" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>FAAAgChCEAgGM0ICAIBCSSQgAYAIGyAAIgAIAoAoABM=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\UICollection\ButtonGroupItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.BaseItemStackExItem" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>HwAggiEQGAkTEgQAAADBSCAABQAqHCACAAAIBqAABBM=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\UICollection\BaseItemStackExItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.BaseItemStackItem" Collapsed="true">
+    <Position X="8" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>FADGgQBAFACQAoQAAYJESOApAQAImQQgKggIgqACKBA=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\UICollection\BaseItemStackItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.RibbonBarItem" Collapsed="true">
+    <Position X="15.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>lYJBguAcNBlSkkZAgIhGSaMlkZwYODAII4CJE/ymIBM=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\UICollection\RibbonBarItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.TabButtonContainerItem" Collapsed="true">
+    <Position X="7.75" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>vwBggiWQGEkbFgwAAADBaOAARQgqHCIOCiAIBqQSBBM=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\UICollection\TabButtonContainerItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.RibbonGalleryItem" Collapsed="true">
+    <Position X="13.25" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>NwBgxqAaWAhSGgQAAgBFS6AEBYg4GCADgAAIB4QEBZM=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\UICollection\RibbonGalleryItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.RibbonGalleryRowItem" Collapsed="true">
+    <Position X="10.5" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>FAAAgAAAAAAAAgAAAAAASKAAAYAICAAAAAAIAoAAABA=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\UICollection\RibbonGalleryRowItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.RibbonPageItem" Collapsed="true">
+    <Position X="0.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAEgAAEAAAAAoAAAABBSKAAQQAICZAIAAIIAoAAABA=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\UICollection\RibbonPageItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.RibbonQuickAccessToolbarItem" Collapsed="true">
+    <Position X="6.75" Y="5.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>lAQAoIEAAAAAAgYQAABASKAAAQEICAAAAAAoAoAAABE=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\UICollection\RibbonQuickAccessToolbarItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.ToolBarItem" Collapsed="true">
+    <Position X="3.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAAgAAAQAAAEgAAAABAyCAAASAICAAAAAAIAoAAABA=</HashCode>
+      <FileName>Controls\WFNew\Compnonent\UICollection\ToolBarItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

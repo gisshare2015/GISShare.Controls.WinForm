@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GISShare.Controls.WinForm.WFNew.CustomizeComboBox" Collapsed="true">
+    <Position X="2.5" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>VcXAkpMIE0FQMwKDFkVk6yYEEZz6GEKAMkY5A4S+ARE=</HashCode>
+      <FileName>Controls\WFNew\Control\CustomizeComboBox\CustomizeComboBox.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.ComboBoxN" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>F0ABggGAAEEAIgICAgJAaCSAEQIICgiAApFoCoAoARA=</HashCode>
+      <FileName>Controls\WFNew\Control\CustomizeComboBox\ComboBoxN.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.ComboTree" Collapsed="true">
+    <Position X="2.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>F0AQggGAAEEAIgICAgBGaCYAEQCICQiBAgAoCoAoARA=</HashCode>
+      <FileName>Controls\WFNew\Control\CustomizeComboBox\ComboTree.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.ComboDate" Collapsed="true">
+    <Position X="5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FUQAghEAEEMEIgICAgQgbCQAEQAICAAAEgA4CoAoAZA=</HashCode>
+      <FileName>Controls\WFNew\Control\CustomizeComboBox\ComboDate.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

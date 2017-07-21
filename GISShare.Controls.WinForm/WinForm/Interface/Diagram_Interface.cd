@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="宋体" Size="9" />
+  <Interface Name="GISShare.Controls.WinForm.IButtonX" Collapsed="true">
+    <Position X="4.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\IButtonX.cs</FileName>
+      <HashCode>AAAAAAACgBgKAECYAgAAAAAEAAAAEDAAAAAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IControlItem" Collapsed="true">
+    <Position X="6.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\IControlItem.cs</FileName>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IDependItem" Collapsed="true">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\IDependItem.cs</FileName>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IBaseItemOwnerNC" Collapsed="true">
+    <Position X="5.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\InterfaceNC\IBaseItemOwnerNC.cs</FileName>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAEAAAAAAQAAIAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IBaseItemOwnerNC2" Collapsed="true">
+    <Position X="5.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\InterfaceNC\IBaseItemOwnerNC2.cs</FileName>
+      <HashCode>ggAYAAAAABAAAAAAAAAAQAAAAAAAAAAAAAIAAAIAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.INCBaseItem" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\InterfaceNC\INCBaseItem.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IOffsetNC" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.25" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\InterfaceNC\IOffsetNC.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IOwnerNC" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\InterfaceNC\IOwnerNC.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IUICollectionItemNC" Collapsed="true">
+    <Position X="2.75" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\InterfaceNC\IUICollectionItemNC.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IListBoxX" Collapsed="true">
+    <Position X="7.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\IListBoxX.cs</FileName>
+      <HashCode>IAAAAAACAAgAAAAAAEAEAEIgAAAAAAABBPIAAgAAAAE=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IRadioButtonX" Collapsed="true">
+    <Position X="0.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\IRadioButtonX.cs</FileName>
+      <HashCode>AAAAAAAgAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.ICheckBoxX" Collapsed="true">
+    <Position X="0.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\ICheckBoxX.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.ILabelX" Collapsed="true">
+    <Position X="2.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\ILabelX.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.ILinkLabelX" Collapsed="true">
+    <Position X="2.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\ILinkLabelX.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.ITreeViewX" Collapsed="true">
+    <Position X="14.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\ITreeViewX.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAAAAEAIAUAAAAAAAAABRGgCAAAABAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.ICheckedListBoxX" Collapsed="true">
+    <Position X="7.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\ICheckedListBoxX.cs</FileName>
+      <HashCode>AADAAAQAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IItemEx" Collapsed="true">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\IItemEx.cs</FileName>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.ITextBoxBaseX" Collapsed="true">
+    <Position X="16.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\ITextBoxBaseX.cs</FileName>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IControlItem2" Collapsed="true">
+    <Position X="10.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\IControlItem2.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IUpDownButtonsX" Collapsed="true">
+    <Position X="10.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\IUpDownButtonsX.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IComboBoxX" Collapsed="true">
+    <Position X="16.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\IComboBoxX.cs</FileName>
+      <HashCode>AIAAAAAKAAAQAAAgAEAAAEAAABAAAAAABPAAAAAIAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.ISetBaseItemStateHelper" Collapsed="true">
+    <Position X="8.25" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\NewFolder1\ISetBaseItemStateHelper.cs</FileName>
+      <HashCode>AAAAAAAAQACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IDataGridViewX" Collapsed="true">
+    <Position X="12.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\IDataGridViewX.cs</FileName>
+      <HashCode>AAAABAQAAAAAAEAAAAAAAAAACIAAQAAABAAAAAgAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IFrameControlItem" Collapsed="true">
+    <Position X="14.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\IFrameControlItem.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IListViewX" Collapsed="true">
+    <Position X="18.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\IListViewX.cs</FileName>
+      <HashCode>AQAIQBAAAAAAAAAAAEAAAEAgAAABAAAAVIACAAIAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.ITabControlX" Collapsed="true">
+    <Position X="20.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\ITabControlX.cs</FileName>
+      <HashCode>AAAQAAAAAAIAAAAAACAAAUAAAAAAAAAQBIAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+</ClassDiagram>

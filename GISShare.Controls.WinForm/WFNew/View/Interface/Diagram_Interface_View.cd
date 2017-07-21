@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IColorViewItem" Collapsed="true">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\IColorViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IVisibleViewItem" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\IVisibleViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IFlexibleRowViewItem" Collapsed="true">
+    <Position X="9.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\IFlexibleRowViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IImageViewItem" Collapsed="true">
+    <Position X="14" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\IImageViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IResizeViewItem" Collapsed="true">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\IResizeViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IRowViewItem" Collapsed="true">
+    <Position X="9.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAIAAAIAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\IRowViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.ISizeViewItem" Collapsed="true">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAEQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\ISizeViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.ISuperViewItem" Collapsed="true">
+    <Position X="16.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\ISuperViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.ITextEditViewItem" Collapsed="true">
+    <Position X="11.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAACAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\ITextEditViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.ITextViewItem" Collapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>WFNew\View\Interface\ITextViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IViewItem" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAIAAAAAAAAAAEAAAgAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\IViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IViewLayoutList" Collapsed="true">
+    <Position X="16.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAgAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>WFNew\View\Interface\IViewLayoutList.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IViewList" Collapsed="true">
+    <Position X="4.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>WFNew\View\Interface\IViewList.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IViewItemOwner" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\Owner\IViewItemOwner.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IViewItemOwner2" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\Owner\IViewItemOwner2.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.INodeViewItem" Collapsed="true">
+    <Position X="16.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAEQCBAAMAAAGAQAAAAAAAAAICAARAABQAQAAA=</HashCode>
+      <FileName>WFNew\View\Interface\Node\INodeViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.INodeViewItem2" Collapsed="true">
+    <Position X="16.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAABAAAAAAAAAAAAAAAAAACAAAQAAEAAA=</HashCode>
+      <FileName>WFNew\View\Interface\Node\INodeViewItem2.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.INodeViewList" Collapsed="true">
+    <Position X="10" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAiAAAAAACAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\Node\INodeViewList.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.ISetViewItemHelper" Collapsed="true">
+    <Position X="22" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\Helper\ISetViewItemHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.ICellViewItem" Collapsed="true">
+    <Position X="22.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAgAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\GridView\ICellViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IRowViewObject" Collapsed="true">
+    <Position X="30.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAEAAAAAAAAIAAAAAAACEAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\GridView\IRowViewObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IColumnTitleViewObject" Collapsed="true">
+    <Position X="30.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAABAAAAAACASAAAAEAAAAAABAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\GridView\IColumnTitleViewObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IColumnViewItem" Collapsed="true">
+    <Position X="22.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\GridView\IColumnViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IColumnViewObject" Collapsed="true">
+    <Position X="32.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAQAAAAAAAAAQAABQAAAAACAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\GridView\IColumnViewObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IColumnViewObjectHelper" Collapsed="true">
+    <Position X="34.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAEAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAI=</HashCode>
+      <FileName>WFNew\View\Interface\GridView\IColumnViewObjectHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.INodeCellViewItem" Collapsed="true">
+    <Position X="28.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\GridView\INodeCellViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IRowCellViewItem" Collapsed="true">
+    <Position X="16.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\GridView\IRowCellViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IRowColumnViewItem" Collapsed="true">
+    <Position X="30.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAIAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\GridView\IRowColumnViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IRowHeaderItem" Collapsed="true">
+    <Position X="32.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAEAAAAAAAAAAAAgAAAEAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\GridView\IRowHeaderItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IRowHeaderItemHelper" Collapsed="true">
+    <Position X="34.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\GridView\IRowHeaderItemHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IGridNodeViewItemTree" Collapsed="true">
+    <Position X="41.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBCAARgAAAAUBEAAAAAAAAAAAIAAAgCAAAACEAMAAQI=</HashCode>
+      <FileName>WFNew\View\Interface\Control\IGridNodeViewItemTree.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IViewListEnumerator" Collapsed="true">
+    <Position X="54" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAI=</HashCode>
+      <FileName>WFNew\View\Interface\Control\IViewListEnumerator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IGridNodeViewItemTreeEvent" Collapsed="true">
+    <Position X="29.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAIAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\Control\IGridNodeViewItemTreeEvent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IGridViewItemListBox" Collapsed="true">
+    <Position X="50.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBCAARgAAAEUBEAAAAAAgAAAAIAAAgCAAAACEAMAAQI=</HashCode>
+      <FileName>WFNew\View\Interface\Control\IGridViewItemListBox.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IGridViewItemListBoxEvent" Collapsed="true">
+    <Position X="52.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAIAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\Control\IGridViewItemListBoxEvent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.INodeViewItemTree" Collapsed="true">
+    <Position X="41.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAABAACAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\Control\INodeViewItemTree.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.INodeViewItemTreeEvent" Collapsed="true">
+    <Position X="29.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\Control\INodeViewItemTreeEvent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IViewItemList" Collapsed="true">
+    <Position X="46.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAIAAAAAAABAAE=</HashCode>
+      <FileName>WFNew\View\Interface\Control\IViewItemList.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IViewItemList2" Collapsed="true">
+    <Position X="54" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\Control\IViewItemList2.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IViewItemListBox" Collapsed="true">
+    <Position X="48" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEICAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\Control\IViewItemListBox.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IViewItemListBox2" Collapsed="true">
+    <Position X="48" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAABAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\Control\IViewItemListBox2.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IViewItemListBoxEvent" Collapsed="true">
+    <Position X="50.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\Control\IViewItemListBoxEvent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.View.IViewItemListEvent" Collapsed="true">
+    <Position X="52.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\View\Interface\Control\IViewItemListEvent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

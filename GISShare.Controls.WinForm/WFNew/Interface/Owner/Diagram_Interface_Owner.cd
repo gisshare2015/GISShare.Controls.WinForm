@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="微软雅黑" Size="9" />
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBaseItemOwner" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\Ribbon\Interface\Owner\IBaseItemOwner.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBaseItemOwner2" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <FileName>Controls\Ribbon\Interface\Owner\IBaseItemOwner2.cs</FileName>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IItemOwner" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\WinForm\Interface\Item\IItemOwner.cs</FileName>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAgAAIAAAAAAAAAgAAAAAQAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IOwner" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\Ribbon\Interface\Owner\IOwner.cs</FileName>
+      <HashCode>IAAAAAAEAABAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAQA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+</ClassDiagram>

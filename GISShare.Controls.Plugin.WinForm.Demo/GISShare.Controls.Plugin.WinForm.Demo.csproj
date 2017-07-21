@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{900FAACD-F3B3-42C8-94F0-01646521E639}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GISShare.Controls.Plugin.WinForm.Demo</RootNamespace>
+    <AssemblyName>GISShare.Controls.Plugin.WinForm.Demo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GISShare.Win32">
+      <HintPath>..\DLL\GISShare.Win32.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DockBarHostTBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DockBarHostTBForm.Designer.cs">
+      <DependentUpon>DockBarHostTBForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DockBarHostForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DockBarHostForm.Designer.cs">
+      <DependentUpon>DockBarHostForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PluginDemoForm.Designer.cs">
+      <DependentUpon>PluginDemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RibbonHostForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RibbonHostForm.Designer.cs">
+      <DependentUpon>RibbonHostForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DockBarHostTBForm.resx">
+      <DependentUpon>DockBarHostTBForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DockBarHostForm.resx">
+      <DependentUpon>DockBarHostForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PluginDemoForm.resx">
+      <DependentUpon>PluginDemoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RibbonHostForm.resx">
+      <DependentUpon>RibbonHostForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GISShare.Controls.Plugin.WinForm.Demo.Hook\GISShare.Controls.Plugin.WinForm.Demo.Hook.csproj">
+      <Project>{907D66FC-216D-43D2-9EE7-C2A2B7E59C5A}</Project>
+      <Name>GISShare.Controls.Plugin.WinForm.Demo.Hook</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISShare.Controls.Plugin.WinForm\GISShare.Controls.Plugin.WinForm.csproj">
+      <Project>{BD690766-A81D-4BED-B439-315B5E10E2B3}</Project>
+      <Name>GISShare.Controls.Plugin.WinForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISShare.Controls.Plugin\GISShare.Controls.Plugin.csproj">
+      <Project>{3F22674F-2B1B-4A07-B509-DC294FA025AF}</Project>
+      <Name>GISShare.Controls.Plugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISShare.Controls.WinForm\GISShare.Controls.WinForm.csproj">
+      <Project>{A720C1A3-9A9C-41C7-AB51-A2C011451914}</Project>
+      <Name>GISShare.Controls.WinForm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

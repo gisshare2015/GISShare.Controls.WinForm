@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GISShare.Controls.WinForm.WFNew.Separator" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>VACEowgACQAAA0AAEAhASKAAAYgICAAAAAAIAqAAQBA=</HashCode>
+      <FileName>Controls\WFNew\Control\Separator\Separator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.LabelSeparator" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAAgCAAAAgCEkAAAABCSCAAAQAIGCAAAAAIAoAAABM=</HashCode>
+      <FileName>Controls\WFNew\Control\Separator\LabelSeparator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.ImageLabelSeparator" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>FAAAgCAAAAgCEkAAAABCSCAAAQAIGCAAAAAIAoAAABM=</HashCode>
+      <FileName>Controls\WFNew\Control\Separator\ImageLabelSeparator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

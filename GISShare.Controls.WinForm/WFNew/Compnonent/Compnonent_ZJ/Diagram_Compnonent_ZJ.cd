@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="宋体" Size="9" />
+  <Class Name="GISShare.Controls.WinForm.WFNew.FormButtonItem" Collapsed="true">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\Ribbon\Compnonent\Compnonent_ZJ\FormButtonItem.cs</FileName>
+      <HashCode>AAAAQQAAAAAAgEAAAABQACAEAAAAAIAIAAAAAgACAAQ=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.CustomizeButtonItem" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Controls\Ribbon\Compnonent\Compnonent_ZJ\CustomizeButtonItem.cs</FileName>
+      <HashCode>IAAAACAAAAgCgIAAQABAAAoAIAAAEAAAIAQAACAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.FormButtonStackItem" Collapsed="true">
+    <Position X="9.75" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Controls\Ribbon\Compnonent\Compnonent_ZJ\FormButtonStackItem.cs</FileName>
+      <HashCode>AAIAQABAAAAQAAAAAABgAIACQAACAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.GalleryScrollButtonItem" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <FileName>Controls\Ribbon\Compnonent\Compnonent_ZJ\GalleryScrollButtonItem.cs</FileName>
+      <HashCode>AAAAAQAAAAAAAEAABABAAAAEAAAAAAAAAAAIAAAQAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.LTBRButtonItem" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\Ribbon\Compnonent\Compnonent_ZJ\LTBRButtonItem.cs</FileName>
+      <HashCode>AAAAAQAAAAEAAEAAAgBAAAAEAAAAAAAAAAAIAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.MdiFormButtonStackItem" Collapsed="true">
+    <Position X="9.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Controls\Ribbon\Compnonent\Compnonent_ZJ\MdiFormButtonStackItem.cs</FileName>
+      <HashCode>AAIAQABAAAAQAAAAAABgAKAAQAACAAAIAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.NextButtonItem" Collapsed="true">
+    <Position X="1.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\Ribbon\Compnonent\Compnonent_ZJ\NextButtonItem.cs</FileName>
+      <HashCode>IAAAAAAAAAgCgKAAAgAAAAIAAAAAEAgIAgAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.OverflowButtonItem" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Controls\Ribbon\Compnonent\Compnonent_ZJ\OverflowButtonItem.cs</FileName>
+      <HashCode>IAAAAAAIEAgCgIgAAABAAAIAAAAAEAAIIAAAAAgAAAI=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.PreButtonItem" Collapsed="true">
+    <Position X="4.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Controls\Ribbon\Compnonent\Compnonent_ZJ\PreButtonItem.cs</FileName>
+      <HashCode>IAAAAAAAAAgCgKAAAgAAAAIAAAAAEAgIAgAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.RibbonApplicationPopupPanelBottomItem" Collapsed="true">
+    <Position X="17" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <FileName>Controls\Ribbon\Compnonent\Compnonent_ZJ\RibbonApplicationPopupPanelBottomItem.cs</FileName>
+      <HashCode>IAIEAIAAAAAAEMAAAABAAEAAAAAAAQAAAAIAAAiAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.RibbonApplicationPopupPanelMiddleLeftItem" Collapsed="true">
+    <Position X="18.75" Y="1.5" Width="3.25" />
+    <TypeIdentifier>
+      <FileName>Controls\Ribbon\Compnonent\Compnonent_ZJ\RibbonApplicationPopupPanelMiddleLeftItem.cs</FileName>
+      <HashCode>IAKEAIAAEBAAMAAAAABIAcAAAAAAAQIAAgIABACBAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.RibbonApplicationPopupPanelMiddleRightItem" Collapsed="true">
+    <Position X="20.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <FileName>Controls\Ribbon\Compnonent\Compnonent_ZJ\RibbonApplicationPopupPanelMiddleRightItem.cs</FileName>
+      <HashCode>IAKEAIAAEBAAEAAAAABIAcAAAAAAAQIAAgIABACBAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.ScrollDownButtonItem" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Controls\Ribbon\Compnonent\Compnonent_ZJ\ScrollDownButtonItem.cs</FileName>
+      <HashCode>IAAAAAAAAAgCgIAAAAAAAAIAAAgAEAgAAgAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.ScrollDropDownButtonItem" Collapsed="true">
+    <Position X="2.75" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Controls\Ribbon\Compnonent\Compnonent_ZJ\ScrollDropDownButtonItem.cs</FileName>
+      <HashCode>IAAAAAAAAIgCgIAAAAEAAAIAAAAAEAAAIAAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.ScrollUpButtonItem" Collapsed="true">
+    <Position X="5.25" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Controls\Ribbon\Compnonent\Compnonent_ZJ\ScrollUpButtonItem.cs</FileName>
+      <HashCode>IAAAAAAAAAgCgIAAAAAAAAIAAAgAEAgAAgAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

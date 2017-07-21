@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBaseButtonExItem" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\Interface\Button\IBaseButtonExItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ITabButtonItem" Collapsed="true">
+    <Position X="5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASSAAAAAAAEIgIAQAAAEEAAAACAAAACCQAABAAIAY=</HashCode>
+      <FileName>Controls\WFNew\Interface\Button\ITabButtonItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBaseButtonItem" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAgCAEAIAAAAAAAAAAAAEAACAAAAAAAAAAI=</HashCode>
+      <FileName>Controls\WFNew\Interface\Button\IBaseButtonItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IButtonItem" Collapsed="true">
+    <Position X="7.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\Interface\Button\IButtonItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IDescriptionButtonItem" Collapsed="true">
+    <Position X="2.75" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAgACAAAAAAAEAAAAACAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Controls\WFNew\Interface\Button\IDescriptionButtonItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IDropDownButtonItem" Collapsed="true">
+    <Position X="7" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAAAAgAAAAAAAQAAAAhAAAAAgAAAAAAAIAAA=</HashCode>
+      <FileName>Controls\WFNew\Interface\Button\IDropDownButtonItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ISplitButtonItem" Collapsed="true">
+    <Position X="7" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QIAAACGAQABQAAABABAAAAAAAAYAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Controls\WFNew\Interface\Button\ISplitButtonItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IStartButtonItem" Collapsed="true">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAIgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\Interface\Button\IStartButtonItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

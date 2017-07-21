@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBaseBarItem" Collapsed="true">
+    <Position X="16.75" Y="18.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAgCAEAAAAAAAAAAAAAAEAAAAAAgAAAAAAI=</HashCode>
+      <FileName>WFNew\Interface\UICollection\IBaseBarItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBaseButtonItem" Collapsed="true">
+    <Position X="11.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAgCAEAIAAAAAAAAAAAAEAACAAAAAAAAAAI=</HashCode>
+      <FileName>WFNew\Interface\Button\IBaseButtonItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBaseItem" Collapsed="true">
+    <Position X="28.75" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAQAEBABAgIAAAAIEAEQAAIAAAACIAAIACAACAQA=</HashCode>
+      <FileName>WFNew\Interface\BaseItem\IBaseItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBaseItemStackExItem" Collapsed="true">
+    <Position X="23.5" Y="18.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEQAAgDAAAAAACAAAAAAAAAFAAAAAAAACAABAI=</HashCode>
+      <FileName>WFNew\Interface\UICollection\IBaseItemStackExItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBaseItemStackItem" Collapsed="true">
+    <Position X="19.25" Y="17.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AADEBABAEAAAAIAAAIIAAIAAAAAAAQAgAgAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\UICollection\IBaseItemStackItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBasePopup" Collapsed="true">
+    <Position X="9" Y="5.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAABAAAAAEAAAAAAAEAACAAAA=</HashCode>
+      <FileName>WFNew\Interface\Popup\IBasePopup.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IButtonGroupItem" Collapsed="true">
+    <Position X="22.25" Y="17.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAgCAEAAAAAACAAAAAAAEgAAAAAAAAAAAAI=</HashCode>
+      <FileName>WFNew\Interface\UICollection\IButtonGroupItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IButtonItem" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Button\IButtonItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IControlHostItem" Collapsed="true">
+    <Position X="31.75" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\ControlHost\IControlHostItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IControlPanelItem" Collapsed="true">
+    <Position X="31.75" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\ControlHost\IControlPanelItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IDropDownButtonItem" Collapsed="true">
+    <Position X="4.5" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAAAAgAAAAAAAQAAAAhAAAAAgAAAAAAAIAAA=</HashCode>
+      <FileName>WFNew\Interface\Button\IDropDownButtonItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IGalleryItem" Collapsed="true">
+    <Position X="19.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAARAAQAAgCAAAAAAAAAAAAAAgAEAABAAAAAAAABII=</HashCode>
+      <FileName>WFNew\Interface\UICollection\IGalleryItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IQuickAccessToolbarItem" Collapsed="true">
+    <Position X="16.5" Y="20.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAgIAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\UICollection\IQuickAccessToolbarItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IRibbonBarItem" Collapsed="true">
+    <Position X="22.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAQAAgCAEAAAAAAAAAAAAAAMBAAAACAAkCAAAI=</HashCode>
+      <FileName>WFNew\Interface\UICollection\IRibbonBarItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IRibbonControl" Collapsed="true">
+    <Position X="0.75" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAEAgAAwiKAAAEOAAAOAgSAkAEgEgAAACAIGUAQI=</HashCode>
+      <FileName>WFNew\Interface\WF\IRibbonControl.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IRibbonPageItem" Collapsed="true">
+    <Position X="22" Y="20.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\UICollection\IRibbonPageItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IContextPopupPanelItem" Collapsed="true">
+    <Position X="25.5" Y="20.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEgABAAAAAAAAAAAAAAAAEAAAAoAAAAACAAAAA=</HashCode>
+      <FileName>WFNew\Interface\PopupPanel\IContextPopupPanelItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ISeparatorItem" Collapsed="true">
+    <Position X="34.75" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAIgAACQAAAAAAAAAAAIAAAAAAAAAAAAAAACAAQAA=</HashCode>
+      <FileName>WFNew\Interface\Separator\ISeparatorItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ISplitButtonItem" Collapsed="true">
+    <Position X="2.25" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Button\ISplitButtonItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IStartButtonItem" Collapsed="true">
+    <Position X="7.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAIgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Button\IStartButtonItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ITabButtonItem" Collapsed="true">
+    <Position X="13.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAEIAIAQAAAEAAAAAAAAAACAAAABAAAAI=</HashCode>
+      <FileName>WFNew\Interface\Button\ITabButtonItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ITextBoxItem" Collapsed="true">
+    <Position X="18.25" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAgAAAAAACAAAAAAAE=</HashCode>
+      <FileName>WFNew\Interface\Input\ITextBoxItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ICollectionItem" Collapsed="true">
+    <Position X="4.75" Y="13.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\UICollection\ICollectionItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IUICollectionItem" Collapsed="true">
+    <Position X="11.75" Y="14" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\UICollection\IUICollectionItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IOwner" Collapsed="true">
+    <Position X="2.75" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAEAABAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>WFNew\Interface\Owner\IOwner.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ISetOwnerHelper" Collapsed="true">
+    <Position X="7.25" Y="19" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Helper\ISetOwnerHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBaseItemOwner" Collapsed="true">
+    <Position X="2.75" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAABAAAAQAAAA=</HashCode>
+      <FileName>WFNew\Interface\Owner\IBaseItemOwner.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IDesignHelper" Collapsed="true">
+    <Position X="7.25" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAABAA=</HashCode>
+      <FileName>WFNew\Interface\Helper\DesignHelper\IDesignHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ISetBaseItemHelper" Collapsed="true">
+    <Position X="7.25" Y="19.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Helper\ISetBaseItemHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ISetRibbonBarHelper" Collapsed="true">
+    <Position X="7.25" Y="21.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>WFNew\Interface\Helper\ISetRibbonBarHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ISetTabButtonItemHelper" Collapsed="true">
+    <Position X="7.25" Y="20.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Helper\ISetTabButtonItemHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IFormButton" Collapsed="true">
+    <Position X="11.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAQ=</HashCode>
+      <FileName>WFNew\Interface\Interface_ZJ\IFormButton.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IGalleryScrollButton" Collapsed="true">
+    <Position X="16.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>WFNew\Interface\Interface_ZJ\IGalleryScrollButton.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ILTBRButton" Collapsed="true">
+    <Position X="15" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Interface_ZJ\ILTBRButton.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IFormButtonStack" Collapsed="true">
+    <Position X="19.75" Y="18.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Interface_ZJ\IFormButtonStack.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ILabelItem" Collapsed="true">
+    <Position X="29" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Label\ILabelItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ILabelSeparatorItem" Collapsed="true">
+    <Position X="26.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgCAEAAAAAAAAAAAAAAEAAAAAAAAAAAAAI=</HashCode>
+      <FileName>WFNew\Interface\Separator\ILabelSeparatorItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IRibbonForm" Collapsed="true">
+    <Position X="4.75" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Form\IRibbonForm.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ICheckBoxItem" Collapsed="true">
+    <Position X="28" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\CheckBox\ICheckBoxItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IRadioButtonItem" Collapsed="true">
+    <Position X="27.75" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\RadioButton\IRadioButtonItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBaseItem2" Collapsed="true">
+    <Position X="32" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABgAQCAAAAAQAIAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\BaseItem\IBaseItem2.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IEventHelper" Collapsed="true">
+    <Position X="4.75" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Helper\IEventHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBaseItem3" Collapsed="true">
+    <Position X="34" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASAAAAAAAAAAAAAAAAAACAAAAgAAAgAAAAIBAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\BaseItem\IBaseItem3.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IPopupOwner" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAIAAEABAAAAAAAAAAAAAAAAQEAAAAAAAAAAEAAA=</HashCode>
+      <FileName>WFNew\Interface\PopupOwner\IPopupOwner.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IPopupOwner2" Collapsed="true">
+    <Position X="4.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAABgAA=</HashCode>
+      <FileName>WFNew\Interface\PopupOwner\IPopupOwner2.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IRibbonApplicationPopupPanelItem" Collapsed="true">
+    <Position X="37.5" Y="3" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>IBCABAAACAgCYBIAIgAACAIAIAAgUBAAIIKgAABAAJM=</HashCode>
+      <FileName>WFNew\Interface\PopupPanel\IRibbonApplicationPopupPanelItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ISimplyPopup" Collapsed="true">
+    <Position X="8.75" Y="9.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAACAIAAAAAAAAACAgAA=</HashCode>
+      <FileName>WFNew\Interface\Popup\ISimplyPopup.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBasePopup2" Collapsed="true">
+    <Position X="9" Y="6.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgCAAAAAAAgAAAAAAAAEAAAAAAAAAAAAAI=</HashCode>
+      <FileName>WFNew\Interface\Popup\IBasePopup2.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IPopupOwnerHelper" Collapsed="true">
+    <Position X="4.75" Y="19.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Helper\IPopupOwnerHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IPopupPanel" Collapsed="true">
+    <Position X="29.75" Y="21.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\PopupPanel\IPopupPanel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IApplicationPopup" Collapsed="true">
+    <Position X="8.75" Y="11" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAIgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Popup\IApplicationPopup.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IDescriptionPopupPanelItem" Collapsed="true">
+    <Position X="29" Y="20.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\PopupPanel\IDescriptionPopupPanelItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IPanelPopup" Collapsed="true">
+    <Position X="8.75" Y="8" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Popup\IPanelPopup.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IDescriptionButtonItem" Collapsed="true">
+    <Position X="9.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAgACAAAAAAAEAAAAACAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>WFNew\Interface\Button\IDescriptionButtonItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IGalleryMirrorPopupPanelItem" Collapsed="true">
+    <Position X="25.75" Y="23" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\PopupPanel\IGalleryMirrorPopupPanelItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBaseItemOwner2" Collapsed="true">
+    <Position X="2.5" Y="19.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Owner\IBaseItemOwner2.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBaseItem4" Collapsed="true">
+    <Position X="36" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAEAAAAAAAAAAEAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\BaseItem\IBaseItem4.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IOverflowButton" Collapsed="true">
+    <Position X="2.25" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Interface_ZJ\IOverflowButton.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IItem" Collapsed="true">
+    <Position X="27.25" Y="4.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAgAAAAAAAAAAQAAAAAAAAAAAAACAABAAA=</HashCode>
+      <FileName>WinForm\Interface\Item\IItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ICustomizePopup" Collapsed="true">
+    <Position X="11" Y="7.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAEAAAgAAAQAAIAAAAAAAAAAAAAAAQAAAAAAE=</HashCode>
+      <FileName>WFNew\Interface\Popup\ICustomizePopup.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ICustomizeComboBoxItem" Collapsed="true">
+    <Position X="18" Y="7.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAABIAEAAQAAAAQAAgAAAAABAAAACAEAQwAAAIAAA=</HashCode>
+      <FileName>WFNew\Interface\CustomizeComboBox\ICustomizeComboBoxItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IInputObjectHelper" Collapsed="true">
+    <Position X="7.25" Y="22" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Helper\IInputObjectHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IInputObject" Collapsed="true">
+    <Position X="4.75" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAACAAEAAAAAAAQgA=</HashCode>
+      <FileName>WFNew\Interface\Input\IInputObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IInputRegion" Collapsed="true">
+    <Position X="11" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAAEAAgAAAAAAQAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Popup\IInputRegion.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IImageItem" Collapsed="true">
+    <Position X="21.25" Y="3" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>WinForm\Interface\Item\IImageItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IComboBoxItem" Collapsed="true">
+    <Position X="14.75" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJBAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\CustomizeComboBox\IComboBoxItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ILinkLabelItem" Collapsed="true">
+    <Position X="30" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>WFNew\Interface\Label\ILinkLabelItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IFontItem" Collapsed="true">
+    <Position X="23" Y="4.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>WinForm\Interface\Item\IFontItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IColorItem" Collapsed="true">
+    <Position X="24.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>WinForm\Interface\Item\IColorItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.IItemOwner" Collapsed="true">
+    <Position X="2.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAgAAIAAAAAAAAAgAAAAAQAAA=</HashCode>
+      <FileName>WinForm\Interface\Item\IItemOwner.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IComboTreeItem" Collapsed="true">
+    <Position X="14.75" Y="8" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\CustomizeComboBox\IComboTreeItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IFlexibleList" Collapsed="true">
+    <Position X="4.75" Y="24.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\FlexibleList\IFlexibleList.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ILockCollectionHelper" Collapsed="true">
+    <Position X="7.25" Y="24.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Helper\ILockCollectionHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ICollectionObjectDesignHelper" Collapsed="true">
+    <Position X="10.25" Y="19" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>WFNew\Interface\Helper\DesignHelper\ICollectionObjectDesignHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IPopupObjectDesignHelper" Collapsed="true">
+    <Position X="10.25" Y="18.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>WFNew\Interface\Helper\DesignHelper\IPopupObjectDesignHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IObjectDesignHelper" Collapsed="true">
+    <Position X="10.25" Y="17.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Helper\DesignHelper\IObjectDesignHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IDropDownPopup" Collapsed="true">
+    <Position X="11" Y="9.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Popup\IDropDownPopup.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBaseButtonExItem" Collapsed="true">
+    <Position X="14" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\Button\IBaseButtonExItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBaseItem5" Collapsed="true">
+    <Position X="36" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAEAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\BaseItem\IBaseItem5.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBaseItem6" Collapsed="true">
+    <Position X="36" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgCAAAAAABAAAAAAAgAAAAAAAAAIAAAAAAAIAAAQAAA=</HashCode>
+      <FileName>WFNew\Interface\BaseItem\IBaseItem6.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IBaseItem7" Collapsed="true">
+    <Position X="36" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAEAAgAAAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\BaseItem\IBaseItem7.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.IRatingStarItem" Collapsed="true">
+    <Position X="30" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAIAAAAAAAAAAIAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>WFNew\Interface\RatingStar\IRatingStarItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GISShare.Controls.WinForm.WFNew.ICollectionItem2" Collapsed="true">
+    <Position X="4.75" Y="15.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>WFNew\Interface\UICollection\ICollectionItem2.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

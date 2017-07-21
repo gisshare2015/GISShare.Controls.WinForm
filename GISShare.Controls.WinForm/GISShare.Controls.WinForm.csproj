@@ -1,0 +1,1673 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A720C1A3-9A9C-41C7-AB51-A2C011451914}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GISShare.Controls.WinForm</RootNamespace>
+    <AssemblyName>GISShare.Controls.WinForm</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GISShare.Win32">
+      <HintPath>..\DLL\GISShare.Win32.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Design">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing.Design">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Delegate\Delegate.cs" />
+    <Compile Include="HandleView\HandleViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HandleView\HandleViewForm.Designer.cs">
+      <DependentUpon>HandleViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\CombineControl\DateTimeCombineControlItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\CombineControl\DegreeCombineControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\CombineControl\VersionCombineControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\StatusBar_ZJ\StatusBarRightBaseItemStackItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\CustomizeComboBox\ComboDateTimeItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\ImageBox\ImageZoomableBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\CombineControl\DateTimeCombineControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\CombineControl\DegreeCombineControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\CombineControl\TimeMonthCalendarCombineControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\CombineControl\VersionCombineControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\CustomizeComboBox\ComboDateTime.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\ImageBox\ImageZoomableBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\UICollection\StatusBarN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\Compnonent\CanvasItemDesigner.cs" />
+    <Compile Include="WFNew\Design\Control\CanvasControlDesigner.cs" />
+    <Compile Include="WFNew\Control\UICollection\CanvasControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\UICollection\CanvasItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\InputText\ButtonTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\InputText\ButtonTextBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\CustomizeComboBox\ComboDateItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\CustomizeComboBox\ComboDate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\InputText\DoubleInputBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\InputText\DoubleInputBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\UICollectionItemControlDesigner.cs" />
+    <Compile Include="WFNew\DockPanel\Design\DocumentAreaDesigner.cs" />
+    <Compile Include="WFNew\DockPanel\DockArea\DocumentArea.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Forms\Compnonent\CompnonentNC_ZJ\NCFormButtonStackItem\NCFormButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Forms\Compnonent\CompnonentNC_ZJ\NCFormButtonStackItem\NCFormButtonStackItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Button\GlyphButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\ImageBox\ImageAreaBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\ImageBox\ImageAreaBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Interface\CustomizeComboBox\ICheckedComboBoxItem.cs" />
+    <Compile Include="WFNew\Interface\CustomizeComboBox\IComboDateTimeItem.cs" />
+    <Compile Include="WFNew\Interface\ImageBox\IImageZoomableBoxItem.cs" />
+    <Compile Include="WFNew\Interface\IRenderable.cs" />
+    <Compile Include="WFNew\Interface\IViewItemRenderable.cs" />
+    <Compile Include="WFNew\Interface\UICollection\ICanvasItem.cs" />
+    <Compile Include="WFNew\Interface\BaseItem\IBaseItemProperty.cs" />
+    <Compile Include="WFNew\Interface\MessageChain\IMessagePermeate.cs" />
+    <Compile Include="WFNew\Interface\BaseItem\IViewDepend.cs" />
+    <Compile Include="WFNew\Interface\BaseItem\IDismissPopupObject.cs" />
+    <Compile Include="WFNew\Interface\Button\ISplitButtonItemEvent.cs" />
+    <Compile Include="WFNew\Interface\Button\ITabButtonItemEvent.cs" />
+    <Compile Include="WFNew\Interface\CustomizeComboBox\ICustomizeComboBoxItemEvent.cs" />
+    <Compile Include="WFNew\Interface\Form\IFormEvent.cs" />
+    <Compile Include="WFNew\Interface\Input\IButtonTextBoxItem.cs" />
+    <Compile Include="WFNew\Interface\ICategoryItem.cs" />
+    <Compile Include="WFNew\Interface\Button\IGlyphButtonItem.cs" />
+    <Compile Include="WFNew\Interface\BaseItem\IBaseItemEvent.cs" />
+    <Compile Include="WFNew\Interface\BaseItem\IBaseItemEvent2.cs" />
+    <Compile Include="WFNew\Interface\Input\IButtonTextBoxItemEvent.cs" />
+    <Compile Include="WFNew\Interface\Input\IDoubleInputBoxItemEvent.cs" />
+    <Compile Include="WFNew\Interface\Input\IInputObject2.cs" />
+    <Compile Include="WFNew\Interface\Input\IIntegerInputBoxItemEvent.cs" />
+    <Compile Include="WFNew\Interface\PopupOwner\IPopupOwnerEvent.cs" />
+    <Compile Include="WFNew\Interface\Popup\IBasePopupEvent.cs" />
+    <Compile Include="WFNew\Interface\Popup\IBasePopupEvent2.cs" />
+    <Compile Include="WFNew\Interface\Popup\IInputRegionEvent.cs" />
+    <Compile Include="WFNew\Interface\ProcessBar\IProcessBarItemEvent.cs" />
+    <Compile Include="WFNew\Interface\RatingStar\IRatingStarItemEvent.cs" />
+    <Compile Include="WFNew\Interface\Slider\IScrollBarItemEvent.cs" />
+    <Compile Include="WFNew\Interface\Slider\ISliderItemEvent.cs" />
+    <Compile Include="WFNew\Interface\UICollection\IBaseItemStackExItemEvent.cs" />
+    <Compile Include="WFNew\Interface\UICollection\ICollectionItem3.cs" />
+    <Compile Include="WFNew\Interface\CustomizeComboBox\IComboDateItem.cs" />
+    <Compile Include="WFNew\Interface\UICollection\ICollectionItem2.cs" />
+    <Compile Include="WFNew\Interface\Label\ILabelExItem.cs" />
+    <Compile Include="WFNew\Interface\Input\IDoubleInputBoxItem.cs" />
+    <Compile Include="WFNew\Interface\Popup\IDoubleInputRegion.cs" />
+    <Compile Include="WFNew\Interface\ToolTip\ISuperToolTip.cs" />
+    <Compile Include="WFNew\Interface\ToolTip\ITipInfo.cs" />
+    <Compile Include="WFNew\Interface\Popup\IToolTipPopup.cs" />
+    <Compile Include="WFNew\Interface\PopupPanel\IToolTipPopupPanelItem.cs" />
+    <Compile Include="WFNew\Interface\Helper\IGetPartItemHelper.cs" />
+    <Compile Include="WFNew\Control\Label\LabelNEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Label\LabelExItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Interface\UICollection\IGalleryItemEvent.cs" />
+    <Compile Include="WFNew\Interface\UICollection\IRibbonBarItemEvent.cs" />
+    <Compile Include="WFNew\Interface\UICollection\ITabButtonContainerItemEvent.cs" />
+    <Compile Include="WFNew\Interface\UICollection\IToolBarItem.cs" />
+    <Compile Include="WFNew\Interface\Input\ITextBoxItem2.cs" />
+    <Compile Include="WFNew\Interface\RatingStar\IRatingStarItem.cs" />
+    <Compile Include="WFNew\Interface\WF\IRibbonControlEvent.cs" />
+    <Compile Include="WFNew\Interface\MessageChain\IReset.cs" />
+    <Compile Include="WFNew\Interface\BaseItem\ITranslation.cs" />
+    <Compile Include="WFNew\Interface\UICollection\IStatusBarItem.cs" />
+    <Compile Include="WFNew\Popup\ContextPopupManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Popup\InputBox\DoubleInputRegion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\UICollection\ToolBarN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\UICollection\ToolBarItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\RatingStar\RatingStar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\RatingStar\RatingStarItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\Button\GlyphButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\ButtonTextBox_ZJ\TextBoxButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\ToolTip\SuperToolTip.cs" />
+    <Compile Include="WFNew\ToolTip\TipInfo.cs" />
+    <Compile Include="WFNew\Popup\ToolTipPopup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\PopupPanel\ToolTipPopupPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\View\BaseView\ViewItemEx.cs" />
+    <Compile Include="WFNew\View\BaseView\VRowViewItem.cs" />
+    <Compile Include="WFNew\View\Collection\TitleViewItemCollection.cs" />
+    <Compile Include="WFNew\View\Collection\ViewItemCollection\SizeViewItemCollection.cs" />
+    <Compile Include="WFNew\View\Compnonent\GridNodeViewItemTreeItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\View\Compnonent\GridViewItemListBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\View\GridView\DataRowCellViewItem.cs" />
+    <Compile Include="WFNew\View\GridView\DataRowNodeCellViewItem.cs" />
+    <Compile Include="WFNew\View\GridView\IRowNodeCellViewItem.cs" />
+    <Compile Include="WFNew\View\GridView\NodeCellViewItem.cs" />
+    <Compile Include="WFNew\View\GridView\RowNodeCellViewItem.cs" />
+    <Compile Include="WFNew\View\GridView\TitleViewItem\ColumnTitleViewItem.cs" />
+    <Compile Include="WFNew\View\Design\CollectionEditer\TitleViewItemCollectionEditer.cs" />
+    <Compile Include="WFNew\View\GridView\TitleViewItem\LockRowColumnTitleViewItem.cs" />
+    <Compile Include="WFNew\View\GridView\TitleViewItem\RowColumnTitleViewItem.cs" />
+    <Compile Include="WFNew\View\GridView\TitleViewItem\TitleViewItem.cs" />
+    <Compile Include="WFNew\View\GridView\TitleViewItem\VRowColumnTitleViewItem.cs" />
+    <Compile Include="WFNew\View\Design\CollectionEditer\ColumnViewItemCollectionEditer.cs" />
+    <Compile Include="WFNew\View\BaseView\FlexibleRowViewItemEx.cs" />
+    <Compile Include="WFNew\View\BaseView\FlexibleVRowViewItem.cs" />
+    <Compile Include="WFNew\View\BaseView\FlexibleVRowViewItemEx.cs" />
+    <Compile Include="WFNew\View\Design\CollectionEditer\SizeViewItemCollectionEditer.cs" />
+    <Compile Include="WFNew\View\Interface\Control\IGridNodeViewItemTree.cs" />
+    <Compile Include="WFNew\View\Interface\Control\IGridNodeViewItemTreeEvent.cs" />
+    <Compile Include="WFNew\View\Interface\GridView\IColumnTitleViewObject.cs" />
+    <Compile Include="WFNew\View\Interface\GridView\INodeCellViewItem.cs" />
+    <Compile Include="WFNew\View\NodeView\FlexibleVRowImageNodeViewItem.cs" />
+    <Compile Include="WFNew\View\NodeView\FlexibleRowImageNodeViewItem.cs" />
+    <Compile Include="WFNew\View\NodeView\FlexibleVRowNodeViewItem.cs" />
+    <Compile Include="WFNew\View\Control\GridNodeViewItemTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\View\Interface\Control\IViewListEnumerator.cs" />
+    <Compile Include="WFNew\View\Interface\GridView\IRowCellViewItem.cs" />
+    <Compile Include="WFNew\View\Compnonent\NodeViewItemTreeItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\View\Interface\IResizeViewItem.cs" />
+    <Compile Include="WFNew\View\NodeView\FlexibleRowNodeViewItem.cs" />
+    <Compile Include="WFNew\View\Interface\Control\IGridViewItemListBox.cs" />
+    <Compile Include="WFNew\View\Interface\Control\IGridViewItemListBoxEvent.cs" />
+    <Compile Include="WFNew\View\Interface\GridView\IRowHeaderItem.cs" />
+    <Compile Include="WFNew\View\Interface\GridView\IRowViewObject.cs" />
+    <Compile Include="WFNew\View\GridView\CellViewItem.cs" />
+    <Compile Include="WFNew\View\Collection\ViewItemCollection\CellViewItemCollection.cs" />
+    <Compile Include="WFNew\View\Collection\ViewItemCollection\RowCellViewItemCollection.cs" />
+    <Compile Include="WFNew\View\BaseView\FlexibleRowViewItem.cs" />
+    <Compile Include="WFNew\View\Interface\GridView\ICellViewItem.cs" />
+    <Compile Include="WFNew\View\Interface\GridView\IColumnViewObject.cs" />
+    <Compile Include="WFNew\View\Interface\IFlexibleRowViewItem.cs" />
+    <Compile Include="WFNew\View\Interface\GridView\IRowColumnViewItem.cs" />
+    <Compile Include="WFNew\View\Interface\IViewLayoutList.cs" />
+    <Compile Include="WFNew\View\Interface\GridView\IRowHeaderItemHelper.cs" />
+    <Compile Include="WFNew\View\GridView\RowCellViewItem.cs" />
+    <Compile Include="WFNew\View\GridView\RowColumnViewItem.cs" />
+    <Compile Include="WFNew\View\Delegate\Delegate.cs" />
+    <Compile Include="WFNew\View\Interface\GridView\IColumnViewItem.cs" />
+    <Compile Include="WFNew\View\Interface\GridView\IColumnViewObjectHelper.cs" />
+    <Compile Include="WFNew\View\Interface\Control\INodeViewItemTreeEvent.cs" />
+    <Compile Include="WFNew\View\Interface\Control\IViewItemList2.cs" />
+    <Compile Include="WFNew\View\Interface\Control\IViewItemListBoxEvent.cs" />
+    <Compile Include="WFNew\View\Interface\Control\IViewItemListEvent.cs" />
+    <Compile Include="WFNew\View\Interface\Owner\IViewItemOwner2.cs" />
+    <Compile Include="WFNew\View\Interface\IRowViewItem.cs" />
+    <Compile Include="WFNew\View\BaseView\RowViewItem.cs" />
+    <Compile Include="WFNew\View\GridView\ColumnViewItem.cs" />
+    <Compile Include="WFNew\View\Collection\ViewItemCollection\ColumnViewItemCollection.cs" />
+    <Compile Include="WFNew\View\Design\CollectionEditer\NodeViewItemCollectionEditor.cs" />
+    <Compile Include="WFNew\View\Design\CollectionEditer\ViewItemCollectionEditer.cs" />
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\IUpDownButtonObjectHelper_ZJ\DownButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Form\BaseItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\ImageBox\ImageBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Interface\Input\IIntegerInputBoxItem.cs" />
+    <Compile Include="WFNew\Compnonent\InputText\IntegerInputBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Interface\Interface_ZJ\IUpDownButton.cs" />
+    <Compile Include="WFNew\Interface\Helper\IUpDownButtonObjectHelper.cs" />
+    <Compile Include="WFNew\Control\InputText\IntegerInputBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Interface\Popup\IIntegerInputRegion.cs" />
+    <Compile Include="WFNew\Interface\CheckBox\IImageCheckBoxItem.cs" />
+    <Compile Include="WFNew\Interface\ImageBox\IImageBoxItem.cs" />
+    <Compile Include="WFNew\Interface\Label\IImageLabelItem.cs" />
+    <Compile Include="WFNew\Interface\RadioButton\IImageRadioButtonItem.cs" />
+    <Compile Include="WFNew\Interface\BaseItem\IBaseItem7.cs" />
+    <Compile Include="WFNew\Interface\MessageChain\IMessageChain.cs" />
+    <Compile Include="WFNew\Interface\Owner\IBaseItemOwner2.cs" />
+    <Compile Include="WFNew\View\Design\ImageNodeViewItemConverter.cs" />
+    <Compile Include="WFNew\View\Design\CollectionEditer\NodeViewItemCollectionEditor2.cs" />
+    <Compile Include="WFNew\View\Design\NodeViewItemConverter.cs" />
+    <Compile Include="WFNew\View\Enum\Enum.cs" />
+    <Compile Include="WFNew\View\Control\GridViewItemListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\View\Interface\Node\INodeViewItem2.cs" />
+    <Compile Include="WFNew\View\Interface\Control\INodeViewItemTree.cs" />
+    <Compile Include="WFNew\View\Interface\Node\INodeViewList.cs" />
+    <Compile Include="WFNew\Layout\LayoutEngine.cs" />
+    <Compile Include="WFNew\Control\Label\ImageLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Label\ImageLabelItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\Separator\ImageLabelSeparator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Separator\ImageLabelSeparatorItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\Label\ImageLinkLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Label\ImageLinkLabelItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\CheckBox\ImageCheckBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\CheckBox\ImageCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\RadioButton\ImageRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\RadioButton\ImageRadioButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\ImageBox\ImageBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Popup\InputBox\IntegerInputRegion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\IUpDownButtonObjectHelper_ZJ\UpButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\View\Interface\Control\IViewItemListBox2.cs" />
+    <Compile Include="WFNew\View\Interface\IViewList.cs" />
+    <Compile Include="WFNew\View\Interface\ISizeViewItem.cs" />
+    <Compile Include="WFNew\View\Interface\ITextEditViewItem.cs" />
+    <Compile Include="WFNew\View\Interface\IVisibleViewItem.cs" />
+    <Compile Include="WFNew\View\NodeView\ImageNodeViewItem.cs" />
+    <Compile Include="WFNew\View\NodeView\NodeViewItem.cs" />
+    <Compile Include="WFNew\View\Collection\NodeViewItemCollection\NodeViewItemCollection.cs" />
+    <Compile Include="WFNew\View\Control\NodeViewItemTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\View\NodeView\SuperNodeViewItem.cs" />
+    <Compile Include="WFNew\View\BaseView\SuperViewItem.cs" />
+    <Compile Include="WFNew\View\BaseView\ColorViewItem.cs" />
+    <Compile Include="WFNew\View\BaseView\ColorViewItemEx.cs" />
+    <Compile Include="WFNew\View\BaseView\ImageViewItem.cs" />
+    <Compile Include="WFNew\View\BaseView\ImageViewItemEx.cs" />
+    <Compile Include="WFNew\View\BaseView\TextViewItemEx.cs" />
+    <Compile Include="WFNew\View\Interface\Node\INodeViewItem.cs" />
+    <Compile Include="WFNew\View\Interface\ISuperViewItem.cs" />
+    <Compile Include="WFNew\View\Interface\Control\IViewItemList.cs" />
+    <Compile Include="WFNew\View\Interface\Control\IViewItemListBox.cs" />
+    <Compile Include="WFNew\View\BaseView\TextViewItem.cs" />
+    <Compile Include="WFNew\View\Collection\ViewItemCollection\ViewItemCollection.cs" />
+    <Compile Include="WFNew\View\Control\ViewItemListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\RibbonControl_ZJ\MdiFormListButtonItemMFBS.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\Button\MdiFormListButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\IScrollableObjectHelper_ZJ\HScrollBarItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\View\Interface\IColorViewItem.cs" />
+    <Compile Include="WFNew\View\Interface\IImageViewItem.cs" />
+    <Compile Include="WFNew\Interface\BaseItem\IBaseItem6.cs" />
+    <Compile Include="WFNew\Compnonent\Button\MdiFormListButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Interface\ProcessBar\IProcessBarItem.cs" />
+    <Compile Include="WFNew\Control\ProcessBar\ProcessBarN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\ProcessBar\ProcessBarItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Interface\Interface_ZJ\ISliderButtonItem.cs" />
+    <Compile Include="WFNew\Interface\Slider\ISliderItem.cs" />
+    <Compile Include="WFNew\Control\Slider\Slider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Slider\SliderItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\Slider_ZJ\SliderButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Interface\Interface_ZJ\IScrollBarButton.cs" />
+    <Compile Include="WFNew\Interface\Slider\IScrollBarItem.cs" />
+    <Compile Include="WFNew\Control\Slider\ScrollBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Slider\ScrollBarItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\ScrollBar_ZJ\ScrollBarButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\View\Interface\Helper\ISetViewItemHelper.cs" />
+    <Compile Include="WFNew\Interface\Helper\IScrollableObjectHelper.cs" />
+    <Compile Include="WFNew\View\Interface\ITextViewItem.cs" />
+    <Compile Include="WFNew\View\Interface\IViewItem.cs" />
+    <Compile Include="WFNew\View\Interface\Owner\IViewItemOwner.cs" />
+    <Compile Include="WFNew\View\BaseView\ViewItem.cs" />
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\IScrollableObjectHelper_ZJ\VScrollBarItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Forms\MessageBox\TBMessageBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\Forms\MessageBox\TBMessageBoxForm.Designer.cs">
+      <DependentUpon>TBMessageBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\Forms\MessageBox\TBMessageBox.cs" />
+    <Compile Include="WFNew\View\NodeView\RowNodeViewItem.cs" />
+    <Compile Include="WFNew\View\BaseView\TextEditViewItem.cs" />
+    <Compile Include="WFNew\View\BaseView\TextEditViewItemEx.cs" />
+    <Compile Include="WFNew\View\BaseView\RowViewItemEx.cs" />
+    <Compile Include="WFNew\View\Collection\SelectedIndexCollection.cs" />
+    <Compile Include="WFNew\View\Compnonent\ViewItemListBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\View\BaseView\VRowViewItemEx.cs" />
+    <Compile Include="WFNew\View\BaseView\ResizeViewItem.cs" />
+    <Compile Include="WFNew\View\BaseView\ResizeViewItemEx.cs" />
+    <Compile Include="WFNew\View\BaseView\ResizeSuperViewItem.cs" />
+    <Compile Include="WFNew\View\NodeView\ResizeNodeViewItem.cs" />
+    <Compile Include="WFNew\View\NodeView\ResizeSuperNodeViewItem.cs" />
+    <Compile Include="WFNew\View\NodeView\ResizeImageNodeViewItem.cs" />
+    <Compile Include="WFNew\View\NodeView\RowImageNodeViewItem.cs" />
+    <Compile Include="WFNew\View\BaseView\SizeViewItem.cs" />
+    <Compile Include="WFNew\View\BaseView\SizeViewItemEx.cs" />
+    <Compile Include="WFNew\View\NodeView\VRowNodeViewItem.cs" />
+    <Compile Include="WFNew\View\NodeView\VRowImageNodeViewItem.cs" />
+    <Compile Include="WinForm\Control\CheckBoxX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\Control\RadioButtonX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\ContextMenu\MenuBarDesigner.cs" />
+    <Compile Include="WinForm\DockBar\DesignerForm\BaseItemDBCollectionDesignerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\DockBar\ToolBarDesigner.cs" />
+    <Compile Include="WinForm\DockBar\DockBarFloatForm\DockBarFloatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\DockBarFloatForm\DockBarFloatFormButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\DockBarFloatForm\DockBarFloatFormButtonStackItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\DockBar\MenuBarDesigner.cs" />
+    <Compile Include="WinForm\DockBar\DockBar\StatusBarDesigner.cs" />
+    <Compile Include="WinForm\DockBar\Enum\Enum.cs" />
+    <Compile Include="WinForm\DockBar\Interface\ICollectionItemDB.cs" />
+    <Compile Include="WinForm\Interface\ICheckBoxX.cs" />
+    <Compile Include="WinForm\Interface\IRadioButtonX.cs" />
+    <Compile Include="WinForm\DockBar\Interface\ITextBoxItemDB.cs" />
+    <Compile Include="WinForm\DockBar\Interface\IDockBarFloatFormButton.cs" />
+    <Compile Include="WinForm\DockBar\Interface\IDockBarFloatForm.cs" />
+    <Compile Include="WinForm\DockBar\Interface\ISetDockBarManagerHelper.cs" />
+    <Compile Include="WinForm\DockBar\FlexibleToolStripItemCollection\FlexibleToolStripItemCollection.cs" />
+    <Compile Include="WinForm\DockBar\Interface\IUpDownButtons.cs" />
+    <Compile Include="WinForm\DockBar\Items\Helper\UpDownButtonsSkinHelper.cs" />
+    <Compile Include="WFNew\Collection\FlexibleList\FlexibleList.cs" />
+    <Compile Include="WFNew\Interface\Form\IForm.cs" />
+    <Compile Include="WFNew\Interface\RecordItem\IRecordItem.cs" />
+    <Compile Include="WFNew\Interface\Helper\ISetRecordItemHelper.cs" />
+    <Compile Include="WFNew\Forms\Class\FormInformation.cs" />
+    <Compile Include="WFNew\Forms\Compnonent\CompnonentNC_ZJ\NCQuickAccessToolbarItem\NCQuickAccessToolbarItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Forms\Form\TBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\Forms\Interface\IDependItem.cs" />
+    <Compile Include="WFNew\Forms\Interface\ITBForm.cs">
+    </Compile>
+    <Compile Include="WFNew\Forms\Interface\InterfaceNC\IBaseItemOwnerNC.cs" />
+    <Compile Include="WFNew\Forms\Interface\InterfaceNC\IBaseItemOwnerNC2.cs" />
+    <Compile Include="WFNew\Forms\Interface\InterfaceNC\INCBaseItem.cs" />
+    <Compile Include="WFNew\Forms\Interface\InterfaceNC\IOffsetNC.cs" />
+    <Compile Include="WFNew\Forms\Interface\InterfaceNC\IOwnerNC.cs" />
+    <Compile Include="WFNew\Forms\Interface\InterfaceNC\IUICollectionItemNC.cs" />
+    <Compile Include="WFNew\DockPanel\BaseMenuStrip\BaseDockPanelPopup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\Delegate\Delegate.cs" />
+    <Compile Include="WFNew\DockPanel\DockButtonManager\DockButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\DockPanelFloatForm\DockPanelFloatFormButtonStackItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\Interface\IDockButtonItem.cs" />
+    <Compile Include="WFNew\DockPanel\Interface\IBasePanel2.cs" />
+    <Compile Include="WFNew\DockPanel\Interface\IDockPanelContainer2.cs" />
+    <Compile Include="WFNew\DockPanel\Interface\Helper\ISetBasePanelHelper.cs" />
+    <Compile Include="WFNew\DockPanel\Interface\Helper\ISetDockPanelHelper.cs" />
+    <Compile Include="WFNew\DockPanel\Interface\Helper\ISetDockPanelManagerHelper.cs" />
+    <Compile Include="WFNew\DockPanel\Interface\Helper\ISetPanelNodeStateHelper.cs" />
+    <Compile Include="WFNew\Design\Control\Other\ExpandableNodeCollectionPanelDesigner.cs" />
+    <Compile Include="WFNew\Design\Control\Other\ExpandableNodePanelDesigner.cs" />
+    <Compile Include="WFNew\Design\Control\Other\ExpandableNodePanelContainerDesigner.cs">
+    </Compile>
+    <Compile Include="WFNew\Design\Control\Other\ExpandablePanelContainerDesigner.cs" />
+    <Compile Include="WFNew\Design\Control\Other\ExpandablePanelDesigner.cs" />
+    <Compile Include="WFNew\Control\WF\RibbonControl\RibbonControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\RibbonControlDesigner.cs" />
+    <Compile Include="WFNew\Interface\WF\ISplitPanel2.cs" />
+    <Compile Include="WFNew\DockPanel\Language\Language.cs" />
+    <Compile Include="WFNew\DockPanel\Language\LanguageCH.cs" />
+    <Compile Include="WFNew\DockPanel\Language\LanguageEN.cs" />
+    <Compile Include="WFNew\Control\AbstractObject\BaseItemControlCC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\AbstractObject\AreaControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\AbstractObject\AreaControlCC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Interface\Area\IArea.cs" />
+    <Compile Include="WFNew\Interface\WF\ISplitLine.cs" />
+    <Compile Include="WFNew\Interface\WF\ISplitPanel.cs" />
+    <Compile Include="WFNew\DockPanel\DockPanelFloatForm\DockPanelFloatFormButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\Interface\IDockPanelFloatForm.cs" />
+    <Compile Include="WFNew\DockPanel\Interface\IDockPanelFloatFormButtonItem.cs" />
+    <Compile Include="WFNew\DockPanel\DockPanel\DockPanelButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\DockPanel\DockPanelButtonStackItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\Interface\IDockPanelButtonItem.cs" />
+    <Compile Include="WFNew\DockPanel\Interface\IDockPanel2.cs" />
+    <Compile Include="Delegate\RenderEventArgs.cs" />
+    <Compile Include="WinForm\DockBar\ContextMenu\ContextMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\DockBar\CustomizeToolBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\DockBar\Customize\DockBarCustomizeForm\CustomizeToolBarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\DockBar\Customize\DockBarCustomizeForm\InsertBaseItemMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\Interface\ICustomize.cs" />
+    <Compile Include="WinForm\DockBar\Items\CheckBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\DockBar\Customize\DockBarCustomizeForm\DockBarCustomizeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\DockBar\Customize\AddOrRemoveDropDownItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\Interface\IDock.cs" />
+    <Compile Include="WinForm\DockBar\Items\ComboBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\Items\DropDownButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\Items\ButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\Interface\IBaseItemDB.cs" />
+    <Compile Include="WinForm\DockBar\Items\MenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\Items\LabelItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\Items\ProgressBarItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\Items\SeparatorItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\Items\SplitButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\Items\TextBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\Items\NumericUpDownItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\Items\MaskedTextBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\Items\RadioButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\Language\Language.cs" />
+    <Compile Include="WinForm\DockBar\Language\LanguageCH.cs" />
+    <Compile Include="WinForm\DockBar\Language\LanguageEN.cs" />
+    <Compile Include="WFNew\DockPanel\BaseMenuStrip\DockPanelCustomizeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\TabButtonContainer_ZJ\CloseButtonTBCItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\TabButtonContainer_ZJ\ContextButtonTBCItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\DesignerForm\BaseItemCollectionDesignerFormEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\DesignerForm\CollectionDesignerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\DesignerForm\CollectionDesignerForm.designer.cs">
+      <DependentUpon>CollectionDesignerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\Design\CollectionEditer\BaseItemCollectionEditer.cs" />
+    <Compile Include="WFNew\Interface\BaseItem\IBaseItem5.cs" />
+    <Compile Include="WFNew\Interface\Button\IBaseButtonExItem.cs" />
+    <Compile Include="WFNew\Interface\Popup\IDropDownPopup.cs" />
+    <Compile Include="WFNew\Interface\Helper\DesignHelper\ICollectionObjectDesignHelper.cs" />
+    <Compile Include="WFNew\Interface\FlexibleList\IFlexibleList.cs" />
+    <Compile Include="WFNew\Interface\Helper\ILockCollectionHelper.cs" />
+    <Compile Include="WFNew\Interface\CustomizeComboBox\IComboTreeItem.cs" />
+    <Compile Include="WinForm\Interface\Item\ITreeNodeItem.cs" />
+    <Compile Include="WFNew\Control\CustomizeComboBox\ComboTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\CustomizeComboBox\ComboTreeItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\DesignerForm\BaseItemCollectionDesignerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\DesignerForm\BaseItemCollectionDesignerForm.Designer.cs">
+      <DependentUpon>BaseItemCollectionDesignerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WFNew\Interface\Helper\DesignHelper\IObjectDesignHelper.cs" />
+    <Compile Include="WFNew\Interface\Helper\DesignHelper\IPopupObjectDesignHelper.cs" />
+    <Compile Include="WFNew\Interface\Interface_ZJ\ITabButtonContainerButton.cs" />
+    <Compile Include="WFNew\Interface\Helper\ISetTabPageItemHelper.cs" />
+    <Compile Include="WFNew\Interface\UICollection\ITabButtonContainerItem.cs" />
+    <Compile Include="WFNew\Interface\WF\ITabControl.cs" />
+    <Compile Include="WFNew\Interface\WF\ITabPageContainerControl.cs" />
+    <Compile Include="WFNew\Interface\UICollection\ITabPageItem.cs" />
+    <Compile Include="WFNew\Language\LanguageCH.cs" />
+    <Compile Include="WFNew\Language\LanguageEN.cs" />
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\TabButtonContainer_ZJ\NextButtonTBCItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\RibbonApplicationPopupDesigner.cs" />
+    <Compile Include="WFNew\Design\Popup\DescriptionMenuPopupDesigner.cs" />
+    <Compile Include="WFNew\Design\Popup\ContextPopupDesigner.cs" />
+    <Compile Include="WFNew\Control\Button\BaseButtonNEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\Button\ButtonNEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\Button\DropDownButtonEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\Button\SplitButtonEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\Button\CheckButtonEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Button\BaseButtonExItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Button\ButtonExItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Button\CheckButtonExItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Button\DropDownButtonExItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Button\SplitButtonExItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\TabButtonContainer_ZJ\PreButtonTBCItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\Button\TabButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\UICollection\TabButtonContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\UICollection\TabButtonContainerItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Button\TabButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\AbstractObject\AreaItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Collection\TabPageCollection\TabPageCollection.cs" />
+    <Compile Include="WFNew\Control\WF\CollapsableSplitPanel\CollapsableSplitPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\Control\Other\CollapsableSplitPanelDesigner.cs" />
+    <Compile Include="WFNew\Interface\WF\ICollapsableSplitPanel.cs" />
+    <Compile Include="WFNew\Control\WF\ExpandableCaptionPanel\CloseButtonECPItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\WF\ExpandableCaptionPanel\ExpandableCaptionPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\WF\ExpandableCaptionPanel\ExpandableCaptionPanelButtonStackItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\Control\Other\ExpandableCaptionPanelDesigner.cs" />
+    <Compile Include="WFNew\Control\WF\ExpandableCaptionPanel\ExpandButtonECPItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Interface\WF\IExpandableCaptionPanel.cs" />
+    <Compile Include="WFNew\Interface\WF\IExpandableCaptionPanelButtonItem.cs" />
+    <Compile Include="WFNew\Interface\Helper\ISetExpandableCaptionPanelHelper.cs" />
+    <Compile Include="WFNew\Control\WF\ExpandableCaptionPanel\TreeNodeButtonECPItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\WF\ExpandableNodePanelContainer\ExpandableNodeCollectionPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\WF\ExpandableNodePanelContainer\ExpandableNodePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\WF\ExpandableNodePanelContainer\ExpandableNodePanelContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\WF\ExpandablePanelContainer\ExpandablePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\WF\ExpandablePanelContainer\ExpandablePanelContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\WF\SplitPanel\SplitLineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\WF\SplitPanel\SplitPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\Control\Other\SplitPanelDesigner.cs" />
+    <Compile Include="WinForm\Enum\Enum.cs" />
+    <Compile Include="WinForm\Control\DataGridViewX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\Interface\IListViewX.cs" />
+    <Compile Include="WinForm\Interface\IFrameControlItem.cs" />
+    <Compile Include="WinForm\Control\ListViewX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\Interface\ITabControlX.cs" />
+    <Compile Include="WinForm\NativeWindow\UpDownButtonNativeWindow.cs" />
+    <Compile Include="WinForm\SkinHelper\CheckBoxXSkinHelper.cs" />
+    <Compile Include="WinForm\SkinHelper\RadioButtonXSkinHelper.cs" />
+    <Compile Include="WinForm\SkinHelper\ListViewXSkinHelper.cs" />
+    <Compile Include="WinForm\SkinHelper\DataGridViewXSkinHelper.cs" />
+    <Compile Include="WinForm\Interface\IDataGridViewX.cs" />
+    <Compile Include="WinForm\Control\CheckedListBoxX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\SkinHelper\CheckedListBoxXSkinHelper.cs" />
+    <Compile Include="WinForm\CollectionEditer\Compnonent\VsButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\CollectionEditer\Compnonent\VsPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\Interface\ICheckedListBoxX.cs" />
+    <Compile Include="WinForm\Interface\ITreeViewX.cs" />
+    <Compile Include="Popup\BasePopup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Popup\BasePopupControlHost.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Popup\BasePopupManager.cs" />
+    <Compile Include="WinForm\DockBar\DockArea\DockBarDockAreaBottom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\DockArea\DockBarDockAreaLeft.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\DockArea\DockBarDockAreaRight.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\DockArea\DockBarDockAreaTop.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\DockBar\Customize\DockBarListMenuStrip\DockBarListMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\DockBarManager\DockBarManagerDesigner.cs" />
+    <Compile Include="WinForm\DockBar\Interface\IDockArea.cs" />
+    <Compile Include="WinForm\DockBar\DockBarManager\DockBarManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\Interface\IDockBar.cs" />
+    <Compile Include="WinForm\DockBar\DockBar\MenuBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\DockBar\StatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\DockBar\ToolBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\DockArea\DockBarDockArea.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\Enum\Enum.cs" />
+    <Compile Include="WFNew\DockPanel\Interface\IPanelNode.cs" />
+    <Compile Include="WFNew\DockPanel\Design\BasePanelDesigner.cs" />
+    <Compile Include="WFNew\DockPanel\DockArea\DockPanelDockArea.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\DockArea\DockPanelDockAreaBottom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\Design\DockPanelDockAreaDesigner.cs" />
+    <Compile Include="WFNew\DockPanel\DockArea\DockPanelDockAreaLeft.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\DockArea\DockPanelDockAreaRight.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\DockArea\DockPanelDockAreaTop.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\DockPanelFloatForm\DockPanelFloatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\DockArea\DocumentDockArea.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\Design\DocumentDockAreaDesigner.cs">
+    </Compile>
+    <Compile Include="WFNew\DockPanel\DockButtonManager\DockButtonManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\DockButtonManager\DockShadowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\DockPanelContainer\DockPanelContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\Design\DockPanelContainerDesigner.cs" />
+    <Compile Include="WFNew\DockPanel\DockPanelContainer\DockPanelContainerLeftRight.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\DockPanelContainer\DockPanelContainerTopBottom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\DockPanelManager\DockPanelManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\Design\DockPanelManagerDesigner.cs" />
+    <Compile Include="WFNew\DockPanel\BasePanel\BasePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\DockPanel\DockPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\Design\DockPanelDesigner.cs" />
+    <Compile Include="WFNew\DockPanel\DockPanelHidePanel\DockPanelHidePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\HoldDockPanel\HoldDockPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\HideArea\DockPanelHideArea.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\HideArea\DockPanelHideAreaBottom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\HideArea\DockPanelHideAreaLeft.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\HideArea\DockPanelHideAreaRight.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\HideArea\DockPanelHideAreaTop.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\HideArea\HideAreaTabButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\HideArea\HideAreaTabButtonGroupItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\DockPanel\Interface\IBaseNode.cs" />
+    <Compile Include="WFNew\DockPanel\Interface\IBinaryNode.cs" />
+    <Compile Include="WFNew\DockPanel\Interface\IBasePanel.cs" />
+    <Compile Include="WFNew\DockPanel\Interface\IDock.cs" />
+    <Compile Include="WFNew\DockPanel\Interface\IDockArea.cs" />
+    <Compile Include="WFNew\DockPanel\Interface\IDockPanel.cs" />
+    <Compile Include="WFNew\DockPanel\Interface\IDockPanelContainer.cs" />
+    <Compile Include="WFNew\DockPanel\Interface\IBottomNode.cs" />
+    <Compile Include="WFNew\DockPanel\Interface\IMultipleNode.cs" />
+    <Compile Include="WFNew\DockPanel\Interface\IRootNode.cs" />
+    <Compile Include="WFNew\Collection\BaseItemCollection\RibbonBarItemCollection.cs" />
+    <Compile Include="WFNew\Collection\BaseItemCollection\RibbonButtonGroupItemCollection.cs" />
+    <Compile Include="WFNew\Design\CollectionEditer\ComboBoxItemCollectionEditer.cs" />
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\QuickAccessToolbar_ZJ\CustomizeButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\BaseItemStackEx_ZJ\NextButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\BaseBar_ZJ\OverflowButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\BaseItemStackEx_ZJ\PreButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\ApplicationPopupPane_ZJ\RibbonApplicationPopupPanelBottomItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\ApplicationPopupPane_ZJ\RibbonApplicationPopupPanelMiddleLeftItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\ApplicationPopupPane_ZJ\RibbonApplicationPopupPanelMiddleRightItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\Gallery_ZJ\ScrollDownButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\Gallery_ZJ\ScrollDropDownButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\Gallery_ZJ\ScrollUpButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\Compnonent\Item\ColorItem.cs" />
+    <Compile Include="WinForm\Compnonent\Item\ImageOrColorItem.cs" />
+    <Compile Include="WinForm\Compnonent\Item\Item.cs" />
+    <Compile Include="WFNew\Delegate\Delegate.cs" />
+    <Compile Include="WFNew\Enum\Enum.cs" />
+    <Compile Include="WFNew\Interface\Label\ILinkLabelItem.cs" />
+    <Compile Include="WFNew\Interface\Input\IInputObject.cs" />
+    <Compile Include="WFNew\Interface\Helper\IInputObjectHelper.cs" />
+    <Compile Include="WinForm\Compnonent\Item\FontItem.cs" />
+    <Compile Include="WinForm\Interface\Item\IColorItem.cs" />
+    <Compile Include="WinForm\Interface\Item\IFontItem.cs" />
+    <Compile Include="WinForm\Interface\Item\IImageItem.cs" />
+    <Compile Include="WinForm\Interface\Item\IImageOrColorItem.cs" />
+    <Compile Include="WFNew\Interface\Popup\IInputRegion.cs" />
+    <Compile Include="WFNew\Interface\Popup\ICustomizePopup.cs" />
+    <Compile Include="WinForm\Interface\Item\IItem.cs" />
+    <Compile Include="WFNew\Interface\BaseItem\IBaseItem.cs" />
+    <Compile Include="WFNew\Interface\Interface_ZJ\IOverflowButton.cs" />
+    <Compile Include="WFNew\Interface\CustomizeComboBox\ICustomizeComboBoxItem.cs" />
+    <Compile Include="WFNew\Interface\CustomizeComboBox\IComboBoxItem.cs" />
+    <Compile Include="WFNew\Control\Label\LinkLabelN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\Compnonent\Item\ImageItem.cs">
+    </Compile>
+    <Compile Include="WFNew\Renderer\WFNewColorTable.cs" />
+    <Compile Include="WFNew\Renderer\WFNewRenderer.cs" />
+    <Compile Include="WFNew\Control\WF\TabControl\TabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\Control\Other\TabControlDesigner.cs" />
+    <Compile Include="WFNew\Control\WF\TabControl\TabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\Control\Other\TabPageDesigner.cs" />
+    <Compile Include="WFNew\Design\Compnonent\BaseBarItemDesigner.cs" />
+    <Compile Include="WFNew\Design\Compnonent\RibbonApplicationPopupPanelItemDesigner.cs" />
+    <Compile Include="WFNew\Design\Compnonent\ButtonItemDesigner.cs" />
+    <Compile Include="WFNew\Design\DescriptionMenuPopupPanelItemDesigner.cs" />
+    <Compile Include="WFNew\Design\Compnonent\DropDownButtonItemDesigner.cs" />
+    <Compile Include="WFNew\Design\Compnonent\RibbonGalleryRowItemDesigner.cs" />
+    <Compile Include="WFNew\Design\Compnonent\MenuButtonItemDesigner.cs" />
+    <Compile Include="WFNew\Design\Compnonent\RibbonPageItemDesigner.cs" />
+    <Compile Include="WFNew\Design\Compnonent\RibbonStartButtonItem2007Designer.cs" />
+    <Compile Include="WFNew\Design\Compnonent\RibbonStartButtonItem2010Designer.cs" />
+    <Compile Include="WFNew\Design\Control\BaseBarDesigner.cs" />
+    <Compile Include="WFNew\Design\Control\ButtonDesigner.cs" />
+    <Compile Include="WFNew\Design\Control\DescriptionMenuPopupPanelDesigner.cs" />
+    <Compile Include="WFNew\Design\Control\DropDownButtonDesigner.cs" />
+    <Compile Include="WFNew\Design\Control\RibbonGalleryRowDesigner.cs" />
+    <Compile Include="WFNew\Design\Control\MenuButtonDesigner.cs" />
+    <Compile Include="WFNew\Design\Control\RibbonStartButton2007Designer.cs" />
+    <Compile Include="WFNew\Design\Control\RibbonStartButton2010Designer.cs" />
+    <Compile Include="WFNew\Renderer\WFNewRenderer2007.cs" />
+    <Compile Include="WFNew\Renderer\WFNewColorTable2007.cs" />
+    <Compile Include="WFNew\Popup\CustomizePopup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\CustomizeComboBox\ComboBoxN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\CustomizeComboBox\CustomizeComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\CustomizeComboBox\CustomizeComboBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\CustomizeComboBox\ComboBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Label\LinkLabelItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Util\Util.cs" />
+    <Compile Include="WinForm\CollectionEditer\ItemCollectionEditer.cs" />
+    <Compile Include="WinForm\Interface\Item\IItemOwner.cs" />
+    <Compile Include="WFNew\Forms\Compnonent\CompnonentNC_ZJ\NCQuickAccessToolbarItem\NCCustomizeButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Forms\Compnonent\CompnonentNC_ZJ\NCQuickAccessToolbarItem\NCOverflowButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\Interface\IListBoxX.cs" />
+    <Compile Include="WinForm\Control\ListBoxX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\SkinHelper\ButtonXSkinHelper.cs" />
+    <Compile Include="WinForm\SkinHelper\ControlSkinHelper.cs" />
+    <Compile Include="WinForm\Control\ButtonX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\Button\DescriptionButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\Interface\IButtonX.cs" />
+    <Compile Include="WFNew\Interface\PopupPanel\IGalleryMirrorPopupPanelItem.cs" />
+    <Compile Include="WFNew\Interface\Button\IDescriptionButtonItem.cs" />
+    <Compile Include="WFNew\Compnonent\Button\DescriptionButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Interface\Popup\IApplicationPopup.cs" />
+    <Compile Include="WFNew\Interface\Popup\IBasePopup2.cs" />
+    <Compile Include="WFNew\Interface\BaseItem\IBaseItem4.cs" />
+    <Compile Include="WFNew\Interface\PopupOwner\IPopupOwner2.cs" />
+    <Compile Include="WFNew\Interface\PopupPanel\IRibbonApplicationPopupPanelItem.cs">
+    </Compile>
+    <Compile Include="WFNew\Control\PopupPanel\RibbonApplicationPopupPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Button\CheckButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Interface\Helper\IEventHelper.cs" />
+    <Compile Include="WFNew\Control\UICollection\RibbonStatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\Button\CheckButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Interface\CheckBox\ICheckBoxItem.cs" />
+    <Compile Include="WFNew\Interface\BaseItem\IBaseItem3.cs" />
+    <Compile Include="WFNew\Interface\Separator\ILabelSeparatorItem.cs" />
+    <Compile Include="WFNew\Interface\Label\ILabelItem.cs" />
+    <Compile Include="WFNew\Interface\Helper\ISetRibbonBarHelper.cs" />
+    <Compile Include="WFNew\Control\PopupPanel\RibbonBarMirrorPopupPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\AbstractObject\BaseItemControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\RibbonControl_ZJ\MdiFormButtonStackItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Interface\UICollection\ICollectionItem.cs" />
+    <Compile Include="WFNew\Interface\Owner\IOwner.cs" />
+    <Compile Include="WFNew\Interface\Helper\ISetTabButtonItemHelper.cs" />
+    <Compile Include="WFNew\Interface\ControlHost\IControlHostItem.cs" />
+    <Compile Include="WFNew\Interface\ControlHost\IControlPanelItem.cs" />
+    <Compile Include="WFNew\Interface\Button\IDropDownButtonItem.cs" />
+    <Compile Include="WFNew\Interface\WF\IRibbonControl.cs" />
+    <Compile Include="WFNew\Interface\Button\ISplitButtonItem.cs" />
+    <Compile Include="WFNew\Interface\Form\IRibbonForm.cs" />
+    <Compile Include="WFNew\Interface\RadioButton\IRadioButtonItem.cs" />
+    <Compile Include="WFNew\Interface\PopupOwner\IPopupOwner.cs" />
+    <Compile Include="WFNew\Interface\Helper\IPopupOwnerHelper.cs" />
+    <Compile Include="WFNew\Interface\PopupPanel\IPopupPanel.cs" />
+    <Compile Include="WFNew\Interface\Popup\ISimplyPopup.cs" />
+    <Compile Include="WFNew\Interface\PopupPanel\IDescriptionPopupPanelItem.cs" />
+    <Compile Include="WFNew\Interface\Popup\IPanelPopup.cs" />
+    <Compile Include="WFNew\Language\Language.cs" />
+    <Compile Include="WFNew\Popup\BasePopup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\UICollection\BaseBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\UICollection\BaseBarItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\UICollection\BaseItemStackEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\UICollection\BaseItemStack.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\Control\BaseItemStackDesigner.cs" />
+    <Compile Include="WFNew\Compnonent\AbstractObject\BaseItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Collection\BaseItemCollection\BaseItemCollection.cs" />
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\RibbonControl_ZJ\FormButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\Gallery_ZJ\GalleryScrollButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\RibbonControl_ZJ\FormButtonStackItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Interface\Popup\IBasePopup.cs" />
+    <Compile Include="WFNew\Interface\Helper\ISetOwnerHelper.cs" />
+    <Compile Include="WFNew\Interface\UICollection\IUICollectionItem.cs" />
+    <Compile Include="WFNew\Interface\Interface_ZJ\IFormButtonStack.cs" />
+    <Compile Include="WFNew\Interface\Interface_ZJ\IGalleryScrollButton.cs" />
+    <Compile Include="WFNew\Interface\Interface_ZJ\ILTBRButton.cs" />
+    <Compile Include="WFNew\Interface\Interface_ZJ\IFormButton.cs" />
+    <Compile Include="WFNew\Interface\Helper\IMeasureHelper.cs" />
+    <Compile Include="WFNew\Interface\UICollection\IBaseBarItem.cs">
+    </Compile>
+    <Compile Include="WFNew\Interface\UICollection\IBaseItemStackExItem.cs">
+    </Compile>
+    <Compile Include="WFNew\Interface\UICollection\IBaseItemStackItem.cs" />
+    <Compile Include="WFNew\Popup\InputBox\InputRegion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Interface\BaseItem\IBaseItem2.cs" />
+    <Compile Include="WFNew\Interface\Owner\IBaseItemOwner.cs" />
+    <Compile Include="WFNew\Interface\UICollection\IButtonGroupItem.cs" />
+    <Compile Include="WFNew\Interface\Button\IButtonItem.cs" />
+    <Compile Include="WFNew\Interface\Helper\DesignHelper\IDesignHelper.cs" />
+    <Compile Include="WFNew\Interface\Separator\ISeparatorItem.cs" />
+    <Compile Include="WFNew\Interface\Helper\ISetBaseItemHelper.cs" />
+    <Compile Include="WFNew\Control\Button\ButtonN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\Control\ButtonGroupDesigner.cs" />
+    <Compile Include="WFNew\Compnonent\UICollection\ButtonGroupItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Button\ButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\UICollection\ButtonGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\UICollection\RibbonGallery.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\Separator\Separator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Separator\SeparatorItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Interface\UICollection\IGalleryItem.cs">
+    </Compile>
+    <Compile Include="WFNew\Design\Control\RibbonGalleryDesigner.cs" />
+    <Compile Include="WFNew\Design\Compnonent\ButtonGroupItemDesigner.cs" />
+    <Compile Include="WFNew\Compnonent\UICollection\RibbonGalleryItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Interface\Input\ITextBoxItem.cs" />
+    <Compile Include="WFNew\Compnonent\UICollection\BaseItemStackItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\Compnonent\BaseItemStackItemDesigner.cs" />
+    <Compile Include="WFNew\Interface\UICollection\IRibbonBarItem.cs" />
+    <Compile Include="WFNew\Control\UICollection\RibbonBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\Control\RibbonBarDesigner.cs" />
+    <Compile Include="WFNew\Compnonent\UICollection\RibbonBarItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\Compnonent\RibbonBarItemDesigner.cs" />
+    <Compile Include="WFNew\Design\Control\BaseItemStackExDesigner.cs" />
+    <Compile Include="WFNew\Compnonent\UICollection\BaseItemStackExItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Interface\UICollection\IRibbonPageItem.cs" />
+    <Compile Include="WFNew\Interface\UICollection\IQuickAccessToolbarItem.cs">
+    </Compile>
+    <Compile Include="WFNew\Interface\PopupPanel\IContextPopupPanelItem.cs" />
+    <Compile Include="WFNew\Control\InputText\TextBoxN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\InputText\TextBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\Compnonent\RibbonGalleryItemDesigner.cs" />
+    <Compile Include="WFNew\Design\Control\RibbonPageDesigner.cs" />
+    <Compile Include="WFNew\Control\UICollection\RibbonQuickAccessToolbar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\BaseItemStackEx_ZJ\LTBRButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\UICollection\RibbonQuickAccessToolbarItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Interface\Button\IStartButtonItem.cs" />
+    <Compile Include="WFNew\Interface\Button\IBaseButtonItem.cs" />
+    <Compile Include="WFNew\Interface\Button\ITabButtonItem.cs" />
+    <Compile Include="WFNew\Control\PopupPanel\ContextPopupPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\Button\RibbonStartButton2007.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Button\RibbonStartButtonItem2007.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\Button\BaseButtonN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Button\BaseButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Popup\DropDownPopup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Popup\ContextPopup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\PopupPanel\ContextPopupPanelItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\Button\SplitButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\Button\DropDownButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Button\DropDownButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Button\SplitButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Popup\RibbonBarPopup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\CheckBox\CheckBoxN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\CheckBox\CheckBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\Control\RibbonApplicationPopupPanelDesigner.cs" />
+    <Compile Include="WFNew\Popup\RibbonApplicationPopup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\PopupPanel\RibbonApplicationPopupPanelItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\WF\RibbonControl\RibbonControlEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Design\RibbonControlExDesigner.cs" />
+    <Compile Include="WFNew\Compnonent\ControlHost\ControlHostItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\ControlHost\ControlPanelItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\RibbonPage_ZJ\RibbonPageTabButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\UICollection\RibbonPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Popup\DescriptionMenuPopup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\PopupPanel\RibbonDescriptionMenuPopupPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\PopupPanel\RibbonDescriptionMenuPopupPanelItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Form\RibbonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\UICollection\RibbonPageItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\Label\LabelN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Label\LabelItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\Separator\LabelSeparator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Separator\LabelSeparatorItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\RadioButton\RadioButtonN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\RadioButton\RadioButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\Button\RibbonStartButton2010.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Button\RibbonStartButtonItem2010.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\UICollection\RibbonGalleryRow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\UICollection\RibbonGalleryRowItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\Button\MenuButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Button\MenuButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Popup\RibbonGalleryPopup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\PopupPanel\RibbonGalleryMirrorPopupPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Forms\Form\TBFormSkinHelper.cs">
+    </Compile>
+    <Compile Include="WinForm\Renderer\WinFormColorTable.cs" />
+    <Compile Include="WinForm\Renderer\WinFormRenderer.cs" />
+    <Compile Include="WinForm\SkinHelper\ListBoxXSkinHelper.cs" />
+    <Compile Include="WinForm\Compnonent\TitleTreeNodeItem.cs" />
+    <Compile Include="WinForm\CollectionEditer\TreeNodeCollectionEditor.cs">
+    </Compile>
+    <Compile Include="WinForm\Compnonent\TreeNodeItem.cs" />
+    <Compile Include="WinForm\Control\TreeViewX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\SkinHelper\TreeViewXSkinHelper.cs" />
+    <Compile Include="WinForm\Control\TabControlX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\SkinHelper\TabControlXSkinHelper.cs" />
+    <Compile Include="WinForm\TypeConverter\TitleTreeNodeItemConverter.cs" />
+    <Compile Include="WinForm\TypeConverter\TreeNodeItemConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="InfoForm.resx">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\DockPanel\Image\CenterToDockBottom.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WFNew\DockPanel\Image\CenterToDockLeft.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WFNew\DockPanel\Image\CenterToDockRight.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WFNew\DockPanel\Image\CenterToDockUp.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WFNew\DockPanel\Image\ToDockBottom.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WFNew\DockPanel\Image\ToDockLeft.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WFNew\DockPanel\Image\ToDockRight.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WFNew\DockPanel\Image\ToDockUp.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WFNew\Compnonent\AbstractObject\Diagram_Compnonent_AbstractObject.cd" />
+    <None Include="WFNew\Compnonent\Button\Diagram_Compnonent_Button.cd" />
+    <None Include="WFNew\Compnonent\CheckBox\Diagram_Compnonent_CheckBox.cd" />
+    <None Include="WFNew\Compnonent\ControlHost\Diagram_Compnonent_ControlHost.cd" />
+    <None Include="WFNew\Compnonent\CustomizeComboBox\Diagram_Compnonent_CustomizeComboBox.cd" />
+    <None Include="WFNew\Compnonent\InputText\Diagram_Compnonent_InputText.cd" />
+    <None Include="WFNew\Compnonent\Label\Diagram_Compnonent_Label.cd" />
+    <None Include="WFNew\Compnonent\PopupPanel\Diagram_Compnonent_PopupPanel.cd" />
+    <None Include="WFNew\Compnonent\ProcessBar\Diagram_Compnonent_ProcessBar.cd" />
+    <None Include="WFNew\Compnonent\RadioButton\Diagram_Compnonent_RadioButton.cd" />
+    <None Include="WFNew\Compnonent\Separator\Diagram_Compnonent_Separator.cd" />
+    <None Include="WFNew\Compnonent\Slider\Diagram_Compnonent_Slider.cd" />
+    <None Include="WFNew\Compnonent\UICollection\Diagram_Compnonent_UICollection.cd" />
+    <None Include="WFNew\Control\AbstractObject\Diagram_Control_AbstractObject.cd" />
+    <None Include="WFNew\Control\Button\Diagram_Control_Button.cd" />
+    <None Include="WFNew\Control\CheckBox\Diagram_Control_CheckBox.cd" />
+    <None Include="WFNew\Control\CustomizeComboBox\Diagram_Control_CustomizeComboBox.cd" />
+    <None Include="WFNew\Control\InputText\Diagram_Control_InputText.cd" />
+    <None Include="WFNew\Control\Label\Diagram_Control_Label.cd" />
+    <None Include="WFNew\Control\PopupPanel\Diagram_Control_PopupPanel.cd" />
+    <None Include="WFNew\Control\ProcessBar\Diagram_Control_ProcessBar.cd" />
+    <None Include="WFNew\Control\RadioButton\Diagram_Control_RadioButton.cd" />
+    <None Include="WFNew\Control\Separator\Diagram_Control_Separator.cd" />
+    <None Include="WFNew\Control\Slider\Diagram_Control_Slider.cd" />
+    <None Include="WFNew\Control\UICollection\Diagram_Control_UICollection.cd" />
+    <None Include="WFNew\Interface\BaseItem\Diagram_Interface_BaseItem.cd" />
+    <None Include="WFNew\Interface\Button\Diagram_Interface_Button.cd" />
+    <None Include="WFNew\Interface\CustomizeComboBox\Diagram_Interface_CustomizeComboBox.cd" />
+    <None Include="WFNew\Interface\Input\Diagram_Interface_Input.cd" />
+    <None Include="WFNew\Interface\Label\Diagram_Interface_Label.cd" />
+    <None Include="WFNew\Interface\MessageChain\Diagram_Interface_MessageChain.cd" />
+    <None Include="WFNew\Interface\PopupPanel\Diagram_Interface_PopupPanel.cd" />
+    <None Include="WFNew\View\BaseView\Diagram_Class_BaseView.cd" />
+    <None Include="WFNew\View\GridView\TitleViewItem\Diagram_Class_TitleViewItem.cd" />
+    <None Include="WFNew\View\Interface\Diagram_Interface_View.cd" />
+    <None Include="WFNew\View\NodeView\Diagram_Class_NodeView.cd" />
+    <EmbeddedResource Include="WinForm\DockBar\ButtonItem.bmp" />
+    <EmbeddedResource Include="WinForm\DockBar\CheckBoxItem.bmp" />
+    <EmbeddedResource Include="WinForm\DockBar\ComboBoxItem.bmp" />
+    <EmbeddedResource Include="WinForm\DockBar\ComboTreeItem.bmp" />
+    <EmbeddedResource Include="WinForm\DockBar\ContextMenu.bmp" />
+    <EmbeddedResource Include="WinForm\DockBar\DateTimePickerItem.bmp" />
+    <EmbeddedResource Include="WinForm\DockBar\DockBar.bmp" />
+    <EmbeddedResource Include="WinForm\DockBar\DockBarManager.bmp" />
+    <EmbeddedResource Include="WinForm\DockBar\DropDownButtonItem.bmp" />
+    <None Include="WinForm\DockBar\Interface\Diagram_Interface.cd">
+      <SubType>
+      </SubType>
+    </None>
+    <None Include="WFNew\Forms\Interface\InterfaceNC\Diagram_InterfaceNC.cd" />
+    <None Include="WFNew\DockPanel\Interface\Diagram_Interface.cd">
+      <SubType>
+      </SubType>
+    </None>
+    <None Include="WFNew\Collection\BaseItemCollection\Diagram_BaseItemCollection.cd" />
+    <None Include="WFNew\Compnonent\Compnonent_ZJ\Diagram_Compnonent_ZJ.cd" />
+    <None Include="WFNew\Compnonent\Diagram_Compnonent.cd" />
+    <None Include="WFNew\Control\Diagram_Control.cd" />
+    <None Include="WFNew\Interface\Diagram_Interface.cd" />
+    <None Include="WFNew\Interface\Owner\Diagram_Interface_Owner.cd" />
+    <None Include="WFNew\Interface\Popup\Diagram_Interface_Popup.cd" />
+    <None Include="WFNew\Popup\Diagram_Popup.cd" />
+    <None Include="WFNew\Forms\Compnonent\CompnonentNC_ZJ\Diagram_CompnonentNC_ZJ.cd" />
+    <EmbeddedResource Include="WinForm\DockBar\LabelItem.bmp" />
+    <EmbeddedResource Include="WinForm\DockBar\MaskedTextBoxItem.bmp" />
+    <EmbeddedResource Include="WinForm\DockBar\MenuItem.bmp" />
+    <EmbeddedResource Include="WinForm\DockBar\NumericUpDownItem.bmp" />
+    <EmbeddedResource Include="WinForm\DockBar\ProgressBarItem.bmp" />
+    <EmbeddedResource Include="WinForm\DockBar\RadioButtonItem.bmp" />
+    <EmbeddedResource Include="WinForm\DockBar\SeparatorItem.bmp" />
+    <EmbeddedResource Include="WinForm\DockBar\SplitButtonItem.bmp" />
+    <EmbeddedResource Include="WinForm\DockBar\TextBoxItem.bmp" />
+    <None Include="WinForm\Interface\Diagram_Interface.cd" />
+    <None Include="WinForm\SkinHelper\Diagram_SkinHelper.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinForm\DockBar\DockBar\Customize\DockBarCustomizeForm\DockBarCustomizeForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DockBarCustomizeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\DockPanel\DockPanelManager.bmp" />
+    <EmbeddedResource Include="WFNew\DockPanel\BaseMenuStrip\DockPanelCustomizeForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DockPanelCustomizeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinForm\DockBar\DockBar\Customize\DockBarCustomizeForm\CustomizeToolBarForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CustomizeToolBarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\Control\WF\TabControl\TabControl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HandleView\HandleViewForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HandleViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\Design\DesignerForm\CollectionDesignerForm.resx">
+      <DependentUpon>CollectionDesignerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFNew\Design\DesignerForm\BaseItemCollectionDesignerForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseItemCollectionDesignerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\Image\Delete.bmp" />
+    <EmbeddedResource Include="WinForm\Image\MoveDown.bmp" />
+    <EmbeddedResource Include="WinForm\Image\MoveUp.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WFNew\DockPanel\Image\CenterToDocumentBottom.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WFNew\DockPanel\Image\CenterToDocumentUp.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WFNew\DockPanel\Image\CenterToDocumentRight.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WFNew\DockPanel\Image\CenterToDocumentLeft.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WFNew\DockPanel\Image\CenterToDockFill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WFNew\Control\WF\CollapsableSplitPanel\CollapsableSplitPanel.bmp" />
+    <EmbeddedResource Include="WFNew\Forms\MessageBox\TBMessageBoxForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TBMessageBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Image\Info.ico" />
+    <EmbeddedResource Include="Image\Compnonent.ico" />
+    <EmbeddedResource Include="WFNew\Image\RibbonBarOverflow.ico" />
+    <EmbeddedResource Include="Image\Key.ico" />
+    <EmbeddedResource Include="WFNew\Image\RibbonMdiFormDefaultIcon.ico" />
+    <Content Include="Image\ChuZhuoXueYuan.jpg" />
+    <Content Include="Image\Designer.ico" />
+    <Content Include="WFNew\Control\WF\ExpandableCaptionPanel\ExpandableCaptionPanel.bmp" />
+    <EmbeddedResource Include="WFNew\Forms\MessageBox\Image\Asterisk_Information.png" />
+    <EmbeddedResource Include="WFNew\Forms\MessageBox\Image\Error_Hand_Stop.png" />
+    <EmbeddedResource Include="WFNew\Forms\MessageBox\Image\Exclamation_Warning.png" />
+    <EmbeddedResource Include="WFNew\Forms\MessageBox\Image\Question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

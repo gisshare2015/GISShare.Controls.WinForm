@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BD690766-A81D-4BED-B439-315B5E10E2B3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GISShare.Controls.Plugin.WinForm</RootNamespace>
+    <AssemblyName>GISShare.Controls.Plugin.WinForm</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChildForm\AppendPluginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\AppendPluginForm.Designer.cs">
+      <DependentUpon>AppendPluginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\AppendPluginForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\AppendPluginForm2.Designer.cs">
+      <DependentUpon>AppendPluginForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\AppendPluginTBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\AppendPluginTBForm.Designer.cs">
+      <DependentUpon>AppendPluginTBForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\PluginCategoryDictionaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\PluginCategoryDictionaryForm.Designer.cs">
+      <DependentUpon>PluginCategoryDictionaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\PluginCategoryDictionaryTBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\PluginCategoryDictionaryTBForm.Designer.cs">
+      <DependentUpon>PluginCategoryDictionaryTBForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\UIViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\UIViewForm.Designer.cs">
+      <DependentUpon>UIViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\UIViewTBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\UIViewTBForm.Designer.cs">
+      <DependentUpon>UIViewTBForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WFNew\CustomizeComboBox\interface\ICheckedComboBoxItemP_.cs" />
+    <Compile Include="WFNew\Input\ButtonTextBoxItemP.cs" />
+    <Compile Include="WFNew\Button\BaseButtonExItemP.cs" />
+    <Compile Include="WFNew\Button\BaseButtonItemP.cs" />
+    <Compile Include="WFNew\Button\ButtonExItemP.cs" />
+    <Compile Include="WFNew\Button\ButtonItemP.cs" />
+    <Compile Include="WFNew\Button\CheckButtonExItemP.cs" />
+    <Compile Include="WFNew\Button\CheckButtonItemP.cs" />
+    <Compile Include="WFNew\Button\DescriptionButtonItemP.cs" />
+    <Compile Include="WFNew\Button\DropDownButtonExItemP.cs" />
+    <Compile Include="WFNew\Button\DropDownButtonItemP.cs" />
+    <Compile Include="WFNew\Button\GlyphButtonItemP.cs" />
+    <Compile Include="WFNew\Button\Interface\IBaseButtonExItemP.cs" />
+    <Compile Include="WFNew\Button\Interface\IBaseButtonItemP.cs" />
+    <Compile Include="WFNew\Button\Interface\IButtonExItemP.cs" />
+    <Compile Include="WFNew\Button\Interface\IButtonItemP.cs" />
+    <Compile Include="WFNew\Button\Interface\ICheckButtonExItemP.cs" />
+    <Compile Include="WFNew\Button\Interface\ICheckButtonItemP.cs" />
+    <Compile Include="WFNew\Button\Interface\IDescriptionButtonItemP.cs" />
+    <Compile Include="WFNew\Button\Interface\IDropDownButtonExItemP.cs" />
+    <Compile Include="WFNew\Button\Interface\IDropDownButtonItemP.cs" />
+    <Compile Include="WFNew\Button\Interface\IGlyphButtonItemP.cs" />
+    <Compile Include="WFNew\Button\Interface\IMenuButtonItemP.cs" />
+    <Compile Include="WFNew\Button\Interface\ISplitButtonExItemP.cs" />
+    <Compile Include="WFNew\Button\Interface\ISplitButtonItemP.cs" />
+    <Compile Include="WFNew\Button\MenuButtonItemP.cs" />
+    <Compile Include="WFNew\Button\SplitButtonExItemP.cs" />
+    <Compile Include="WFNew\Button\SplitButtonItemP.cs" />
+    <Compile Include="WFNew\CheckBox\CheckBoxItemP.cs" />
+    <Compile Include="WFNew\CheckBox\ImageCheckBoxItemP.cs" />
+    <Compile Include="WFNew\CheckBox\Interface\ICheckBoxItemP.cs" />
+    <Compile Include="WFNew\CheckBox\Interface\IImageCheckBoxItemP.cs" />
+    <Compile Include="WFNew\ControlHost\ControlHostItemP.cs" />
+    <Compile Include="WFNew\ControlHost\ControlPanelItemP.cs" />
+    <Compile Include="WFNew\ControlHost\Interface\IControlHostItemP.cs" />
+    <Compile Include="WFNew\ControlHost\Interface\IControlPanelItemP.cs" />
+    <Compile Include="WFNew\CustomizeComboBox\ComboBoxItemP.cs" />
+    <Compile Include="WFNew\CustomizeComboBox\ComboDateItemP.cs" />
+    <Compile Include="WFNew\CustomizeComboBox\ComboTreeItemP.cs" />
+    <Compile Include="WFNew\CustomizeComboBox\interface\IComboBoxItemP.cs" />
+    <Compile Include="WFNew\CustomizeComboBox\interface\IComboDateItemP.cs" />
+    <Compile Include="WFNew\CustomizeComboBox\interface\IComboTreeItemP.cs" />
+    <Compile Include="WFNew\CustomizeComboBox\interface\ICustomizeComboBoxItemP_.cs" />
+    <Compile Include="WFNew\DockPanel\BasePanelP.cs" />
+    <Compile Include="WFNew\DockPanel\DockPanelP.cs" />
+    <Compile Include="WFNew\DockPanel\Enum\Enum.cs" />
+    <Compile Include="WFNew\DockPanel\Interface\IBasePanelP.cs" />
+    <Compile Include="WFNew\DockPanel\Interface\IDockPanelP.cs" />
+    <Compile Include="WFNew\Enum\Enum.cs" />
+    <Compile Include="WFNew\Forms\Enum\Enum.cs" />
+    <Compile Include="WFNew\Forms\NCToolbarItemsSubItem.cs" />
+    <Compile Include="WFNew\IBaseItemP_.cs" />
+    <Compile Include="WFNew\Input\Interface\IButtonTextBoxItemP.cs" />
+    <Compile Include="WFNew\ImageBox\ImageBoxItemP.cs" />
+    <Compile Include="WFNew\ImageBox\Interface\IImageBoxItemP.cs" />
+    <Compile Include="WFNew\Input\DoubleInputBoxItemP.cs" />
+    <Compile Include="WFNew\Input\IntegerInputBoxItemP.cs" />
+    <Compile Include="WFNew\Input\Interface\IDoubleInputBoxItemP.cs" />
+    <Compile Include="WFNew\Input\Interface\IIntegerInputBoxItemP.cs" />
+    <Compile Include="WFNew\Input\Interface\ITextBoxItemP.cs" />
+    <Compile Include="WFNew\Input\TextBoxItemP.cs" />
+    <Compile Include="WFNew\Label\ImageLabelItemP.cs" />
+    <Compile Include="WFNew\Label\ImageLinkLabelItemP.cs" />
+    <Compile Include="WFNew\Label\Interface\IImageLabelItemP.cs" />
+    <Compile Include="WFNew\Label\Interface\IImageLinkLabelItemP.cs" />
+    <Compile Include="WFNew\Label\Interface\ILabelExItemP.cs" />
+    <Compile Include="WFNew\Label\Interface\ILabelItemP.cs" />
+    <Compile Include="WFNew\Label\Interface\ILinkLabelItemP.cs" />
+    <Compile Include="WFNew\Label\LabelExItemP.cs" />
+    <Compile Include="WFNew\Label\LabelItemP.cs" />
+    <Compile Include="WFNew\Label\LinkLabelItemP.cs" />
+    <Compile Include="WFNew\Popup\ContextPopupP.cs" />
+    <Compile Include="WFNew\Popup\Interface\IContextPopupP.cs" />
+    <Compile Include="WFNew\ProcessBar\Interface\IProcessBarItemP.cs" />
+    <Compile Include="WFNew\ProcessBar\ProcessBarItemP.cs" />
+    <Compile Include="WFNew\RadioButton\ImageRadioButtonItemP.cs" />
+    <Compile Include="WFNew\RadioButton\Interface\IImageRadioButtonItemP.cs" />
+    <Compile Include="WFNew\RadioButton\Interface\IRadioButtonItemP.cs" />
+    <Compile Include="WFNew\RadioButton\RadioButtonItemP.cs" />
+    <Compile Include="WFNew\RatingStar\Interface\IRatingStarItemP.cs" />
+    <Compile Include="WFNew\RatingStar\RatingStarItemP.cs" />
+    <Compile Include="WFNew\Ribbon\Enum\Enum.cs" />
+    <Compile Include="WFNew\Ribbon\HostForm\HostRibbonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WFNew\Ribbon\Serializable\HostRibbonFrameworkSerializableObject.cs" />
+    <Compile Include="WFNew\Ribbon\HostObject\HostRibbonObject.cs" />
+    <Compile Include="WFNew\Ribbon\MenuItemsSubItem.cs" />
+    <Compile Include="WFNew\Ribbon\OperationItemsSubItem.cs" />
+    <Compile Include="WFNew\Ribbon\PageContentsSubItem.cs" />
+    <Compile Include="WFNew\Ribbon\RecordItemsSubItem.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonPagesSubItem.cs" />
+    <Compile Include="WFNew\Ribbon\RibbonStatusBarSubItem.cs" />
+    <Compile Include="WFNew\Ribbon\ToolbarItemsSubItem.cs" />
+    <Compile Include="WFNew\Separator\ImageLabelSeparatorItemP.cs" />
+    <Compile Include="WFNew\Separator\Interface\IImageLabelSeparatorItemP.cs" />
+    <Compile Include="WFNew\Separator\Interface\ILabelSeparatorItemP.cs" />
+    <Compile Include="WFNew\Separator\Interface\ISeparatorItemP.cs" />
+    <Compile Include="WFNew\Separator\LabelSeparatorItemP.cs" />
+    <Compile Include="WFNew\Separator\SeparatorItemP.cs" />
+    <Compile Include="WFNew\Slider\Interface\IScrollBarItemP.cs" />
+    <Compile Include="WFNew\Slider\Interface\ISliderItemP.cs" />
+    <Compile Include="WFNew\Slider\ScrollBarItemP.cs" />
+    <Compile Include="WFNew\Slider\SliderItemP.cs" />
+    <Compile Include="WFNew\UICollection\BaseItemStackExItemP.cs" />
+    <Compile Include="WFNew\UICollection\BaseItemStackItemP.cs" />
+    <Compile Include="WFNew\UICollection\ButtonGroupItemP.cs" />
+    <Compile Include="WFNew\UICollection\Interface\IBaseItemStackExItemP.cs" />
+    <Compile Include="WFNew\UICollection\Interface\IBaseItemStackItemP.cs" />
+    <Compile Include="WFNew\UICollection\Interface\IButtonGroupItemP.cs" />
+    <Compile Include="WFNew\UICollection\Interface\IRibbonBarItemP.cs" />
+    <Compile Include="WFNew\UICollection\Interface\IRibbonGalleryItemP.cs" />
+    <Compile Include="WFNew\UICollection\Interface\IRibbonGalleryRowItemP.cs" />
+    <Compile Include="WFNew\UICollection\Interface\IRibbonPageItemP.cs" />
+    <Compile Include="WFNew\UICollection\RibbonBarItemP.cs" />
+    <Compile Include="WFNew\UICollection\RibbonGalleryItemP.cs" />
+    <Compile Include="WFNew\UICollection\RibbonGalleryRowItemP.cs" />
+    <Compile Include="WFNew\UICollection\RibbonPageItemP.cs" />
+    <Compile Include="WinForm\DockBar\Class\ButtonItemP.cs" />
+    <Compile Include="WinForm\DockBar\Class\CheckBoxItemP.cs" />
+    <Compile Include="WinForm\DockBar\Class\ComboBoxItemP.cs" />
+    <Compile Include="WinForm\DockBar\Class\ContextMenuP.cs" />
+    <Compile Include="WinForm\DockBar\Class\DropDownButtonItemP.cs" />
+    <Compile Include="WinForm\DockBar\Class\LabelItemP.cs" />
+    <Compile Include="WinForm\DockBar\Class\MaskedTextBoxItemP.cs" />
+    <Compile Include="WinForm\DockBar\Class\MenuBarP.cs" />
+    <Compile Include="WinForm\DockBar\Class\MenuItemP.cs" />
+    <Compile Include="WinForm\DockBar\Class\NumericUpDownItemP.cs" />
+    <Compile Include="WinForm\DockBar\Class\ProgressBarItemP.cs" />
+    <Compile Include="WinForm\DockBar\Class\RadioButtonItemP.cs" />
+    <Compile Include="WinForm\DockBar\Class\SeparatorItemP.cs" />
+    <Compile Include="WinForm\DockBar\Class\SplitButtonItemP.cs" />
+    <Compile Include="WinForm\DockBar\Class\StatusBarP.cs" />
+    <Compile Include="WinForm\DockBar\Class\TextBoxItemP.cs" />
+    <Compile Include="WinForm\DockBar\Class\ToolBarP.cs" />
+    <Compile Include="WinForm\DockBar\Enum\Enum.cs" />
+    <Compile Include="WinForm\DockBar\HostDockBarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\HostDockBarTBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\DockBar\HostObject\HostDockBarObject.cs" />
+    <Compile Include="WinForm\DockBar\Interface\IBaseItemDBP_.cs" />
+    <Compile Include="WinForm\DockBar\Interface\IButtonItemP.cs" />
+    <Compile Include="WinForm\DockBar\Interface\ICheckBoxItemP.cs" />
+    <Compile Include="WinForm\DockBar\Interface\IComboBoxItemP.cs" />
+    <Compile Include="WinForm\DockBar\Interface\IContextMenuP.cs" />
+    <Compile Include="WinForm\DockBar\Interface\IDockBarP_.cs" />
+    <Compile Include="WinForm\DockBar\Interface\IDropDownButtonItemP.cs" />
+    <Compile Include="WinForm\DockBar\Interface\ILabelItemP.cs" />
+    <Compile Include="WinForm\DockBar\Interface\IMaskedTextBoxItemP.cs" />
+    <Compile Include="WinForm\DockBar\Interface\IMenuBarP.cs" />
+    <Compile Include="WinForm\DockBar\Interface\IMenuItemP.cs" />
+    <Compile Include="WinForm\DockBar\Interface\INumericUpDownItemP.cs" />
+    <Compile Include="WinForm\DockBar\Interface\IProgressBarItemP.cs" />
+    <Compile Include="WinForm\DockBar\Interface\IRadioButtonItemP.cs" />
+    <Compile Include="WinForm\DockBar\Interface\ISeparatorItemP.cs" />
+    <Compile Include="WinForm\DockBar\Interface\ISplitButtonItemP.cs" />
+    <Compile Include="WinForm\DockBar\Interface\IStatusBarP.cs" />
+    <Compile Include="WinForm\DockBar\Interface\ITextBoxItemP.cs" />
+    <Compile Include="WinForm\DockBar\Interface\IToolBarP.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChildForm\AppendPluginForm.resx">
+      <DependentUpon>AppendPluginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\AppendPluginForm2.resx">
+      <DependentUpon>AppendPluginForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\AppendPluginTBForm.resx">
+      <DependentUpon>AppendPluginTBForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\PluginCategoryDictionaryForm.resx">
+      <DependentUpon>PluginCategoryDictionaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\PluginCategoryDictionaryTBForm.resx">
+      <DependentUpon>PluginCategoryDictionaryTBForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\UIViewForm.resx">
+      <DependentUpon>UIViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\UIViewTBForm.resx">
+      <DependentUpon>UIViewTBForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoForm.resx">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GISShare.Controls.Plugin\GISShare.Controls.Plugin.csproj">
+      <Project>{3F22674F-2B1B-4A07-B509-DC294FA025AF}</Project>
+      <Name>GISShare.Controls.Plugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISShare.Controls.WinForm\GISShare.Controls.WinForm.csproj">
+      <Project>{A720C1A3-9A9C-41C7-AB51-A2C011451914}</Project>
+      <Name>GISShare.Controls.WinForm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

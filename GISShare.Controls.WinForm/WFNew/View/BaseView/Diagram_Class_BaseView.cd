@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.ColorViewItem" Collapsed="true">
+    <Position X="3.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAABSAACgAAAAAAAAAAEAgAgAAAA=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\ColorViewItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.VRowViewItemEx" Collapsed="true">
+    <Position X="10.25" Y="9.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\VRowViewItemEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.ColorViewItemEx" Collapsed="true">
+    <Position X="1.25" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\ColorViewItemEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.FlexibleRowViewItem" Collapsed="true">
+    <Position X="17.25" Y="8.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEAgRQFBAJIgCSuLlLRRkAgAIgRApXAAImQgAAhRUU=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\FlexibleRowViewItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.FlexibleRowViewItemEx" Collapsed="true">
+    <Position X="19.75" Y="8.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\FlexibleRowViewItemEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.FlexibleVRowViewItem" Collapsed="true">
+    <Position X="8" Y="8.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAEAgRQFBAJIgCSuLlLRRkAgAIgRApXAAImQgAAhRUU=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\FlexibleVRowViewItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.FlexibleVRowViewItemEx" Collapsed="true">
+    <Position X="5.25" Y="8.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\FlexibleVRowViewItemEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.ImageViewItem" Collapsed="true">
+    <Position X="17.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAABAAAAAAAABAAAAgAAAAABAEAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\ImageViewItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.ImageViewItemEx" Collapsed="true">
+    <Position X="19.75" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\ImageViewItemEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.ResizeSuperViewItem" Collapsed="true">
+    <Position X="17.5" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgBAABAIAAAQABgABAgAAAAAAAAQAAAgAAAAgQAA=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\ResizeSuperViewItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.ResizeViewItem" Collapsed="true">
+    <Position X="8.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgBAABAIAAAQABgABAgAAAAAAAAQAAAgAAAAgQAA=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\ResizeViewItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.ResizeViewItemEx" Collapsed="true">
+    <Position X="6.25" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\ResizeViewItemEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.RowViewItem" Collapsed="true">
+    <Position X="12.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAQQFAABIgCSuLFDRREAgAIgRApHAAImQAAABBUU=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\RowViewItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.RowViewItemEx" Collapsed="true">
+    <Position X="14.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\RowViewItemEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.SuperViewItem" Collapsed="true">
+    <Position X="15.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAIAEAAEAABIAAQAAEDQAAAgAIAAAAHAAAAACAAIAQA=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\SuperViewItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.TextEditViewItem" Collapsed="true">
+    <Position X="12.25" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAQAAEAAAACCAABAQEBAAAAAAEIAAACBAAAgAAQ=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\TextEditViewItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.TextEditViewItemEx" Collapsed="true">
+    <Position X="14.75" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\TextEditViewItemEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.TextViewItem" Collapsed="true">
+    <Position X="12.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAIAAAABAAAABAAAAgAAAAAADAAAAAAAACIAA=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\TextViewItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.TextViewItemEx" Collapsed="true">
+    <Position X="10.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\TextViewItemEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.ViewItem" Collapsed="true">
+    <Position X="12.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IhEAAAQBAAwAggQMBBBVBAAgBAgRAAEiAAgAGAAAAEE=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\ViewItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.ViewItemEx" Collapsed="true">
+    <Position X="10.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\ViewItemEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.VRowViewItem" Collapsed="true">
+    <Position X="12.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\VRowViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.SizeViewItem" Collapsed="true">
+    <Position X="12.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAABAAAAAABAAAAAEQgAAAAAADAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\SizeViewItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.View.SizeViewItemEx" Collapsed="true">
+    <Position X="10.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\WFNew\View\BaseView\SizeViewItemEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>
