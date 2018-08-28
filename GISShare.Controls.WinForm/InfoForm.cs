@@ -104,7 +104,7 @@ namespace GISShare.Controls.WinForm
             }
             //else if (e.X > 246 && e.X < 517 && e.Y > 259 && e.Y < 265)
             //{
-            //    System.Diagnostics.Process.Start("http://user.qzone.qq.com/441856317/infocenter");
+            //    System.Diagnostics.Process.Start("");
             //}
         }
     }

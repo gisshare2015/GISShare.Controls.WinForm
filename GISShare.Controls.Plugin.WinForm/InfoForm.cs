@@ -90,10 +90,10 @@ namespace GISShare.Controls.Plugin.WinForm
             pPoint = new Point(10, 80);
             gGraphics.DrawString(strInfo, fFont, bBrush, pPoint.X, pPoint.Y);
             //
-            strInfo = "滁州学院 地理信息与旅游学院 2012届地理科学专业 刘振洪\n\r" + "http://user.qzone.qq.com/441856317/infocenter";
-            fFont = new Font("宋体", 8);
-            pPoint = new Point(243, 245);
-            gGraphics.DrawString(strInfo, fFont, bBrush, pPoint.X, pPoint.Y);
+            //strInfo = "";
+            //fFont = new Font("宋体", 8);
+            //pPoint = new Point(243, 245);
+            //gGraphics.DrawString(strInfo, fFont, bBrush, pPoint.X, pPoint.Y);
         }
 
         private void InfoForm_MouseClick(object sender, MouseEventArgs e)
@@ -102,10 +102,10 @@ namespace GISShare.Controls.Plugin.WinForm
             {
                 System.Diagnostics.Process.Start("http://www.gisshare.com/");
             }
-            else if (e.X > 246 && e.X < 517 && e.Y > 259 && e.Y < 265)
-            {
-                System.Diagnostics.Process.Start("http://user.qzone.qq.com/441856317/infocenter");
-            }
+            //else if (e.X > 246 && e.X < 517 && e.Y > 259 && e.Y < 265)
+            //{
+            //    System.Diagnostics.Process.Start("");
+            //}
         }
     }
 }

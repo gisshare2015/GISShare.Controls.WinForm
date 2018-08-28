@@ -47,10 +47,8 @@ namespace GISShare.Controls.WinForm.Demo
 
 
   版权所有，欢迎使用！
-                         滁州学院 
-                         地理信息与旅游学院 
-                          2012届地理科学专业 
-                         刘振洪";
+                         即时分享 
+                         GISShare";
             #endregion
             //
             #region 寄语
@@ -79,11 +77,9 @@ TBForm、RibbonControl、ViewItemListBox等）和
 方面的需要可以与本人联系，在工作之余我会尽量
 完善使之趋于完美。
 
-  版权所有，欢迎使用！
-                         滁州学院 
-                         地理信息与旅游学院 
-                          2012届地理科学专业 
-                         刘振洪";
+  版权所有，欢迎使用！                         
+                         即时分享 
+                         GISShare";
             #endregion
         }
 
