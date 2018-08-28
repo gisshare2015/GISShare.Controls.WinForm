@@ -22,7 +22,9 @@ namespace GISShare.Controls.Plugin
         /// </summary>
         /// <param name="strPluginFolderArry">文件夹数组</param>
         /// <param name="strPluginFolderArry">排除的文件名列表（包含后缀名）</param>
+        /// <param name="bFilterFilePathArrayTypeRemove">true 过滤；false 包含</param>
         /// <param name="strFilterObjectNameArray">踢出对象名称列表</param>
+        /// <param name="bFilterObjectNameArrayTypeRemove">true 过滤；false 包含</param>
         /// <returns>插件目录字典</returns>
         public PluginCategoryDictionary GetPluginsFromDLLFolders(string[] strPluginFolderArray, string[] strFilterFilePathArray, bool bFilterFilePathArrayTypeRemove, string[] strFilterObjectNameArray, bool bFilterObjectNameArrayTypeRemove)
         {
@@ -112,20 +114,23 @@ namespace GISShare.Controls.Plugin
                 {
                     foreach (Type type in typeArray)
                     {
-                        //获得一个类型所有实现的接口
-                        Type[] interfaceArray = type.GetInterfaces();
-                        //遍历接口类型
-                        foreach (Type one in interfaceArray)
+                        if (type.IsClass && !type.IsAbstract)
                         {
-                            //如果满足某种类型，则添加到插件集合对象中
-                            switch (one.FullName)
+                            //获得一个类型所有实现的接口
+                            Type[] interfaceArray = type.GetInterfaces();
+                            //遍历接口类型
+                            foreach (Type one in interfaceArray)
                             {
-                                case "GISShare.Controls.Plugin.IPlugin":
-                                    //MessageBox.Show(theInterface.FullName);
-                                    this.GetPluginObject(pluginCategoryDictionary, type, strFilterObjectNameArray, bFilterObjectNameArrayTypeRemove);
-                                    break;
-                                default:
-                                    break;
+                                //如果满足某种类型，则添加到插件集合对象中
+                                switch (one.FullName)
+                                {
+                                    case "GISShare.Controls.Plugin.IPlugin":
+                                        //MessageBox.Show(theInterface.FullName);
+                                        this.GetPluginObject(pluginCategoryDictionary, type, strFilterObjectNameArray, bFilterObjectNameArrayTypeRemove);
+                                        break;
+                                    default:
+                                        break;
+                                }
                             }
                         }
                     }

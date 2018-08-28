@@ -90,7 +90,7 @@ namespace GISShare.Controls.WinForm
             pPoint = new Point(10, 80);
             gGraphics.DrawString(strInfo, fFont, bBrush, pPoint.X, pPoint.Y);
             ////
-            //strInfo = "滁州学院 地理信息与旅游学院 2012届地理科学专业 刘振洪\n\r" + "http://user.qzone.qq.com/441856317/infocenter";
+            //strInfo = "";
             //fFont = new Font("宋体", 8);
             //pPoint = new Point(243, 245);
             //gGraphics.DrawString(strInfo, fFont, bBrush, pPoint.X, pPoint.Y);
