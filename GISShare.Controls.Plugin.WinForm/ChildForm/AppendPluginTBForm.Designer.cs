@@ -28,73 +28,81 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppendPluginTBForm));
-            this.btnCancel = new GISShare.Controls.WinForm.WFNew.ButtonN();
-            this.btnOk = new GISShare.Controls.WinForm.WFNew.ButtonN();
-            this.btnOpen = new GISShare.Controls.WinForm.WFNew.ButtonN();
+            this.btnCancel = new GISShare.Controls.WinForm.WFNew.ButtonItem();
+            this.btnOk = new GISShare.Controls.WinForm.WFNew.ButtonItem();
+            this.btnOpen = new GISShare.Controls.WinForm.WFNew.ButtonItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbUse = new GISShare.Controls.WinForm.WFNew.RadioButtonN();
-            this.rbCut = new GISShare.Controls.WinForm.WFNew.RadioButtonN();
-            this.rbCopy = new GISShare.Controls.WinForm.WFNew.RadioButtonN();
+            this.baseItemHost3 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.baseItemHost4 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.rbUse = new GISShare.Controls.WinForm.WFNew.RadioButtonItem();
+            this.baseItemHost5 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.rbCut = new GISShare.Controls.WinForm.WFNew.RadioButtonItem();
+            this.baseItemHost6 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.rbCopy = new GISShare.Controls.WinForm.WFNew.RadioButtonItem();
             this.txtFileName = new System.Windows.Forms.TextBox();
-            this.lblFileName = new GISShare.Controls.WinForm.WFNew.LabelN();
+            this.baseItemHost7 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.lblFileName = new GISShare.Controls.WinForm.WFNew.LabelItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.separator1 = new GISShare.Controls.WinForm.WFNew.Separator();
+            this.separator1 = new GISShare.Controls.WinForm.WFNew.SeparatorItem();
+            this.baseItemHost1 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.baseItemHost2 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.baseItemHost8 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCancel
             // 
-            this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnCancel.AutoPlanTextRectangle = false;
-            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.Font = new System.Drawing.Font("宋体", 9F);
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCancel.Image = null;
             this.btnCancel.LeftBottomRadius = 3;
             this.btnCancel.LeftTopRadius = 3;
-            this.btnCancel.Location = new System.Drawing.Point(164, 177);
+            this.btnCancel.Location = new System.Drawing.Point(0, 0);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Padding = new System.Windows.Forms.Padding(0);
             this.btnCancel.RightBottomRadius = 3;
             this.btnCancel.RightTopRadius = 3;
-            this.btnCancel.Size = new System.Drawing.Size(90, 27);
-            this.btnCancel.TabIndex = 86;
+            this.btnCancel.ShowNomalState = true;
+            this.btnCancel.Size = new System.Drawing.Size(135, 40);
+            this.btnCancel.Tag = null;
             this.btnCancel.Text = "取   消";
             this.btnCancel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnCancel_MouseClick);
             // 
             // btnOk
             // 
-            this.btnOk.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnOk.AutoPlanTextRectangle = false;
-            this.btnOk.BackColor = System.Drawing.Color.Transparent;
+            this.btnOk.Font = new System.Drawing.Font("宋体", 9F);
+            this.btnOk.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnOk.Image = null;
             this.btnOk.LeftBottomRadius = 3;
             this.btnOk.LeftTopRadius = 3;
-            this.btnOk.Location = new System.Drawing.Point(366, 177);
+            this.btnOk.Location = new System.Drawing.Point(0, 0);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Padding = new System.Windows.Forms.Padding(0);
             this.btnOk.RightBottomRadius = 3;
             this.btnOk.RightTopRadius = 3;
-            this.btnOk.Size = new System.Drawing.Size(90, 27);
-            this.btnOk.TabIndex = 85;
+            this.btnOk.ShowNomalState = true;
+            this.btnOk.Size = new System.Drawing.Size(135, 40);
+            this.btnOk.Tag = null;
             this.btnOk.Text = "加   载";
             this.btnOk.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnOk_MouseClick);
             // 
             // btnOpen
             // 
-            this.btnOpen.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnOpen.AutoPlanTextRectangle = false;
-            this.btnOpen.BackColor = System.Drawing.Color.Transparent;
+            this.btnOpen.Font = new System.Drawing.Font("宋体", 9F);
+            this.btnOpen.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnOpen.Image = null;
             this.btnOpen.LeftBottomRadius = 3;
             this.btnOpen.LeftTopRadius = 3;
-            this.btnOpen.Location = new System.Drawing.Point(250, 111);
+            this.btnOpen.Location = new System.Drawing.Point(0, 0);
             this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Padding = new System.Windows.Forms.Padding(0);
             this.btnOpen.RightBottomRadius = 3;
             this.btnOpen.RightTopRadius = 3;
-            this.btnOpen.Size = new System.Drawing.Size(53, 23);
-            this.btnOpen.TabIndex = 87;
+            this.btnOpen.ShowNomalState = true;
+            this.btnOpen.Size = new System.Drawing.Size(80, 34);
+            this.btnOpen.Tag = null;
             this.btnOpen.Text = ">>";
             this.btnOpen.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnOpen_MouseClick);
             // 
@@ -102,76 +110,135 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(8, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 197);
+            this.pictureBox1.Size = new System.Drawing.Size(196, 294);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 83;
             this.pictureBox1.TabStop = false;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.rbUse);
-            this.groupBox1.Controls.Add(this.btnOpen);
-            this.groupBox1.Controls.Add(this.rbCut);
-            this.groupBox1.Controls.Add(this.rbCopy);
+            this.groupBox1.Controls.Add(this.baseItemHost3);
+            this.groupBox1.Controls.Add(this.baseItemHost4);
+            this.groupBox1.Controls.Add(this.baseItemHost5);
+            this.groupBox1.Controls.Add(this.baseItemHost6);
             this.groupBox1.Controls.Add(this.txtFileName);
-            this.groupBox1.Controls.Add(this.lblFileName);
+            this.groupBox1.Controls.Add(this.baseItemHost7);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.groupBox1.Location = new System.Drawing.Point(153, 8);
+            this.groupBox1.Location = new System.Drawing.Point(230, 12);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(318, 142);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(477, 213);
             this.groupBox1.TabIndex = 82;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "插 件";
             // 
+            // baseItemHost3
+            // 
+            this.baseItemHost3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.baseItemHost3.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost3.BaseItemObject = this.btnOpen;
+            this.baseItemHost3.Location = new System.Drawing.Point(375, 166);
+            this.baseItemHost3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.baseItemHost3.Name = "baseItemHost3";
+            this.baseItemHost3.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost3.Size = new System.Drawing.Size(80, 34);
+            this.baseItemHost3.TabIndex = 87;
+            // 
+            // baseItemHost4
+            // 
+            this.baseItemHost4.BaseItemObject = this.rbUse;
+            this.baseItemHost4.Location = new System.Drawing.Point(16, 75);
+            this.baseItemHost4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.baseItemHost4.Name = "baseItemHost4";
+            this.baseItemHost4.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost4.Size = new System.Drawing.Size(70, 24);
+            this.baseItemHost4.TabIndex = 88;
+            // 
             // rbUse
             // 
             this.rbUse.Checked = true;
-            this.rbUse.Location = new System.Drawing.Point(11, 50);
+            this.rbUse.Font = new System.Drawing.Font("宋体", 9F);
+            this.rbUse.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.rbUse.Location = new System.Drawing.Point(0, 0);
             this.rbUse.Name = "rbUse";
-            this.rbUse.Padding = new System.Windows.Forms.Padding(0);
-            this.rbUse.Size = new System.Drawing.Size(47, 16);
-            this.rbUse.TabIndex = 88;
+            this.rbUse.Size = new System.Drawing.Size(70, 24);
+            this.rbUse.Tag = null;
             this.rbUse.Text = "使用";
+            // 
+            // baseItemHost5
+            // 
+            this.baseItemHost5.BaseItemObject = this.rbCut;
+            this.baseItemHost5.Location = new System.Drawing.Point(16, 177);
+            this.baseItemHost5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.baseItemHost5.Name = "baseItemHost5";
+            this.baseItemHost5.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost5.Size = new System.Drawing.Size(70, 24);
+            this.baseItemHost5.TabIndex = 4;
             // 
             // rbCut
             // 
-            this.rbCut.Location = new System.Drawing.Point(11, 118);
+            this.rbCut.Font = new System.Drawing.Font("宋体", 9F);
+            this.rbCut.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.rbCut.Location = new System.Drawing.Point(0, 0);
             this.rbCut.Name = "rbCut";
-            this.rbCut.Padding = new System.Windows.Forms.Padding(0);
-            this.rbCut.Size = new System.Drawing.Size(47, 16);
-            this.rbCut.TabIndex = 4;
+            this.rbCut.Size = new System.Drawing.Size(70, 24);
+            this.rbCut.Tag = null;
             this.rbCut.Text = "剪切";
+            // 
+            // baseItemHost6
+            // 
+            this.baseItemHost6.BaseItemObject = this.rbCopy;
+            this.baseItemHost6.Location = new System.Drawing.Point(16, 120);
+            this.baseItemHost6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.baseItemHost6.Name = "baseItemHost6";
+            this.baseItemHost6.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost6.Size = new System.Drawing.Size(70, 24);
+            this.baseItemHost6.TabIndex = 89;
             // 
             // rbCopy
             // 
-            this.rbCopy.Location = new System.Drawing.Point(11, 80);
+            this.rbCopy.Font = new System.Drawing.Font("宋体", 9F);
+            this.rbCopy.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.rbCopy.Location = new System.Drawing.Point(0, 0);
             this.rbCopy.Name = "rbCopy";
-            this.rbCopy.Padding = new System.Windows.Forms.Padding(0);
-            this.rbCopy.Size = new System.Drawing.Size(47, 16);
-            this.rbCopy.TabIndex = 3;
+            this.rbCopy.Size = new System.Drawing.Size(70, 24);
+            this.rbCopy.Tag = null;
             this.rbCopy.Text = "复制";
             // 
             // txtFileName
             // 
             this.txtFileName.BackColor = System.Drawing.SystemColors.Control;
             this.txtFileName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFileName.Location = new System.Drawing.Point(70, 19);
+            this.txtFileName.Location = new System.Drawing.Point(105, 28);
+            this.txtFileName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFileName.Multiline = true;
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.ReadOnly = true;
-            this.txtFileName.Size = new System.Drawing.Size(233, 85);
+            this.txtFileName.Size = new System.Drawing.Size(348, 126);
             this.txtFileName.TabIndex = 0;
+            // 
+            // baseItemHost7
+            // 
+            this.baseItemHost7.BaseItemObject = this.lblFileName;
+            this.baseItemHost7.Location = new System.Drawing.Point(14, 33);
+            this.baseItemHost7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.baseItemHost7.Name = "baseItemHost7";
+            this.baseItemHost7.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost7.Size = new System.Drawing.Size(99, 24);
+            this.baseItemHost7.TabIndex = 2;
             // 
             // lblFileName
             // 
+            this.lblFileName.Font = new System.Drawing.Font("宋体", 9F);
             this.lblFileName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.lblFileName.Location = new System.Drawing.Point(9, 22);
+            this.lblFileName.Location = new System.Drawing.Point(0, 0);
             this.lblFileName.Name = "lblFileName";
-            this.lblFileName.Padding = new System.Windows.Forms.Padding(0);
-            this.lblFileName.Size = new System.Drawing.Size(66, 16);
-            this.lblFileName.TabIndex = 2;
+            this.lblFileName.Size = new System.Drawing.Size(99, 24);
+            this.lblFileName.Tag = null;
             this.lblFileName.Text = "插件对象：";
             // 
             // openFileDialog1
@@ -180,29 +247,68 @@
             // 
             // separator1
             // 
-            this.separator1.BackColor = System.Drawing.Color.Transparent;
+            this.separator1.AutoLayout = true;
             this.separator1.eOrientation = System.Windows.Forms.Orientation.Horizontal;
+            this.separator1.Font = new System.Drawing.Font("宋体", 9F);
+            this.separator1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.separator1.Location = new System.Drawing.Point(145, 161);
             this.separator1.LockHeight = true;
+            this.separator1.MinimumSize = new System.Drawing.Size(3, 3);
             this.separator1.Name = "separator1";
-            this.separator1.Padding = new System.Windows.Forms.Padding(0);
             this.separator1.Size = new System.Drawing.Size(331, 3);
-            this.separator1.TabIndex = 87;
+            this.separator1.Tag = null;
             this.separator1.Text = "separator1";
+            // 
+            // baseItemHost1
+            // 
+            this.baseItemHost1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.baseItemHost1.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost1.BaseItemObject = this.btnCancel;
+            this.baseItemHost1.Location = new System.Drawing.Point(246, 266);
+            this.baseItemHost1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.baseItemHost1.Name = "baseItemHost1";
+            this.baseItemHost1.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost1.Size = new System.Drawing.Size(135, 40);
+            this.baseItemHost1.TabIndex = 86;
+            // 
+            // baseItemHost2
+            // 
+            this.baseItemHost2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.baseItemHost2.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost2.BaseItemObject = this.btnOk;
+            this.baseItemHost2.Location = new System.Drawing.Point(549, 266);
+            this.baseItemHost2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.baseItemHost2.Name = "baseItemHost2";
+            this.baseItemHost2.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost2.Size = new System.Drawing.Size(135, 40);
+            this.baseItemHost2.TabIndex = 85;
+            // 
+            // baseItemHost8
+            // 
+            this.baseItemHost8.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost8.BaseItemObject = null;
+            this.baseItemHost8.Location = new System.Drawing.Point(218, 242);
+            this.baseItemHost8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.baseItemHost8.Name = "baseItemHost8";
+            this.baseItemHost8.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost8.Size = new System.Drawing.Size(496, 4);
+            this.baseItemHost8.TabIndex = 87;
             // 
             // AppendPluginTBForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 215);
-            this.Controls.Add(this.separator1);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnOk);
+            this.CancelItemsEventNC = false;
+            this.ClientSize = new System.Drawing.Size(752, 350);
+            this.Controls.Add(this.baseItemHost8);
+            this.Controls.Add(this.baseItemHost1);
+            this.Controls.Add(this.baseItemHost2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.HelpButton = true;
             this.Location = new System.Drawing.Point(0, 0);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AppendPluginTBForm";
@@ -222,14 +328,22 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtFileName;
-        private GISShare.Controls.WinForm.WFNew.LabelN lblFileName;
-        private GISShare.Controls.WinForm.WFNew.ButtonN btnCancel;
-        private GISShare.Controls.WinForm.WFNew.ButtonN btnOk;
-        private GISShare.Controls.WinForm.WFNew.ButtonN btnOpen;
-        private GISShare.Controls.WinForm.WFNew.RadioButtonN rbCut;
-        private GISShare.Controls.WinForm.WFNew.RadioButtonN rbCopy;
-        private GISShare.Controls.WinForm.WFNew.RadioButtonN rbUse;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private Controls.WinForm.WFNew.Separator separator1;
+        private GISShare.Controls.WinForm.WFNew.LabelItem lblFileName;
+        private GISShare.Controls.WinForm.WFNew.ButtonItem btnCancel;
+        private GISShare.Controls.WinForm.WFNew.ButtonItem btnOk;
+        private GISShare.Controls.WinForm.WFNew.ButtonItem btnOpen;
+        private GISShare.Controls.WinForm.WFNew.RadioButtonItem rbCut;
+        private GISShare.Controls.WinForm.WFNew.RadioButtonItem rbCopy;
+        private GISShare.Controls.WinForm.WFNew.RadioButtonItem rbUse;
+        private Controls.WinForm.WFNew.SeparatorItem separator1;
+        private Controls.WinForm.WFNew.BaseItemHost baseItemHost1;
+        private Controls.WinForm.WFNew.BaseItemHost baseItemHost2;
+        private Controls.WinForm.WFNew.BaseItemHost baseItemHost3;
+        private Controls.WinForm.WFNew.BaseItemHost baseItemHost4;
+        private Controls.WinForm.WFNew.BaseItemHost baseItemHost5;
+        private Controls.WinForm.WFNew.BaseItemHost baseItemHost6;
+        private Controls.WinForm.WFNew.BaseItemHost baseItemHost7;
+        private Controls.WinForm.WFNew.BaseItemHost baseItemHost8;
     }
 }

@@ -22,19 +22,7 @@ namespace GISShare.Controls.WinForm.WFNew.View.Design
                 typeof(RowViewItem),  
                 typeof(VRowViewItem),  
                 typeof(FlexibleRowViewItem), 
-                typeof(FlexibleVRowViewItem), 
-                //
-                typeof(ViewItemEx),
-                typeof(SizeViewItemEx),
-                typeof(TextViewItemEx), 
-                typeof(ImageViewItemEx), 
-                typeof(ColorViewItemEx),
-                typeof(TextEditViewItemEx), 
-                typeof(ResizeViewItemEx), 
-                typeof(RowViewItemEx), 
-                typeof(VRowViewItemEx), 
-                typeof(FlexibleRowViewItemEx),
-                typeof(FlexibleVRowViewItemEx),
+                typeof(FlexibleVRowViewItem),
                 //
                 typeof(SuperViewItem)
             };

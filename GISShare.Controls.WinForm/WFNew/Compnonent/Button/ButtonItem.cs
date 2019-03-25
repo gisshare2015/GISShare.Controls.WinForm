@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.ButtonItemDesigner))]
+    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.CollectionItemDesigner))]
     public class ButtonItem : ImageLabelItem, 
         IButtonItem, IDismissPopupObject, IPopupOwnerHelper, ICollectionObjectDesignHelper, IPopupObjectDesignHelper//, IMeasureHelper
     {

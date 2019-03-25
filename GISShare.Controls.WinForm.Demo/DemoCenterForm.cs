@@ -142,12 +142,6 @@ TBForm¡¢RibbonControl¡¢ViewItemListBoxµÈ£©ºÍ
             demoOfRibbonControlForm.Show();
         }
 
-        private void btnRibbonControlEx_MouseClick(object sender, MouseEventArgs e)
-        {
-            GISShare.Controls.WinForm.Demo.WFNew.DemoOfRibbonControlExForm demoOfRibbonControlExForm = new GISShare.Controls.WinForm.Demo.WFNew.DemoOfRibbonControlExForm();
-            demoOfRibbonControlExForm.Show();
-        }
-
         private void btnViewItemListBox_MouseClick(object sender, MouseEventArgs e)
         {
             GISShare.Controls.WinForm.Demo.WFNew.DemoOfViewItemListBoxForm demoOfViewItemListBoxForm = new GISShare.Controls.WinForm.Demo.WFNew.DemoOfViewItemListBoxForm();

@@ -247,19 +247,19 @@
 
         #endregion
 
-        private GISShare.Controls.WinForm.WFNew.ToolBarN toolBarN1;
         private GISShare.Controls.WinForm.WFNew.LabelItem labelItem1;
         private GISShare.Controls.WinForm.WFNew.SeparatorItem separatorItem1;
         private GISShare.Controls.WinForm.WFNew.SplitButtonItem splitButtonItem1;
         private GISShare.Controls.WinForm.WFNew.BaseButtonItem baseButtonItem1;
         private GISShare.Controls.WinForm.WFNew.BaseButtonItem baseButtonItem2;
         private GISShare.Controls.WinForm.WFNew.BaseButtonItem baseButtonItem3;
-        private GISShare.Controls.WinForm.WFNew.ToolBarN toolBarN3;
         private GISShare.Controls.WinForm.WFNew.LabelItem labelItem2;
-        private GISShare.Controls.WinForm.WFNew.ToolBarN toolBarN2;
         private GISShare.Controls.WinForm.WFNew.DropDownButtonItem dropDownButtonItem1;
         private GISShare.Controls.WinForm.WFNew.BaseButtonItem baseButtonItem4;
         private GISShare.Controls.WinForm.WFNew.BaseButtonItem baseButtonItem5;
         private GISShare.Controls.WinForm.WFNew.BaseButtonItem baseButtonItem6;
+        private GISShare.Controls.WinForm.WFNew.ToolBarN toolBarN1;
+        private GISShare.Controls.WinForm.WFNew.ToolBarN toolBarN3;
+        private GISShare.Controls.WinForm.WFNew.ToolBarN toolBarN2;
     }
 }

@@ -14,8 +14,8 @@ namespace GISShare.Controls.Plugin.WinForm.WFNew.Ribbon
         private string[] m_FilterObjectNameArray = null;
         private bool m_FilterObjectNameArrayTypeRemove = true;
         private object m_Hook = null;
-        private GISShare.Controls.WinForm.WFNew.RibbonControl m_RibbonControl;
-        private GISShare.Controls.WinForm.WFNew.RibbonStatusBar m_RibbonStatusBar;
+        private GISShare.Controls.WinForm.WFNew.IRibbonControl m_RibbonControl;
+        private GISShare.Controls.WinForm.WFNew.IStatusBarItem m_RibbonStatusBar;
         private GISShare.Controls.WinForm.WFNew.ContextPopupManager m_ContextPopupManager;
         private GISShare.Controls.WinForm.WFNew.DockPanel.DockPanelManager m_DockPanelManager;
         //
@@ -39,8 +39,8 @@ namespace GISShare.Controls.Plugin.WinForm.WFNew.Ribbon
             string[] strFilterObjectNameArray,
             bool bFilterObjectNameArrayTypeRemove,
             object hook,
-            GISShare.Controls.WinForm.WFNew.RibbonControl ribbonControl,
-            GISShare.Controls.WinForm.WFNew.RibbonStatusBar ribbonStatusBar,
+            GISShare.Controls.WinForm.WFNew.IRibbonControl ribbonControl,
+            GISShare.Controls.WinForm.WFNew.IStatusBarItem ribbonStatusBar,
             GISShare.Controls.WinForm.WFNew.ContextPopupManager contextPopupManager,
             GISShare.Controls.WinForm.WFNew.DockPanel.DockPanelManager dockPanelManager)
         {
@@ -77,7 +77,7 @@ namespace GISShare.Controls.Plugin.WinForm.WFNew.Ribbon
         /// <summary>
         /// RibbonControl
         /// </summary>
-        public GISShare.Controls.WinForm.WFNew.RibbonControl RibbonControl
+        public GISShare.Controls.WinForm.WFNew.IRibbonControl RibbonControl
         {
             get { return m_RibbonControl; }
         }
@@ -85,7 +85,7 @@ namespace GISShare.Controls.Plugin.WinForm.WFNew.Ribbon
         /// <summary>
         /// RibbonStatusBar
         /// </summary>
-        public GISShare.Controls.WinForm.WFNew.RibbonStatusBar RibbonStatusBar
+        public GISShare.Controls.WinForm.WFNew.IStatusBarItem RibbonStatusBar
         {
             get { return m_RibbonStatusBar; }
         }
@@ -144,8 +144,8 @@ namespace GISShare.Controls.Plugin.WinForm.WFNew.Ribbon
         /// 从跟结点向下检索
         /// </summary>
         private void LoadPlugin(PluginCategoryDictionary pluginCategoryDictionary,
-            GISShare.Controls.WinForm.WFNew.RibbonControl ribbonControl,
-            GISShare.Controls.WinForm.WFNew.RibbonStatusBar ribbonStatusBar,
+            GISShare.Controls.WinForm.WFNew.IRibbonControl ribbonControl,
+            GISShare.Controls.WinForm.WFNew.IStatusBarItem ribbonStatusBar,
             GISShare.Controls.WinForm.WFNew.ContextPopupManager contextPopupManager,
             GISShare.Controls.WinForm.WFNew.DockPanel.DockPanelManager dockPanelManager)
         {
@@ -189,14 +189,14 @@ namespace GISShare.Controls.Plugin.WinForm.WFNew.Ribbon
                                     ribbonBarItem.Visible = ribbonBarItem.HaveVisibleBaseItem;
                                 }
                             }
-                            ribbonControl.RibbonPages.Add(ribbonPageItem);
+                            ribbonControl.TabPages.Add(ribbonPageItem);
                         }
                         ribbonPageItem.Visible = ribbonPageItem.HaveVisibleBaseItem;
                     }
                 }
                 else
                 {
-                    this.LoadPlugin(pluginCategoryDictionary, pluginCategoryDictionary.GetPluginCategory((int)CategoryIndex_3_Style.eRibbonControlEx_RibbonPages), ribbonControl.RibbonPages);
+                    this.LoadPlugin(pluginCategoryDictionary, pluginCategoryDictionary.GetPluginCategory((int)CategoryIndex_3_Style.eRibbonControlEx_RibbonPages), ribbonControl.TabPages);
                 }
                 //
                 //RibbonControlEx.ApplicationPopup.MenuItems
@@ -267,8 +267,8 @@ namespace GISShare.Controls.Plugin.WinForm.WFNew.Ribbon
         //
         private void LoadPlugin(PluginCategoryDictionary pluginCategoryDictionary,
             PluginCategory pluginCategory,
-            GISShare.Controls.WinForm.WFNew.RibbonControl ribbonControl,
-            GISShare.Controls.WinForm.WFNew.RibbonStatusBar ribbonStatusBar,
+            GISShare.Controls.WinForm.WFNew.IRibbonControl ribbonControl,
+            GISShare.Controls.WinForm.WFNew.IStatusBarItem ribbonStatusBar,
             GISShare.Controls.WinForm.WFNew.ContextPopupManager contextPopupManager)
         {
             if (pluginCategory == null) return;
@@ -297,7 +297,7 @@ namespace GISShare.Controls.Plugin.WinForm.WFNew.Ribbon
                         if (ribbonControl != null) this.LoadPlugin_InsertSubItem(pluginCategoryDictionary, one, ribbonControl.PageContents);
                         break;
                     case (int)WFNew.Ribbon.CategoryIndex_3_Style.eRibbonControlEx_RibbonPages:
-                        if (ribbonControl != null) this.LoadPlugin_InsertSubItem(pluginCategoryDictionary, one, ribbonControl.RibbonPages);
+                        if (ribbonControl != null) this.LoadPlugin_InsertSubItem(pluginCategoryDictionary, one, ribbonControl.TabPages);
                         break;
                     case (int)WFNew.Ribbon.CategoryIndex_3_Style.eRibbonControlEx_ApplicationPopup_MenuItems:
                         if (ribbonControl != null) this.LoadPlugin_InsertSubItem(pluginCategoryDictionary, one, ribbonControl.ApplicationPopup.MenuItems);
@@ -343,7 +343,7 @@ namespace GISShare.Controls.Plugin.WinForm.WFNew.Ribbon
                         GISShare.Controls.WinForm.WFNew.IBaseItem pBaseItem = null;
                         if (pBaseItem == null && ribbonControl != null)
                         {
-                            pBaseItem = ribbonControl.GetBaseItem2(one.DependItem);
+                            pBaseItem = ((GISShare.Controls.WinForm.WFNew.ICollectionItem3)ribbonControl).GetBaseItem2(one.DependItem);
                         }
                         if (pBaseItem == null && ribbonStatusBar != null)
                         {
@@ -1212,7 +1212,7 @@ namespace GISShare.Controls.Plugin.WinForm.WFNew.Ribbon
                 //
                 GISShare.Controls.WinForm.WFNew.View.NodeViewItem nodeViewItem5 = 
                     new GISShare.Controls.WinForm.WFNew.View.NodeViewItem("功能区面板集合", "功能区面板集合");
-                foreach (GISShare.Controls.WinForm.WFNew.IBaseItem one in this.m_RibbonControl.RibbonPages)
+                foreach (GISShare.Controls.WinForm.WFNew.IBaseItem one in this.m_RibbonControl.TabPages)
                 {
                     GISShare.Controls.WinForm.WFNew.View.NodeViewItem node = 
                         new GISShare.Controls.WinForm.WFNew.View.NodeViewItem(one.Name, one.Text + "（Name：" + one.Name + "）");

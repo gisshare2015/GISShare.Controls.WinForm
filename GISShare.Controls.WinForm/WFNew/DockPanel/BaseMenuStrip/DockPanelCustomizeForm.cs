@@ -38,12 +38,15 @@ namespace GISShare.Controls.WinForm.WFNew.DockPanel
         {
             this.tabControl1 = new GISShare.Controls.WinForm.WFNew.TabControl();
             this.tabPage_BasePanel = new GISShare.Controls.WinForm.WFNew.TabPage();
-            this.checkedListBox_BasePanel = new GISShare.Controls.WinForm.WFNew.View.ViewItemListBox();
+            this.baseItemHost2 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.checkedListBox_BasePanel = new GISShare.Controls.WinForm.WFNew.View.ViewItemListBoxItem();
             this.tabPage_DockPanel = new GISShare.Controls.WinForm.WFNew.TabPage();
-            this.checkedListBox_DockPanel = new GISShare.Controls.WinForm.WFNew.View.ViewItemListBox();
+            this.baseItemHost3 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.checkedListBox_DockPanel = new GISShare.Controls.WinForm.WFNew.View.ViewItemListBoxItem();
             this.tabPage_PanelTree = new GISShare.Controls.WinForm.WFNew.TabPage();
-            this.treeView_PanelTree = new GISShare.Controls.WinForm.WFNew.View.NodeViewItemTree();
-            this.button_Cancel = new GISShare.Controls.WinForm.WFNew.BaseButtonN();
+            this.baseItemHost1 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.treeView_PanelTree = new GISShare.Controls.WinForm.WFNew.View.NodeViewItemTreeItem();
+            this.button_Cancel = new GISShare.Controls.WinForm.WFNew.BaseButtonItem();
             this.tabControl1.SuspendLayout();
             this.tabPage_BasePanel.SuspendLayout();
             this.tabPage_DockPanel.SuspendLayout();
@@ -57,11 +60,12 @@ namespace GISShare.Controls.WinForm.WFNew.DockPanel
             this.tabControl1.Controls.Add(this.tabPage_BasePanel);
             this.tabControl1.Controls.Add(this.tabPage_DockPanel);
             this.tabControl1.Controls.Add(this.tabPage_PanelTree);
-            this.tabControl1.Location = new System.Drawing.Point(9, 12);
+            this.tabControl1.Location = new System.Drawing.Point(14, 18);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Windows.Forms.Padding(0);
             this.tabControl1.ShowOutLine = true;
-            this.tabControl1.Size = new System.Drawing.Size(442, 316);
+            this.tabControl1.Size = new System.Drawing.Size(663, 474);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.TabPages.Add(this.tabPage_BasePanel);
             this.tabControl1.TabPages.Add(this.tabPage_DockPanel);
@@ -71,96 +75,135 @@ namespace GISShare.Controls.WinForm.WFNew.DockPanel
             // 
             // tabPage_BasePanel
             // 
-            this.tabPage_BasePanel.Controls.Add(this.checkedListBox_BasePanel);
+            this.tabPage_BasePanel.BackColor = System.Drawing.Color.White;
+            this.tabPage_BasePanel.Controls.Add(this.baseItemHost2);
             this.tabPage_BasePanel.Image = null;
             this.tabPage_BasePanel.Location = new System.Drawing.Point(1, 22);
+            this.tabPage_BasePanel.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_BasePanel.Name = "tabPage_BasePanel";
-            this.tabPage_BasePanel.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_BasePanel.Size = new System.Drawing.Size(440, 293);
+            this.tabPage_BasePanel.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage_BasePanel.Size = new System.Drawing.Size(661, 451);
             this.tabPage_BasePanel.TabIndex = 0;
             this.tabPage_BasePanel.Text = "BasePanel";
             // 
+            // baseItemHost2
+            // 
+            this.baseItemHost2.BaseItemObject = this.checkedListBox_BasePanel;
+            this.baseItemHost2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.baseItemHost2.Location = new System.Drawing.Point(0, 0);
+            this.baseItemHost2.Margin = new System.Windows.Forms.Padding(4);
+            this.baseItemHost2.Name = "baseItemHost2";
+            this.baseItemHost2.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost2.Size = new System.Drawing.Size(661, 451);
+            this.baseItemHost2.TabIndex = 0;
+            // 
             // checkedListBox_BasePanel
             // 
+            this.checkedListBox_BasePanel.AutoGetFocus = true;
             this.checkedListBox_BasePanel.BackColor = System.Drawing.SystemColors.Window;
-            this.checkedListBox_BasePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkedListBox_BasePanel.Font = new System.Drawing.Font("宋体", 9F);
+            this.checkedListBox_BasePanel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkedListBox_BasePanel.Location = new System.Drawing.Point(0, 0);
             this.checkedListBox_BasePanel.Name = "checkedListBox_BasePanel";
-            this.checkedListBox_BasePanel.Padding = new System.Windows.Forms.Padding(0);
-            this.checkedListBox_BasePanel.SelectedIndex = -1;
-            this.checkedListBox_BasePanel.ShowOutLine = false;
-            this.checkedListBox_BasePanel.Size = new System.Drawing.Size(440, 293);
-            this.checkedListBox_BasePanel.TabIndex = 0;
+            this.checkedListBox_BasePanel.Size = new System.Drawing.Size(661, 451);
+            this.checkedListBox_BasePanel.Tag = null;
+            this.checkedListBox_BasePanel.Text = null;
             // 
             // tabPage_DockPanel
             // 
-            this.tabPage_DockPanel.Controls.Add(this.checkedListBox_DockPanel);
+            this.tabPage_DockPanel.Controls.Add(this.baseItemHost3);
             this.tabPage_DockPanel.Image = null;
             this.tabPage_DockPanel.Location = new System.Drawing.Point(1, 22);
+            this.tabPage_DockPanel.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_DockPanel.Name = "tabPage_DockPanel";
-            this.tabPage_DockPanel.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_DockPanel.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage_DockPanel.ShowOutLine = true;
-            this.tabPage_DockPanel.Size = new System.Drawing.Size(440, 293);
+            this.tabPage_DockPanel.Size = new System.Drawing.Size(661, 451);
             this.tabPage_DockPanel.TabIndex = 1;
             this.tabPage_DockPanel.Text = "DockPanel";
             // 
+            // baseItemHost3
+            // 
+            this.baseItemHost3.BackColor = System.Drawing.Color.White;
+            this.baseItemHost3.BaseItemObject = this.checkedListBox_DockPanel;
+            this.baseItemHost3.Location = new System.Drawing.Point(0, 0);
+            this.baseItemHost3.Margin = new System.Windows.Forms.Padding(4);
+            this.baseItemHost3.Name = "baseItemHost3";
+            this.baseItemHost3.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost3.Size = new System.Drawing.Size(660, 440);
+            this.baseItemHost3.TabIndex = 0;
+            // 
             // checkedListBox_DockPanel
             // 
+            this.checkedListBox_DockPanel.AutoGetFocus = true;
             this.checkedListBox_DockPanel.BackColor = System.Drawing.SystemColors.Window;
-            this.checkedListBox_DockPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkedListBox_DockPanel.Font = new System.Drawing.Font("宋体", 9F);
+            this.checkedListBox_DockPanel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkedListBox_DockPanel.Location = new System.Drawing.Point(0, 0);
             this.checkedListBox_DockPanel.Name = "checkedListBox_DockPanel";
-            this.checkedListBox_DockPanel.Padding = new System.Windows.Forms.Padding(0);
-            this.checkedListBox_DockPanel.SelectedIndex = -1;
-            this.checkedListBox_DockPanel.ShowOutLine = false;
-            this.checkedListBox_DockPanel.Size = new System.Drawing.Size(440, 293);
-            this.checkedListBox_DockPanel.TabIndex = 0;
+            this.checkedListBox_DockPanel.Size = new System.Drawing.Size(660, 440);
+            this.checkedListBox_DockPanel.Tag = null;
+            this.checkedListBox_DockPanel.Text = null;
             // 
             // tabPage_PanelTree
             // 
-            this.tabPage_PanelTree.Controls.Add(this.treeView_PanelTree);
+            this.tabPage_PanelTree.BackColor = System.Drawing.Color.White;
+            this.tabPage_PanelTree.Controls.Add(this.baseItemHost1);
             this.tabPage_PanelTree.Image = null;
             this.tabPage_PanelTree.Location = new System.Drawing.Point(1, 22);
+            this.tabPage_PanelTree.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_PanelTree.Name = "tabPage_PanelTree";
-            this.tabPage_PanelTree.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_PanelTree.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage_PanelTree.ShowOutLine = true;
-            this.tabPage_PanelTree.Size = new System.Drawing.Size(440, 293);
+            this.tabPage_PanelTree.Size = new System.Drawing.Size(661, 451);
             this.tabPage_PanelTree.TabIndex = 2;
             this.tabPage_PanelTree.Text = "PanelTree";
             // 
+            // baseItemHost1
+            // 
+            this.baseItemHost1.BaseItemObject = this.treeView_PanelTree;
+            this.baseItemHost1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.baseItemHost1.Location = new System.Drawing.Point(0, 0);
+            this.baseItemHost1.Margin = new System.Windows.Forms.Padding(4);
+            this.baseItemHost1.Name = "baseItemHost1";
+            this.baseItemHost1.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost1.Size = new System.Drawing.Size(661, 451);
+            this.baseItemHost1.TabIndex = 0;
+            // 
             // treeView_PanelTree
             // 
+            this.treeView_PanelTree.AutoGetFocus = true;
             this.treeView_PanelTree.BackColor = System.Drawing.SystemColors.Window;
-            this.treeView_PanelTree.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView_PanelTree.Font = new System.Drawing.Font("宋体", 9F);
+            this.treeView_PanelTree.ForeColor = System.Drawing.SystemColors.ControlText;
             this.treeView_PanelTree.Location = new System.Drawing.Point(0, 0);
             this.treeView_PanelTree.Name = "treeView_PanelTree";
-            this.treeView_PanelTree.Padding = new System.Windows.Forms.Padding(0);
             this.treeView_PanelTree.SelectedNode = null;
-            this.treeView_PanelTree.ShowOutLine = false;
-            this.treeView_PanelTree.Size = new System.Drawing.Size(440, 293);
-            this.treeView_PanelTree.TabIndex = 0;
+            this.treeView_PanelTree.Size = new System.Drawing.Size(661, 451);
+            this.treeView_PanelTree.Tag = null;
+            this.treeView_PanelTree.Text = null;
             // 
             // button_Cancel
             // 
             this.button_Cancel.AutoPlanTextRectangle = false;
-            this.button_Cancel.BackColor = System.Drawing.Color.Transparent;
+            this.button_Cancel.Font = new System.Drawing.Font("宋体", 9F);
+            this.button_Cancel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button_Cancel.Image = null;
             this.button_Cancel.Location = new System.Drawing.Point(361, 332);
             this.button_Cancel.Name = "button_Cancel";
-            this.button_Cancel.Padding = new System.Windows.Forms.Padding(0);
             this.button_Cancel.Size = new System.Drawing.Size(90, 25);
-            this.button_Cancel.TabIndex = 1;
+            this.button_Cancel.Tag = null;
             this.button_Cancel.Text = "Close";
             // 
             // DockPanelCustomizeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 363);
-            this.Controls.Add(this.button_Cancel);
+            this.ClientSize = new System.Drawing.Size(694, 544);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Location = new System.Drawing.Point(0, 0);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DockPanelCustomizeForm";
@@ -182,10 +225,13 @@ namespace GISShare.Controls.WinForm.WFNew.DockPanel
         private GISShare.Controls.WinForm.WFNew.TabPage tabPage_BasePanel;
         private GISShare.Controls.WinForm.WFNew.TabPage tabPage_DockPanel;
         private GISShare.Controls.WinForm.WFNew.TabPage tabPage_PanelTree;
-        private GISShare.Controls.WinForm.WFNew.View.ViewItemListBox checkedListBox_BasePanel;
-        private GISShare.Controls.WinForm.WFNew.View.ViewItemListBox checkedListBox_DockPanel;
-        private GISShare.Controls.WinForm.WFNew.View.NodeViewItemTree treeView_PanelTree;
-        private GISShare.Controls.WinForm.WFNew.BaseButtonN button_Cancel;
+        private GISShare.Controls.WinForm.WFNew.View.ViewItemListBoxItem checkedListBox_BasePanel;
+        private GISShare.Controls.WinForm.WFNew.View.ViewItemListBoxItem checkedListBox_DockPanel;
+        private GISShare.Controls.WinForm.WFNew.View.NodeViewItemTreeItem treeView_PanelTree;
+        private GISShare.Controls.WinForm.WFNew.BaseItemHost baseItemHost1;
+        private GISShare.Controls.WinForm.WFNew.BaseButtonItem button_Cancel;
+        private GISShare.Controls.WinForm.WFNew.BaseItemHost baseItemHost2;
+        private GISShare.Controls.WinForm.WFNew.BaseItemHost baseItemHost3;
 
         //
         //

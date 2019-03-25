@@ -375,9 +375,9 @@ namespace GISShare.Controls.WinForm.DockBar
                 return base.SetCreateTypeInfo(pComponent);
             }
 
-            protected override bool FiltrationShowPopup(object value)
+            protected override bool FiltrationShowPopup(WFNew.View.NodeViewItem node)
             {
-                if (value is DockBarManager)
+                if (node.Tag is DockBarManager)
                 {
                     this.GetPopupItem("Expand_Appand").Visible = true;
                     this.GetPopupItem("ExpandAll_Appand").Visible = true;
@@ -392,7 +392,7 @@ namespace GISShare.Controls.WinForm.DockBar
                     this.GetPopupItem("Collapse_Appand").Visible = false;
                 }
                 //
-                return base.FiltrationShowPopup(value);
+                return base.FiltrationShowPopup(node);
             }
         }
 

@@ -28,20 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ribbonControl1 = new GISShare.Controls.WinForm.WFNew.RibbonControl();
-            this.ribbonStatusBar1 = new GISShare.Controls.WinForm.WFNew.RibbonStatusBar();
+            this.ribbonControl1 = new GISShare.Controls.WinForm.WFNew.RibbonControlItem();
+            this.ribbonStatusBar1 = new GISShare.Controls.WinForm.WFNew.RibbonStatusBarItem();
             this.dockPanelManager1 = new GISShare.Controls.WinForm.WFNew.DockPanel.DockPanelManager();
             this.documentArea1 = new GISShare.Controls.WinForm.WFNew.DockPanel.DocumentArea();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.contextPopupManager1 = new GISShare.Controls.WinForm.WFNew.ContextPopupManager();
+            this.baseItemHost1 = new Controls.WinForm.WFNew.BaseItemHost();
+            this.baseItemHost2 = new Controls.WinForm.WFNew.BaseItemHost();
             this.documentArea1.SuspendLayout();
             this.SuspendLayout();
+            //
+            // baseItemHost1
+            //
+            this.baseItemHost1.BaseItemObject = this.ribbonControl1;
+            this.baseItemHost1.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.baseItemHost1.TabIndex = 0;
+            this.baseItemHost1.Size = new System.Drawing.Size(673, 141);
+            this.baseItemHost1.Location = new System.Drawing.Point(0, 0);
             // 
             // ribbonControl1
             // 
-            this.ribbonControl1.BackColor = System.Drawing.Color.Transparent;
             this.ribbonControl1.CanExchangeItem = false;
-            this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.ePNLayoutStyle = GISShare.Controls.WinForm.WFNew.PNLayoutStyle.eTail;
             this.ribbonControl1.eQuickAccessToolbarStyle = GISShare.Controls.WinForm.WFNew.QuickAccessToolbarStyle.eHalfRound;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
@@ -50,14 +59,20 @@
             this.ribbonControl1.Padding = new System.Windows.Forms.Padding(0);
             this.ribbonControl1.ParentForm = this;
             this.ribbonControl1.Size = new System.Drawing.Size(673, 141);
-            this.ribbonControl1.TabIndex = 0;
             this.ribbonControl1.Text = "[Demo]插件结构的文编编辑器[Demo]";
             this.ribbonControl1.UsingCloseTabButton = false;
+            //
+            // baseItemHost2
+            //
+            this.baseItemHost2.BaseItemObject = this.ribbonStatusBar1;
+            this.baseItemHost2.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.baseItemHost2.TabIndex = 0;
+            this.baseItemHost2.Size = new System.Drawing.Size(673, 23);
+            this.baseItemHost2.Location = new System.Drawing.Point(0, 413);
             // 
             // ribbonStatusBar1
             // 
-            this.ribbonStatusBar1.BackColor = System.Drawing.Color.Transparent;
-            this.ribbonStatusBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ribbonStatusBar1.eOrientation = System.Windows.Forms.Orientation.Horizontal;
             this.ribbonStatusBar1.IsRestrictItems = true;
             this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 413);
@@ -67,7 +82,6 @@
             this.ribbonStatusBar1.RestrictItemsWidth = -1;
             this.ribbonStatusBar1.ShowNomalState = true;
             this.ribbonStatusBar1.Size = new System.Drawing.Size(673, 23);
-            this.ribbonStatusBar1.TabIndex = 1;
             this.ribbonStatusBar1.Text = "ribbonStatusBar1";
             // 
             // dockPanelManager1
@@ -101,8 +115,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 436);
             this.Controls.Add(this.documentArea1);
-            this.Controls.Add(this.ribbonStatusBar1);
-            this.Controls.Add(this.ribbonControl1);
+            this.Controls.Add(this.baseItemHost2);
+            this.Controls.Add(this.baseItemHost1);
             this.Name = "RibbonHostForm";
             this.RibbonControl = this.ribbonControl1;
             this.Text = "[Demo]插件结构的文编编辑器[Demo]";
@@ -113,12 +127,14 @@
 
         #endregion
 
-        private GISShare.Controls.WinForm.WFNew.RibbonControl ribbonControl1;
-        private GISShare.Controls.WinForm.WFNew.RibbonStatusBar ribbonStatusBar1;
+        private GISShare.Controls.WinForm.WFNew.RibbonControlItem ribbonControl1;
+        private GISShare.Controls.WinForm.WFNew.RibbonStatusBarItem ribbonStatusBar1;
         private GISShare.Controls.WinForm.WFNew.DockPanel.DocumentArea documentArea1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private GISShare.Controls.WinForm.WFNew.DockPanel.DockPanelManager dockPanelManager1;
         private GISShare.Controls.WinForm.WFNew.ContextPopupManager contextPopupManager1;
+        private GISShare.Controls.WinForm.WFNew.BaseItemHost baseItemHost1;
+        private GISShare.Controls.WinForm.WFNew.BaseItemHost baseItemHost2;
     }
 }
 

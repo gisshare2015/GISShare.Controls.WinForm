@@ -523,6 +523,19 @@ namespace GISShare.Controls.WinForm.WFNew
             return form;
         }
 
+        public IRibbonControl TryGetDependRibbonControl()
+        {
+            return this.TryGetDependRibbonControl_DG(this.pOwner);
+        }
+        private IRibbonControl TryGetDependRibbonControl_DG(IOwner owner)
+        {
+            if (owner == null) return null;
+            //
+            IRibbonControl ribbonControl = owner as IRibbonControl;
+            if (ribbonControl == null) return this.TryGetDependRibbonControl_DG(owner.pOwner);
+            return ribbonControl;
+        }
+
         /// <summary>
         /// 界面有效更新，即大面积刷新，主要在有子项被移除后使用，系统自助调用
         /// </summary>
@@ -1219,6 +1232,9 @@ namespace GISShare.Controls.WinForm.WFNew
         private bool m_MouseEnter = false;
         void IMessageChain.SendMessage(MessageInfo messageInfo)
         {
+            //注入当前对象
+            messageInfo.Now = this;
+            //
             switch (messageInfo.eMessageStyle)
             {
                 case MessageStyle.eMSViewInfo:
@@ -1398,13 +1414,10 @@ namespace GISShare.Controls.WinForm.WFNew
             //
             if (this.Visible && this.Enabled && !this.GetOverflowState())
             {
-                //if(this is View.IViewItemListBox) Console.WriteLine(this.ToString() + " - " + this.m_eViewParameterStyle);
-                if (this.m_eViewParameterStyle != ViewParameterStyle.eFocused)
-                {
-                    //植入监听
-                    this.MessageMonitor(messageInfo);
-                }
-                else
+                //植入监听
+                this.MessageMonitor(messageInfo);
+                //
+                if (this.m_eViewParameterStyle == ViewParameterStyle.eFocused)
                 {
                     //关联对应事件
                     if (!messageInfo.CancelPreEvent)
@@ -1532,7 +1545,8 @@ namespace GISShare.Controls.WinForm.WFNew
             }
             //
             MouseEventArgs mouseEventArgs = messageInfo.MessageParameter as MouseEventArgs;
-            if (mouseEventArgs != null && this.Contains(mouseEventArgs.Location))
+            bool bMouseMove = Form.MouseButtons == MouseButtons.None ? this.Contains(mouseEventArgs.Location) : this.m_MouseDown;
+            if (mouseEventArgs != null && bMouseMove)
             {
                 if (!this.m_MouseEnter)
                 {

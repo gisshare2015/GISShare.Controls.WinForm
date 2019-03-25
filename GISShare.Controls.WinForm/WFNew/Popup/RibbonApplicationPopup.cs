@@ -9,24 +9,23 @@ using System.ComponentModel;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.RibbonApplicationPopupDesigner))]
-    public class RibbonApplicationPopup : BasePopup, ICollectionItem, ICollectionItem2, IApplicationPopup, ICollectionObjectDesignHelper
+    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.CollectionItemDesigner))]
+    public class RibbonApplicationPopup : BasePopup, ICollectionItem, ICollectionItem2, IApplicationPopup, ICollectionObjectDesignHelper, IRibbonApplicationObjectDesignHelper
     {
-        private RibbonApplicationPopupPanel m_RibbonApplicationPopupPanel = null;
+        private RibbonApplicationPopupPanelItem m_RibbonApplicationPopupPanel = null;
         private ToolStripControlHost m_ToolStripControlHost = null;
 
         public RibbonApplicationPopup()
         {
-            this.m_RibbonApplicationPopupPanel = new RibbonApplicationPopupPanel();
+            this.m_RibbonApplicationPopupPanel = new RibbonApplicationPopupPanelItem();
             this.m_RibbonApplicationPopupPanel.Padding = new Padding(2);
             this.m_RibbonApplicationPopupPanel.LeftTopRadius = 5;
             this.m_RibbonApplicationPopupPanel.LeftBottomRadius = 6;
             this.m_RibbonApplicationPopupPanel.RightTopRadius = 6;
             this.m_RibbonApplicationPopupPanel.RightBottomRadius = 7;
-            this.m_RibbonApplicationPopupPanel.Width = 10;
-            this.m_RibbonApplicationPopupPanel.Height = 20;
             //
-            this.m_ToolStripControlHost = new ToolStripControlHost(this.m_RibbonApplicationPopupPanel);
+            this.m_ToolStripControlHost = new ToolStripControlHost(new BaseItemHost(this.m_RibbonApplicationPopupPanel) { Width = 10, Height = 20 });
+            this.m_RibbonApplicationPopupPanel.Entity = this.m_ToolStripControlHost.Control;
             this.m_ToolStripControlHost.Dock = DockStyle.Fill;
             this.m_ToolStripControlHost.BackColor = base.BackColor;
             this.m_ToolStripControlHost.Margin = new Padding(0);
@@ -38,7 +37,7 @@ namespace GISShare.Controls.WinForm.WFNew
             this.DropShadowEnabled = false;
             this.ShowItemToolTips = false;
             //
-            ((ISetOwnerHelper)(this.m_RibbonApplicationPopupPanel)).SetOwner(this);
+            ((ISetOwnerHelper)(this.m_ToolStripControlHost.Control)).SetOwner(this);
         }
 
         [Browsable(false), 
@@ -183,7 +182,7 @@ namespace GISShare.Controls.WinForm.WFNew
 
         public Size GetIdealSize()
         {
-            Graphics g = Graphics.FromHwnd(this.m_RibbonApplicationPopupPanel.Handle);
+            Graphics g = Graphics.FromHwnd(this.m_ToolStripControlHost.Control.Handle);
             Size size = this.m_RibbonApplicationPopupPanel.GetIdealSize(g);
             g.Dispose();
             //

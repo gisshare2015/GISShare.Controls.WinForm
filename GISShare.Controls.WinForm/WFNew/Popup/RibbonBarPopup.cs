@@ -10,14 +10,15 @@ namespace GISShare.Controls.WinForm.WFNew
 {
     class RibbonBarPopup : BasePopup, IPanelPopup
     {
-        private RibbonBarMirrorPopupPanel m_RibbonBarMirrorPopupPanel = null;
+        private RibbonBarMirrorPopupPanelItem m_RibbonBarMirrorPopupPanel = null;
         private ToolStripControlHost m_ToolStripControlHost = null;
 
         public RibbonBarPopup(IRibbonBarItem ribbonBarItem)
         {
-            this.m_RibbonBarMirrorPopupPanel = new RibbonBarMirrorPopupPanel(ribbonBarItem);
+            this.m_RibbonBarMirrorPopupPanel = new RibbonBarMirrorPopupPanelItem(ribbonBarItem);
             //
-            this.m_ToolStripControlHost = new ToolStripControlHost(this.m_RibbonBarMirrorPopupPanel);
+            this.m_ToolStripControlHost = new ToolStripControlHost(new BaseItemHost(this.m_RibbonBarMirrorPopupPanel) { Size = this.m_RibbonBarMirrorPopupPanel.Size, BackColor = System.Drawing.Color.Transparent });
+            this.m_RibbonBarMirrorPopupPanel.Entity = this.m_ToolStripControlHost.Control;
             this.m_ToolStripControlHost.Dock = DockStyle.Fill;
             //this.m_ToolStripControlHost.BackColor = base.BackColor;
             this.m_ToolStripControlHost.Margin = new Padding(0);
@@ -29,13 +30,13 @@ namespace GISShare.Controls.WinForm.WFNew
             this.DropShadowEnabled = false;
             this.ShowItemToolTips = false;
             //
-            ((ISetOwnerHelper)(this.m_RibbonBarMirrorPopupPanel)).SetOwner(this);
+            ((ISetOwnerHelper)(this.m_ToolStripControlHost.Control)).SetOwner(this);
         }
 
         #region IPanelPopup
         public Size GetIdealSize()
         {
-            Graphics g = Graphics.FromHwnd(this.m_RibbonBarMirrorPopupPanel.Handle);
+            Graphics g = Graphics.FromHwnd(this.m_ToolStripControlHost.Control.Handle);
             Size size = this.m_RibbonBarMirrorPopupPanel.GetIdealSize(g);
             g.Dispose();
             //

@@ -9,7 +9,6 @@ using System.ComponentModel;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.ButtonGroupItemDesigner))]
     public class ButtonGroupItem : BaseItemStackItem, IButtonGroupItem
     {
         #region 构造函数

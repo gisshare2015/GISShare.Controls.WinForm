@@ -9,7 +9,6 @@ using System.ComponentModel;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.RibbonGalleryRowItemDesigner))]
     public class RibbonGalleryRowItem : BaseItemStackItem
     {
         #region ¹¹Ôìº¯Êý

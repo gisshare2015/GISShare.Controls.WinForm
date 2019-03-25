@@ -708,7 +708,7 @@ namespace GISShare.Controls.WinForm.WFNew
         #region Clone
         public override object Clone()
         {
-            BaseItemStackEx baseItem = new BaseItemStackEx();
+            TabButtonContainerItem baseItem = new TabButtonContainerItem();
             baseItem.Checked = this.Checked;
             baseItem.Enabled = this.Enabled;
             baseItem.Font = this.Font;

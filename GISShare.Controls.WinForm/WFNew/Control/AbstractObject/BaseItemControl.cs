@@ -101,7 +101,7 @@ namespace GISShare.Controls.WinForm.WFNew
 
         bool m_LockWith = false;
         [Browsable(true), DefaultValue(false), Description("自身的宽度是否被锁定，如被锁定其宽度将不会被自动拉伸"), Category("布局")]
-        public virtual bool LockWith 
+        public virtual bool LockWith
         {
             get { return this.m_LockWith; }
             set { this.m_LockWith = value; }
@@ -711,6 +711,9 @@ namespace GISShare.Controls.WinForm.WFNew
         #region IMessageChain
         void IMessageChain.SendMessage(MessageInfo messageInfo)
         {
+            //注入当前对象
+            messageInfo.Now = this;
+            //
             switch (messageInfo.eMessageStyle)
             {
                 case MessageStyle.eMSViewInfo:
@@ -817,7 +820,7 @@ namespace GISShare.Controls.WinForm.WFNew
         {
             this.m_MouseDown = false;
             MouseEventArgs mouseEventArgs = messageInfo.MessageParameter as MouseEventArgs;
-            if (mouseEventArgs == null || !this.DisplayRectangle.Contains(mouseEventArgs.Location))
+            if (mouseEventArgs == null)// || !this.DisplayRectangle.Contains(mouseEventArgs.Location)
             {
                 this.m_MouseEnter = false;
             }

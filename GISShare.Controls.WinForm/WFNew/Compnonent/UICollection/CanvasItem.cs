@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.CanvasItemDesigner))]
+    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.CollectionItemDesigner))]
     public class CanvasItem : AreaItem,
         IOwner, IBaseItemOwner, IBaseItemOwner2,
         IUICollectionItem,
@@ -112,7 +112,7 @@ namespace GISShare.Controls.WinForm.WFNew
 
         public override object Clone()
         {
-            return new CanvasControl();
+            return new CanvasItem();
         }
 
         protected override void MessageMonitor(MessageInfo messageInfo)

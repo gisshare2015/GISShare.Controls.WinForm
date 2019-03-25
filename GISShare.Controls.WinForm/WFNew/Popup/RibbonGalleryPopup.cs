@@ -10,18 +10,19 @@ namespace GISShare.Controls.WinForm.WFNew
 {
     class RibbonGalleryPopup : BasePopup, IPanelPopup
     {
-        private RibbonGalleryMirrorPopupPanel m_RibbonGalleryMirrorPopupPanel = null;
+        private RibbonGalleryMirrorPopupPanelItem m_RibbonGalleryMirrorPopupPanel = null;
         private ToolStripControlHost m_ToolStripControlHost = null;
 
         public RibbonGalleryPopup(IGalleryItem ribbonGalleryItem)
         {
-            this.m_RibbonGalleryMirrorPopupPanel = new RibbonGalleryMirrorPopupPanel(ribbonGalleryItem);
+            this.m_RibbonGalleryMirrorPopupPanel = new RibbonGalleryMirrorPopupPanelItem(ribbonGalleryItem);
             this.m_RibbonGalleryMirrorPopupPanel.LeftTopRadius = 5;
             this.m_RibbonGalleryMirrorPopupPanel.LeftBottomRadius = 6;
             this.m_RibbonGalleryMirrorPopupPanel.RightTopRadius = 6;
             this.m_RibbonGalleryMirrorPopupPanel.RightBottomRadius = 7;
             //
-            this.m_ToolStripControlHost = new ToolStripControlHost(this.m_RibbonGalleryMirrorPopupPanel);
+            this.m_ToolStripControlHost = new ToolStripControlHost(new BaseItemHost(this.m_RibbonGalleryMirrorPopupPanel));
+            this.m_RibbonGalleryMirrorPopupPanel.Entity = this.m_ToolStripControlHost.Control;
             this.m_ToolStripControlHost.Dock = DockStyle.Fill;
             //this.m_ToolStripControlHost.BackColor = base.BackColor;
             this.m_ToolStripControlHost.Margin = new Padding(0);
@@ -33,13 +34,13 @@ namespace GISShare.Controls.WinForm.WFNew
             this.DropShadowEnabled = false;
             this.ShowItemToolTips = false;
             //
-            ((ISetOwnerHelper)(this.m_RibbonGalleryMirrorPopupPanel)).SetOwner(this);
+            ((ISetOwnerHelper)(this.m_ToolStripControlHost.Control)).SetOwner(this);
         }
 
         #region IPanelPopup
         public Size GetIdealSize()
         {
-            Graphics g = Graphics.FromHwnd(this.m_RibbonGalleryMirrorPopupPanel.Handle);
+            Graphics g = Graphics.FromHwnd(this.m_ToolStripControlHost.Control.Handle);
             Size size = this.m_RibbonGalleryMirrorPopupPanel.GetIdealSize(g);
             g.Dispose();
             //

@@ -8,7 +8,6 @@ using System.ComponentModel;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.RibbonPageItemDesigner))]
     public class RibbonPageItem : BaseItemStackExItem, IRibbonPageItem, ISetTabPageItemHelper
     {
         ITabButtonItem m_pTabButtonItem;

@@ -10,6 +10,7 @@ namespace GISShare.Controls.WinForm.WFNew
 {
     public interface IBasePopup : IBaseItem, IBasePopupEvent
     {
+        Size ImageScalingSize { get; set; }
         bool AutoClose { get; set; }
         bool DropShadowEnabled { get; set; }
         double Opacity { get; set; }

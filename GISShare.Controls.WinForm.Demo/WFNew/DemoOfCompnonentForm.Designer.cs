@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DemoOfCompnonentForm));
-            this.ribbonStatusBar1 = new GISShare.Controls.WinForm.WFNew.RibbonStatusBar();
+            this.ribbonStatusBar1 = new GISShare.Controls.WinForm.WFNew.RibbonStatusBarItem();
             this.dockPanelManager1 = new GISShare.Controls.WinForm.WFNew.DockPanel.DockPanelManager();
             this.basePanel1 = new GISShare.Controls.WinForm.WFNew.DockPanel.BasePanel();
-            this.viewItemListBox1 = new GISShare.Controls.WinForm.WFNew.View.ViewItemListBox();
+            this.viewItemListBox1 = new GISShare.Controls.WinForm.WFNew.View.ViewItemListBoxItem();
             this.dockPanelDockAreaLeft1 = new GISShare.Controls.WinForm.WFNew.DockPanel.DockPanelDockAreaLeft();
             this.dockPanel1 = new GISShare.Controls.WinForm.WFNew.DockPanel.DockPanel();
             this.ribbonBarItem17 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
@@ -48,7 +48,7 @@
             this.baseButtonItem4 = new GISShare.Controls.WinForm.WFNew.BaseButtonItem();
             this.baseButtonItem5 = new GISShare.Controls.WinForm.WFNew.BaseButtonItem();
             this.baseButtonItem6 = new GISShare.Controls.WinForm.WFNew.BaseButtonItem();
-            this.ribbonPage10 = new GISShare.Controls.WinForm.WFNew.RibbonPage();
+            this.ribbonPage10 = new GISShare.Controls.WinForm.WFNew.RibbonPageItem();
             this.ribbonBarItem18 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
             this.ribbonGalleryItem1 = new GISShare.Controls.WinForm.WFNew.RibbonGalleryItem();
             this.ribbonGalleryRowItem1 = new GISShare.Controls.WinForm.WFNew.RibbonGalleryRowItem();
@@ -105,10 +105,10 @@
             this.labelSeparatorItem1 = new GISShare.Controls.WinForm.WFNew.LabelSeparatorItem();
             this.baseItemStackItem1 = new GISShare.Controls.WinForm.WFNew.BaseItemStackItem();
             this.ribbonBarItem16 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
-            this.ribbonPage9 = new GISShare.Controls.WinForm.WFNew.RibbonPage();
+            this.ribbonPage9 = new GISShare.Controls.WinForm.WFNew.RibbonPageItem();
             this.sliderItem1 = new GISShare.Controls.WinForm.WFNew.SliderItem();
             this.ribbonBarItem15 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
-            this.ribbonPage8 = new GISShare.Controls.WinForm.WFNew.RibbonPage();
+            this.ribbonPage8 = new GISShare.Controls.WinForm.WFNew.RibbonPageItem();
             this.ribbonBarItem21 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
             this.scrollBarItem1 = new GISShare.Controls.WinForm.WFNew.ScrollBarItem();
             this.separatorItem9 = new GISShare.Controls.WinForm.WFNew.SeparatorItem();
@@ -116,19 +116,19 @@
             this.ribbonBarItem14 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
             this.baseItemStackItem4 = new GISShare.Controls.WinForm.WFNew.BaseItemStackItem();
             this.processBarItem1 = new GISShare.Controls.WinForm.WFNew.ProcessBarItem();
-            this.ribbonPage7 = new GISShare.Controls.WinForm.WFNew.RibbonPage();
+            this.ribbonPage7 = new GISShare.Controls.WinForm.WFNew.RibbonPageItem();
             this.comboTreeItem1 = new GISShare.Controls.WinForm.WFNew.ComboTreeItem();
             this.ribbonBarItem13 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
             this.comboBoxItem1 = new GISShare.Controls.WinForm.WFNew.ComboBoxItem();
             this.ribbonBarItem12 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
-            this.ribbonPage6 = new GISShare.Controls.WinForm.WFNew.RibbonPage();
+            this.ribbonPage6 = new GISShare.Controls.WinForm.WFNew.RibbonPageItem();
             this.ribbonBarItem24 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
             this.comboDateItem1 = new GISShare.Controls.WinForm.WFNew.ComboDateItem();
             this.integerInputBoxItem1 = new GISShare.Controls.WinForm.WFNew.IntegerInputBoxItem();
             this.ribbonBarItem11 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
             this.textBoxItem1 = new GISShare.Controls.WinForm.WFNew.TextBoxItem();
             this.ribbonBarItem10 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
-            this.ribbonPage5 = new GISShare.Controls.WinForm.WFNew.RibbonPage();
+            this.ribbonPage5 = new GISShare.Controls.WinForm.WFNew.RibbonPageItem();
             this.ribbonBarItem22 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
             this.doubleInputBoxItem1 = new GISShare.Controls.WinForm.WFNew.DoubleInputBoxItem();
             this.ribbonBarItem26 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
@@ -136,11 +136,11 @@
             this.imageRadioButtonItem1 = new GISShare.Controls.WinForm.WFNew.ImageRadioButtonItem();
             this.radioButtonItem1 = new GISShare.Controls.WinForm.WFNew.RadioButtonItem();
             this.ribbonBarItem9 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
-            this.ribbonPage4 = new GISShare.Controls.WinForm.WFNew.RibbonPage();
+            this.ribbonPage4 = new GISShare.Controls.WinForm.WFNew.RibbonPageItem();
             this.imageCheckBoxItem1 = new GISShare.Controls.WinForm.WFNew.ImageCheckBoxItem();
             this.checkBoxItem1 = new GISShare.Controls.WinForm.WFNew.CheckBoxItem();
             this.ribbonBarItem8 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
-            this.ribbonPage3 = new GISShare.Controls.WinForm.WFNew.RibbonPage();
+            this.ribbonPage3 = new GISShare.Controls.WinForm.WFNew.RibbonPageItem();
             this.buttonExItem2 = new GISShare.Controls.WinForm.WFNew.ButtonExItem();
             this.buttonExItem1 = new GISShare.Controls.WinForm.WFNew.ButtonExItem();
             this.separatorItem5 = new GISShare.Controls.WinForm.WFNew.SeparatorItem();
@@ -166,7 +166,7 @@
             this.separatorItem1 = new GISShare.Controls.WinForm.WFNew.SeparatorItem();
             this.baseButtonItem2 = new GISShare.Controls.WinForm.WFNew.BaseButtonItem();
             this.ribbonBarItem1 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
-            this.ribbonPage1 = new GISShare.Controls.WinForm.WFNew.RibbonPage();
+            this.ribbonPage1 = new GISShare.Controls.WinForm.WFNew.RibbonPageItem();
             this.ribbonBarItem27 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
             this.glyphButtonItem1 = new GISShare.Controls.WinForm.WFNew.GlyphButtonItem();
             this.imageLinkLabelItem1 = new GISShare.Controls.WinForm.WFNew.ImageLinkLabelItem();
@@ -175,13 +175,13 @@
             this.imageLabelItem1 = new GISShare.Controls.WinForm.WFNew.ImageLabelItem();
             this.labelItem1 = new GISShare.Controls.WinForm.WFNew.LabelItem();
             this.ribbonBarItem6 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
-            this.ribbonPage2 = new GISShare.Controls.WinForm.WFNew.RibbonPage();
+            this.ribbonPage2 = new GISShare.Controls.WinForm.WFNew.RibbonPageItem();
             this.ribbonBarItem23 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
             this.labelExItem1 = new GISShare.Controls.WinForm.WFNew.LabelExItem();
             this.labelExItem2 = new GISShare.Controls.WinForm.WFNew.LabelExItem();
             this.btnInfo = new GISShare.Controls.WinForm.WFNew.BaseButtonItem();
-            this.ribbonControlEx1 = new GISShare.Controls.WinForm.WFNew.RibbonControlEx();
-            this.ribbonPage11 = new GISShare.Controls.WinForm.WFNew.RibbonPage();
+            this.ribbonControlEx1 = new GISShare.Controls.WinForm.WFNew.RibbonControlItem();
+            this.ribbonPage11 = new GISShare.Controls.WinForm.WFNew.RibbonPageItem();
             this.ribbonBarItem25 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
             this.ratingStarItem1 = new GISShare.Controls.WinForm.WFNew.RatingStarItem();
             this.separatorItem10 = new GISShare.Controls.WinForm.WFNew.SeparatorItem();
@@ -191,28 +191,38 @@
             this.ratingStarItem4 = new GISShare.Controls.WinForm.WFNew.RatingStarItem();
             this.separatorItem11 = new GISShare.Controls.WinForm.WFNew.SeparatorItem();
             this.ratingStarItem5 = new GISShare.Controls.WinForm.WFNew.RatingStarItem();
-            this.ribbonPage12 = new GISShare.Controls.WinForm.WFNew.RibbonPage();
+            this.ribbonPage12 = new GISShare.Controls.WinForm.WFNew.RibbonPageItem();
             this.ribbonBarItem19 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
             this.imageBoxItem1 = new GISShare.Controls.WinForm.WFNew.ImageBoxItem();
             this.imageAreaBoxItem1 = new GISShare.Controls.WinForm.WFNew.ImageAreaBoxItem();
+            this.baseItemHost1 = new Controls.WinForm.WFNew.BaseItemHost();
+            this.baseItemHost2 = new Controls.WinForm.WFNew.BaseItemHost();
+            this.baseItemHost3 = new Controls.WinForm.WFNew.BaseItemHost();
             this.basePanel1.SuspendLayout();
             this.dockPanelDockAreaLeft1.SuspendLayout();
             this.dockPanel1.SuspendLayout();
             this.SuspendLayout();
+            //
+            //
+            //
+            this.baseItemHost1.BaseItemObject = this.ribbonStatusBar1;
+            this.baseItemHost1.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.baseItemHost1.TabIndex = 1;
+            this.baseItemHost1.Location = new System.Drawing.Point(0, 658);
+            this.baseItemHost1.Size = new System.Drawing.Size(1552, 32);
             // 
             // ribbonStatusBar1
             // 
-            this.ribbonStatusBar1.BackColor = System.Drawing.Color.Transparent;
-            this.ribbonStatusBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ribbonStatusBar1.eOrientation = System.Windows.Forms.Orientation.Horizontal;
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 439);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 658);
+            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
-            this.ribbonStatusBar1.Padding = new System.Windows.Forms.Padding(1);
+            this.ribbonStatusBar1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ribbonStatusBar1.RestrictItemsHeight = -1;
             this.ribbonStatusBar1.RestrictItemsWidth = -1;
             this.ribbonStatusBar1.ShowNomalState = true;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1035, 21);
-            this.ribbonStatusBar1.TabIndex = 1;
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1552, 32);
             this.ribbonStatusBar1.Text = "ribbonStatusBar1";
             // 
             // dockPanelManager1
@@ -225,26 +235,35 @@
             // 
             // basePanel1
             // 
-            this.basePanel1.Controls.Add(this.viewItemListBox1);
+            this.basePanel1.Controls.Add(this.baseItemHost3);
             this.basePanel1.Image = null;
             this.basePanel1.IsDocumentPanel = false;
             this.basePanel1.Location = new System.Drawing.Point(1, 20);
+            this.basePanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.basePanel1.Name = "basePanel1";
             this.basePanel1.Padding = new System.Windows.Forms.Padding(0);
-            this.basePanel1.Size = new System.Drawing.Size(186, 277);
+            this.basePanel1.Size = new System.Drawing.Size(282, 496);
             this.basePanel1.TabIndex = 0;
             this.basePanel1.Text = "控件列表";
+            //
+            //
+            //
+            this.baseItemHost3.BaseItemObject = this.viewItemListBox1;
+            this.baseItemHost3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.baseItemHost3.BackColor = System.Drawing.SystemColors.Window;
+            this.baseItemHost3.Size = new System.Drawing.Size(282, 496);
+            this.baseItemHost3.TabIndex = 0;
+            this.baseItemHost3.Location = new System.Drawing.Point(0, 0);
             // 
             // viewItemListBox1
             // 
             this.viewItemListBox1.AutoGetFocus = true;
             this.viewItemListBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.viewItemListBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewItemListBox1.Location = new System.Drawing.Point(0, 0);
+            this.viewItemListBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.viewItemListBox1.Name = "viewItemListBox1";
             this.viewItemListBox1.Padding = new System.Windows.Forms.Padding(0);
-            this.viewItemListBox1.Size = new System.Drawing.Size(186, 277);
-            this.viewItemListBox1.TabIndex = 0;
+            this.viewItemListBox1.Size = new System.Drawing.Size(282, 496);
             this.viewItemListBox1.Text = "viewItemListBox1";
             // 
             // dockPanelDockAreaLeft1
@@ -252,10 +271,11 @@
             this.dockPanelDockAreaLeft1.Controls.Add(this.dockPanel1);
             this.dockPanelDockAreaLeft1.InternalMinWidth = 25;
             this.dockPanelDockAreaLeft1.Location = new System.Drawing.Point(0, 141);
+            this.dockPanelDockAreaLeft1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dockPanelDockAreaLeft1.Name = "dockPanelDockAreaLeft1";
             this.dockPanelDockAreaLeft1.OuterMinWidth = 100;
             this.dockPanelDockAreaLeft1.Padding = new System.Windows.Forms.Padding(0);
-            this.dockPanelDockAreaLeft1.Size = new System.Drawing.Size(192, 298);
+            this.dockPanelDockAreaLeft1.Size = new System.Drawing.Size(288, 517);
             this.dockPanelDockAreaLeft1.TabIndex = 2;
             this.dockPanelDockAreaLeft1.Text = "DockPanelDockAreaLeft";
             // 
@@ -264,9 +284,10 @@
             this.dockPanel1.BasePanels.Add(this.basePanel1);
             this.dockPanel1.Controls.Add(this.basePanel1);
             this.dockPanel1.Location = new System.Drawing.Point(0, 0);
+            this.dockPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dockPanel1.Name = "dockPanel1";
             this.dockPanel1.Padding = new System.Windows.Forms.Padding(0);
-            this.dockPanel1.Size = new System.Drawing.Size(188, 298);
+            this.dockPanel1.Size = new System.Drawing.Size(284, 517);
             this.dockPanel1.TabIndex = 0;
             this.dockPanel1.Text = "控件列表";
             // 
@@ -384,6 +405,7 @@
             // 
             // separatorItem7
             // 
+            this.separatorItem7.AutoLayout = true;
             this.separatorItem7.eOrientation = System.Windows.Forms.Orientation.Vertical;
             this.separatorItem7.Font = new System.Drawing.Font("宋体", 9F);
             this.separatorItem7.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -450,7 +472,6 @@
             // 
             // ribbonPage10
             // 
-            this.ribbonPage10.BackColor = System.Drawing.Color.Transparent;
             this.ribbonPage10.BaseItems.Add(this.ribbonBarItem17);
             this.ribbonPage10.BaseItems.Add(this.ribbonBarItem18);
             this.ribbonPage10.BaseItems.Add(this.ribbonBarItem20);
@@ -462,13 +483,13 @@
             this.ribbonPage10.Image = null;
             this.ribbonPage10.LineDistance = 2;
             this.ribbonPage10.Location = new System.Drawing.Point(0, 0);
+            this.ribbonPage10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonPage10.Name = "ribbonPage10";
             this.ribbonPage10.Padding = new System.Windows.Forms.Padding(0);
             this.ribbonPage10.RestrictItemsHeight = -1;
             this.ribbonPage10.RestrictItemsWidth = -1;
             this.ribbonPage10.ShowBackgroud = false;
-            this.ribbonPage10.Size = new System.Drawing.Size(1028, 89);
-            this.ribbonPage10.TabIndex = 11;
+            this.ribbonPage10.Size = new System.Drawing.Size(0, 0);
             this.ribbonPage10.Text = "界面集合组件";
             this.ribbonPage10.TopViewItemIndex = 0;
             this.ribbonPage10.VisibleEx = true;
@@ -929,6 +950,7 @@
             // 
             // separatorItem8
             // 
+            this.separatorItem8.AutoLayout = true;
             this.separatorItem8.eOrientation = System.Windows.Forms.Orientation.Vertical;
             this.separatorItem8.Font = new System.Drawing.Font("宋体", 9F);
             this.separatorItem8.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -1103,6 +1125,7 @@
             // 
             // separatorItem6
             // 
+            this.separatorItem6.AutoLayout = true;
             this.separatorItem6.eOrientation = System.Windows.Forms.Orientation.Vertical;
             this.separatorItem6.Font = new System.Drawing.Font("宋体", 9F);
             this.separatorItem6.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -1158,7 +1181,6 @@
             // 
             // ribbonPage9
             // 
-            this.ribbonPage9.BackColor = System.Drawing.Color.Transparent;
             this.ribbonPage9.BaseItems.Add(this.ribbonBarItem16);
             this.ribbonPage9.ColumnDistance = 2;
             this.ribbonPage9.eOrientation = System.Windows.Forms.Orientation.Horizontal;
@@ -1167,13 +1189,13 @@
             this.ribbonPage9.Image = null;
             this.ribbonPage9.LineDistance = 2;
             this.ribbonPage9.Location = new System.Drawing.Point(0, 0);
+            this.ribbonPage9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonPage9.Name = "ribbonPage9";
             this.ribbonPage9.Padding = new System.Windows.Forms.Padding(0);
             this.ribbonPage9.RestrictItemsHeight = -1;
             this.ribbonPage9.RestrictItemsWidth = -1;
             this.ribbonPage9.ShowBackgroud = false;
-            this.ribbonPage9.Size = new System.Drawing.Size(1028, 89);
-            this.ribbonPage9.TabIndex = 9;
+            this.ribbonPage9.Size = new System.Drawing.Size(0, 0);
             this.ribbonPage9.Text = "分割条组件";
             this.ribbonPage9.TopViewItemIndex = 0;
             this.ribbonPage9.Visible = false;
@@ -1213,7 +1235,6 @@
             // 
             // ribbonPage8
             // 
-            this.ribbonPage8.BackColor = System.Drawing.Color.Transparent;
             this.ribbonPage8.BaseItems.Add(this.ribbonBarItem15);
             this.ribbonPage8.BaseItems.Add(this.ribbonBarItem21);
             this.ribbonPage8.ColumnDistance = 2;
@@ -1223,13 +1244,13 @@
             this.ribbonPage8.Image = null;
             this.ribbonPage8.LineDistance = 2;
             this.ribbonPage8.Location = new System.Drawing.Point(0, 0);
+            this.ribbonPage8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonPage8.Name = "ribbonPage8";
             this.ribbonPage8.Padding = new System.Windows.Forms.Padding(0);
             this.ribbonPage8.RestrictItemsHeight = -1;
             this.ribbonPage8.RestrictItemsWidth = -1;
             this.ribbonPage8.ShowBackgroud = false;
-            this.ribbonPage8.Size = new System.Drawing.Size(1028, 89);
-            this.ribbonPage8.TabIndex = 7;
+            this.ribbonPage8.Size = new System.Drawing.Size(0, 0);
             this.ribbonPage8.Text = "滑动/滚动组件";
             this.ribbonPage8.TopViewItemIndex = 0;
             this.ribbonPage8.Visible = false;
@@ -1267,6 +1288,7 @@
             // 
             // separatorItem9
             // 
+            this.separatorItem9.AutoLayout = true;
             this.separatorItem9.eOrientation = System.Windows.Forms.Orientation.Vertical;
             this.separatorItem9.Font = new System.Drawing.Font("宋体", 9F);
             this.separatorItem9.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -1334,7 +1356,6 @@
             // 
             // ribbonPage7
             // 
-            this.ribbonPage7.BackColor = System.Drawing.Color.Transparent;
             this.ribbonPage7.BaseItems.Add(this.ribbonBarItem14);
             this.ribbonPage7.ColumnDistance = 2;
             this.ribbonPage7.eOrientation = System.Windows.Forms.Orientation.Horizontal;
@@ -1343,13 +1364,13 @@
             this.ribbonPage7.Image = null;
             this.ribbonPage7.LineDistance = 2;
             this.ribbonPage7.Location = new System.Drawing.Point(0, 0);
+            this.ribbonPage7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonPage7.Name = "ribbonPage7";
             this.ribbonPage7.Padding = new System.Windows.Forms.Padding(0);
             this.ribbonPage7.RestrictItemsHeight = -1;
             this.ribbonPage7.RestrictItemsWidth = -1;
             this.ribbonPage7.ShowBackgroud = false;
-            this.ribbonPage7.Size = new System.Drawing.Size(1028, 89);
-            this.ribbonPage7.TabIndex = 6;
+            this.ribbonPage7.Size = new System.Drawing.Size(0, 0);
             this.ribbonPage7.Text = "进度条组件";
             this.ribbonPage7.TopViewItemIndex = 0;
             this.ribbonPage7.Visible = false;
@@ -1365,6 +1386,7 @@
             this.comboTreeItem1.LockHeight = true;
             this.comboTreeItem1.Name = "comboTreeItem1";
             this.comboTreeItem1.SelectedNode = null;
+            this.comboTreeItem1.ShowDropDownNum = 0;
             this.comboTreeItem1.Size = new System.Drawing.Size(120, 21);
             this.comboTreeItem1.Tag = null;
             this.comboTreeItem1.Text = "";
@@ -1395,6 +1417,7 @@
             this.comboBoxItem1.Location = new System.Drawing.Point(3, 26);
             this.comboBoxItem1.LockHeight = true;
             this.comboBoxItem1.Name = "comboBoxItem1";
+            this.comboBoxItem1.ShowDropDownNum = 0;
             this.comboBoxItem1.Size = new System.Drawing.Size(120, 21);
             this.comboBoxItem1.Tag = null;
             this.comboBoxItem1.Text = "";
@@ -1418,7 +1441,6 @@
             // 
             // ribbonPage6
             // 
-            this.ribbonPage6.BackColor = System.Drawing.Color.Transparent;
             this.ribbonPage6.BaseItems.Add(this.ribbonBarItem12);
             this.ribbonPage6.BaseItems.Add(this.ribbonBarItem13);
             this.ribbonPage6.BaseItems.Add(this.ribbonBarItem24);
@@ -1429,13 +1451,13 @@
             this.ribbonPage6.Image = null;
             this.ribbonPage6.LineDistance = 2;
             this.ribbonPage6.Location = new System.Drawing.Point(0, 0);
+            this.ribbonPage6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonPage6.Name = "ribbonPage6";
             this.ribbonPage6.Padding = new System.Windows.Forms.Padding(0);
             this.ribbonPage6.RestrictItemsHeight = -1;
             this.ribbonPage6.RestrictItemsWidth = -1;
             this.ribbonPage6.ShowBackgroud = false;
-            this.ribbonPage6.Size = new System.Drawing.Size(1028, 89);
-            this.ribbonPage6.TabIndex = 5;
+            this.ribbonPage6.Size = new System.Drawing.Size(0, 0);
             this.ribbonPage6.Text = "下拉框组件";
             this.ribbonPage6.TopViewItemIndex = 0;
             this.ribbonPage6.Visible = false;
@@ -1460,6 +1482,7 @@
             // 
             // comboDateItem1
             // 
+            this.comboDateItem1.CanEdit = false;
             this.comboDateItem1.DropDownHeight = -1;
             this.comboDateItem1.DropDownWidth = -1;
             this.comboDateItem1.eCustomizeComboBoxStyle = GISShare.Controls.WinForm.WFNew.CustomizeComboBoxStyle.eDropDownList;
@@ -1469,6 +1492,7 @@
             this.comboDateItem1.LockHeight = true;
             this.comboDateItem1.Name = "comboDateItem1";
             this.comboDateItem1.SelectedDate = new System.DateTime(2013, 6, 11, 0, 0, 0, 0);
+            this.comboDateItem1.ShowDropDownNum = 1;
             this.comboDateItem1.Size = new System.Drawing.Size(121, 20);
             this.comboDateItem1.Tag = null;
             this.comboDateItem1.Text = "2013/6/11";
@@ -1535,7 +1559,6 @@
             // 
             // ribbonPage5
             // 
-            this.ribbonPage5.BackColor = System.Drawing.Color.Transparent;
             this.ribbonPage5.BaseItems.Add(this.ribbonBarItem10);
             this.ribbonPage5.BaseItems.Add(this.ribbonBarItem11);
             this.ribbonPage5.BaseItems.Add(this.ribbonBarItem22);
@@ -1547,13 +1570,13 @@
             this.ribbonPage5.Image = null;
             this.ribbonPage5.LineDistance = 2;
             this.ribbonPage5.Location = new System.Drawing.Point(0, 0);
+            this.ribbonPage5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonPage5.Name = "ribbonPage5";
             this.ribbonPage5.Padding = new System.Windows.Forms.Padding(0);
             this.ribbonPage5.RestrictItemsHeight = -1;
             this.ribbonPage5.RestrictItemsWidth = -1;
             this.ribbonPage5.ShowBackgroud = false;
-            this.ribbonPage5.Size = new System.Drawing.Size(1028, 89);
-            this.ribbonPage5.TabIndex = 4;
+            this.ribbonPage5.Size = new System.Drawing.Size(0, 0);
             this.ribbonPage5.Text = "输入框控件";
             this.ribbonPage5.TopViewItemIndex = 0;
             this.ribbonPage5.Visible = false;
@@ -1663,7 +1686,6 @@
             // 
             // ribbonPage4
             // 
-            this.ribbonPage4.BackColor = System.Drawing.Color.Transparent;
             this.ribbonPage4.BaseItems.Add(this.ribbonBarItem9);
             this.ribbonPage4.ColumnDistance = 2;
             this.ribbonPage4.eOrientation = System.Windows.Forms.Orientation.Horizontal;
@@ -1672,13 +1694,13 @@
             this.ribbonPage4.Image = null;
             this.ribbonPage4.LineDistance = 2;
             this.ribbonPage4.Location = new System.Drawing.Point(0, 0);
+            this.ribbonPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Padding = new System.Windows.Forms.Padding(0);
             this.ribbonPage4.RestrictItemsHeight = -1;
             this.ribbonPage4.RestrictItemsWidth = -1;
             this.ribbonPage4.ShowBackgroud = false;
-            this.ribbonPage4.Size = new System.Drawing.Size(1028, 89);
-            this.ribbonPage4.TabIndex = 3;
+            this.ribbonPage4.Size = new System.Drawing.Size(0, 0);
             this.ribbonPage4.Text = "单选框组件";
             this.ribbonPage4.TopViewItemIndex = 0;
             this.ribbonPage4.Visible = false;
@@ -1727,7 +1749,6 @@
             // 
             // ribbonPage3
             // 
-            this.ribbonPage3.BackColor = System.Drawing.Color.Transparent;
             this.ribbonPage3.BaseItems.Add(this.ribbonBarItem8);
             this.ribbonPage3.ColumnDistance = 2;
             this.ribbonPage3.eOrientation = System.Windows.Forms.Orientation.Horizontal;
@@ -1736,13 +1757,13 @@
             this.ribbonPage3.Image = null;
             this.ribbonPage3.LineDistance = 2;
             this.ribbonPage3.Location = new System.Drawing.Point(0, 0);
+            this.ribbonPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Padding = new System.Windows.Forms.Padding(0);
             this.ribbonPage3.RestrictItemsHeight = -1;
             this.ribbonPage3.RestrictItemsWidth = -1;
             this.ribbonPage3.ShowBackgroud = false;
-            this.ribbonPage3.Size = new System.Drawing.Size(1028, 89);
-            this.ribbonPage3.TabIndex = 2;
+            this.ribbonPage3.Size = new System.Drawing.Size(0, 0);
             this.ribbonPage3.Text = "复选框组件";
             this.ribbonPage3.TopViewItemIndex = 0;
             this.ribbonPage3.Visible = false;
@@ -1773,6 +1794,7 @@
             // 
             // separatorItem5
             // 
+            this.separatorItem5.AutoLayout = true;
             this.separatorItem5.eOrientation = System.Windows.Forms.Orientation.Vertical;
             this.separatorItem5.Font = new System.Drawing.Font("宋体", 9F);
             this.separatorItem5.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -1841,6 +1863,7 @@
             // 
             // separatorItem4
             // 
+            this.separatorItem4.AutoLayout = true;
             this.separatorItem4.eOrientation = System.Windows.Forms.Orientation.Vertical;
             this.separatorItem4.Font = new System.Drawing.Font("宋体", 9F);
             this.separatorItem4.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -1909,6 +1932,7 @@
             // 
             // separatorItem3
             // 
+            this.separatorItem3.AutoLayout = true;
             this.separatorItem3.eOrientation = System.Windows.Forms.Orientation.Vertical;
             this.separatorItem3.Font = new System.Drawing.Font("宋体", 9F);
             this.separatorItem3.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -1976,6 +2000,7 @@
             // 
             // separatorItem2
             // 
+            this.separatorItem2.AutoLayout = true;
             this.separatorItem2.eOrientation = System.Windows.Forms.Orientation.Vertical;
             this.separatorItem2.Font = new System.Drawing.Font("宋体", 9F);
             this.separatorItem2.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -2043,6 +2068,7 @@
             // 
             // separatorItem1
             // 
+            this.separatorItem1.AutoLayout = true;
             this.separatorItem1.eOrientation = System.Windows.Forms.Orientation.Vertical;
             this.separatorItem1.Font = new System.Drawing.Font("宋体", 9F);
             this.separatorItem1.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -2087,7 +2113,6 @@
             // 
             // ribbonPage1
             // 
-            this.ribbonPage1.BackColor = System.Drawing.Color.Transparent;
             this.ribbonPage1.BaseItems.Add(this.ribbonBarItem1);
             this.ribbonPage1.BaseItems.Add(this.ribbonBarItem2);
             this.ribbonPage1.BaseItems.Add(this.ribbonBarItem3);
@@ -2101,13 +2126,13 @@
             this.ribbonPage1.Image = null;
             this.ribbonPage1.LineDistance = 2;
             this.ribbonPage1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Padding = new System.Windows.Forms.Padding(0);
             this.ribbonPage1.RestrictItemsHeight = -1;
             this.ribbonPage1.RestrictItemsWidth = -1;
             this.ribbonPage1.ShowBackgroud = false;
-            this.ribbonPage1.Size = new System.Drawing.Size(1028, 89);
-            this.ribbonPage1.TabIndex = 1;
+            this.ribbonPage1.Size = new System.Drawing.Size(0, 0);
             this.ribbonPage1.Text = "按钮组件";
             this.ribbonPage1.TopViewItemIndex = 0;
             this.ribbonPage1.Visible = false;
@@ -2227,7 +2252,6 @@
             // 
             // ribbonPage2
             // 
-            this.ribbonPage2.BackColor = System.Drawing.Color.Transparent;
             this.ribbonPage2.BaseItems.Add(this.ribbonBarItem6);
             this.ribbonPage2.BaseItems.Add(this.ribbonBarItem7);
             this.ribbonPage2.BaseItems.Add(this.ribbonBarItem23);
@@ -2238,13 +2262,13 @@
             this.ribbonPage2.Image = null;
             this.ribbonPage2.LineDistance = 2;
             this.ribbonPage2.Location = new System.Drawing.Point(0, 0);
+            this.ribbonPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Padding = new System.Windows.Forms.Padding(0);
             this.ribbonPage2.RestrictItemsHeight = -1;
             this.ribbonPage2.RestrictItemsWidth = -1;
             this.ribbonPage2.ShowBackgroud = false;
-            this.ribbonPage2.Size = new System.Drawing.Size(1028, 89);
-            this.ribbonPage2.TabIndex = 0;
+            this.ribbonPage2.Size = new System.Drawing.Size(0, 0);
             this.ribbonPage2.Text = "标签组件";
             this.ribbonPage2.TopViewItemIndex = 0;
             this.ribbonPage2.Visible = false;
@@ -2298,21 +2322,33 @@
             this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInfo.Location = new System.Drawing.Point(50, 3);
             this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(49, 19);
+            this.btnInfo.Size = new System.Drawing.Size(64, 19);
             this.btnInfo.Tag = null;
             this.btnInfo.Text = "关于";
             this.btnInfo.UsingViewOverflow = false;
             this.btnInfo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnInfo_MouseClick);
+            //
+            //
+            //
+            this.baseItemHost2.BaseItemObject = this.ribbonControlEx1;
+            this.baseItemHost2.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.baseItemHost2.TabIndex = 0;
+            this.baseItemHost2.Size = new System.Drawing.Size(1552, 141);
+            this.baseItemHost2.Location = new System.Drawing.Point(0, 0);
             // 
             // ribbonControlEx1
             // 
-            this.ribbonControlEx1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            //this.ribbonControlEx1.ApplicationPopup.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.ribbonControlEx1.CanExchangeItem = false;
-            this.ribbonControlEx1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControlEx1.ePNLayoutStyle = GISShare.Controls.WinForm.WFNew.PNLayoutStyle.eTail;
             this.ribbonControlEx1.eQuickAccessToolbarStyle = GISShare.Controls.WinForm.WFNew.QuickAccessToolbarStyle.eHalfRound;
             this.ribbonControlEx1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControlEx1.LockHeight = true;
+            this.ribbonControlEx1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonControlEx1.Name = "ribbonControlEx1";
             this.ribbonControlEx1.Padding = new System.Windows.Forms.Padding(0);
             this.ribbonControlEx1.ParentForm = this;
@@ -2329,15 +2365,13 @@
             this.ribbonControlEx1.RibbonPages.Add(this.ribbonPage12);
             this.ribbonControlEx1.RibbonPages.Add(this.ribbonPage10);
             this.ribbonControlEx1.RibbonPageSelectedIndex = 10;
-            this.ribbonControlEx1.Size = new System.Drawing.Size(1035, 141);
-            this.ribbonControlEx1.TabIndex = 0;
+            this.ribbonControlEx1.Size = new System.Drawing.Size(1552, 141);
             this.ribbonControlEx1.Text = "简单组件/控件集合";
             this.ribbonControlEx1.ToolbarItems.Add(this.btnInfo);
             this.ribbonControlEx1.UsingCloseTabButton = false;
             // 
             // ribbonPage11
             // 
-            this.ribbonPage11.BackColor = System.Drawing.Color.Transparent;
             this.ribbonPage11.BaseItems.Add(this.ribbonBarItem25);
             this.ribbonPage11.ColumnDistance = 2;
             this.ribbonPage11.eOrientation = System.Windows.Forms.Orientation.Horizontal;
@@ -2346,13 +2380,13 @@
             this.ribbonPage11.Image = null;
             this.ribbonPage11.LineDistance = 2;
             this.ribbonPage11.Location = new System.Drawing.Point(0, 0);
+            this.ribbonPage11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonPage11.Name = "ribbonPage11";
             this.ribbonPage11.Padding = new System.Windows.Forms.Padding(0);
             this.ribbonPage11.RestrictItemsHeight = -1;
             this.ribbonPage11.RestrictItemsWidth = -1;
             this.ribbonPage11.ShowBackgroud = false;
-            this.ribbonPage11.Size = new System.Drawing.Size(1028, 89);
-            this.ribbonPage11.TabIndex = 8;
+            this.ribbonPage11.Size = new System.Drawing.Size(0, 0);
             this.ribbonPage11.Text = "星型组件";
             this.ribbonPage11.TopViewItemIndex = 0;
             this.ribbonPage11.Visible = false;
@@ -2396,6 +2430,7 @@
             // 
             // separatorItem10
             // 
+            this.separatorItem10.AutoLayout = true;
             this.separatorItem10.eOrientation = System.Windows.Forms.Orientation.Vertical;
             this.separatorItem10.Font = new System.Drawing.Font("宋体", 9F);
             this.separatorItem10.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -2460,6 +2495,7 @@
             // 
             // separatorItem11
             // 
+            this.separatorItem11.AutoLayout = true;
             this.separatorItem11.eOrientation = System.Windows.Forms.Orientation.Vertical;
             this.separatorItem11.Font = new System.Drawing.Font("宋体", 9F);
             this.separatorItem11.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -2486,7 +2522,6 @@
             // 
             // ribbonPage12
             // 
-            this.ribbonPage12.BackColor = System.Drawing.Color.Transparent;
             this.ribbonPage12.BaseItems.Add(this.ribbonBarItem19);
             this.ribbonPage12.ColumnDistance = 2;
             this.ribbonPage12.eOrientation = System.Windows.Forms.Orientation.Horizontal;
@@ -2495,13 +2530,13 @@
             this.ribbonPage12.Image = null;
             this.ribbonPage12.LineDistance = 2;
             this.ribbonPage12.Location = new System.Drawing.Point(0, 0);
+            this.ribbonPage12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonPage12.Name = "ribbonPage12";
             this.ribbonPage12.Padding = new System.Windows.Forms.Padding(0);
             this.ribbonPage12.RestrictItemsHeight = -1;
             this.ribbonPage12.RestrictItemsWidth = -1;
             this.ribbonPage12.ShowBackgroud = false;
-            this.ribbonPage12.Size = new System.Drawing.Size(1028, 89);
-            this.ribbonPage12.TabIndex = 10;
+            this.ribbonPage12.Size = new System.Drawing.Size(1545, 89);
             this.ribbonPage12.Text = "图片框组件";
             this.ribbonPage12.TopViewItemIndex = 0;
             this.ribbonPage12.Visible = false;
@@ -2551,14 +2586,15 @@
             // 
             // DemoOfCompnonentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1035, 460);
+            this.ClientSize = new System.Drawing.Size(1552, 690);
             this.Controls.Add(this.dockPanelDockAreaLeft1);
-            this.Controls.Add(this.ribbonStatusBar1);
-            this.Controls.Add(this.ribbonControlEx1);
+            this.Controls.Add(this.baseItemHost1);
+            this.Controls.Add(this.baseItemHost2);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.ribbonControlEx1.MenuStrip;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DemoOfCompnonentForm";
             this.RibbonControl = this.ribbonControlEx1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -2575,17 +2611,17 @@
         private GISShare.Controls.WinForm.WFNew.DockPanel.DockPanelDockAreaLeft dockPanelDockAreaLeft1;
         private GISShare.Controls.WinForm.WFNew.DockPanel.DockPanel dockPanel1;
         private GISShare.Controls.WinForm.WFNew.DockPanel.BasePanel basePanel1;
-        private GISShare.Controls.WinForm.WFNew.RibbonStatusBar ribbonStatusBar1;
+        private GISShare.Controls.WinForm.WFNew.RibbonStatusBarItem ribbonStatusBar1;
         private GISShare.Controls.WinForm.WFNew.DockPanel.DockPanelManager dockPanelManager1;
-        private GISShare.Controls.WinForm.WFNew.RibbonControlEx ribbonControlEx1;
-        private GISShare.Controls.WinForm.WFNew.RibbonPage ribbonPage2;
+        private GISShare.Controls.WinForm.WFNew.RibbonControlItem ribbonControlEx1;
+        private GISShare.Controls.WinForm.WFNew.RibbonPageItem ribbonPage2;
         private GISShare.Controls.WinForm.WFNew.RibbonBarItem ribbonBarItem6;
         private GISShare.Controls.WinForm.WFNew.LabelItem labelItem1;
         private GISShare.Controls.WinForm.WFNew.ImageLabelItem imageLabelItem1;
         private GISShare.Controls.WinForm.WFNew.RibbonBarItem ribbonBarItem7;
         private GISShare.Controls.WinForm.WFNew.LinkLabelItem linkLabelItem1;
         private GISShare.Controls.WinForm.WFNew.ImageLinkLabelItem imageLinkLabelItem1;
-        private GISShare.Controls.WinForm.WFNew.RibbonPage ribbonPage1;
+        private GISShare.Controls.WinForm.WFNew.RibbonPageItem ribbonPage1;
         private GISShare.Controls.WinForm.WFNew.RibbonBarItem ribbonBarItem1;
         private GISShare.Controls.WinForm.WFNew.BaseButtonItem baseButtonItem2;
         private GISShare.Controls.WinForm.WFNew.SeparatorItem separatorItem1;
@@ -2611,37 +2647,37 @@
         private GISShare.Controls.WinForm.WFNew.SeparatorItem separatorItem5;
         private GISShare.Controls.WinForm.WFNew.ButtonExItem buttonExItem1;
         private GISShare.Controls.WinForm.WFNew.ButtonExItem buttonExItem2;
-        private GISShare.Controls.WinForm.WFNew.RibbonPage ribbonPage3;
+        private GISShare.Controls.WinForm.WFNew.RibbonPageItem ribbonPage3;
         private GISShare.Controls.WinForm.WFNew.RibbonBarItem ribbonBarItem8;
         private GISShare.Controls.WinForm.WFNew.CheckBoxItem checkBoxItem1;
         private GISShare.Controls.WinForm.WFNew.ImageCheckBoxItem imageCheckBoxItem1;
-        private GISShare.Controls.WinForm.WFNew.RibbonPage ribbonPage4;
+        private GISShare.Controls.WinForm.WFNew.RibbonPageItem ribbonPage4;
         private GISShare.Controls.WinForm.WFNew.RibbonBarItem ribbonBarItem9;
         private GISShare.Controls.WinForm.WFNew.RadioButtonItem radioButtonItem1;
         private GISShare.Controls.WinForm.WFNew.ImageRadioButtonItem imageRadioButtonItem1;
-        private GISShare.Controls.WinForm.WFNew.RibbonPage ribbonPage5;
+        private GISShare.Controls.WinForm.WFNew.RibbonPageItem ribbonPage5;
         private GISShare.Controls.WinForm.WFNew.RibbonBarItem ribbonBarItem10;
         private GISShare.Controls.WinForm.WFNew.TextBoxItem textBoxItem1;
         private GISShare.Controls.WinForm.WFNew.RibbonBarItem ribbonBarItem11;
         private GISShare.Controls.WinForm.WFNew.IntegerInputBoxItem integerInputBoxItem1;
-        private GISShare.Controls.WinForm.WFNew.RibbonPage ribbonPage6;
+        private GISShare.Controls.WinForm.WFNew.RibbonPageItem ribbonPage6;
         private GISShare.Controls.WinForm.WFNew.RibbonBarItem ribbonBarItem12;
         private GISShare.Controls.WinForm.WFNew.ComboBoxItem comboBoxItem1;
         private GISShare.Controls.WinForm.WFNew.RibbonBarItem ribbonBarItem13;
         private GISShare.Controls.WinForm.WFNew.ComboTreeItem comboTreeItem1;
-        private GISShare.Controls.WinForm.WFNew.RibbonPage ribbonPage7;
+        private GISShare.Controls.WinForm.WFNew.RibbonPageItem ribbonPage7;
         private GISShare.Controls.WinForm.WFNew.RibbonBarItem ribbonBarItem14;
-        private GISShare.Controls.WinForm.WFNew.RibbonPage ribbonPage8;
+        private GISShare.Controls.WinForm.WFNew.RibbonPageItem ribbonPage8;
         private GISShare.Controls.WinForm.WFNew.RibbonBarItem ribbonBarItem15;
         private GISShare.Controls.WinForm.WFNew.SliderItem sliderItem1;
-        private GISShare.Controls.WinForm.WFNew.RibbonPage ribbonPage9;
+        private GISShare.Controls.WinForm.WFNew.RibbonPageItem ribbonPage9;
         private GISShare.Controls.WinForm.WFNew.RibbonBarItem ribbonBarItem16;
         private GISShare.Controls.WinForm.WFNew.BaseItemStackItem baseItemStackItem1;
         private GISShare.Controls.WinForm.WFNew.LabelSeparatorItem labelSeparatorItem1;
         private GISShare.Controls.WinForm.WFNew.SeparatorItem separatorItem6;
         private GISShare.Controls.WinForm.WFNew.BaseItemStackItem baseItemStackItem2;
         private GISShare.Controls.WinForm.WFNew.ImageLabelSeparatorItem imageLabelSeparatorItem1;
-        private GISShare.Controls.WinForm.WFNew.RibbonPage ribbonPage10;
+        private GISShare.Controls.WinForm.WFNew.RibbonPageItem ribbonPage10;
         private GISShare.Controls.WinForm.WFNew.RibbonBarItem ribbonBarItem17;
         private GISShare.Controls.WinForm.WFNew.BaseButtonItem btnInfo;
         private GISShare.Controls.WinForm.WFNew.BaseItemStackItem baseItemStackItem3;
@@ -2689,7 +2725,7 @@
         private GISShare.Controls.WinForm.WFNew.BaseButtonItem baseButtonItem31;
         private GISShare.Controls.WinForm.WFNew.BaseButtonItem baseButtonItem32;
         private GISShare.Controls.WinForm.WFNew.BaseButtonItem baseButtonItem33;
-        private GISShare.Controls.WinForm.WFNew.RibbonPage ribbonPage12;
+        private GISShare.Controls.WinForm.WFNew.RibbonPageItem ribbonPage12;
         private GISShare.Controls.WinForm.WFNew.RibbonBarItem ribbonBarItem19;
         private GISShare.Controls.WinForm.WFNew.ImageBoxItem imageBoxItem1;
         private GISShare.Controls.WinForm.WFNew.BaseItemStackItem baseItemStackItem4;
@@ -2710,7 +2746,7 @@
         private GISShare.Controls.WinForm.WFNew.ScrollBarItem scrollBarItem1;
         private GISShare.Controls.WinForm.WFNew.ScrollBarItem scrollBarItem2;
         private GISShare.Controls.WinForm.WFNew.SeparatorItem separatorItem9;
-        private GISShare.Controls.WinForm.WFNew.View.ViewItemListBox viewItemListBox1;
+        private GISShare.Controls.WinForm.WFNew.View.ViewItemListBoxItem viewItemListBox1;
         private GISShare.Controls.WinForm.WFNew.RibbonBarItem ribbonBarItem22;
         private GISShare.Controls.WinForm.WFNew.DoubleInputBoxItem doubleInputBoxItem1;
         private GISShare.Controls.WinForm.WFNew.RibbonBarItem ribbonBarItem23;
@@ -2718,7 +2754,7 @@
         private GISShare.Controls.WinForm.WFNew.LabelExItem labelExItem2;
         private GISShare.Controls.WinForm.WFNew.RibbonBarItem ribbonBarItem24;
         private GISShare.Controls.WinForm.WFNew.ComboDateItem comboDateItem1;
-        private GISShare.Controls.WinForm.WFNew.RibbonPage ribbonPage11;
+        private GISShare.Controls.WinForm.WFNew.RibbonPageItem ribbonPage11;
         private GISShare.Controls.WinForm.WFNew.RibbonBarItem ribbonBarItem25;
         private GISShare.Controls.WinForm.WFNew.RatingStarItem ratingStarItem1;
         private GISShare.Controls.WinForm.WFNew.SeparatorItem separatorItem10;
@@ -2738,5 +2774,8 @@
         private Controls.WinForm.WFNew.LinkLabelItem linkLabelItem3;
         private Controls.WinForm.WFNew.BaseButtonItem baseButtonItem1;
         private Controls.WinForm.WFNew.ImageAreaBoxItem imageAreaBoxItem1;
+        private Controls.WinForm.WFNew.BaseItemHost baseItemHost1;
+        private Controls.WinForm.WFNew.BaseItemHost baseItemHost2;
+        private Controls.WinForm.WFNew.BaseItemHost baseItemHost3;
     }
 }

@@ -42,7 +42,7 @@ namespace GISShare.Controls.WinForm.WFNew
         {
             base.OnTabButtonMouseDown(e);
             //
-            IRibbonControl pRibbonControl = this.Parent as IRibbonControl;
+            IRibbonControl pRibbonControl = this.TryGetDependRibbonControl();
             if (pRibbonControl == null || !pRibbonControl.HideRibbonPage) return;
             pRibbonControl.ShowPagesPopup();
         }

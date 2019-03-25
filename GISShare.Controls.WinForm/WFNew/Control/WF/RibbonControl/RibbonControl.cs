@@ -2110,9 +2110,21 @@ namespace GISShare.Controls.WinForm.WFNew
             #endregion
 
             #region IPopupPanel
+            private Control m_Entity;
+            /// <summary>
+            /// 依附实体
+            /// </summary>
+            [Browsable(false), Description("Popup依附实体"), Category("属性")]
+            public Control Entity
+            {
+                get { return m_Entity; }
+                set { m_Entity = value; }
+            }
+
             public void TrySetPopupPanelSize(Size size)
             {
                 this.Size = size;
+                if (this.m_Entity != null) this.m_Entity.Size = size;
             }
             #endregion
 

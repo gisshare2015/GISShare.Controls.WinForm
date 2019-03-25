@@ -11,7 +11,7 @@ namespace GISShare.Controls.Plugin.WinForm
     public partial class AppendPluginTBForm : GISShare.Controls.WinForm.WFNew.Forms.TBForm // Form
     {
         private IBaseHost3 m_pBaseHost3;
-        private GISShare.Controls.WinForm.WFNew.View.ViewItemListBox m_ViewItemListBox;
+        private GISShare.Controls.WinForm.WFNew.View.ViewItemListBoxItem m_ViewItemListBox;
 
         public AppendPluginTBForm(IBaseHost3 pBaseHost3)
         {
@@ -96,8 +96,7 @@ namespace GISShare.Controls.Plugin.WinForm
                 strFileName = strFileNameNew;
             }
             //
-            this.m_ViewItemListBox = new Controls.WinForm.WFNew.View.ViewItemListBox();
-            this.m_ViewItemListBox.Dock = DockStyle.Fill;
+            this.m_ViewItemListBox = new Controls.WinForm.WFNew.View.ViewItemListBoxItem();
             this.m_ViewItemListBox.ShowHScrollBar = true;
             //
             this.m_pBaseHost3.AppendPluginObject(strFileName);
@@ -106,7 +105,7 @@ namespace GISShare.Controls.Plugin.WinForm
             {
                 GISShare.Controls.WinForm.WFNew.Forms.TBForm form = new GISShare.Controls.WinForm.WFNew.Forms.TBForm();
                 form.Text = "插件加载信息";
-                form.Controls.Add(this.m_ViewItemListBox);
+                form.Controls.Add(new GISShare.Controls.WinForm.WFNew.BaseItemHost(this.m_ViewItemListBox) { Dock = DockStyle.Fill });
                 form.Owner = this;
                 form.ShowIcon = false;
                 form.Size = new Size(this.Width + 100, this.Height + 100);

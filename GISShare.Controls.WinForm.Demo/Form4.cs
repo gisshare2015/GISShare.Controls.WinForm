@@ -15,6 +15,9 @@ namespace GISShare.Controls.WinForm.Demo
         Controls.WinForm.WFNew.View.NodeViewItem m_AAA = new Controls.WinForm.WFNew.View.NodeViewItem("AAA");
         public Form4()
         {
+            GISShare.Controls.WinForm.WFNew.Forms.TBFormSkinHelper v =
+                new Controls.WinForm.WFNew.Forms.TBFormSkinHelper(this);
+
             InitializeComponent();
             this.comboTree1.NodeViewItems.Add(m_A);
             m_A.NodeViewItems.Add(m_AA);
@@ -23,6 +26,8 @@ namespace GISShare.Controls.WinForm.Demo
 
             this.zoomableImageBox1.DefaultExtent(true);
             //this.zoomableImageBox1.FullExtent(true);
+
+           
         }
 
         private void buttonX1_Click(object sender, EventArgs e)

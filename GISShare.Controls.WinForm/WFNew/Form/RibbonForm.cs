@@ -248,7 +248,7 @@ namespace GISShare.Controls.WinForm.WFNew
                 //
                 Rectangle rectClip = rectBounds;
                 Region region = new Region(rectClip);
-                rectClip.Inflate(-size.Width + 1, -size.Height + 1);
+                rectClip.Inflate(-size.Width, -size.Height);
                 //
                 IntPtr iHandle = GISShare.Win32.API.GetDCEx
                     (

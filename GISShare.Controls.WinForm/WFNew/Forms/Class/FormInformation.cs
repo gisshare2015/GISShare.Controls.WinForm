@@ -9,6 +9,11 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
     public class FormInformation
     {
         /// <summary>
+        /// 是否为 XP以上系统
+        /// </summary>
+        public static readonly bool IsVista = Environment.OSVersion.Version.Major >= 6 && System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser;
+
+        /// <summary>
         /// Calculates the border size for the given form.
         /// </summary>
         /// <param name="form">The form.</param>
@@ -26,9 +31,6 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
             bool caption = (style & (int)(GISShare.Win32.WindowStyles.WS_CAPTION)) != 0;
             int factor = SystemInformation.BorderMultiplierFactor - 1;
 
-            OperatingSystem system = Environment.OSVersion;
-            bool isVista = system.Version.Major >= 6 && System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser;
-
             switch (form.FormBorderStyle)
             {
                 case FormBorderStyle.FixedToolWindow:
@@ -38,11 +40,9 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
                     break;
                 case FormBorderStyle.SizableToolWindow:
                 case FormBorderStyle.Sizable:
-                    if (isVista)
+                    if (IsVista)
                     {
                         border = SystemInformation.FrameBorderSize;
-                        //border.Width = border.Width + SystemInformation.HorizontalResizeBorderThickness;
-                        //border.Height = border.Height + SystemInformation.VerticalResizeBorderThickness;
                     }
                     else
                     {
@@ -68,7 +68,17 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
             //
             if (form.IsMdiChild && form.WindowState == FormWindowState.Minimized) return SystemInformation.CaptionButtonSize;
             //
-            return ((form.FormBorderStyle != FormBorderStyle.SizableToolWindow) && form.FormBorderStyle != FormBorderStyle.FixedToolWindow) ? SystemInformation.CaptionButtonSize : SystemInformation.ToolWindowCaptionButtonSize;
+            switch (form.FormBorderStyle)
+            {
+                case FormBorderStyle.None:
+                    return new Size(0, 0);
+                case FormBorderStyle.FixedToolWindow:
+                case FormBorderStyle.SizableToolWindow:
+                    return SystemInformation.ToolWindowCaptionButtonSize;
+                default:
+                    return SystemInformation.CaptionButtonSize;
+            }
+            //return ((form.FormBorderStyle != FormBorderStyle.SizableToolWindow) && form.FormBorderStyle != FormBorderStyle.FixedToolWindow) ? SystemInformation.CaptionButtonSize : SystemInformation.ToolWindowCaptionButtonSize;
         }
 
         /// <summary>
@@ -82,7 +92,17 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
             //
             if (form.IsMdiChild && form.WindowState == FormWindowState.Minimized) return SystemInformation.CaptionHeight;
             //
-            return (form.FormBorderStyle != FormBorderStyle.SizableToolWindow && form.FormBorderStyle != FormBorderStyle.FixedToolWindow) ? SystemInformation.CaptionHeight : SystemInformation.ToolWindowCaptionHeight;
+            switch (form.FormBorderStyle) 
+            {
+                case FormBorderStyle.None:
+                    return 0;
+                case FormBorderStyle.FixedToolWindow:
+                case FormBorderStyle.SizableToolWindow:
+                    return SystemInformation.ToolWindowCaptionHeight + 1;
+                default:
+                    return SystemInformation.CaptionHeight + 2;
+            }
+            //return (form.FormBorderStyle != FormBorderStyle.SizableToolWindow && form.FormBorderStyle != FormBorderStyle.FixedToolWindow) ? SystemInformation.CaptionHeight : SystemInformation.ToolWindowCaptionHeight;
         }
 
         /// <summary>

@@ -85,6 +85,13 @@ namespace GISShare.Controls.WinForm.WFNew
             get { return m_CancelPreEvent; }
             set { m_CancelPreEvent = value; }
         }
+
+        object m_Now;
+        public object Now
+        {
+            get { return m_Now; }
+            set { m_Now = value; }
+        }
     }
 
     public enum MessageStyle
@@ -116,4 +123,4 @@ namespace GISShare.Controls.WinForm.WFNew
         eMSVisibleChanged
         
     }
-}
+ }

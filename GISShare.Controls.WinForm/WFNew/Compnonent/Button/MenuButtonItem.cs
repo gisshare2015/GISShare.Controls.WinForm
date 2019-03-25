@@ -8,7 +8,6 @@ using System.Windows.Forms.Design;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.MenuButtonItemDesigner))]
     public class MenuButtonItem : ButtonItem
     {
         #region ¹¹Ôìº¯Êý

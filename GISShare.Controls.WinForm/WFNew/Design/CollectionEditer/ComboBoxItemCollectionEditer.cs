@@ -16,10 +16,6 @@ namespace GISShare.Controls.WinForm.WFNew.Design
                 typeof(View.TextViewItem), 
                 typeof(View.ImageViewItem), 
                 typeof(View.ColorViewItem), 
-                typeof(View.ViewItemEx),
-                typeof(View.TextViewItemEx), 
-                typeof(View.ImageViewItemEx), 
-                typeof(View.ColorViewItemEx),
                 typeof(View.SuperViewItem)
             };
         }

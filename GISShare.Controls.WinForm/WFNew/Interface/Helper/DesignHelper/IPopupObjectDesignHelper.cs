@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    public interface IPopupObjectDesignHelper
+    public interface IPopupObjectDesignHelper : IObjectDesignHelper
     {
         void ShowPopup();
 

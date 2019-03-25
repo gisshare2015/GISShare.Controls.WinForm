@@ -8,7 +8,6 @@ using System.ComponentModel;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.RibbonGalleryItemDesigner))]
     public class RibbonGalleryItem : BaseItemStackItem, IGalleryItem, IGalleryItemEvent, IPopupOwner, IPopupOwnerHelper
     {
         private const int CTR_MINHEIGHT = 62;

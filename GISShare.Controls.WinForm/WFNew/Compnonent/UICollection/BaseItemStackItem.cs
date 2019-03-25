@@ -9,7 +9,7 @@ using System.ComponentModel;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.BaseItemStackItemDesigner))]
+    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.CollectionItemDesigner))]
     public class BaseItemStackItem : AreaItem, IBaseItemStackItem, ICollectionObjectDesignHelper
     {
         private BaseItem m_BaseItemMouseDown = null;

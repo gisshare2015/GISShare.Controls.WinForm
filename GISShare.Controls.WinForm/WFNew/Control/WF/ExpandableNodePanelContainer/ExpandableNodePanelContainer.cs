@@ -134,7 +134,7 @@ namespace GISShare.Controls.WinForm.WFNew
                 y = (y + one.Height) + this.Space.Height;
             }
             //
-            if(this.AutoResize) this.Height = y;
+            if (this.AutoResize) this.Height = y;
             //
             base.Invalidate();
         }

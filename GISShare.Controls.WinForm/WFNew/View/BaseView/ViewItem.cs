@@ -17,6 +17,12 @@ namespace GISShare.Controls.WinForm.WFNew.View
             this.m_Text = text;
         }
 
+        public ViewItem(string name, string text)
+            : this(text)
+        {
+            this.m_Name = name;
+        }
+
         #region IRenderable
         RenderStyle m_eRenderStyle = RenderStyle.eSystem;
         [Browsable(true), DefaultValue(typeof(RenderStyle), "eSystem"), Description("渲染类型"), Category("外观")]
@@ -28,6 +34,14 @@ namespace GISShare.Controls.WinForm.WFNew.View
         #endregion
 
         #region IViewItem
+        string m_Name;
+        [Browsable(true), Description("名称"), Category("描述")]
+        public string Name
+        {
+            get { return m_Name; }
+            set { m_Name = value; }
+        }
+
         string m_Text = "ViewItem";
         [Browsable(true), Description("文本"), Category("外观")]
         public virtual string Text
@@ -38,6 +52,14 @@ namespace GISShare.Controls.WinForm.WFNew.View
                 if (m_Text == value) return;
                 m_Text = value;
             }
+        }
+
+        private object m_Tag;
+        [Browsable(true), DefaultValue(null), TypeConverter(typeof(StringConverter)), Description("用来携带附加信息"), Category("数据")]
+        public object Tag
+        {
+            get { return m_Tag; }
+            set { m_Tag = value; }
         }
 
         /// <summary>
@@ -133,7 +155,7 @@ namespace GISShare.Controls.WinForm.WFNew.View
                     this.MSMouseWheel(messageInfo);
                     break;
                     //
-                case MessageStyle.eMSMouseDown:
+                case MessageStyle.eMSMouseDown: 
                     this.MSMouseDown(messageInfo);
                     break;
                 case MessageStyle.eMSMouseUp:
@@ -199,14 +221,14 @@ namespace GISShare.Controls.WinForm.WFNew.View
         }
         private void MSMouseDown(MessageInfo messageInfo)
         {
-            IViewItemOwner pViewItemOwner = messageInfo.Sender as IViewItemOwner;
-            if (pViewItemOwner != null)
+            IOwner pOwner = messageInfo.Now as IOwner;
+            if (pOwner != null)
             {
                 MouseEventArgs mouseEventArgs = messageInfo.MessageParameter as MouseEventArgs;
                 if (mouseEventArgs != null && this.DisplayRectangle.Contains(mouseEventArgs.Location))
                 {
                     this.m_MouseDown = true;
-                    if (this.RefreshBaseItemState) { pViewItemOwner.Refresh(); }
+                    if (this.RefreshBaseItemState) { pOwner.Refresh(); }
                     //植入监听
                     this.MessageMonitor(messageInfo);//new MessageInfo(this, messageInfo.eMessageStyle, messageInfo.MessageParameter)
                 }
@@ -215,7 +237,7 @@ namespace GISShare.Controls.WinForm.WFNew.View
         private void MSMouseUp(MessageInfo messageInfo)
         {
             this.m_MouseDown = false;
-            IViewItemOwner pViewItemOwner = messageInfo.Sender as IViewItemOwner;
+            IViewItemOwner pViewItemOwner = messageInfo.Now as IViewItemOwner;
             if (pViewItemOwner != null)
             {
                 MouseEventArgs mouseEventArgs = messageInfo.MessageParameter as MouseEventArgs;
@@ -232,7 +254,7 @@ namespace GISShare.Controls.WinForm.WFNew.View
         {
             //if (this.m_MouseDown) return;
             //
-            IViewItemOwner pViewItemOwner = messageInfo.Sender as IViewItemOwner;
+            IViewItemOwner pViewItemOwner = messageInfo.Now as IViewItemOwner;
             if (pViewItemOwner != null)
             {
                 MouseEventArgs mouseEventArgs = messageInfo.MessageParameter as MouseEventArgs;
@@ -241,8 +263,9 @@ namespace GISShare.Controls.WinForm.WFNew.View
                     Rectangle rectangle = Rectangle.Intersect(pViewItemOwner.ViewItemsRectangle, this.DisplayRectangle);
                     if (this.m_MouseDown && !rectangle.Contains(mouseEventArgs.Location)) return;//key
                     //
+                    bool bMouseMove = Form.MouseButtons == MouseButtons.None ? rectangle.Contains(mouseEventArgs.Location) : this.m_MouseDown;
                     //if (this.DisplayRectangle.Contains(mouseEventArgs.Location))
-                    if (rectangle.Contains(mouseEventArgs.Location))
+                    if (bMouseMove)
                     {
                         if (!this.m_MouseEnter)
                         {
@@ -275,7 +298,7 @@ namespace GISShare.Controls.WinForm.WFNew.View
             {
                 this.m_MouseEnter = true;
                 //Console.WriteLine(this.Text + "|2 true|" + this.eBaseItemState);
-                IViewItemOwner pViewItemOwner = messageInfo.Sender as IViewItemOwner;
+                IViewItemOwner pViewItemOwner = messageInfo.Now as IViewItemOwner;
                 if (pViewItemOwner != null)
                 {
                     if (this.RefreshBaseItemState) { pViewItemOwner.Refresh(); }
@@ -288,7 +311,7 @@ namespace GISShare.Controls.WinForm.WFNew.View
             {
                 this.m_MouseEnter = false;
                 //Console.WriteLine(this.Text + "|1 false|" + this.eBaseItemState);
-                IViewItemOwner pViewItemOwner = messageInfo.Sender as IViewItemOwner;
+                IViewItemOwner pViewItemOwner = messageInfo.Now as IViewItemOwner;
                 if (pViewItemOwner != null)
                 {
                     if (this.RefreshBaseItemState) { pViewItemOwner.Refresh(); }
@@ -299,7 +322,7 @@ namespace GISShare.Controls.WinForm.WFNew.View
         }
         private void MSMouseClick(MessageInfo messageInfo)
         {
-            IViewItemOwner pViewItemOwner = messageInfo.Sender as IViewItemOwner;
+            IViewItemOwner pViewItemOwner = messageInfo.Now as IViewItemOwner;
             if (pViewItemOwner != null)
             {
                 MouseEventArgs mouseEventArgs = messageInfo.MessageParameter as MouseEventArgs;
@@ -312,7 +335,7 @@ namespace GISShare.Controls.WinForm.WFNew.View
         }
         private void MSMouseDoubleClick(MessageInfo messageInfo)
         {
-            IViewItemOwner pViewItemOwner = messageInfo.Sender as IViewItemOwner;
+            IViewItemOwner pViewItemOwner = messageInfo.Now as IViewItemOwner;
             if (pViewItemOwner != null)
             {
                 MouseEventArgs mouseEventArgs = messageInfo.MessageParameter as MouseEventArgs;

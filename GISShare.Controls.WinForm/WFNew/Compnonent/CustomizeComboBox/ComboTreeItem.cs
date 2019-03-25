@@ -17,18 +17,22 @@ namespace GISShare.Controls.WinForm.WFNew
         private const int CTR_SINGLELEFTSPACE = 0;//
         private const int CTR_MIDDLESPACE = 2;//间距
 
-        GISShare.Controls.WinForm.WFNew.View.NodeViewItemTree m_NodeViewItemTree;
+        GISShare.Controls.WinForm.WFNew.View.NodeViewItemTreeItem m_NodeViewItemTree;
         
         #region 构造函数
         public ComboTreeItem()
-            : base(new GISShare.Controls.WinForm.WFNew.View.NodeViewItemTree())
+            : base(new GISShare.Controls.WinForm.WFNew.BaseItemHost())
         {
-            this.m_NodeViewItemTree = ((ICustomizeComboBoxItem)this).ControlObject as GISShare.Controls.WinForm.WFNew.View.NodeViewItemTree;
+            this.m_NodeViewItemTree = new GISShare.Controls.WinForm.WFNew.View.NodeViewItemTreeItem();
             this.m_NodeViewItemTree.BackColor = System.Drawing.SystemColors.Window;
-            this.m_NodeViewItemTree.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_NodeViewItemTree.ShowOutLine = false;
             this.m_NodeViewItemTree.MouseDoubleClick += new MouseEventHandler(NodeViewItemTree_MouseDoubleClick);
             this.m_NodeViewItemTree.SelectedNodeChanged += new PropertyChangedEventHandler(NodeViewItemTree_SelectedNodeChanged);
+            //
+            GISShare.Controls.WinForm.WFNew.BaseItemHost baseItemHost = (GISShare.Controls.WinForm.WFNew.BaseItemHost)((ICustomizeComboBoxItem)this).ControlObject;
+            baseItemHost.BackColor = System.Drawing.SystemColors.Window;
+            baseItemHost.Dock = System.Windows.Forms.DockStyle.Fill;
+            baseItemHost.BaseItemObject = this.m_NodeViewItemTree;
             //
             //
             //

@@ -697,6 +697,9 @@ namespace GISShare.Controls.WinForm.WFNew
         #region IMessageChain
         void IMessageChain.SendMessage(MessageInfo messageInfo)
         {
+            //注入当前对象
+            messageInfo.Now = this;
+            //
             switch (messageInfo.eMessageStyle)
             {
                 case MessageStyle.eMSViewInfo:
@@ -803,7 +806,7 @@ namespace GISShare.Controls.WinForm.WFNew
         {
             this.m_MouseDown = false;
             MouseEventArgs mouseEventArgs = messageInfo.MessageParameter as MouseEventArgs;
-            if (mouseEventArgs == null || !this.DisplayRectangle.Contains(mouseEventArgs.Location))
+            if (mouseEventArgs == null)// || !this.DisplayRectangle.Contains(mouseEventArgs.Location)
             {
                 this.m_MouseEnter = false;
             }

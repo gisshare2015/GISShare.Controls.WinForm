@@ -3,3 +3,8 @@ D:\Independent\GISShare\GISShare.Controls\DotNet\SVN\trunk\GISShare.Controls.Plu
 D:\Independent\GISShare\GISShare.Controls\DotNet\SVN\trunk\GISShare.Controls.Plugin.WinForm.Demo.PluginDLL\obj\Debug\GISShare.Controls.Plugin.WinForm.Demo.PluginDLL.csprojResolveAssemblyReference.cache
 D:\Independent\GISShare\GISShare.Controls\DotNet\SVN\trunk\GISShare.Controls.Plugin.WinForm.Demo.PluginDLL\obj\Debug\GISShare.Controls.Plugin.WinForm.Demo.PluginDLL.dll
 D:\Independent\GISShare\GISShare.Controls\DotNet\SVN\trunk\GISShare.Controls.Plugin.WinForm.Demo.PluginDLL\obj\Debug\GISShare.Controls.Plugin.WinForm.Demo.PluginDLL.pdb
+C:\Users\admin\Documents\GitHub\GISShare.Controls.WinForm\GISShare.Controls.Plugin.WinForm.Demo\bin\Debug\Plugin\GISShare.Controls.Plugin.WinForm.Demo.PluginDLL.dll
+C:\Users\admin\Documents\GitHub\GISShare.Controls.WinForm\GISShare.Controls.Plugin.WinForm.Demo\bin\Debug\Plugin\GISShare.Controls.Plugin.WinForm.Demo.PluginDLL.pdb
+C:\Users\admin\Documents\GitHub\GISShare.Controls.WinForm\GISShare.Controls.Plugin.WinForm.Demo.PluginDLL\obj\Debug\GISShare.Controls.Plugin.WinForm.Demo.PluginDLL.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\GitHub\GISShare.Controls.WinForm\GISShare.Controls.Plugin.WinForm.Demo.PluginDLL\obj\Debug\GISShare.Controls.Plugin.WinForm.Demo.PluginDLL.dll
+C:\Users\admin\Documents\GitHub\GISShare.Controls.WinForm\GISShare.Controls.Plugin.WinForm.Demo.PluginDLL\obj\Debug\GISShare.Controls.Plugin.WinForm.Demo.PluginDLL.pdb

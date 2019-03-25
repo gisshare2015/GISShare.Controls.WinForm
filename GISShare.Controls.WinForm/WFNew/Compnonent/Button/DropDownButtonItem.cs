@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.DropDownButtonItemDesigner))]
+    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.CollectionItemDesigner))]
     public class DropDownButtonItem : BaseButtonItem, IDropDownButtonItem, IPopupOwnerHelper, ICollectionObjectDesignHelper, IPopupObjectDesignHelper
     {
         protected override EventStateStyle GetEventStateSupplement(string strEventName)

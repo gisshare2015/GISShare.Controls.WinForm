@@ -82,7 +82,7 @@ namespace GISShare.Controls.WinForm
             GISShare.Win32.API.EnumChildWindows(intPtrNodeViewItem.IntPtrInfo, EnumCP, intPtrNodeViewItem.IntPtrInfo);
             //
             this.lblInfo.Text = "¹²Ð¯´ø " + node.NodeViewItems.Count + " ¾ä±ú";
-            this.lblInfo.Refresh();
+            this.toolBarN2.Refresh();
         }
         private bool EnumCP(IntPtr hwnd, IntPtr lParam)
         {

@@ -22,7 +22,7 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
             WFNew.IPanelPopup pPanelPopup = ((WFNew.IPopupOwnerHelper)this).GetBasePopup() as WFNew.IPanelPopup;
             if (pPanelPopup != null)
             {
-                WFNew.ContextPopupPanel pContextPopupPanel = pPanelPopup.GetPopupPanel() as WFNew.ContextPopupPanel;
+                WFNew.ContextPopupPanelItem pContextPopupPanel = pPanelPopup.GetPopupPanel() as WFNew.ContextPopupPanelItem;
                 if (pContextPopupPanel != null) pContextPopupPanel.eContextPopupStyle = GISShare.Controls.WinForm.WFNew.ContextPopupStyle.eSuper;
             }
             //this.setr

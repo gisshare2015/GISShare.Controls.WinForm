@@ -29,78 +29,120 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PluginDemoForm));
-            this.dbRibbonHostForm = new GISShare.Controls.WinForm.WFNew.DescriptionButton();
-            this.dbDockBarHostTBForm = new GISShare.Controls.WinForm.WFNew.DescriptionButton();
-            this.dbDockBarHostForm = new GISShare.Controls.WinForm.WFNew.DescriptionButton();
+            this.dbRibbonHostForm = new GISShare.Controls.WinForm.WFNew.DescriptionButtonItem();
+            this.dbDockBarHostTBForm = new GISShare.Controls.WinForm.WFNew.DescriptionButtonItem();
+            this.dbDockBarHostForm = new GISShare.Controls.WinForm.WFNew.DescriptionButtonItem();
+            this.baseItemHost1 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.baseItemHost2 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.baseItemHost3 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
             this.SuspendLayout();
             // 
             // dbRibbonHostForm
             // 
-            this.dbRibbonHostForm.BackColor = System.Drawing.Color.Transparent;
             this.dbRibbonHostForm.Description = "基于RibbonControl、RibbonStatus、ContextPopupManager和DockPanelManager控件解析的插件应用程序Demo（" +
     "这些控件/组件成员是可选的）";
             this.dbRibbonHostForm.DescriptionFont = new System.Drawing.Font("宋体", 9F);
             this.dbRibbonHostForm.DescriptionForeColor = System.Drawing.SystemColors.ControlText;
             this.dbRibbonHostForm.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
+            this.dbRibbonHostForm.ForeColor = System.Drawing.SystemColors.ControlText;
             this.dbRibbonHostForm.Image = null;
             this.dbRibbonHostForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dbRibbonHostForm.Location = new System.Drawing.Point(12, 12);
+            this.dbRibbonHostForm.Location = new System.Drawing.Point(0, 0);
             this.dbRibbonHostForm.Name = "dbRibbonHostForm";
             this.dbRibbonHostForm.Padding = new System.Windows.Forms.Padding(3);
-            this.dbRibbonHostForm.Size = new System.Drawing.Size(339, 76);
-            this.dbRibbonHostForm.TabIndex = 1;
+            this.dbRibbonHostForm.ShowNomalState = true;
+            this.dbRibbonHostForm.Size = new System.Drawing.Size(508, 114);
+            this.dbRibbonHostForm.Tag = null;
             this.dbRibbonHostForm.Text = "RibbonHostForm";
             this.dbRibbonHostForm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dbRibbonHostForm.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dbRibbonHostForm_MouseClick);
             // 
             // dbDockBarHostTBForm
             // 
-            this.dbDockBarHostTBForm.BackColor = System.Drawing.Color.Transparent;
             this.dbDockBarHostTBForm.Description = "基于TBForm、DockBarManager和DockPanelManager控件解析的插件应用程序Demo（这些窗体/组件成员是可选的）";
             this.dbDockBarHostTBForm.DescriptionFont = new System.Drawing.Font("宋体", 9F);
             this.dbDockBarHostTBForm.DescriptionForeColor = System.Drawing.SystemColors.ControlText;
             this.dbDockBarHostTBForm.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
+            this.dbDockBarHostTBForm.ForeColor = System.Drawing.SystemColors.ControlText;
             this.dbDockBarHostTBForm.Image = null;
             this.dbDockBarHostTBForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dbDockBarHostTBForm.Location = new System.Drawing.Point(12, 171);
+            this.dbDockBarHostTBForm.Location = new System.Drawing.Point(0, 0);
             this.dbDockBarHostTBForm.Name = "dbDockBarHostTBForm";
             this.dbDockBarHostTBForm.Padding = new System.Windows.Forms.Padding(3);
-            this.dbDockBarHostTBForm.Size = new System.Drawing.Size(339, 71);
-            this.dbDockBarHostTBForm.TabIndex = 2;
+            this.dbDockBarHostTBForm.ShowNomalState = true;
+            this.dbDockBarHostTBForm.Size = new System.Drawing.Size(508, 106);
+            this.dbDockBarHostTBForm.Tag = null;
             this.dbDockBarHostTBForm.Text = "DockBarHostTBForm";
             this.dbDockBarHostTBForm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dbDockBarHostTBForm.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dbDockBarHostTBForm_MouseClick);
             // 
             // dbDockBarHostForm
             // 
-            this.dbDockBarHostForm.BackColor = System.Drawing.Color.Transparent;
             this.dbDockBarHostForm.Description = "基于DockBarManager和DockPanelManager控件解析的插件应用程序Demo（这些组件成员是可选的）";
             this.dbDockBarHostForm.DescriptionFont = new System.Drawing.Font("宋体", 9F);
             this.dbDockBarHostForm.DescriptionForeColor = System.Drawing.SystemColors.ControlText;
             this.dbDockBarHostForm.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
+            this.dbDockBarHostForm.ForeColor = System.Drawing.SystemColors.ControlText;
             this.dbDockBarHostForm.Image = null;
             this.dbDockBarHostForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dbDockBarHostForm.Location = new System.Drawing.Point(12, 94);
+            this.dbDockBarHostForm.Location = new System.Drawing.Point(0, 0);
             this.dbDockBarHostForm.Name = "dbDockBarHostForm";
             this.dbDockBarHostForm.Padding = new System.Windows.Forms.Padding(3);
-            this.dbDockBarHostForm.Size = new System.Drawing.Size(339, 71);
-            this.dbDockBarHostForm.TabIndex = 3;
+            this.dbDockBarHostForm.ShowNomalState = true;
+            this.dbDockBarHostForm.Size = new System.Drawing.Size(508, 106);
+            this.dbDockBarHostForm.Tag = null;
             this.dbDockBarHostForm.Text = "DockBarHostForm";
             this.dbDockBarHostForm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dbDockBarHostForm.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dbDockBarHostForm_MouseClick);
             // 
+            // baseItemHost1
+            // 
+            this.baseItemHost1.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost1.BaseItemObject = this.dbRibbonHostForm;
+            this.baseItemHost1.Location = new System.Drawing.Point(18, 18);
+            this.baseItemHost1.Margin = new System.Windows.Forms.Padding(4);
+            this.baseItemHost1.Name = "baseItemHost1";
+            this.baseItemHost1.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost1.Size = new System.Drawing.Size(508, 114);
+            this.baseItemHost1.TabIndex = 1;
+            // 
+            // baseItemHost2
+            // 
+            this.baseItemHost2.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost2.BaseItemObject = this.dbDockBarHostTBForm;
+            this.baseItemHost2.Location = new System.Drawing.Point(18, 256);
+            this.baseItemHost2.Margin = new System.Windows.Forms.Padding(4);
+            this.baseItemHost2.Name = "baseItemHost2";
+            this.baseItemHost2.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost2.Size = new System.Drawing.Size(508, 106);
+            this.baseItemHost2.TabIndex = 2;
+            // 
+            // baseItemHost3
+            // 
+            this.baseItemHost3.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost3.BaseItemObject = this.dbDockBarHostForm;
+            this.baseItemHost3.Location = new System.Drawing.Point(18, 141);
+            this.baseItemHost3.Margin = new System.Windows.Forms.Padding(4);
+            this.baseItemHost3.Name = "baseItemHost3";
+            this.baseItemHost3.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost3.Size = new System.Drawing.Size(508, 106);
+            this.baseItemHost3.TabIndex = 2;
+            // 
             // PluginDemoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 254);
-            this.Controls.Add(this.dbDockBarHostForm);
-            this.Controls.Add(this.dbDockBarHostTBForm);
-            this.Controls.Add(this.dbRibbonHostForm);
+            this.CancelItemsEventNC = false;
+            this.ClientSize = new System.Drawing.Size(539, 372);
+            this.Controls.Add(this.baseItemHost3);
+            this.Controls.Add(this.baseItemHost2);
+            this.Controls.Add(this.baseItemHost1);
+            this.eRenderStyle = GISShare.Controls.WinForm.WFNew.RenderStyle.eSystem;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMiddleCaptionText = true;
             this.Location = new System.Drawing.Point(0, 0);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PluginDemoForm";
@@ -112,9 +154,12 @@
 
         #endregion
 
-        private GISShare.Controls.WinForm.WFNew.DescriptionButton dbRibbonHostForm;
-        private GISShare.Controls.WinForm.WFNew.DescriptionButton dbDockBarHostTBForm;
-        private GISShare.Controls.WinForm.WFNew.DescriptionButton dbDockBarHostForm;
+        private GISShare.Controls.WinForm.WFNew.DescriptionButtonItem dbRibbonHostForm;
+        private GISShare.Controls.WinForm.WFNew.DescriptionButtonItem dbDockBarHostTBForm;
+        private GISShare.Controls.WinForm.WFNew.DescriptionButtonItem dbDockBarHostForm;
+        private GISShare.Controls.WinForm.WFNew.BaseItemHost baseItemHost1;
+        private GISShare.Controls.WinForm.WFNew.BaseItemHost baseItemHost2;
+        private GISShare.Controls.WinForm.WFNew.BaseItemHost baseItemHost3;
 
     }
 }

@@ -97,6 +97,8 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
             }
             #endregion
             //
+            InitializeComponent();
+            //
             #region 设置基础尺寸
             switch (this.m_eMessageBoxButtons)
             {
@@ -118,8 +120,6 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
                     break;
             }
             #endregion
-            //
-            InitializeComponent();
             //
             this.SetAndGetFormInfo();
             //
@@ -185,115 +185,115 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
         private void LayoutButton()
         {
             #region 设置按钮
-            this.btnButton1.Size = new Size(CONST_BOTTONWIDTH, CONST_BOTTONHEIGTH);
-            this.btnButton2.Size = new Size(CONST_BOTTONWIDTH, CONST_BOTTONHEIGTH);
-            this.btnButton3.Size = new Size(CONST_BOTTONWIDTH, CONST_BOTTONHEIGTH);
+            this.baseItemHost1.Size = new Size(CONST_BOTTONWIDTH, CONST_BOTTONHEIGTH);
+            this.baseItemHost2.Size = new Size(CONST_BOTTONWIDTH, CONST_BOTTONHEIGTH);
+            this.baseItemHost3.Size = new Size(CONST_BOTTONWIDTH, CONST_BOTTONHEIGTH);
             //
             Rectangle rectangle = this.BottomRectangle;
             int iY = (rectangle.Top + rectangle.Bottom - CONST_BOTTONHEIGTH) / 2 + 1;
             switch (this.m_eMessageBoxButtons)
             {
                 case MessageBoxButtons.AbortRetryIgnore:
-                    this.btnButton1.Location = new Point((rectangle.Left + rectangle.Right - 3 * CONST_BOTTONWIDTH - 2 * CONST_BOTTONSPACE) / 2, iY);
-                    this.btnButton1.Name = "Abort";
-                    this.btnButton1.Text = "中   止";
-                    this.btnButton1.Visible = true;
-                    this.btnButton2.Location = new Point(this.btnButton1.Location.X + CONST_BOTTONWIDTH + CONST_BOTTONSPACE, iY);
-                    this.btnButton2.Name = "Retry";
-                    this.btnButton2.Text = "重   试";
-                    this.btnButton2.Visible = true;
-                    this.btnButton3.Location = new Point(this.btnButton2.Location.X + CONST_BOTTONWIDTH + CONST_BOTTONSPACE, iY);
-                    this.btnButton3.Name = "Ignore";
-                    this.btnButton3.Text = "忽   略";
-                    this.btnButton3.Visible = true;
+                    this.baseItemHost1.Location = new Point((rectangle.Left + rectangle.Right - 3 * CONST_BOTTONWIDTH - 2 * CONST_BOTTONSPACE) / 2, iY);
+                    this.baseItemHost1.BaseItemObject.Name = "Abort";
+                    this.baseItemHost1.BaseItemObject.Text = "中   止";
+                    this.baseItemHost1.Visible = true;
+                    this.baseItemHost2.Location = new Point(this.baseItemHost1.Location.X + CONST_BOTTONWIDTH + CONST_BOTTONSPACE, iY);
+                    this.baseItemHost2.BaseItemObject.Name = "Retry";
+                    this.baseItemHost2.BaseItemObject.Text = "重   试";
+                    this.baseItemHost2.Visible = true;
+                    this.baseItemHost3.Location = new Point(this.baseItemHost2.Location.X + CONST_BOTTONWIDTH + CONST_BOTTONSPACE, iY);
+                    this.baseItemHost3.BaseItemObject.Name = "Ignore";
+                    this.baseItemHost3.BaseItemObject.Text = "忽   略";
+                    this.baseItemHost3.Visible = true;
                     break;
                 case MessageBoxButtons.OK:
-                    this.btnButton1.Location = new Point((rectangle.Left + rectangle.Right - CONST_BOTTONWIDTH) / 2, iY);
-                    this.btnButton1.Name = "OK";
-                    this.btnButton1.Text = "确   定";
-                    this.btnButton1.Visible = true;
-                    this.btnButton2.Name = "Cancel";
-                    this.btnButton2.Text = "取   消";
-                    this.btnButton2.Visible = false;
-                    this.btnButton3.Name = "None";
-                    this.btnButton3.Text = "None";
-                    this.btnButton3.Visible = false;
+                    this.baseItemHost1.Location = new Point((rectangle.Left + rectangle.Right - CONST_BOTTONWIDTH) / 2, iY);
+                    this.baseItemHost1.BaseItemObject.Name = "OK";
+                    this.baseItemHost1.BaseItemObject.Text = "确   定";
+                    this.baseItemHost1.Visible = true;
+                    this.baseItemHost2.BaseItemObject.Name = "Cancel";
+                    this.baseItemHost2.BaseItemObject.Text = "取   消";
+                    this.baseItemHost2.Visible = false;
+                    this.baseItemHost3.BaseItemObject.Name = "None";
+                    this.baseItemHost3.BaseItemObject.Text = "None";
+                    this.baseItemHost3.Visible = false;
                     break;
                 case MessageBoxButtons.OKCancel:
-                    this.btnButton1.Location = new Point((rectangle.Left + rectangle.Right - 2 * CONST_BOTTONWIDTH - CONST_BOTTONSPACE) / 2, iY);
-                    this.btnButton1.Name = "OK";
-                    this.btnButton1.Text = "确   定";
-                    this.btnButton1.Visible = true;
-                    this.btnButton2.Location = new Point(this.btnButton1.Location.X + CONST_BOTTONWIDTH + CONST_BOTTONSPACE, iY);
-                    this.btnButton2.Name = "Cancel";
-                    this.btnButton2.Text = "取   消";
-                    this.btnButton2.Visible = true;
-                    this.btnButton3.Name = "None";
-                    this.btnButton3.Text = "None";
-                    this.btnButton3.Visible = false;
+                    this.baseItemHost1.Location = new Point((rectangle.Left + rectangle.Right - 2 * CONST_BOTTONWIDTH - CONST_BOTTONSPACE) / 2, iY);
+                    this.baseItemHost1.BaseItemObject.Name = "OK";
+                    this.baseItemHost1.BaseItemObject.Text = "确   定";
+                    this.baseItemHost1.Visible = true;
+                    this.baseItemHost2.Location = new Point(this.baseItemHost1.Location.X + CONST_BOTTONWIDTH + CONST_BOTTONSPACE, iY);
+                    this.baseItemHost2.BaseItemObject.Name = "Cancel";
+                    this.baseItemHost2.BaseItemObject.Text = "取   消";
+                    this.baseItemHost2.Visible = true;
+                    this.baseItemHost3.BaseItemObject.Name = "None";
+                    this.baseItemHost3.BaseItemObject.Text = "None";
+                    this.baseItemHost3.Visible = false;
                     break;
                 case MessageBoxButtons.RetryCancel:
-                    this.btnButton1.Location = new Point((rectangle.Left + rectangle.Right - 2 * CONST_BOTTONWIDTH - CONST_BOTTONSPACE) / 2, iY);
-                    this.btnButton1.Name = "Retry";
-                    this.btnButton1.Text = "重   试";
-                    this.btnButton1.Visible = true;
-                    this.btnButton2.Location = new Point(this.btnButton1.Location.X + CONST_BOTTONWIDTH + CONST_BOTTONSPACE, iY);
-                    this.btnButton2.Name = "Cancel";
-                    this.btnButton2.Text = "取   消";
-                    this.btnButton2.Visible = true;
-                    this.btnButton3.Name = "None";
-                    this.btnButton3.Text = "None";
-                    this.btnButton3.Visible = false;
+                    this.baseItemHost1.Location = new Point((rectangle.Left + rectangle.Right - 2 * CONST_BOTTONWIDTH - CONST_BOTTONSPACE) / 2, iY);
+                    this.baseItemHost1.BaseItemObject.Name = "Retry";
+                    this.baseItemHost1.BaseItemObject.Text = "重   试";
+                    this.baseItemHost1.Visible = true;
+                    this.baseItemHost2.Location = new Point(this.baseItemHost1.Location.X + CONST_BOTTONWIDTH + CONST_BOTTONSPACE, iY);
+                    this.baseItemHost2.BaseItemObject.Name = "Cancel";
+                    this.baseItemHost2.BaseItemObject.Text = "取   消";
+                    this.baseItemHost2.Visible = true;
+                    this.baseItemHost3.BaseItemObject.Name = "None";
+                    this.baseItemHost3.BaseItemObject.Text = "None";
+                    this.baseItemHost3.Visible = false;
                     break;
                 case MessageBoxButtons.YesNo:
-                    this.btnButton1.Location = new Point((rectangle.Left + rectangle.Right - 2 * CONST_BOTTONWIDTH - CONST_BOTTONSPACE) / 2, iY);
-                    this.btnButton1.Name = "Yes";
-                    this.btnButton1.Text = "是";
-                    this.btnButton1.Visible = true;
-                    this.btnButton2.Location = new Point(this.btnButton1.Location.X + CONST_BOTTONWIDTH + CONST_BOTTONSPACE, iY);
-                    this.btnButton2.Name = "No";
-                    this.btnButton2.Text = "否";
-                    this.btnButton2.Visible = true;
-                    this.btnButton3.Name = "Cancel";
-                    this.btnButton3.Text = "取   消";
-                    this.btnButton3.Visible = false;
+                    this.baseItemHost1.Location = new Point((rectangle.Left + rectangle.Right - 2 * CONST_BOTTONWIDTH - CONST_BOTTONSPACE) / 2, iY);
+                    this.baseItemHost1.BaseItemObject.Name = "Yes";
+                    this.baseItemHost1.BaseItemObject.Text = "是";
+                    this.baseItemHost1.Visible = true;
+                    this.baseItemHost2.Location = new Point(this.baseItemHost1.Location.X + CONST_BOTTONWIDTH + CONST_BOTTONSPACE, iY);
+                    this.baseItemHost2.BaseItemObject.Name = "No";
+                    this.baseItemHost2.BaseItemObject.Text = "否";
+                    this.baseItemHost2.Visible = true;
+                    this.baseItemHost3.BaseItemObject.Name = "Cancel";
+                    this.baseItemHost3.BaseItemObject.Text = "取   消";
+                    this.baseItemHost3.Visible = false;
                     break;
                 case MessageBoxButtons.YesNoCancel:
-                    this.btnButton1.Location = new Point((rectangle.Left + rectangle.Right - 3 * CONST_BOTTONWIDTH - 2 * CONST_BOTTONSPACE) / 2, iY);
-                    this.btnButton1.Name = "Yes";
-                    this.btnButton1.Text = "是";
-                    this.btnButton1.Visible = true;
-                    this.btnButton2.Location = new Point(this.btnButton1.Location.X + CONST_BOTTONWIDTH + CONST_BOTTONSPACE, iY);
-                    this.btnButton2.Name = "No";
-                    this.btnButton2.Text = "否";
-                    this.btnButton2.Visible = true;
-                    this.btnButton3.Location = new Point(this.btnButton2.Location.X + CONST_BOTTONWIDTH + CONST_BOTTONSPACE, iY);
-                    this.btnButton3.Name = "Cancel";
-                    this.btnButton3.Text = "取   消";
-                    this.btnButton3.Visible = true;
+                    this.baseItemHost1.Location = new Point((rectangle.Left + rectangle.Right - 3 * CONST_BOTTONWIDTH - 2 * CONST_BOTTONSPACE) / 2, iY);
+                    this.baseItemHost1.BaseItemObject.Name = "Yes";
+                    this.baseItemHost1.BaseItemObject.Text = "是";
+                    this.baseItemHost1.Visible = true;
+                    this.baseItemHost2.Location = new Point(this.baseItemHost1.Location.X + CONST_BOTTONWIDTH + CONST_BOTTONSPACE, iY);
+                    this.baseItemHost2.BaseItemObject.Name = "No";
+                    this.baseItemHost2.BaseItemObject.Text = "否";
+                    this.baseItemHost2.Visible = true;
+                    this.baseItemHost3.Location = new Point(this.baseItemHost2.Location.X + CONST_BOTTONWIDTH + CONST_BOTTONSPACE, iY);
+                    this.baseItemHost3.BaseItemObject.Name = "Cancel";
+                    this.baseItemHost3.BaseItemObject.Text = "取   消";
+                    this.baseItemHost3.Visible = true;
                     break;
                 default:
-                    this.btnButton1.Location = new Point((rectangle.Left + rectangle.Right - CONST_BOTTONWIDTH) / 2, iY);
-                    this.btnButton1.Name = "OK";
-                    this.btnButton1.Text = "确   定";
-                    this.btnButton1.Visible = true;
-                    this.btnButton2.Name = "Cancel";
-                    this.btnButton2.Text = "取   消";
-                    this.btnButton2.Visible = false;
-                    this.btnButton3.Name = "None";
-                    this.btnButton3.Text = "None";
-                    this.btnButton3.Visible = false;
+                    this.baseItemHost1.Location = new Point((rectangle.Left + rectangle.Right - CONST_BOTTONWIDTH) / 2, iY);
+                    this.baseItemHost1.BaseItemObject.Name = "OK";
+                    this.baseItemHost1.BaseItemObject.Text = "确   定";
+                    this.baseItemHost1.Visible = true;
+                    this.baseItemHost2.BaseItemObject.Name = "Cancel";
+                    this.baseItemHost2.BaseItemObject.Text = "取   消";
+                    this.baseItemHost2.Visible = false;
+                    this.baseItemHost3.BaseItemObject.Name = "None";
+                    this.baseItemHost3.BaseItemObject.Text = "None";
+                    this.baseItemHost3.Visible = false;
                     break;
             }
             //
-            this.btnButton1.MouseClick += new MouseEventHandler(Button_MouseClick);
-            this.btnButton2.MouseClick += new MouseEventHandler(Button_MouseClick);
-            this.btnButton3.MouseClick += new MouseEventHandler(Button_MouseClick);
+            this.baseItemHost1.BaseItemObject.MouseClick += new MouseEventHandler(Button_MouseClick);
+            this.baseItemHost2.BaseItemObject.MouseClick += new MouseEventHandler(Button_MouseClick);
+            this.baseItemHost3.BaseItemObject.MouseClick += new MouseEventHandler(Button_MouseClick);
             #endregion
         }
         void Button_MouseClick(object sender, MouseEventArgs e)
         {
-            WFNew.BaseButtonN ribbonBaseButton = sender as WFNew.BaseButtonN;
+            WFNew.IBaseItem ribbonBaseButton = sender as WFNew.IBaseItem;
             if (ribbonBaseButton == null || !ribbonBaseButton.Visible) return;
             //
             switch (ribbonBaseButton.Name)
@@ -405,9 +405,9 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
             }
         }
 
-        protected override void OnDraw(PaintEventArgs e)
+        protected override void OnPaint(PaintEventArgs e)
         {
-            base.OnDraw(e);
+            base.OnPaint(e);
             //
             if (this.ShowTextInfo)
             {

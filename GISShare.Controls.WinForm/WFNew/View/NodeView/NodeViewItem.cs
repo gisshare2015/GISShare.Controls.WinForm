@@ -8,7 +8,7 @@ using System.Windows.Forms;
 namespace GISShare.Controls.WinForm.WFNew.View
 {
     [Serializable, DefaultProperty("Text"), TypeConverter(typeof(GISShare.Controls.WinForm.WFNew.View.Design.NodeViewItemConverter))]//
-    public class NodeViewItem : TextViewItemEx,        
+    public class NodeViewItem : TextViewItem,        
         IViewList,
         INodeViewList, 
         ITextEditViewItem, IVisibleViewItem, INodeViewItem, INodeViewItem2,
@@ -705,8 +705,10 @@ namespace GISShare.Controls.WinForm.WFNew.View
             switch (messageInfo.eMessageStyle)
             {
                 case MessageStyle.eMSMouseDown:
+                    //MessageBox.Show("0");
                     if (this.TriggerExpandCollapse(((System.Windows.Forms.MouseEventArgs)messageInfo.MessageParameter).Location))
                     {
+                        //MessageBox.Show("1");
                         this.IsExpanded = !this.IsExpanded;
                     }
                     break;

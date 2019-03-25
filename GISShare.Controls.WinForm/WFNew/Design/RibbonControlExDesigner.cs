@@ -1309,7 +1309,7 @@ namespace GISShare.Controls.WinForm.WFNew.Design
         //}
         #endregion
 
-        private class BaseItemCollectionEditerFormEx : WFNew.Design.BaseItemCollectionDesignerFormEx
+        private class BaseItemCollectionEditerFormEx : WFNew.Design.BaseItemCollectionDesignerForm
         {
             private RibbonControlEx m_RibbonControl = null;
 

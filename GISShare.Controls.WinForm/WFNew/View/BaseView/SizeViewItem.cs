@@ -17,20 +17,9 @@ namespace GISShare.Controls.WinForm.WFNew.View
             : base(text) { }
 
         public SizeViewItem(string name, string text)
-            : base(text)
-        {
-            this.m_Name = name;
-        }
+            : base(name,text){}
 
         #region ISizeViewItem
-        string m_Name;
-        [Browsable(true), Description("名称"), Category("描述")]
-        public string Name
-        {
-            get { return m_Name; }
-            set { m_Name = value; }
-        }
-
         int m_Width = -1;
         [Browsable(true), DefaultValue(-1), Description("宽度（小于零时，由系统操作）"), Category("布局")]
         public virtual int Width

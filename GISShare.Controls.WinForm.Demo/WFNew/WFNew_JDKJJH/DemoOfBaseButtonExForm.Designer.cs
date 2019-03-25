@@ -28,46 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ribbonBaseButtonEx1 = new GISShare.Controls.WinForm.WFNew.BaseButtonEx();
-            this.ribbonBaseButtonEx2 = new GISShare.Controls.WinForm.WFNew.BaseButtonEx();
+            this.ribbonBaseButtonEx1 = new GISShare.Controls.WinForm.WFNew.BaseButtonExItem();
+            this.ribbonBaseButtonEx2 = new GISShare.Controls.WinForm.WFNew.BaseButtonExItem();
+            this.baseItemHost1 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.baseItemHost2 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
             this.SuspendLayout();
             // 
             // ribbonBaseButtonEx1
             // 
             this.ribbonBaseButtonEx1.AutoPlanTextRectangle = false;
-            this.ribbonBaseButtonEx1.BackColor = System.Drawing.Color.Transparent;
+            this.ribbonBaseButtonEx1.Font = new System.Drawing.Font("宋体", 9F);
+            this.ribbonBaseButtonEx1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonEx1.Image = null;
-            this.ribbonBaseButtonEx1.Location = new System.Drawing.Point(50, 12);
+            this.ribbonBaseButtonEx1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonEx1.Name = "ribbonBaseButtonEx1";
-            this.ribbonBaseButtonEx1.Padding = new System.Windows.Forms.Padding(0);
-            this.ribbonBaseButtonEx1.Size = new System.Drawing.Size(116, 29);
-            this.ribbonBaseButtonEx1.TabIndex = 0;
+            this.ribbonBaseButtonEx1.ShowNomalState = true;
+            this.ribbonBaseButtonEx1.Size = new System.Drawing.Size(174, 44);
+            this.ribbonBaseButtonEx1.Tag = null;
             this.ribbonBaseButtonEx1.Text = "水平方向布局";
             // 
             // ribbonBaseButtonEx2
             // 
             this.ribbonBaseButtonEx2.AutoPlanTextRectangle = false;
-            this.ribbonBaseButtonEx2.BackColor = System.Drawing.Color.Transparent;
             this.ribbonBaseButtonEx2.eOrientation = System.Windows.Forms.Orientation.Vertical;
+            this.ribbonBaseButtonEx2.Font = new System.Drawing.Font("宋体", 9F);
+            this.ribbonBaseButtonEx2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonEx2.Image = null;
-            this.ribbonBaseButtonEx2.Location = new System.Drawing.Point(94, 47);
+            this.ribbonBaseButtonEx2.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonEx2.Name = "ribbonBaseButtonEx2";
-            this.ribbonBaseButtonEx2.Padding = new System.Windows.Forms.Padding(0);
-            this.ribbonBaseButtonEx2.Size = new System.Drawing.Size(29, 116);
-            this.ribbonBaseButtonEx2.TabIndex = 1;
+            this.ribbonBaseButtonEx2.ShowNomalState = true;
+            this.ribbonBaseButtonEx2.Size = new System.Drawing.Size(44, 174);
+            this.ribbonBaseButtonEx2.Tag = null;
             this.ribbonBaseButtonEx2.Text = "竖直方向布局";
+            // 
+            // baseItemHost1
+            // 
+            this.baseItemHost1.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost1.BaseItemObject = this.ribbonBaseButtonEx1;
+            this.baseItemHost1.Location = new System.Drawing.Point(75, 18);
+            this.baseItemHost1.Margin = new System.Windows.Forms.Padding(4);
+            this.baseItemHost1.Name = "baseItemHost1";
+            this.baseItemHost1.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost1.Size = new System.Drawing.Size(174, 44);
+            this.baseItemHost1.TabIndex = 0;
+            // 
+            // baseItemHost2
+            // 
+            this.baseItemHost2.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost2.BaseItemObject = this.ribbonBaseButtonEx2;
+            this.baseItemHost2.Location = new System.Drawing.Point(141, 70);
+            this.baseItemHost2.Margin = new System.Windows.Forms.Padding(4);
+            this.baseItemHost2.Name = "baseItemHost2";
+            this.baseItemHost2.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost2.Size = new System.Drawing.Size(44, 174);
+            this.baseItemHost2.TabIndex = 1;
             // 
             // DemoOfBaseButtonExForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(214, 174);
-            this.Controls.Add(this.ribbonBaseButtonEx2);
-            this.Controls.Add(this.ribbonBaseButtonEx1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.ClientSize = new System.Drawing.Size(385, 313);
+            this.Controls.Add(this.baseItemHost2);
+            this.Controls.Add(this.baseItemHost1);
             this.Location = new System.Drawing.Point(0, 0);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DemoOfBaseButtonExForm";
             this.Text = "BaseButtonEx控件";
             this.ResumeLayout(false);
@@ -76,7 +100,9 @@
 
         #endregion
 
-        private GISShare.Controls.WinForm.WFNew.BaseButtonEx ribbonBaseButtonEx1;
-        private GISShare.Controls.WinForm.WFNew.BaseButtonEx ribbonBaseButtonEx2;
+        private GISShare.Controls.WinForm.WFNew.BaseButtonExItem ribbonBaseButtonEx1;
+        private GISShare.Controls.WinForm.WFNew.BaseButtonExItem ribbonBaseButtonEx2;
+        private GISShare.Controls.WinForm.WFNew.BaseItemHost baseItemHost1;
+        private GISShare.Controls.WinForm.WFNew.BaseItemHost baseItemHost2;
     }
 }

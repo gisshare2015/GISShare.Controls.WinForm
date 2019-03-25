@@ -8,8 +8,8 @@ using System.ComponentModel;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.RibbonStartButtonItem2007Designer))]
-    public class RibbonStartButtonItem2007 : BaseButtonItem, IStartButtonItem, IPopupOwnerHelper, ICollectionObjectDesignHelper, IPopupObjectDesignHelper
+    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.CollectionItemDesigner))]
+    public class RibbonStartButtonItem2007 : BaseButtonItem, IStartButtonItem, IPopupOwnerHelper, ICollectionObjectDesignHelper, IPopupObjectDesignHelper, IRibbonApplicationObjectDesignHelper
     {
         private IApplicationPopup m_RibbonApplicationPopup;
 

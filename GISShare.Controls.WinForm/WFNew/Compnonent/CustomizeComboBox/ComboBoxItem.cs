@@ -19,19 +19,23 @@ namespace GISShare.Controls.WinForm.WFNew
         private const int CTR_SINGLELEFTSPACE = 0;//
         private const int CTR_MIDDLESPACE = 2;//间距
 
-        GISShare.Controls.WinForm.WFNew.View.ViewItemListBox m_ViewItemListBox;
+        GISShare.Controls.WinForm.WFNew.View.ViewItemListBoxItem m_ViewItemListBox;
 
         #region 构造函数
         public ComboBoxItem()
-            : base(new GISShare.Controls.WinForm.WFNew.View.ViewItemListBox())
+            : base(new GISShare.Controls.WinForm.WFNew.BaseItemHost())
         {
-            this.m_ViewItemListBox = ((ICustomizeComboBoxItem)this).ControlObject as GISShare.Controls.WinForm.WFNew.View.ViewItemListBox;
+            this.m_ViewItemListBox = new View.ViewItemListBoxItem();
             this.m_ViewItemListBox.BackColor = System.Drawing.SystemColors.Window;
-            this.m_ViewItemListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_ViewItemListBox.ShowOutLine = false;
             this.m_ViewItemListBox.MultipleSelect = false;
             this.m_ViewItemListBox.SelectedIndexChanged += new IntValueChangedHandler(ViewItemListBox_SelectedIndexChanged);
             this.m_ViewItemListBox.MouseUp += new System.Windows.Forms.MouseEventHandler(ListBoxX_MouseUp);
+            //
+            GISShare.Controls.WinForm.WFNew.BaseItemHost baseItemHost = (GISShare.Controls.WinForm.WFNew.BaseItemHost)((ICustomizeComboBoxItem)this).ControlObject;
+            baseItemHost.BackColor = System.Drawing.SystemColors.Window;
+            baseItemHost.Dock = System.Windows.Forms.DockStyle.Fill;
+            baseItemHost.BaseItemObject = this.m_ViewItemListBox;
             //
             //
             //
@@ -487,7 +491,7 @@ namespace GISShare.Controls.WinForm.WFNew
                             if (this.RemoveUnEnabledCheckedItem && !one.Enabled) continue;
                             strText += one.Text + ";";
                         }
-                        strText = strText.TrimEnd(';');
+                        strText = strText == null ? "" : strText.TrimEnd(';');
                     }
                     else
                     {

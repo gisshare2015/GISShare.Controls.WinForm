@@ -9,7 +9,6 @@ using System.Windows.Forms;
 
 namespace GISShare.Controls.WinForm.WFNew.DockPanel
 {
-    [ToolboxItem(false)]
     class HideAreaTabButtonGroupItem : WFNew.BaseItemStackItem //Control
     {
         private const int CTR_HIDEAREATABBUTTONGROUPSPACE = 6;

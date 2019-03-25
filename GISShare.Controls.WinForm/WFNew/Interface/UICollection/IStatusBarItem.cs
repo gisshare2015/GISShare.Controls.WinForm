@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    public interface IStatusBarItem
+    public interface IStatusBarItem : IBaseBarItem
     {
         BaseItemCollection RightBaseItems { get; }
     }

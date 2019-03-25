@@ -144,17 +144,13 @@ namespace GISShare.Controls.WinForm.WFNew.Design
             {
                 this.PopupItemOperation(pBaseItem.Name, nodeParent.Tag as IList, node);
             }
+            else if (nodeParent.Tag is ICollectionObjectDesignHelper)
+            {
+                this.PopupItemOperation(pBaseItem.Name, ((ICollectionObjectDesignHelper)nodeParent.Tag).List, node);
+            }
             else
             {
-                ICollectionObjectDesignHelper pCollectionObjectDesignHelper = nodeParent.Tag as ICollectionObjectDesignHelper;
-                if (pCollectionObjectDesignHelper == null)
-                {
-                    this.PopupItemOperation(pBaseItem.Name, null, node);
-                }
-                else
-                {
-                    this.PopupItemOperation(pBaseItem.Name, pCollectionObjectDesignHelper.List, node);
-                }
+                this.PopupItemOperation(pBaseItem.Name, null, node);
             }
         }
         private void PopupItemOperation(string sender, IList parentList, View.NodeViewItem node)
@@ -177,6 +173,7 @@ namespace GISShare.Controls.WinForm.WFNew.Design
                             if (pNodeViewList != null)
                             {
                                 pNodeViewList.NodeViewItems.Remove(node);
+                                this.treeView1.Refresh();
                             }
                         }
                         break;
@@ -185,7 +182,7 @@ namespace GISShare.Controls.WinForm.WFNew.Design
                     case "ClearItems":
                         if (node.Tag is ICollectionObjectDesignHelper)
                         {
-                            ICollectionObjectDesignHelper pCollectionObjectDesignHelper = node.Tag as ICollectionObjectDesignHelper;
+                            ICollectionObjectDesignHelper pCollectionObjectDesignHelper = (ICollectionObjectDesignHelper)node.Tag;
                             if (!pCollectionObjectDesignHelper.List.IsReadOnly && pCollectionObjectDesignHelper.List.Count > 0)
                             {
                                 foreach (Component one in pCollectionObjectDesignHelper.List)
@@ -194,11 +191,12 @@ namespace GISShare.Controls.WinForm.WFNew.Design
                                 }
                                 pCollectionObjectDesignHelper.List.Clear();
                                 node.NodeViewItems.Clear();
+                                this.treeView1.Refresh();
                             }
                         }
                         else if (node.Tag is IList)
                         {
-                            IList list = node.Tag as IList;
+                            IList list = (IList)node.Tag;
                             if (!list.IsReadOnly && list.Count > 0)
                             {
                                 foreach (Component one in list)
@@ -207,6 +205,7 @@ namespace GISShare.Controls.WinForm.WFNew.Design
                                 }
                                 list.Clear();
                                 node.NodeViewItems.Clear();
+                                this.treeView1.Refresh();
                             }
                         }
                         break;
@@ -228,6 +227,7 @@ namespace GISShare.Controls.WinForm.WFNew.Design
                                         {
                                             pFlexibleList.ExchangeItem(iNow - 1, iNow);
                                             this.treeView1.SelectedNode = node;
+                                            nodeParent.Refresh();
                                         }
                                     }
                                 }
@@ -252,6 +252,7 @@ namespace GISShare.Controls.WinForm.WFNew.Design
                                         {
                                             pFlexibleList.ExchangeItem(iNow + 1, iNow);
                                             this.treeView1.SelectedNode = node;
+                                            nodeParent.Refresh();
                                         }
                                     }
                                 }
@@ -294,7 +295,7 @@ namespace GISShare.Controls.WinForm.WFNew.Design
                     case "ClearItems":
                         if (node.Tag is ICollectionObjectDesignHelper)
                         {
-                            ICollectionObjectDesignHelper pCollectionObjectDesignHelper = node.Tag as ICollectionObjectDesignHelper;
+                            ICollectionObjectDesignHelper pCollectionObjectDesignHelper = (ICollectionObjectDesignHelper)node.Tag;
                             if (!pCollectionObjectDesignHelper.List.IsReadOnly && pCollectionObjectDesignHelper.List.Count > 0)
                             {
                                 foreach (Component one in pCollectionObjectDesignHelper.List)
@@ -307,7 +308,7 @@ namespace GISShare.Controls.WinForm.WFNew.Design
                         }
                         else if (node.Tag is IList)
                         {
-                            IList list = node.Tag as IList;
+                            IList list = (IList)node.Tag;
                             if (!list.IsReadOnly && list.Count > 0)
                             {
                                 foreach (Component one in list)
@@ -353,22 +354,25 @@ namespace GISShare.Controls.WinForm.WFNew.Design
         /// <summary>
         /// 创建加载子项类型的Popup
         /// </summary>
-        /// <param name="pCollectionItem"></param>
-        private void CreateNewItemTypePopup(Type type)
+        /// <param name="node"></param>
+        private void CreateNewItemTypePopup(View.NodeViewItem node)
         {
             IDropDownButtonItem newItems = this.CreateNewItemTypeDropDownButton;
             if (newItems == null) return;
             newItems.BaseItems.Clear();
             //
+            string strName = this.GetNewItemTypesDictionaryKey(node);
+            //
+            Dictionary<string, Type[]> createNewItemTypesDictionary = this.CreateNewItemTypesDictionary();
             Type[] types;
-            if (this.CreateNewItemTypesDictionary() == null ||
-                !this.CreateNewItemTypesDictionary().ContainsKey(type.FullName))
+            if (createNewItemTypesDictionary == null ||
+                !createNewItemTypesDictionary.ContainsKey(strName))
             {
                 types = this.CreateNewItemTypes();
             }
             else
             {
-                types = this.CreateNewItemTypesDictionary()[type.FullName];
+                types = createNewItemTypesDictionary[strName];
             }
             foreach (Type one in types)
             {
@@ -387,6 +391,10 @@ namespace GISShare.Controls.WinForm.WFNew.Design
                     newItems.BaseItems.Add(item);
                 }
             }
+        }
+        protected virtual string GetNewItemTypesDictionaryKey(View.NodeViewItem node)
+        {
+            return node.Tag == null ? node.Name : node.Tag.GetType().FullName;
         }
         void CreateItem_MouseClick(object sender, MouseEventArgs e)
         {
@@ -420,6 +428,7 @@ namespace GISShare.Controls.WinForm.WFNew.Design
                     if (list.Add(pComponent) >= 0)
                     {
                         this.BuildTree_DG(pComponent as IObjectDesignHelper, parent.NodeViewItems);
+                        parent.Refresh();
                     }
                     else { pComponent.Dispose(); }
                 }
@@ -434,7 +443,7 @@ namespace GISShare.Controls.WinForm.WFNew.Design
             View.NodeViewItem node = e.NewValue as View.NodeViewItem;
             if (node == null) return;
             //
-            if (!this.FiltrationSelected(node.Tag)) return;
+            if (!this.FiltrationSelected(node)) return;
             //
             Component component = node.Tag as Component;
             if (component == null) return;
@@ -456,7 +465,7 @@ namespace GISShare.Controls.WinForm.WFNew.Design
             //
             this.ribbonPopup1.Tag = node;
             //
-            if (!this.FiltrationShowPopup(node.Tag))
+            if (!this.FiltrationShowPopup(node))
             {
                 this.ribbonPopup1.Items["Expand"].Visible = false;
                 this.ribbonPopup1.Items["ExpandAll"].Visible = false;
@@ -479,7 +488,7 @@ namespace GISShare.Controls.WinForm.WFNew.Design
             {
                 if (node.Tag != null)
                 {
-                    this.CreateNewItemTypePopup(node.Tag.GetType());
+                    this.CreateNewItemTypePopup(node);
                     this.CreateNewItemTypeDropDownButton.Tag = node;
                 }
                 //
@@ -491,19 +500,15 @@ namespace GISShare.Controls.WinForm.WFNew.Design
                 }
                 else if (nodeParent.Tag is IList)
                 {
-                    if (!this.FiltrationPopupItem(nodeParent.Tag as IList, node.Tag)) return;
+                    if (!this.FiltrationPopupItem((IList)nodeParent.Tag, node.Tag)) return;
+                }
+                else if (nodeParent.Tag is ICollectionObjectDesignHelper)
+                {
+                    if (!this.FiltrationPopupItem(((ICollectionObjectDesignHelper)nodeParent.Tag).List, node.Tag)) return;
                 }
                 else
                 {
-                    ICollectionObjectDesignHelper pCollectionObjectDesignHelper = nodeParent.Tag as ICollectionObjectDesignHelper;
-                    if (pCollectionObjectDesignHelper == null)
-                    {
-                        if (!this.FiltrationPopupItem(null, node.Tag)) return;
-                    }
-                    else
-                    {
-                        if (!this.FiltrationPopupItem(pCollectionObjectDesignHelper.List, node.Tag)) return;
-                    }
+                    if (!this.FiltrationPopupItem(null, node.Tag)) return;
                 }
             }
             //
@@ -523,13 +528,13 @@ namespace GISShare.Controls.WinForm.WFNew.Design
                 bool bAC = false;
                 if (value is ICollectionObjectDesignHelper)
                 {
-                    ICollectionObjectDesignHelper pCollectionObjectDesignHelper = value as ICollectionObjectDesignHelper;
+                    ICollectionObjectDesignHelper pCollectionObjectDesignHelper = (ICollectionObjectDesignHelper)value;
                     bAC = (pCollectionObjectDesignHelper == null || pCollectionObjectDesignHelper.List.IsReadOnly) ? false : true;
                     bEEC = (pCollectionObjectDesignHelper == null || pCollectionObjectDesignHelper.List.Count <= 0) ? false : true;
                 }
                 else if (value is IList)
                 {
-                    IList list = value as IList;
+                    IList list = (IList)value;
                     bAC = (list == null || list.IsReadOnly) ? false : true;
                     bEEC = (list == null || list.Count <= 0) ? false : true;
                 }
@@ -563,13 +568,13 @@ namespace GISShare.Controls.WinForm.WFNew.Design
                 bool bAC = false;
                 if (value is ICollectionObjectDesignHelper)
                 {
-                    ICollectionObjectDesignHelper pCollectionObjectDesignHelper = value as ICollectionObjectDesignHelper;
+                    ICollectionObjectDesignHelper pCollectionObjectDesignHelper = (ICollectionObjectDesignHelper)value;
                     bAC = (pCollectionObjectDesignHelper == null || pCollectionObjectDesignHelper.List.IsReadOnly) ? false : true;
                     bEEC = (pCollectionObjectDesignHelper == null || pCollectionObjectDesignHelper.List.Count <= 0) ? false : true;
                 }
                 else if (value is IList)
                 {
-                    IList list = value as IList;
+                    IList list = (IList)value;
                     bAC = (list == null || list.IsReadOnly) ? false : true;
                     bEEC = (list == null || list.Count <= 0) ? false : true;
                 }
@@ -654,9 +659,11 @@ namespace GISShare.Controls.WinForm.WFNew.Design
             //
             View.NodeViewItem node = this.CreateNode(pObjectDesignHelper);
             node.Name = pObjectDesignHelper.Name;
-            node.Text = this.GetTypeDescription(pObjectDesignHelper);
             node.Tag = pObjectDesignHelper;
+            node.Text = this.GetTypeDescription(node);
             nodes.Add(node);
+            //
+            this.BuildTreeEx(node);
             //
             ICollectionObjectDesignHelper pCollectionObjectDesignHelper = pObjectDesignHelper as ICollectionObjectDesignHelper;
             if (pCollectionObjectDesignHelper != null)
@@ -667,6 +674,8 @@ namespace GISShare.Controls.WinForm.WFNew.Design
                 }
             }
         }
+
+        protected virtual void BuildTreeEx(View.NodeViewItem node) { }
 
         /// <summary>
         /// 当节点对应的组建被选中置顶后截获该组件,用于实现额外的操作
@@ -685,6 +694,15 @@ namespace GISShare.Controls.WinForm.WFNew.Design
         /// <returns></returns>
         protected virtual bool SetCreateTypeInfo(IComponent pComponent)
         {
+            if (this.m_pObjectDesignHelper is ICanvasItem)
+            {
+                ISetBaseItemHelper pSetBaseItemHelper = pComponent as ISetBaseItemHelper;
+                if (pSetBaseItemHelper != null)
+                {
+                    pSetBaseItemHelper.SetLocation(((IBaseItem)this.m_pObjectDesignHelper).Location);
+                }
+            }
+            //
             IObjectDesignHelper item = pComponent as IObjectDesignHelper;
             if (item == null) return false;
             item.Name = pComponent.Site.Name;
@@ -741,31 +759,31 @@ namespace GISShare.Controls.WinForm.WFNew.Design
         /// <summary>
         /// 该子项是否可以选中，返回 true可选 false不可选
         /// </summary>
-        /// <param name="value"></param>
+        /// <param name="node"></param>
         /// <returns></returns>
-        protected virtual bool FiltrationSelected(object value)
+        protected virtual bool FiltrationSelected(View.NodeViewItem node)
         {
-            return value != null;
+            return node != null;
         }
 
         /// <summary>
         /// 节点是否展现Popup，返回 true展现 false不展示
         /// </summary>
-        /// <param name="value"></param>
+        /// <param name="node"></param>
         /// <returns></returns>
-        protected virtual bool FiltrationShowPopup(object value)
+        protected virtual bool FiltrationShowPopup(View.NodeViewItem node)
         {
-            return value != null;
+            return node != null;
         }
 
         /// <summary>
         /// 节点描述名称
         /// </summary>
-        /// <param name="value"></param>
+        /// <param name="node"></param>
         /// <returns></returns>
-        protected virtual string GetTypeDescription(object value)
+        protected virtual string GetTypeDescription(View.NodeViewItem node)
         {
-            IObjectDesignHelper pObjectDesignHelper = value as IObjectDesignHelper;
+            IObjectDesignHelper pObjectDesignHelper = node.Tag as IObjectDesignHelper;
             return pObjectDesignHelper == null ? "null" : pObjectDesignHelper.Text + "（" + pObjectDesignHelper.Name + "）";
         }
 
@@ -848,6 +866,492 @@ namespace GISShare.Controls.WinForm.WFNew.Design
             //
             return true;
         }
+
+        #region 类型嵌入
+        public static Type[] Catalogue_Label = new Type[] { typeof(LabelItem),  typeof(LabelExItem), typeof(ImageLabelItem) };
+        public static Type[] Catalogue_LinkLabel = new Type[] { typeof(LinkLabelItem), typeof(ImageLinkLabelItem) };
+        public static Type[] Catalogue_Button = new Type[] { typeof(BaseButtonItem), typeof(CheckButtonItem), typeof(DropDownButtonItem), typeof(SplitButtonItem) };
+        public static Type[] Catalogue_GlyphButton = new Type[] { typeof(GlyphButtonItem) };
+        public static Type[] Catalogue_ButtonEx = new Type[] { typeof(BaseButtonExItem), typeof(CheckButtonExItem), typeof(DropDownButtonExItem), typeof(SplitButtonExItem) };
+        public static Type[] Catalogue_DescriptionButton = new Type[] { typeof(DescriptionButtonItem) };
+        public static Type[] Catalogue_CheckBox = new Type[] { typeof(CheckBoxItem), typeof(ImageCheckBoxItem) };
+        public static Type[] Catalogue_RadioButton = new Type[] { typeof(RadioButtonItem), typeof(ImageRadioButtonItem) };
+        public static Type[] Catalogue_InputBox = new Type[] { typeof(TextBoxItem), typeof(IntegerInputBoxItem), typeof(DoubleInputBoxItem), typeof(ButtonTextBoxItem) };
+        public static Type[] Catalogue_ComboBox = new Type[] { typeof(ComboBoxItem), typeof(ComboTreeItem), typeof(ComboDateItem)/*, typeof(ComboDateTimeItem)*/ };
+        public static Type[] Catalogue_ProcessBar = new Type[] { typeof(ProcessBarItem) };
+        public static Type[] Catalogue_RatingStar = new Type[] { typeof(RatingStarItem) };
+        public static Type[] Catalogue_ScrollBar = new Type[] { typeof(SliderItem), typeof(ScrollBarItem) };
+        public static Type[] Catalogue_Separator = new Type[] { typeof(SeparatorItem) };
+        public static Type[] Catalogue_LabelSeparator = new Type[] { typeof(LabelSeparatorItem), typeof(ImageLabelSeparatorItem) };
+        public static Type[] Catalogue_ImageBox = new Type[] { typeof(ImageBoxItem), typeof(ImageAreaBoxItem), typeof(ImageZoomableBoxItem) };
+        public static Type[] Catalogue_CombineControl = new Type[] { typeof(DateTimeCombineItem), typeof(DegreeCombineItem), typeof(VersionCombinetem) };
+        public static Type[] Catalogue_BaseItemStack = new Type[] { typeof(BaseItemStackItem), typeof(BaseItemStackExItem) };
+        public static Type[] Catalogue_Canvas = new Type[] { typeof(CanvasItem) };
+        public static Type[] Catalogue_PopupPanel = new Type[] { typeof(ContextPopupPanelItem), typeof(DescriptionMenuPopupPanelItem), typeof(RibbonApplicationPopupPanelItem) };
+        public static Type[] Catalogue_Bar = new Type[] { typeof(BaseBarItem), typeof(ToolBarItem), typeof(StatusBarItem) };
+        public static Type[] Catalogue_ButtonGroup = new Type[] { typeof(ButtonGroupItem) };
+        public static Type[] Catalogue_RibbonGallery = new Type[] { typeof(RibbonGalleryItem) };
+        public static Type[] Catalogue_RibbonBar = new Type[] { typeof(RibbonBarItem) };
+        public static Type[] Catalogue_RibbonPage = new Type[] { typeof(RibbonPageItem) };
+        public static Type[] Catalogue_RibbonQuickAccessToolbar = new Type[] { typeof(RibbonQuickAccessToolbarItem) };
+        public static Type[] Catalogue_RibbonStatusBar = new Type[] { typeof(RibbonStatusBarItem) };
+        public static Type[] Catalogue_RibbonControl = new Type[] { typeof(RibbonControlItem) };
+        public static Type[] Catalogue_ListBox = new Type[] { typeof(View.ViewItemListBoxItem) };
+        public static Type[] Catalogue_Tree = new Type[] { typeof(View.NodeViewItemTreeItem) };
+        public static Type[] Catalogue_GridView = new Type[] { typeof(View.GridViewItemListBoxItem) };
+        public static Type[] Catalogue_GridNodeView = new Type[] { typeof(View.GridNodeViewItemTreeItem) };
+
+        public static Type[] CombineTypes(params Type[][] typesArray)
+        {
+            List<Type> list = new List<Type>();
+            foreach (Type[] one in typesArray) 
+            {
+                list.AddRange(one);
+            }
+            return list.ToArray();
+        }
+
+        public static Type[] GetRibbonBarNewItemTypes()
+        {
+            return CombineTypes(
+                Catalogue_Label,
+                Catalogue_LinkLabel,
+                Catalogue_Button,
+                Catalogue_GlyphButton,
+                Catalogue_ButtonEx,
+                //Catalogue_DescriptionButton,
+                Catalogue_CheckBox,
+                Catalogue_RadioButton,
+                Catalogue_InputBox,
+                Catalogue_ComboBox,
+                Catalogue_ProcessBar,
+                Catalogue_RatingStar,
+                Catalogue_ScrollBar,
+                Catalogue_Separator,
+                Catalogue_LabelSeparator,
+                Catalogue_ImageBox,
+                Catalogue_CombineControl,
+                Catalogue_BaseItemStack,
+                Catalogue_Canvas,
+                //Catalogue_PopupPanel,
+                //Catalogue_Bar,
+                Catalogue_ButtonGroup,
+                Catalogue_RibbonGallery,
+                //Catalogue_RibbonBar,
+                //Catalogue_RibbonPage,
+                //Catalogue_RibbonQuickAccessToolbar,
+                //Catalogue_RibbonStatusBar,
+                //Catalogue_RibbonControl,
+                Catalogue_ListBox,
+                Catalogue_Tree,
+                Catalogue_GridView,
+                Catalogue_GridNodeView
+                );
+        }
+        public static Type[] GetBaseBarNewItemTypes()
+        {
+            return CombineTypes(
+                Catalogue_Label,
+                Catalogue_LinkLabel,
+                Catalogue_Button,
+                Catalogue_GlyphButton,
+                Catalogue_ButtonEx,
+                //Catalogue_DescriptionButton,
+                Catalogue_CheckBox,
+                Catalogue_RadioButton,
+                Catalogue_InputBox,
+                Catalogue_ComboBox,
+                Catalogue_ProcessBar,
+                Catalogue_RatingStar,
+                Catalogue_ScrollBar,
+                Catalogue_Separator,
+                Catalogue_LabelSeparator,
+                Catalogue_ImageBox,
+                Catalogue_CombineControl,
+                Catalogue_BaseItemStack,
+                //Catalogue_Canvas,
+                //Catalogue_PopupPanel,
+                //Catalogue_Bar,
+                Catalogue_ButtonGroup,
+                Catalogue_RibbonGallery,
+                //Catalogue_RibbonBar,
+                //Catalogue_RibbonPage,
+                //Catalogue_RibbonQuickAccessToolbar,
+                //Catalogue_RibbonStatusBar,
+                //Catalogue_RibbonControl,
+                Catalogue_ListBox,
+                Catalogue_Tree,
+                Catalogue_GridView,
+                Catalogue_GridNodeView
+                );
+        }
+        public static Type[] GetBaseItemStackNewItemTypes()
+        {
+            return CombineTypes(
+                Catalogue_Label,
+                Catalogue_LinkLabel,
+                Catalogue_Button,
+                Catalogue_GlyphButton,
+                Catalogue_ButtonEx,
+                Catalogue_DescriptionButton,
+                Catalogue_CheckBox,
+                Catalogue_RadioButton,
+                Catalogue_InputBox,
+                Catalogue_ComboBox,
+                Catalogue_ProcessBar,
+                Catalogue_RatingStar,
+                Catalogue_ScrollBar,
+                Catalogue_Separator,
+                Catalogue_LabelSeparator,
+                Catalogue_ImageBox,
+                Catalogue_CombineControl,
+                Catalogue_BaseItemStack,
+                Catalogue_Canvas,
+                //Catalogue_PopupPanel,
+                //Catalogue_Bar,
+                Catalogue_ButtonGroup,
+                Catalogue_RibbonGallery,
+                //Catalogue_RibbonBar,
+                //Catalogue_RibbonPage,
+                //Catalogue_RibbonQuickAccessToolbar,
+                //Catalogue_RibbonStatusBar,
+                //Catalogue_RibbonControl,
+                Catalogue_ListBox,
+                Catalogue_Tree,
+                Catalogue_GridView,
+                Catalogue_GridNodeView
+                );
+        }
+        public static Type[] GetButtonGroupNewItemTypes()
+        {
+            return CombineTypes(
+                Catalogue_Button,
+                Catalogue_GlyphButton
+                );
+        }
+        public static Type[] GetPopupNewItemTypes()
+        {
+            return CombineTypes(
+                Catalogue_Label,
+                Catalogue_LinkLabel,
+                Catalogue_Button,
+                Catalogue_GlyphButton,
+                //Catalogue_ButtonEx,
+                //Catalogue_DescriptionButton,
+                Catalogue_CheckBox,
+                Catalogue_RadioButton,
+                Catalogue_InputBox,
+                Catalogue_ComboBox,
+                Catalogue_ProcessBar,
+                Catalogue_RatingStar,
+                Catalogue_ScrollBar,
+                Catalogue_Separator,
+                Catalogue_LabelSeparator,
+                Catalogue_ImageBox,
+                Catalogue_CombineControl,
+                Catalogue_BaseItemStack,
+                //Catalogue_Canvas,
+                //Catalogue_PopupPanel,
+                //Catalogue_Bar,
+                Catalogue_ButtonGroup,
+                Catalogue_RibbonGallery,
+                //Catalogue_RibbonBar,
+                //Catalogue_RibbonPage,
+                //Catalogue_RibbonQuickAccessToolbar,
+                //Catalogue_RibbonStatusBar,
+                //Catalogue_RibbonControl,
+                Catalogue_ListBox,
+                Catalogue_Tree,
+                Catalogue_GridView,
+                Catalogue_GridNodeView
+                );
+        }
+        public static Type[] GetRibbonQuickAccessToolbarNewItemTypes()
+        {
+            return CombineTypes(
+                //Catalogue_Label,
+                //Catalogue_LinkLabel,
+                Catalogue_Button,
+                Catalogue_GlyphButton,
+                //Catalogue_ButtonEx,
+                //Catalogue_DescriptionButton,
+                //Catalogue_CheckBox,
+                //Catalogue_RadioButton,
+                Catalogue_InputBox,
+                Catalogue_ComboBox,
+                //Catalogue_ProcessBar,
+                //Catalogue_RatingStar,
+                //Catalogue_ScrollBar,
+                Catalogue_Separator//,
+                //Catalogue_LabelSeparator,
+                //Catalogue_ImageBox,
+                //Catalogue_CombineControl,
+                //Catalogue_BaseItemStack,
+                //Catalogue_Canvas,
+                //Catalogue_PopupPanel,
+                //Catalogue_Bar,
+                //Catalogue_ButtonGroup,
+                //Catalogue_RibbonGallery,
+                //Catalogue_RibbonBar,
+                //Catalogue_RibbonPage,
+                //Catalogue_RibbonQuickAccessToolbar,
+                //Catalogue_RibbonStatusBar,
+                //Catalogue_RibbonControl,
+                //Catalogue_ListBox,
+                //Catalogue_Tree,
+                //Catalogue_GridView,
+                //Catalogue_GridNodeView
+                );
+        }
+        public static Type[] GetRibbonPageContentContainerNewItemTypes()
+        {
+            return CombineTypes(
+                Catalogue_Label,
+                Catalogue_LinkLabel,
+                Catalogue_Button,
+                Catalogue_GlyphButton,
+                //Catalogue_ButtonEx,
+                //Catalogue_DescriptionButton,
+                //Catalogue_CheckBox,
+                //Catalogue_RadioButton,
+                Catalogue_InputBox,
+                Catalogue_ComboBox,
+                //Catalogue_ProcessBar,
+                //Catalogue_RatingStar,
+                //Catalogue_ScrollBar,
+                Catalogue_Separator//,
+                //Catalogue_LabelSeparator,
+                //Catalogue_ImageBox,
+                //Catalogue_CombineControl,
+                //Catalogue_BaseItemStack,
+                //Catalogue_Canvas,
+                //Catalogue_PopupPanel,
+                //Catalogue_Bar,
+                //Catalogue_ButtonGroup,
+                //Catalogue_RibbonGallery,
+                //Catalogue_RibbonBar,
+                //Catalogue_RibbonPage,
+                //Catalogue_RibbonQuickAccessToolbar,
+                //Catalogue_RibbonStatusBar,
+                //Catalogue_RibbonControl,
+                //Catalogue_ListBox,
+                //Catalogue_Tree,
+                //Catalogue_GridView,
+                //Catalogue_GridNodeView
+                );
+        }
+        public static Type[] GetCreateNewItemTypes()
+        {
+            return CombineTypes(
+                Catalogue_Label,
+                Catalogue_LinkLabel,
+                Catalogue_Button,
+                Catalogue_GlyphButton,
+                Catalogue_ButtonEx,
+                Catalogue_DescriptionButton,
+                Catalogue_CheckBox,
+                Catalogue_RadioButton,
+                Catalogue_InputBox,
+                Catalogue_ComboBox,
+                Catalogue_ProcessBar,
+                Catalogue_RatingStar,
+                Catalogue_ScrollBar,
+                Catalogue_Separator,
+                Catalogue_LabelSeparator,
+                Catalogue_ImageBox,
+                Catalogue_CombineControl,
+                Catalogue_BaseItemStack,
+                Catalogue_Canvas,
+                Catalogue_PopupPanel,
+                Catalogue_Bar,
+                Catalogue_ButtonGroup,
+                Catalogue_RibbonGallery,
+                Catalogue_RibbonBar,
+                Catalogue_RibbonPage,
+                Catalogue_RibbonQuickAccessToolbar,
+                Catalogue_RibbonStatusBar,
+                Catalogue_RibbonControl,
+                Catalogue_ListBox,
+                Catalogue_Tree,
+                Catalogue_GridView,
+                Catalogue_GridNodeView
+                );
+        }
+
+        public static Dictionary<string, Type[]> GetCreateNewItemTypesDictionary()
+        {
+            Dictionary<string, Type[]> typeCreateNewItemTypesDictionary = new Dictionary<string, Type[]>();
+            //
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.RibbonApplicationPopupPanelMiddleLeftItem",
+                new Type[] { typeof(MenuButtonItem), typeof(SeparatorItem)  });
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.RibbonApplicationPopupPanelMiddleRightItem",
+                new Type[] { typeof(LabelSeparatorItem), typeof(BaseButtonItem), typeof(SeparatorItem) });
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.RibbonApplicationPopupPanelBottomItem",
+                new Type[] {  typeof(BaseButtonItem), typeof(SeparatorItem) });
+            //
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.BaseBar",
+                GetBaseBarNewItemTypes()
+                );
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.BaseBarItem",
+                GetBaseBarNewItemTypes()
+                );
+            //
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.RibbonBar",
+                GetRibbonBarNewItemTypes()
+                );
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.RibbonBarItem",
+                GetRibbonBarNewItemTypes()
+                );
+            //
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.BaseItemStack",
+                GetBaseItemStackNewItemTypes()
+                );
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.BaseItemStackItem",
+                GetBaseItemStackNewItemTypes()
+                );
+            //
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.BaseItemStackEx",
+                GetBaseItemStackNewItemTypes()
+                );
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.BaseItemStackExItem",
+                GetBaseItemStackNewItemTypes()
+                );
+            //
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.ButtonGroup",
+                GetButtonGroupNewItemTypes()
+                );
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.ButtonGroupItem",
+                GetButtonGroupNewItemTypes()
+                );
+            //
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.DropDownButton",
+                GetPopupNewItemTypes()
+                );
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.DropDownButtonItem",
+                GetPopupNewItemTypes()
+                );
+            //
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.RibbonGallery",
+                new Type[] { typeof(RibbonGalleryRowItem) }
+                );
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.RibbonGalleryItem",
+                new Type[] { typeof(RibbonGalleryRowItem) }
+                );
+            //
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.RibbonGalleryRow",
+                new Type[] { typeof(BaseButtonItem), typeof(CheckButtonItem), typeof(ButtonItem) }
+                );
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.RibbonGalleryRowItem",
+                new Type[] { typeof(BaseButtonItem), typeof(CheckButtonItem), typeof(ButtonItem) }
+                );
+            //
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.MenuButton",
+                CombineTypes(Catalogue_DescriptionButton, GetPopupNewItemTypes())
+                );
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.MenuButtonItem",
+                CombineTypes(Catalogue_DescriptionButton, GetPopupNewItemTypes())
+                );
+            //
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.RibbonPage",
+                new Type[] { typeof(RibbonBarItem) }
+                );
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.RibbonPageItem",
+                new Type[] { typeof(RibbonBarItem) }
+                );
+            //
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.ContextPopupPanel",
+                GetPopupNewItemTypes()
+                );
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.ContextPopupPanelItem",
+                GetPopupNewItemTypes()
+                );
+            //
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.RibbonQuickAccessToolbar",
+                GetRibbonQuickAccessToolbarNewItemTypes()
+                );
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.RibbonQuickAccessToolbarItem",
+                GetRibbonQuickAccessToolbarNewItemTypes()
+                );
+            //
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.SplitButton",
+                GetPopupNewItemTypes()
+                );
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.SplitButtonItem",
+                GetPopupNewItemTypes()
+                );
+            //
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.RibbonStatusBar",
+                GetBaseBarNewItemTypes()
+                );
+            typeCreateNewItemTypesDictionary.Add
+                (
+                "GISShare.Controls.WinForm.WFNew.RibbonStatusBarItem",
+                GetBaseBarNewItemTypes()
+                );
+            //
+            return typeCreateNewItemTypesDictionary;
+        }
+        #endregion
 
     }
 }

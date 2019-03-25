@@ -70,7 +70,8 @@ namespace GISShare.Controls.WinForm.WFNew.View.Design
             private System.Windows.Forms.Button btnDelete;
             private GISShare.Controls.WinForm.VsButton btnAddRoot;
             private GISShare.Controls.WinForm.VsButton btnAddChild;
-            private NodeViewItemTree treeView1;
+            private NodeViewItemTreeItem treeView1;
+            private BaseItemHost baseItemHost1;
             private GISShare.Controls.WinForm.VsPropertyGrid vsPropertyGrid1;
             private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
             private System.Windows.Forms.TableLayoutPanel tlpAddNode;
@@ -102,7 +103,8 @@ namespace GISShare.Controls.WinForm.WFNew.View.Design
                 this.btnMoveUp = new System.Windows.Forms.Button();
                 this.vsPropertyGrid1 = new GISShare.Controls.WinForm.VsPropertyGrid(base.Context);
                 this.lblRight = new System.Windows.Forms.Label();
-                this.treeView1 = new NodeViewItemTree();
+                this.treeView1 = new NodeViewItemTreeItem();
+                this.baseItemHost1 = new BaseItemHost();
                 this.lblLeft = new System.Windows.Forms.Label();
                 this.tlpAll = new System.Windows.Forms.TableLayoutPanel();
                 this.tlpMoveDelete = new System.Windows.Forms.TableLayoutPanel();
@@ -236,15 +238,21 @@ namespace GISShare.Controls.WinForm.WFNew.View.Design
                 this.lblRight.TabIndex = 1;
                 this.lblRight.Text = "½Úµã ÊôÐÔ£¨&P£©£º";
                 // 
+                // baseItemHost1
+                // 
+                this.baseItemHost1.AllowDrop = true;
+                this.baseItemHost1.BaseItemObject = this.treeView1;
+                this.baseItemHost1.Dock = System.Windows.Forms.DockStyle.Fill;
+                this.baseItemHost1.Location = new System.Drawing.Point(13, 31);
+                this.baseItemHost1.Name = "treeView1";
+                this.baseItemHost1.Size = new System.Drawing.Size(283, 228);
+                // 
                 // treeView1
                 // 
-                this.treeView1.AllowDrop = true;
-                this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
                 this.treeView1.Location = new System.Drawing.Point(13, 31);
                 this.treeView1.Margin = new System.Windows.Forms.Padding(13, 3, 3, 3);
                 this.treeView1.Name = "treeView1";
                 this.treeView1.Size = new System.Drawing.Size(283, 228);
-                this.treeView1.TabIndex = 3;
                 // 
                 // lblLeft
                 // 
@@ -264,7 +272,7 @@ namespace GISShare.Controls.WinForm.WFNew.View.Design
                 this.tlpAll.Controls.Add(this.tlpMoveDelete, 1, 1);
                 this.tlpAll.Controls.Add(this.lblRight, 2, 0);
                 this.tlpAll.Controls.Add(this.vsPropertyGrid1, 2, 1);
-                this.tlpAll.Controls.Add(this.treeView1, 0, 1);
+                this.tlpAll.Controls.Add(this.baseItemHost1, 0, 1);
                 this.tlpAll.Controls.Add(this.lblLeft, 0, 0);
                 this.tlpAll.Controls.Add(this.tlpAddNode, 0, 2);
                 this.tlpAll.Controls.Add(this.tlpOkAndCancel, 2, 3);
@@ -589,7 +597,7 @@ namespace GISShare.Controls.WinForm.WFNew.View.Design
                     this.m_CurrentNode = null;
                     this.btnAddChild.Enabled = false;
                     this.btnDelete.Enabled = false;
-                    NodeViewItemTree treeView = this.TreeView;
+                    NodeViewItemTreeItem treeView = this.TreeView;
                     if ((items.Length > 0) && (nodes[0] != null))
                     {
                         this.treeView1.SelectedNode = nodes[0];
@@ -695,13 +703,13 @@ namespace GISShare.Controls.WinForm.WFNew.View.Design
                 }
             }
 
-            private NodeViewItemTree TreeView
+            private NodeViewItemTreeItem TreeView
             {
                 get
                 {
                     if ((base.Context != null) && (base.Context.Instance is TreeView))
                     {
-                        return (NodeViewItemTree)base.Context.Instance;
+                        return (NodeViewItemTreeItem)base.Context.Instance;
                     }
                     return null;
                 }

@@ -375,7 +375,7 @@ namespace GISShare.Controls.WinForm.WFNew.Design
         //
         //
 
-        class CanvasItemBaseItemCollectionDesignerFormEx : BaseItemCollectionDesignerFormEx
+        class CanvasItemBaseItemCollectionDesignerFormEx : BaseItemCollectionDesignerForm
         {
             IBaseItem m_pBaseItem;
             public CanvasItemBaseItemCollectionDesignerFormEx(IObjectDesignHelper pObjectDesignHelper)

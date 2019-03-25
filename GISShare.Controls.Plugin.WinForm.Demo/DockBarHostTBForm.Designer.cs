@@ -53,11 +53,11 @@
             // dockBarDockAreaBottom1
             // 
             this.dockBarDockAreaBottom1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dockBarDockAreaBottom1.Location = new System.Drawing.Point(0, 341);
+            this.dockBarDockAreaBottom1.Location = new System.Drawing.Point(0, 508);
             this.dockBarDockAreaBottom1.Name = "dockBarDockAreaBottom1";
             this.dockBarDockAreaBottom1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             this.dockBarDockAreaBottom1.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.dockBarDockAreaBottom1.Size = new System.Drawing.Size(574, 0);
+            this.dockBarDockAreaBottom1.Size = new System.Drawing.Size(861, 0);
             // 
             // dockBarDockAreaLeft1
             // 
@@ -66,16 +66,16 @@
             this.dockBarDockAreaLeft1.Name = "dockBarDockAreaLeft1";
             this.dockBarDockAreaLeft1.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.dockBarDockAreaLeft1.RowMargin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.dockBarDockAreaLeft1.Size = new System.Drawing.Size(0, 341);
+            this.dockBarDockAreaLeft1.Size = new System.Drawing.Size(0, 508);
             // 
             // dockBarDockAreaRight1
             // 
             this.dockBarDockAreaRight1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dockBarDockAreaRight1.Location = new System.Drawing.Point(574, 0);
+            this.dockBarDockAreaRight1.Location = new System.Drawing.Point(861, 0);
             this.dockBarDockAreaRight1.Name = "dockBarDockAreaRight1";
             this.dockBarDockAreaRight1.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.dockBarDockAreaRight1.RowMargin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.dockBarDockAreaRight1.Size = new System.Drawing.Size(0, 341);
+            this.dockBarDockAreaRight1.Size = new System.Drawing.Size(0, 508);
             // 
             // dockBarDockAreaTop1
             // 
@@ -84,7 +84,7 @@
             this.dockBarDockAreaTop1.Name = "dockBarDockAreaTop1";
             this.dockBarDockAreaTop1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             this.dockBarDockAreaTop1.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.dockBarDockAreaTop1.Size = new System.Drawing.Size(574, 0);
+            this.dockBarDockAreaTop1.Size = new System.Drawing.Size(861, 0);
             // 
             // dockPanelManager1
             // 
@@ -96,9 +96,10 @@
             this.documentArea1.Controls.Add(this.richTextBox1);
             this.documentArea1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.documentArea1.Location = new System.Drawing.Point(0, 0);
+            this.documentArea1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.documentArea1.Name = "documentArea1";
             this.documentArea1.Padding = new System.Windows.Forms.Padding(0);
-            this.documentArea1.Size = new System.Drawing.Size(574, 341);
+            this.documentArea1.Size = new System.Drawing.Size(861, 508);
             this.documentArea1.TabIndex = 4;
             this.documentArea1.Text = "DocumentArea";
             // 
@@ -106,16 +107,17 @@
             // 
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(574, 341);
+            this.richTextBox1.Size = new System.Drawing.Size(861, 508);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
-            // DockBarHostForm
+            // DockBarHostTBForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 341);
+            this.ClientSize = new System.Drawing.Size(861, 508);
             this.Controls.Add(this.documentArea1);
             this.Controls.Add(this.dockBarDockAreaLeft1);
             this.Controls.Add(this.dockBarDockAreaRight1);
@@ -123,7 +125,8 @@
             this.Controls.Add(this.dockBarDockAreaBottom1);
             this.IsMiddleCaptionText = true;
             this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "DockBarHostForm";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "DockBarHostTBForm";
             this.Text = "[Demo]插件结构的文编编辑器[Demo]";
             this.documentArea1.ResumeLayout(false);
             this.ResumeLayout(false);

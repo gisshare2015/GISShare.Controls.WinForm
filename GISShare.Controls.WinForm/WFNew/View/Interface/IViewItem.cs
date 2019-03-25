@@ -7,7 +7,11 @@ namespace GISShare.Controls.WinForm.WFNew.View
 {
     public interface IViewItem : IRenderable
     {
+        string Name { get; set; }
+
         string Text { get; set; }
+
+        object Tag { get; set; }
         
         ViewParameterStyle eViewParameterStyle { get; }
 

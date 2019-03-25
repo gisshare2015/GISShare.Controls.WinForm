@@ -8,16 +8,16 @@ using System.ComponentModel;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.ContextPopupDesigner)), ToolboxItem(true)]
+    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.CollectionItemDesigner)), ToolboxItem(true)]
     public class ContextPopup : BasePopup, ISimplyPopup, ICollectionItem, ICollectionItem2, ICollectionObjectDesignHelper
     {
-        private ContextPopupPanel m_ContextPopupPanel = null;
+        private ContextPopupPanelItem m_ContextPopupPanel = null;
         private ToolStripControlHost m_ToolStripControlHost = null;
 
         #region 构造函数
         public ContextPopup()
         {
-            this.m_ContextPopupPanel = new ContextPopupPanel();
+            this.m_ContextPopupPanel = new ContextPopupPanelItem();
             this.m_ContextPopupPanel.Padding = new Padding(2);
             this.m_ContextPopupPanel.LeftTopRadius = 6;
             this.m_ContextPopupPanel.LeftBottomRadius = 6;
@@ -28,11 +28,15 @@ namespace GISShare.Controls.WinForm.WFNew
             this.m_ContextPopupPanel.IsStretchItems = true;
             this.m_ContextPopupPanel.IsRestrictItems = true;
             this.m_ContextPopupPanel.PreButtonIncreaseIndex = false;
-            this.m_ContextPopupPanel.Width = 10;
-            this.m_ContextPopupPanel.Height = 20;
             this.m_ContextPopupPanel.ShowOutLine = true;
             //
-            this.m_ToolStripControlHost = new ToolStripControlHost(this.m_ContextPopupPanel);
+            this.m_ToolStripControlHost = new ToolStripControlHost(
+                new BaseItemHost(this.m_ContextPopupPanel) {
+                    Width = 10, 
+                    Height = 20
+                }
+            );
+            this.m_ContextPopupPanel.Entity = this.m_ToolStripControlHost.Control;
             this.m_ToolStripControlHost.Dock = DockStyle.Fill;
             this.m_ToolStripControlHost.BackColor = base.BackColor;
             this.m_ToolStripControlHost.Margin = new Padding(0);
@@ -44,7 +48,7 @@ namespace GISShare.Controls.WinForm.WFNew
             this.DropShadowEnabled = false;
             this.ShowItemToolTips = false;
             //
-            ((ISetOwnerHelper)(this.m_ContextPopupPanel)).SetOwner(this);
+            ((ISetOwnerHelper)(this.m_ToolStripControlHost.Control)).SetOwner(this);
         }
 
         //public ContextPopup(GISShare.Controls.Plugin.WFNew.IContextPopupP pBaseItemP)
@@ -138,7 +142,7 @@ namespace GISShare.Controls.WinForm.WFNew
 
         public Size GetIdealSize()
         {
-            Graphics g = Graphics.FromHwnd(this.m_ContextPopupPanel.Handle);
+            Graphics g = Graphics.FromHwnd(this.m_ToolStripControlHost.Control.Handle);
             Size size = this.m_ContextPopupPanel.GetIdealSize(g);
             g.Dispose();
             //
@@ -190,7 +194,8 @@ namespace GISShare.Controls.WinForm.WFNew
                 this.Padding.Left + size.Width + this.Padding.Right,
                 this.Padding.Top + size.Height + this.Padding.Bottom
                 );
-            this.m_ContextPopupPanel.Size = size;
+            //this.m_ContextPopupPanel.Size = size;
+            this.m_ToolStripControlHost.Control.Size = size;
         }
 
         public void RefreshPopupPanel()

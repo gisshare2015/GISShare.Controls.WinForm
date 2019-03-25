@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GISShare.Controls.WinForm.WFNew.ContextPopupPanelItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FABAgAEgABAAAgAAAABBSaAAAQGICAAoAACIArAAABg=</HashCode>
+      <FileName>WFNew\Compnonent\PopupPanel\ContextPopupPanelItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.DescriptionMenuPopupPanelItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAABAAIAAAACAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>WFNew\Compnonent\PopupPanel\DescriptionMenuPopupPanelItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.RibbonApplicationPopupPanelItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>tBCAhCAACAhCexYAIgBBSCIqIYCoWjAAKIq4AoBgILs=</HashCode>
+      <FileName>WFNew\Compnonent\PopupPanel\RibbonApplicationPopupPanelItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.RibbonBarMirrorPopupPanelItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FYIFkkBcJAiSgkRAgIBASKEBsZyIORAIIgKJCvCCIBo=</HashCode>
+      <FileName>WFNew\Compnonent\PopupPanel\RibbonBarMirrorPopupPanelItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.RibbonGalleryMirrorPopupPanelItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACEAABAEACAAQAAgABAAIAAAICAAQCAAgIAAAAAAAg=</HashCode>
+      <FileName>WFNew\Compnonent\PopupPanel\RibbonGalleryMirrorPopupPanelItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.ToolTipPopupPanelItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAABAAAAAAAAABAAgAAEACCCAAAAAgAEAAAAAg=</HashCode>
+      <FileName>WFNew\Compnonent\PopupPanel\ToolTipPopupPanelItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

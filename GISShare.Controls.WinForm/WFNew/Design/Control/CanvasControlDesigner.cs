@@ -568,7 +568,7 @@ namespace GISShare.Controls.WinForm.WFNew.Design
 
         private void BuildTreeView(object sender, EventArgs ea)
         {
-            BaseItemCollectionDesignerFormEx baseItemCollectionDesignerFormEx = new BaseItemCollectionDesignerFormEx(this.m_CanvasControl);
+            BaseItemCollectionDesignerForm baseItemCollectionDesignerFormEx = new BaseItemCollectionDesignerForm(this.m_CanvasControl);
             baseItemCollectionDesignerFormEx.GetServiceCallBackEx = new GetServiceCallBack(this.GetService);
             baseItemCollectionDesignerFormEx.TopMost = true;
             baseItemCollectionDesignerFormEx.Location = new Point(360, 150);

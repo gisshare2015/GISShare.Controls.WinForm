@@ -31,8 +31,8 @@ using System.Runtime.InteropServices;
 //
 // 可以指定所有这些值，也可以使用“修订号”和“内部版本号”的默认值，
 // 方法是按如下所示使用“*”:
-[assembly: AssemblyVersion("2.3.3.0")]
-[assembly: AssemblyFileVersion("2.3.3.0")]
+[assembly: AssemblyVersion("3.0.0.0")]
+[assembly: AssemblyFileVersion("3.0.0.0")]
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //A.B.C.D：版本号
@@ -103,4 +103,8 @@ using System.Runtime.InteropServices;
 //2.3.1.0 解决64位机器长整型的问题；为DockPanelManager添加DockPanelFloatForms_Read属性和DockBarManager添加DockBarFloatForms_Read属性；//
 //2.3.2.0 修改NodeViewTree的名称为NodeViewItemTree，修改NodeViewTreeItem的名称和NodeViewItemTreeItem，修改NodeViewItemTree和NodeViewItemTreeItem的CanEdit属性；
 //2.3.3.0 添加控件GridNodeViewItemTree和GridNodeViewItemTreeItem，新增相关项INodeCellViewItem、IRowNodeCellViewItem、NodeCellViewItem、RowNodeCellViewItem，以及相关渲染；
+//
+//
+//
+//3.0.0.0 删除WFNew中的控件实体，采用Item显示；//
 

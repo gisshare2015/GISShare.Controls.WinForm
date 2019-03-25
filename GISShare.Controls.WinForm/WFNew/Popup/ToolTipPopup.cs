@@ -9,11 +9,11 @@ namespace GISShare.Controls.WinForm.WFNew
     class ToolTipPopup : BasePopup, IToolTipPopup
     {
         private ToolStripControlHost m_ToolStripControlHost = null;
-        private ToolTipPopupPanel m_ToolTipPopupPanel;
+        private ToolTipPopupPanelItem m_ToolTipPopupPanel;
 
         public ToolTipPopup()
         {
-            this.m_ToolTipPopupPanel = new ToolTipPopupPanel();
+            this.m_ToolTipPopupPanel = new ToolTipPopupPanelItem();
             this.m_ToolTipPopupPanel.Padding = new Padding(2);
             this.m_ToolTipPopupPanel.Size = new System.Drawing.Size(18, 18);
             //this.m_ToolTipPopupPanel.Dock = DockStyle.Fill;
@@ -25,10 +25,14 @@ namespace GISShare.Controls.WinForm.WFNew
             this.m_ToolTipPopupPanel.LockHeight = true;
             this.m_ToolTipPopupPanel.IsStretchItems = true;
             this.m_ToolTipPopupPanel.IsRestrictItems = true;
-            this.m_ToolTipPopupPanel.Width = 10;
-            this.m_ToolTipPopupPanel.Height = 20;
             //
-            this.m_ToolStripControlHost = new ToolStripControlHost(this.m_ToolTipPopupPanel);
+            this.m_ToolStripControlHost = new ToolStripControlHost(
+                new BaseItemHost(this.m_ToolTipPopupPanel) {
+                    Width = 10, 
+                    Height = 20
+                }
+            );
+            this.m_ToolTipPopupPanel.Entity = this.m_ToolStripControlHost.Control;
             this.m_ToolStripControlHost.Dock = DockStyle.Fill;
             this.m_ToolStripControlHost.BackColor = base.BackColor;
             this.m_ToolStripControlHost.Margin = new Padding(0);
@@ -41,12 +45,12 @@ namespace GISShare.Controls.WinForm.WFNew
             this.DropShadowEnabled = false;
             this.ShowItemToolTips = false;
             //
-            ((ISetOwnerHelper)this).SetOwner(this.m_ToolTipPopupPanel as IBaseItemOwner);
+            ((ISetOwnerHelper)this).SetOwner((IOwner)this.m_ToolStripControlHost.Control);
         }
 
         public Size GetIdealSize()
         {
-            Graphics g = Graphics.FromHwnd(this.m_ToolTipPopupPanel.Handle);
+            Graphics g = Graphics.FromHwnd(this.m_ToolStripControlHost.Control.Handle);
             Size size = this.m_ToolTipPopupPanel.GetIdealSize(g);
             g.Dispose();
             //

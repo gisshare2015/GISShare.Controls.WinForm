@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    public interface ICollectionObjectDesignHelper
+    public interface ICollectionObjectDesignHelper : IObjectDesignHelper
     {
         IList List { get; }
 

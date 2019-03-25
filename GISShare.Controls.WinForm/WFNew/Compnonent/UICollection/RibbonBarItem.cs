@@ -11,7 +11,6 @@ namespace GISShare.Controls.WinForm.WFNew
     /// <summary>
     /// 绘制型 功能区工具条
     /// </summary>
-    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.RibbonBarItemDesigner))]
     public class RibbonBarItem : BaseItemStackItem, 
         IRibbonBarItem, IRibbonBarItemEvent, ISetRibbonBarHelper, IPopupOwner, IPopupOwnerHelper
     {

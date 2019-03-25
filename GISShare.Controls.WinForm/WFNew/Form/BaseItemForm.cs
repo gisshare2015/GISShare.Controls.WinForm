@@ -282,6 +282,7 @@ namespace GISShare.Controls.WinForm.WFNew
                 base.OnMouseDoubleClick(e);
             }
         }
+
         //
 
         protected override void OnMouseEnter(EventArgs e)

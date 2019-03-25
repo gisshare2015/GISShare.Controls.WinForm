@@ -28,16 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gridViewItemListBox1 = new GISShare.Controls.WinForm.WFNew.View.GridViewItemListBox();
+            this.gridViewItemListBox1 = new GISShare.Controls.WinForm.WFNew.View.GridViewItemListBoxItem();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.viewItemListBox1 = new GISShare.Controls.WinForm.WFNew.View.ViewItemListBox();
+            this.viewItemListBox1 = new GISShare.Controls.WinForm.WFNew.View.ViewItemListBoxItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBoxN1 = new GISShare.Controls.WinForm.WFNew.TextBoxN();
-            this.buttonN1 = new GISShare.Controls.WinForm.WFNew.ButtonN();
+            this.textBoxN1 = new GISShare.Controls.WinForm.WFNew.TextBoxItem();
+            this.buttonN1 = new GISShare.Controls.WinForm.WFNew.ButtonItem();
+            this.baseItemHost1 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.baseItemHost2 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.baseItemHost3 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.baseItemHost4 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,21 +50,22 @@
             this.gridViewItemListBox1.AutoGetFocus = true;
             this.gridViewItemListBox1.BackColor = System.Drawing.SystemColors.Window;
             this.gridViewItemListBox1.DataSource = null;
-            this.gridViewItemListBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.gridViewItemListBox1.Font = new System.Drawing.Font("宋体", 9F);
+            this.gridViewItemListBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.gridViewItemListBox1.Location = new System.Drawing.Point(0, 0);
             this.gridViewItemListBox1.MultipleSelect = true;
             this.gridViewItemListBox1.Name = "gridViewItemListBox1";
-            this.gridViewItemListBox1.Padding = new System.Windows.Forms.Padding(0);
-            this.gridViewItemListBox1.Size = new System.Drawing.Size(644, 391);
-            this.gridViewItemListBox1.TabIndex = 2;
+            this.gridViewItemListBox1.Size = new System.Drawing.Size(966, 578);
+            this.gridViewItemListBox1.Tag = null;
             this.gridViewItemListBox1.Text = "gridViewItemListBox1";
             this.gridViewItemListBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gridViewItemListBox1_MouseDown);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(650, 347);
+            this.button1.Location = new System.Drawing.Point(975, 520);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 32);
+            this.button1.Size = new System.Drawing.Size(106, 48);
             this.button1.TabIndex = 3;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -68,9 +73,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(654, 289);
+            this.button2.Location = new System.Drawing.Point(981, 434);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(53, 40);
+            this.button2.Size = new System.Drawing.Size(80, 60);
             this.button2.TabIndex = 4;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -80,12 +86,13 @@
             // 
             this.viewItemListBox1.AutoGetFocus = true;
             this.viewItemListBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.viewItemListBox1.Location = new System.Drawing.Point(650, 0);
+            this.viewItemListBox1.Font = new System.Drawing.Font("宋体", 9F);
+            this.viewItemListBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.viewItemListBox1.Location = new System.Drawing.Point(0, 0);
             this.viewItemListBox1.Name = "viewItemListBox1";
-            this.viewItemListBox1.Padding = new System.Windows.Forms.Padding(0);
             this.viewItemListBox1.ShowHScrollBar = true;
-            this.viewItemListBox1.Size = new System.Drawing.Size(247, 164);
-            this.viewItemListBox1.TabIndex = 5;
+            this.viewItemListBox1.Size = new System.Drawing.Size(370, 246);
+            this.viewItemListBox1.Tag = null;
             this.viewItemListBox1.Text = "viewItemListBox1";
             // 
             // dataGridView1
@@ -95,10 +102,11 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(650, 170);
+            this.dataGridView1.Location = new System.Drawing.Point(975, 255);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(247, 93);
+            this.dataGridView1.Size = new System.Drawing.Size(370, 140);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView1_CellPainting);
             // 
@@ -119,42 +127,88 @@
             // 
             // textBoxN1
             // 
-            this.textBoxN1.Location = new System.Drawing.Point(730, 301);
+            this.textBoxN1.Font = new System.Drawing.Font("宋体", 9F);
+            this.textBoxN1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBoxN1.Location = new System.Drawing.Point(0, 0);
             this.textBoxN1.LockHeight = true;
             this.textBoxN1.Name = "textBoxN1";
-            this.textBoxN1.Padding = new System.Windows.Forms.Padding(0);
             this.textBoxN1.PasswordChar = '\0';
-            this.textBoxN1.Size = new System.Drawing.Size(146, 20);
-            this.textBoxN1.TabIndex = 7;
+            this.textBoxN1.Size = new System.Drawing.Size(219, 27);
+            this.textBoxN1.Tag = null;
             this.textBoxN1.Text = "textBoxN1";
             this.textBoxN1.TextChanged += new System.EventHandler(this.textBoxN1_TextChanged);
             this.textBoxN1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxN1_KeyDown);
             // 
             // buttonN1
             // 
-            this.buttonN1.BackColor = System.Drawing.Color.Transparent;
+            this.buttonN1.Font = new System.Drawing.Font("宋体", 9F);
+            this.buttonN1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonN1.Image = null;
-            this.buttonN1.Location = new System.Drawing.Point(751, 337);
+            this.buttonN1.Location = new System.Drawing.Point(0, 0);
             this.buttonN1.Name = "buttonN1";
-            this.buttonN1.Padding = new System.Windows.Forms.Padding(0);
-            this.buttonN1.Size = new System.Drawing.Size(58, 32);
-            this.buttonN1.TabIndex = 8;
+            this.buttonN1.ShowNomalState = true;
+            this.buttonN1.Size = new System.Drawing.Size(87, 48);
+            this.buttonN1.Tag = null;
             this.buttonN1.Text = "buttonN1";
             this.buttonN1.Click += new System.EventHandler(this.buttonN1_Click);
             // 
+            // baseItemHost1
+            // 
+            this.baseItemHost1.BackColor = System.Drawing.SystemColors.Window;
+            this.baseItemHost1.BaseItemObject = this.gridViewItemListBox1;
+            this.baseItemHost1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.baseItemHost1.Location = new System.Drawing.Point(0, 0);
+            this.baseItemHost1.Margin = new System.Windows.Forms.Padding(4);
+            this.baseItemHost1.Name = "baseItemHost1";
+            this.baseItemHost1.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost1.Size = new System.Drawing.Size(966, 578);
+            this.baseItemHost1.TabIndex = 2;
+            // 
+            // baseItemHost2
+            // 
+            this.baseItemHost2.BaseItemObject = this.viewItemListBox1;
+            this.baseItemHost2.Location = new System.Drawing.Point(975, 0);
+            this.baseItemHost2.Margin = new System.Windows.Forms.Padding(4);
+            this.baseItemHost2.Name = "baseItemHost2";
+            this.baseItemHost2.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost2.Size = new System.Drawing.Size(370, 246);
+            this.baseItemHost2.TabIndex = 5;
+            // 
+            // baseItemHost3
+            // 
+            this.baseItemHost3.BaseItemObject = this.textBoxN1;
+            this.baseItemHost3.Location = new System.Drawing.Point(1095, 452);
+            this.baseItemHost3.Margin = new System.Windows.Forms.Padding(4);
+            this.baseItemHost3.Name = "baseItemHost3";
+            this.baseItemHost3.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost3.Size = new System.Drawing.Size(219, 27);
+            this.baseItemHost3.TabIndex = 7;
+            // 
+            // baseItemHost4
+            // 
+            this.baseItemHost4.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost4.BaseItemObject = this.buttonN1;
+            this.baseItemHost4.Location = new System.Drawing.Point(1126, 506);
+            this.baseItemHost4.Margin = new System.Windows.Forms.Padding(4);
+            this.baseItemHost4.Name = "baseItemHost4";
+            this.baseItemHost4.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost4.Size = new System.Drawing.Size(87, 48);
+            this.baseItemHost4.TabIndex = 8;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 391);
-            this.Controls.Add(this.buttonN1);
-            this.Controls.Add(this.textBoxN1);
+            this.ClientSize = new System.Drawing.Size(1350, 578);
+            this.Controls.Add(this.baseItemHost1);
+            this.Controls.Add(this.baseItemHost2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.viewItemListBox1);
+            this.Controls.Add(this.baseItemHost3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.gridViewItemListBox1);
+            this.Controls.Add(this.baseItemHost4);
             this.Location = new System.Drawing.Point(0, 0);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -164,16 +218,20 @@
 
         #endregion
 
-        private Controls.WinForm.WFNew.View.GridViewItemListBox gridViewItemListBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private Controls.WinForm.WFNew.View.ViewItemListBox viewItemListBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private Controls.WinForm.WFNew.TextBoxN textBoxN1;
-        private Controls.WinForm.WFNew.ButtonN buttonN1;
+        private Controls.WinForm.WFNew.View.GridViewItemListBoxItem gridViewItemListBox1;
+        private Controls.WinForm.WFNew.View.ViewItemListBoxItem viewItemListBox1;
+        private Controls.WinForm.WFNew.TextBoxItem textBoxN1;
+        private Controls.WinForm.WFNew.ButtonItem buttonN1;
+        private Controls.WinForm.WFNew.BaseItemHost baseItemHost1;
+        private Controls.WinForm.WFNew.BaseItemHost baseItemHost2;
+        private Controls.WinForm.WFNew.BaseItemHost baseItemHost3;
+        private Controls.WinForm.WFNew.BaseItemHost baseItemHost4;
 
     }
 }

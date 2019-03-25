@@ -33,7 +33,8 @@
             GISShare.Controls.WinForm.WFNew.View.TextViewItem textViewItem2 = new GISShare.Controls.WinForm.WFNew.View.TextViewItem();
             GISShare.Controls.WinForm.WFNew.View.TextViewItem textViewItem3 = new GISShare.Controls.WinForm.WFNew.View.TextViewItem();
             GISShare.Controls.WinForm.WFNew.View.TextViewItem textViewItem4 = new GISShare.Controls.WinForm.WFNew.View.TextViewItem();
-            this.ribbonControl1 = new GISShare.Controls.WinForm.WFNew.RibbonControl();
+            this.baseItemHost1 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.ribbonControl1 = new GISShare.Controls.WinForm.WFNew.RibbonControlItem();
             this.ribbonMenuButtonItem1 = new GISShare.Controls.WinForm.WFNew.MenuButtonItem();
             this.ribbonMenuButtonItem2 = new GISShare.Controls.WinForm.WFNew.MenuButtonItem();
             this.ribbonMenuButtonItem3 = new GISShare.Controls.WinForm.WFNew.MenuButtonItem();
@@ -122,17 +123,29 @@
             this.btnExist = new GISShare.Controls.WinForm.WFNew.BaseButtonItem();
             this.ribbonSeparatorItem2 = new GISShare.Controls.WinForm.WFNew.SeparatorItem();
             this.btnInfo = new GISShare.Controls.WinForm.WFNew.BaseButtonItem();
-            this.ribbonStatusBar1 = new GISShare.Controls.WinForm.WFNew.RibbonStatusBar();
+            this.ribbonStatusBar1 = new GISShare.Controls.WinForm.WFNew.RibbonStatusBarItem();
             this.lblNum = new GISShare.Controls.WinForm.WFNew.LabelItem();
             this.lblNumInfo = new GISShare.Controls.WinForm.WFNew.LabelItem();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
+            // 
+            // baseItemHost1
+            // 
+            this.baseItemHost1.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost1.BaseItemObject = this.ribbonControl1;
+            this.baseItemHost1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.baseItemHost1.Location = new System.Drawing.Point(0, 0);
+            this.baseItemHost1.Name = "baseItemHost1";
+            this.baseItemHost1.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost1.Size = new System.Drawing.Size(936, 141);
+            this.baseItemHost1.TabIndex = 0;
             // 
             // ribbonControl1
             // 
             // 
             // 
             // 
+            this.ribbonControl1.ApplicationPopup.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.ribbonControl1.ApplicationPopup.MenuItems.Add(this.ribbonMenuButtonItem1);
             this.ribbonControl1.ApplicationPopup.MenuItems.Add(this.ribbonMenuButtonItem2);
             this.ribbonControl1.ApplicationPopup.MenuItems.Add(this.ribbonMenuButtonItem3);
@@ -147,15 +160,15 @@
             this.ribbonControl1.ApplicationPopup.OperationItems.Add(this.ribbonBaseButtonItem5);
             this.ribbonControl1.ApplicationPopup.RecordItems.Add(this.ribbonLabelSeparatorItem4);
             this.ribbonControl1.ApplicationPopup.RecordItems.Add(this.ribbonBaseButtonItem28);
-            this.ribbonControl1.BackColor = System.Drawing.Color.Transparent;
             this.ribbonControl1.CanExchangeItem = false;
-            this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.ePNLayoutStyle = GISShare.Controls.WinForm.WFNew.PNLayoutStyle.eTail;
             this.ribbonControl1.eQuickAccessToolbarStyle = GISShare.Controls.WinForm.WFNew.QuickAccessToolbarStyle.eHalfRound;
+            this.ribbonControl1.Font = new System.Drawing.Font("宋体", 9F);
+            this.ribbonControl1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.LockHeight = true;
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.Padding = new System.Windows.Forms.Padding(0);
             this.ribbonControl1.PageContents.Add(this.ribbonLabelItem1);
             this.ribbonControl1.PageContents.Add(this.cbSkin1);
             this.ribbonControl1.ParentForm = this;
@@ -163,8 +176,8 @@
             this.ribbonControl1.RibbonPages.Add(this.ribbonPageItem1);
             this.ribbonControl1.RibbonPages.Add(this.ribbonPageItem3);
             this.ribbonControl1.RibbonPageSelectedIndex = 0;
-            this.ribbonControl1.Size = new System.Drawing.Size(624, 141);
-            this.ribbonControl1.TabIndex = 0;
+            this.ribbonControl1.Size = new System.Drawing.Size(936, 141);
+            this.ribbonControl1.Tag = null;
             this.ribbonControl1.Text = "RibbonControl控件";
             this.ribbonControl1.ToolbarItems.Add(this.ribbonBaseButtonItem4);
             this.ribbonControl1.ToolbarItems.Add(this.ribbonBaseButtonItem1);
@@ -185,6 +198,7 @@
             this.ribbonMenuButtonItem1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonMenuButtonItem1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonMenuButtonItem1.Image")));
             this.ribbonMenuButtonItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ribbonMenuButtonItem1.Location = new System.Drawing.Point(0, 0);
             this.ribbonMenuButtonItem1.Name = "ribbonMenuButtonItem1";
             this.ribbonMenuButtonItem1.Padding = new System.Windows.Forms.Padding(6);
             this.ribbonMenuButtonItem1.Size = new System.Drawing.Size(148, 39);
@@ -202,6 +216,7 @@
             this.ribbonMenuButtonItem2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonMenuButtonItem2.Image = ((System.Drawing.Image)(resources.GetObject("ribbonMenuButtonItem2.Image")));
             this.ribbonMenuButtonItem2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ribbonMenuButtonItem2.Location = new System.Drawing.Point(0, 0);
             this.ribbonMenuButtonItem2.Name = "ribbonMenuButtonItem2";
             this.ribbonMenuButtonItem2.Padding = new System.Windows.Forms.Padding(6);
             this.ribbonMenuButtonItem2.Size = new System.Drawing.Size(148, 39);
@@ -219,6 +234,7 @@
             this.ribbonMenuButtonItem3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonMenuButtonItem3.Image = ((System.Drawing.Image)(resources.GetObject("ribbonMenuButtonItem3.Image")));
             this.ribbonMenuButtonItem3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ribbonMenuButtonItem3.Location = new System.Drawing.Point(0, 0);
             this.ribbonMenuButtonItem3.Name = "ribbonMenuButtonItem3";
             this.ribbonMenuButtonItem3.Padding = new System.Windows.Forms.Padding(6);
             this.ribbonMenuButtonItem3.Size = new System.Drawing.Size(148, 39);
@@ -242,6 +258,7 @@
             this.ribbonMenuButtonItem4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonMenuButtonItem4.Image = ((System.Drawing.Image)(resources.GetObject("ribbonMenuButtonItem4.Image")));
             this.ribbonMenuButtonItem4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ribbonMenuButtonItem4.Location = new System.Drawing.Point(0, 0);
             this.ribbonMenuButtonItem4.Name = "ribbonMenuButtonItem4";
             this.ribbonMenuButtonItem4.Padding = new System.Windows.Forms.Padding(6);
             this.ribbonMenuButtonItem4.Size = new System.Drawing.Size(148, 39);
@@ -258,6 +275,7 @@
             this.ribbonDescriptionButtonItem1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonDescriptionButtonItem1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonDescriptionButtonItem1.Image")));
             this.ribbonDescriptionButtonItem1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.ribbonDescriptionButtonItem1.Location = new System.Drawing.Point(0, 0);
             this.ribbonDescriptionButtonItem1.Name = "ribbonDescriptionButtonItem1";
             this.ribbonDescriptionButtonItem1.Padding = new System.Windows.Forms.Padding(6);
             this.ribbonDescriptionButtonItem1.Size = new System.Drawing.Size(235, 56);
@@ -274,6 +292,7 @@
             this.ribbonDescriptionButtonItem2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonDescriptionButtonItem2.Image = ((System.Drawing.Image)(resources.GetObject("ribbonDescriptionButtonItem2.Image")));
             this.ribbonDescriptionButtonItem2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.ribbonDescriptionButtonItem2.Location = new System.Drawing.Point(0, 0);
             this.ribbonDescriptionButtonItem2.Name = "ribbonDescriptionButtonItem2";
             this.ribbonDescriptionButtonItem2.Padding = new System.Windows.Forms.Padding(6);
             this.ribbonDescriptionButtonItem2.Size = new System.Drawing.Size(235, 56);
@@ -290,6 +309,7 @@
             this.ribbonDescriptionButtonItem3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonDescriptionButtonItem3.Image = ((System.Drawing.Image)(resources.GetObject("ribbonDescriptionButtonItem3.Image")));
             this.ribbonDescriptionButtonItem3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.ribbonDescriptionButtonItem3.Location = new System.Drawing.Point(0, 0);
             this.ribbonDescriptionButtonItem3.Name = "ribbonDescriptionButtonItem3";
             this.ribbonDescriptionButtonItem3.Padding = new System.Windows.Forms.Padding(6);
             this.ribbonDescriptionButtonItem3.Size = new System.Drawing.Size(235, 56);
@@ -306,6 +326,7 @@
             this.ribbonDescriptionButtonItem4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonDescriptionButtonItem4.Image = ((System.Drawing.Image)(resources.GetObject("ribbonDescriptionButtonItem4.Image")));
             this.ribbonDescriptionButtonItem4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.ribbonDescriptionButtonItem4.Location = new System.Drawing.Point(0, 0);
             this.ribbonDescriptionButtonItem4.Name = "ribbonDescriptionButtonItem4";
             this.ribbonDescriptionButtonItem4.Padding = new System.Windows.Forms.Padding(6);
             this.ribbonDescriptionButtonItem4.Size = new System.Drawing.Size(235, 56);
@@ -322,6 +343,7 @@
             this.ribbonDescriptionButtonItem5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonDescriptionButtonItem5.Image = ((System.Drawing.Image)(resources.GetObject("ribbonDescriptionButtonItem5.Image")));
             this.ribbonDescriptionButtonItem5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.ribbonDescriptionButtonItem5.Location = new System.Drawing.Point(0, 0);
             this.ribbonDescriptionButtonItem5.Name = "ribbonDescriptionButtonItem5";
             this.ribbonDescriptionButtonItem5.Padding = new System.Windows.Forms.Padding(6);
             this.ribbonDescriptionButtonItem5.Size = new System.Drawing.Size(235, 56);
@@ -331,10 +353,13 @@
             // 
             // ribbonSeparatorItem3
             // 
+            this.ribbonSeparatorItem3.AutoLayout = true;
             this.ribbonSeparatorItem3.eOrientation = System.Windows.Forms.Orientation.Horizontal;
             this.ribbonSeparatorItem3.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonSeparatorItem3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ribbonSeparatorItem3.Location = new System.Drawing.Point(0, 0);
             this.ribbonSeparatorItem3.LockHeight = true;
+            this.ribbonSeparatorItem3.MinimumSize = new System.Drawing.Size(3, 3);
             this.ribbonSeparatorItem3.Name = "ribbonSeparatorItem3";
             this.ribbonSeparatorItem3.Size = new System.Drawing.Size(148, 3);
             this.ribbonSeparatorItem3.Tag = null;
@@ -354,6 +379,7 @@
             this.ribbonMenuButtonItem5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonMenuButtonItem5.Image = ((System.Drawing.Image)(resources.GetObject("ribbonMenuButtonItem5.Image")));
             this.ribbonMenuButtonItem5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ribbonMenuButtonItem5.Location = new System.Drawing.Point(0, 0);
             this.ribbonMenuButtonItem5.Name = "ribbonMenuButtonItem5";
             this.ribbonMenuButtonItem5.Padding = new System.Windows.Forms.Padding(6);
             this.ribbonMenuButtonItem5.Size = new System.Drawing.Size(148, 39);
@@ -370,6 +396,7 @@
             this.ribbonDescriptionButtonItem6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonDescriptionButtonItem6.Image = ((System.Drawing.Image)(resources.GetObject("ribbonDescriptionButtonItem6.Image")));
             this.ribbonDescriptionButtonItem6.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.ribbonDescriptionButtonItem6.Location = new System.Drawing.Point(0, 0);
             this.ribbonDescriptionButtonItem6.Name = "ribbonDescriptionButtonItem6";
             this.ribbonDescriptionButtonItem6.Padding = new System.Windows.Forms.Padding(6);
             this.ribbonDescriptionButtonItem6.Size = new System.Drawing.Size(235, 56);
@@ -386,6 +413,7 @@
             this.ribbonDescriptionButtonItem7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonDescriptionButtonItem7.Image = ((System.Drawing.Image)(resources.GetObject("ribbonDescriptionButtonItem7.Image")));
             this.ribbonDescriptionButtonItem7.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.ribbonDescriptionButtonItem7.Location = new System.Drawing.Point(0, 0);
             this.ribbonDescriptionButtonItem7.Name = "ribbonDescriptionButtonItem7";
             this.ribbonDescriptionButtonItem7.Padding = new System.Windows.Forms.Padding(6);
             this.ribbonDescriptionButtonItem7.Size = new System.Drawing.Size(235, 56);
@@ -402,6 +430,7 @@
             this.ribbonDescriptionButtonItem8.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonDescriptionButtonItem8.Image = ((System.Drawing.Image)(resources.GetObject("ribbonDescriptionButtonItem8.Image")));
             this.ribbonDescriptionButtonItem8.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.ribbonDescriptionButtonItem8.Location = new System.Drawing.Point(0, 0);
             this.ribbonDescriptionButtonItem8.Name = "ribbonDescriptionButtonItem8";
             this.ribbonDescriptionButtonItem8.Padding = new System.Windows.Forms.Padding(6);
             this.ribbonDescriptionButtonItem8.Size = new System.Drawing.Size(235, 56);
@@ -419,6 +448,7 @@
             this.ribbonMenuButtonItem6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonMenuButtonItem6.Image = ((System.Drawing.Image)(resources.GetObject("ribbonMenuButtonItem6.Image")));
             this.ribbonMenuButtonItem6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ribbonMenuButtonItem6.Location = new System.Drawing.Point(0, 0);
             this.ribbonMenuButtonItem6.Name = "ribbonMenuButtonItem6";
             this.ribbonMenuButtonItem6.Padding = new System.Windows.Forms.Padding(6);
             this.ribbonMenuButtonItem6.Size = new System.Drawing.Size(148, 39);
@@ -436,6 +466,7 @@
             this.ribbonMenuButtonItem7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonMenuButtonItem7.Image = ((System.Drawing.Image)(resources.GetObject("ribbonMenuButtonItem7.Image")));
             this.ribbonMenuButtonItem7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ribbonMenuButtonItem7.Location = new System.Drawing.Point(0, 0);
             this.ribbonMenuButtonItem7.Name = "ribbonMenuButtonItem7";
             this.ribbonMenuButtonItem7.Padding = new System.Windows.Forms.Padding(6);
             this.ribbonMenuButtonItem7.Size = new System.Drawing.Size(148, 39);
@@ -445,10 +476,13 @@
             // 
             // ribbonSeparatorItem4
             // 
+            this.ribbonSeparatorItem4.AutoLayout = true;
             this.ribbonSeparatorItem4.eOrientation = System.Windows.Forms.Orientation.Horizontal;
             this.ribbonSeparatorItem4.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonSeparatorItem4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ribbonSeparatorItem4.Location = new System.Drawing.Point(0, 0);
             this.ribbonSeparatorItem4.LockHeight = true;
+            this.ribbonSeparatorItem4.MinimumSize = new System.Drawing.Size(3, 3);
             this.ribbonSeparatorItem4.Name = "ribbonSeparatorItem4";
             this.ribbonSeparatorItem4.Size = new System.Drawing.Size(148, 3);
             this.ribbonSeparatorItem4.Tag = null;
@@ -464,6 +498,7 @@
             this.ribbonMenuButtonItem8.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonMenuButtonItem8.Image = ((System.Drawing.Image)(resources.GetObject("ribbonMenuButtonItem8.Image")));
             this.ribbonMenuButtonItem8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ribbonMenuButtonItem8.Location = new System.Drawing.Point(0, 0);
             this.ribbonMenuButtonItem8.Name = "ribbonMenuButtonItem8";
             this.ribbonMenuButtonItem8.Padding = new System.Windows.Forms.Padding(6);
             this.ribbonMenuButtonItem8.Size = new System.Drawing.Size(148, 39);
@@ -482,6 +517,7 @@
             this.ribbonMenuButtonItem9.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonMenuButtonItem9.Image = ((System.Drawing.Image)(resources.GetObject("ribbonMenuButtonItem9.Image")));
             this.ribbonMenuButtonItem9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ribbonMenuButtonItem9.Location = new System.Drawing.Point(0, 0);
             this.ribbonMenuButtonItem9.Name = "ribbonMenuButtonItem9";
             this.ribbonMenuButtonItem9.Padding = new System.Windows.Forms.Padding(6);
             this.ribbonMenuButtonItem9.Size = new System.Drawing.Size(148, 39);
@@ -496,6 +532,7 @@
             this.ribbonBaseButtonItem5.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem5.Image = null;
+            this.ribbonBaseButtonItem5.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem5.Name = "ribbonBaseButtonItem5";
             this.ribbonBaseButtonItem5.ShowNomalState = true;
             this.ribbonBaseButtonItem5.Size = new System.Drawing.Size(90, 21);
@@ -507,6 +544,7 @@
             // 
             this.ribbonLabelSeparatorItem4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
             this.ribbonLabelSeparatorItem4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ribbonLabelSeparatorItem4.Location = new System.Drawing.Point(0, 0);
             this.ribbonLabelSeparatorItem4.LockHeight = true;
             this.ribbonLabelSeparatorItem4.Name = "ribbonLabelSeparatorItem4";
             this.ribbonLabelSeparatorItem4.Size = new System.Drawing.Size(237, 21);
@@ -518,6 +556,7 @@
             this.ribbonBaseButtonItem28.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem28.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem28.Image = null;
+            this.ribbonBaseButtonItem28.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem28.Name = "ribbonBaseButtonItem28";
             this.ribbonBaseButtonItem28.Size = new System.Drawing.Size(237, 23);
             this.ribbonBaseButtonItem28.Tag = null;
@@ -528,13 +567,15 @@
             // 
             this.ribbonLabelItem1.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonLabelItem1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ribbonLabelItem1.Location = new System.Drawing.Point(744, 25);
             this.ribbonLabelItem1.Name = "ribbonLabelItem1";
-            this.ribbonLabelItem1.Size = new System.Drawing.Size(42, 21);
+            this.ribbonLabelItem1.Size = new System.Drawing.Size(62, 21);
             this.ribbonLabelItem1.Tag = null;
             this.ribbonLabelItem1.Text = "外观：";
             // 
             // cbSkin1
             // 
+            this.cbSkin1.CanEdit = false;
             this.cbSkin1.DropDownHeight = 120;
             this.cbSkin1.DropDownWidth = 130;
             this.cbSkin1.eCustomizeComboBoxStyle = GISShare.Controls.WinForm.WFNew.CustomizeComboBoxStyle.eDropDownList;
@@ -550,9 +591,11 @@
             textViewItem2.Text = "Office2010外观";
             this.cbSkin1.Items.Add(textViewItem1);
             this.cbSkin1.Items.Add(textViewItem2);
+            this.cbSkin1.Location = new System.Drawing.Point(806, 25);
             this.cbSkin1.LockHeight = true;
             this.cbSkin1.Name = "cbSkin1";
             this.cbSkin1.SelectedIndex = 0;
+            this.cbSkin1.ShowDropDownNum = 0;
             this.cbSkin1.Size = new System.Drawing.Size(130, 21);
             this.cbSkin1.Tag = null;
             this.cbSkin1.Text = "Office2007外观";
@@ -568,10 +611,11 @@
             this.ribbonPageItem2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonPageItem2.Image = null;
             this.ribbonPageItem2.LineDistance = 2;
+            this.ribbonPageItem2.Location = new System.Drawing.Point(3, 49);
             this.ribbonPageItem2.Name = "ribbonPageItem2";
             this.ribbonPageItem2.RestrictItemsHeight = -1;
             this.ribbonPageItem2.RestrictItemsWidth = -1;
-            this.ribbonPageItem2.Size = new System.Drawing.Size(617, 89);
+            this.ribbonPageItem2.Size = new System.Drawing.Size(929, 89);
             this.ribbonPageItem2.Tag = null;
             this.ribbonPageItem2.Text = "文件";
             this.ribbonPageItem2.TopViewItemIndex = 0;
@@ -589,6 +633,7 @@
             this.ribbonBarItem2.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBarItem2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBarItem2.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBarItem2.Image")));
+            this.ribbonBarItem2.Location = new System.Drawing.Point(3, 49);
             this.ribbonBarItem2.LockWith = true;
             this.ribbonBarItem2.Name = "ribbonBarItem2";
             this.ribbonBarItem2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 2);
@@ -604,6 +649,7 @@
             this.ribbonBaseButtonItem33.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem33.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem33.Image")));
             this.ribbonBaseButtonItem33.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ribbonBaseButtonItem33.Location = new System.Drawing.Point(6, 52);
             this.ribbonBaseButtonItem33.Name = "ribbonBaseButtonItem33";
             this.ribbonBaseButtonItem33.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
             this.ribbonBaseButtonItem33.Size = new System.Drawing.Size(35, 67);
@@ -616,6 +662,7 @@
             this.ribbonBaseButtonItem34.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem34.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem34.Image")));
             this.ribbonBaseButtonItem34.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ribbonBaseButtonItem34.Location = new System.Drawing.Point(42, 52);
             this.ribbonBaseButtonItem34.Name = "ribbonBaseButtonItem34";
             this.ribbonBaseButtonItem34.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
             this.ribbonBaseButtonItem34.Size = new System.Drawing.Size(35, 67);
@@ -628,6 +675,7 @@
             this.ribbonBaseButtonItem35.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem35.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem35.Image")));
             this.ribbonBaseButtonItem35.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ribbonBaseButtonItem35.Location = new System.Drawing.Point(78, 52);
             this.ribbonBaseButtonItem35.Name = "ribbonBaseButtonItem35";
             this.ribbonBaseButtonItem35.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
             this.ribbonBaseButtonItem35.Size = new System.Drawing.Size(42, 67);
@@ -636,10 +684,13 @@
             // 
             // ribbonSeparatorItem5
             // 
+            this.ribbonSeparatorItem5.AutoLayout = true;
             this.ribbonSeparatorItem5.eOrientation = System.Windows.Forms.Orientation.Vertical;
             this.ribbonSeparatorItem5.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonSeparatorItem5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ribbonSeparatorItem5.Location = new System.Drawing.Point(121, 52);
             this.ribbonSeparatorItem5.LockWith = true;
+            this.ribbonSeparatorItem5.MinimumSize = new System.Drawing.Size(3, 3);
             this.ribbonSeparatorItem5.Name = "ribbonSeparatorItem5";
             this.ribbonSeparatorItem5.Size = new System.Drawing.Size(3, 67);
             this.ribbonSeparatorItem5.Tag = null;
@@ -652,6 +703,7 @@
             this.ribbonBaseItemStackItem4.BaseItems.Add(this.ribbonBaseButtonItem30);
             this.ribbonBaseItemStackItem4.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseItemStackItem4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ribbonBaseItemStackItem4.Location = new System.Drawing.Point(125, 52);
             this.ribbonBaseItemStackItem4.Name = "ribbonBaseItemStackItem4";
             this.ribbonBaseItemStackItem4.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
             this.ribbonBaseItemStackItem4.RestrictItemsHeight = -1;
@@ -666,6 +718,7 @@
             this.ribbonBaseButtonItem26.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem26.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem26.Image")));
             this.ribbonBaseButtonItem26.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ribbonBaseButtonItem26.Location = new System.Drawing.Point(126, 52);
             this.ribbonBaseButtonItem26.Name = "ribbonBaseButtonItem26";
             this.ribbonBaseButtonItem26.Size = new System.Drawing.Size(46, 21);
             this.ribbonBaseButtonItem26.Tag = null;
@@ -677,6 +730,7 @@
             this.ribbonBaseButtonItem29.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem29.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem29.Image")));
             this.ribbonBaseButtonItem29.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ribbonBaseButtonItem29.Location = new System.Drawing.Point(126, 74);
             this.ribbonBaseButtonItem29.Name = "ribbonBaseButtonItem29";
             this.ribbonBaseButtonItem29.Size = new System.Drawing.Size(46, 21);
             this.ribbonBaseButtonItem29.Tag = null;
@@ -688,6 +742,7 @@
             this.ribbonBaseButtonItem30.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem30.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem30.Image")));
             this.ribbonBaseButtonItem30.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ribbonBaseButtonItem30.Location = new System.Drawing.Point(126, 96);
             this.ribbonBaseButtonItem30.Name = "ribbonBaseButtonItem30";
             this.ribbonBaseButtonItem30.Size = new System.Drawing.Size(46, 21);
             this.ribbonBaseButtonItem30.Tag = null;
@@ -699,6 +754,7 @@
             this.ribbonBaseItemStackItem5.BaseItems.Add(this.ribbonBaseButtonItem31);
             this.ribbonBaseItemStackItem5.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseItemStackItem5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ribbonBaseItemStackItem5.Location = new System.Drawing.Point(173, 62);
             this.ribbonBaseItemStackItem5.LockHeight = true;
             this.ribbonBaseItemStackItem5.Name = "ribbonBaseItemStackItem5";
             this.ribbonBaseItemStackItem5.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
@@ -714,6 +770,7 @@
             this.ribbonBaseButtonItem32.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem32.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem32.Image")));
             this.ribbonBaseButtonItem32.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ribbonBaseButtonItem32.Location = new System.Drawing.Point(174, 62);
             this.ribbonBaseButtonItem32.Name = "ribbonBaseButtonItem32";
             this.ribbonBaseButtonItem32.Size = new System.Drawing.Size(46, 23);
             this.ribbonBaseButtonItem32.Tag = null;
@@ -726,6 +783,7 @@
             this.ribbonBaseButtonItem31.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem31.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem31.Image")));
             this.ribbonBaseButtonItem31.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ribbonBaseButtonItem31.Location = new System.Drawing.Point(174, 86);
             this.ribbonBaseButtonItem31.Name = "ribbonBaseButtonItem31";
             this.ribbonBaseButtonItem31.Size = new System.Drawing.Size(46, 23);
             this.ribbonBaseButtonItem31.Tag = null;
@@ -739,6 +797,7 @@
             this.ribbonBarItem3.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBarItem3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBarItem3.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBarItem3.Image")));
+            this.ribbonBarItem3.Location = new System.Drawing.Point(225, 49);
             this.ribbonBarItem3.LockWith = true;
             this.ribbonBarItem3.Name = "ribbonBarItem3";
             this.ribbonBarItem3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 2);
@@ -756,6 +815,7 @@
             this.ribbonBaseItemStackItem6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseItemStackItem6.IsRestrictItems = true;
             this.ribbonBaseItemStackItem6.LineDistance = 6;
+            this.ribbonBaseItemStackItem6.Location = new System.Drawing.Point(228, 52);
             this.ribbonBaseItemStackItem6.Name = "ribbonBaseItemStackItem6";
             this.ribbonBaseItemStackItem6.RestrictItemsHeight = -1;
             this.ribbonBaseItemStackItem6.RestrictItemsWidth = -1;
@@ -771,6 +831,7 @@
             this.ribbonBaseItemStackItem7.eOrientation = System.Windows.Forms.Orientation.Horizontal;
             this.ribbonBaseItemStackItem7.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseItemStackItem7.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ribbonBaseItemStackItem7.Location = new System.Drawing.Point(228, 58);
             this.ribbonBaseItemStackItem7.Margin = new System.Windows.Forms.Padding(0, 6, 0, 0);
             this.ribbonBaseItemStackItem7.Name = "ribbonBaseItemStackItem7";
             this.ribbonBaseItemStackItem7.RestrictItemsHeight = -1;
@@ -783,6 +844,7 @@
             // 
             this.ribbonLabelItem2.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonLabelItem2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ribbonLabelItem2.Location = new System.Drawing.Point(228, 58);
             this.ribbonLabelItem2.Name = "ribbonLabelItem2";
             this.ribbonLabelItem2.Size = new System.Drawing.Size(42, 21);
             this.ribbonLabelItem2.Tag = null;
@@ -790,6 +852,7 @@
             // 
             // cbSkin2
             // 
+            this.cbSkin2.CanEdit = false;
             this.cbSkin2.DropDownHeight = 120;
             this.cbSkin2.DropDownWidth = 130;
             this.cbSkin2.eCustomizeComboBoxStyle = GISShare.Controls.WinForm.WFNew.CustomizeComboBoxStyle.eDropDownList;
@@ -805,8 +868,10 @@
             textViewItem4.Text = "Office2010外观";
             this.cbSkin2.Items.Add(textViewItem3);
             this.cbSkin2.Items.Add(textViewItem4);
+            this.cbSkin2.Location = new System.Drawing.Point(270, 58);
             this.cbSkin2.LockHeight = true;
             this.cbSkin2.Name = "cbSkin2";
+            this.cbSkin2.ShowDropDownNum = 0;
             this.cbSkin2.Size = new System.Drawing.Size(130, 21);
             this.cbSkin2.Tag = null;
             this.cbSkin2.Text = "Office2007外观";
@@ -822,11 +887,12 @@
             this.ribbonButtonGroupItem1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonButtonGroupItem1.IsRestrictItems = true;
             this.ribbonButtonGroupItem1.LineDistance = 0;
+            this.ribbonButtonGroupItem1.Location = new System.Drawing.Point(183, 85);
             this.ribbonButtonGroupItem1.LockWith = true;
             this.ribbonButtonGroupItem1.Name = "ribbonButtonGroupItem1";
             this.ribbonButtonGroupItem1.RestrictItemsHeight = -1;
             this.ribbonButtonGroupItem1.RestrictItemsWidth = -1;
-            this.ribbonButtonGroupItem1.Size = new System.Drawing.Size(182, 23);
+            this.ribbonButtonGroupItem1.Size = new System.Drawing.Size(272, 23);
             this.ribbonButtonGroupItem1.Tag = null;
             this.ribbonButtonGroupItem1.Text = "ribbonButtonGroupItem1";
             // 
@@ -835,8 +901,9 @@
             this.btnOffice2007.Font = new System.Drawing.Font("宋体", 9F);
             this.btnOffice2007.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnOffice2007.Image = null;
+            this.btnOffice2007.Location = new System.Drawing.Point(183, 85);
             this.btnOffice2007.Name = "btnOffice2007";
-            this.btnOffice2007.Size = new System.Drawing.Size(91, 23);
+            this.btnOffice2007.Size = new System.Drawing.Size(136, 23);
             this.btnOffice2007.Tag = null;
             this.btnOffice2007.Text = "Office2007外观";
             this.btnOffice2007.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnOffice2007_MouseClick);
@@ -846,8 +913,9 @@
             this.btnOffice2010.Font = new System.Drawing.Font("宋体", 9F);
             this.btnOffice2010.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnOffice2010.Image = null;
+            this.btnOffice2010.Location = new System.Drawing.Point(319, 85);
             this.btnOffice2010.Name = "btnOffice2010";
-            this.btnOffice2010.Size = new System.Drawing.Size(91, 23);
+            this.btnOffice2010.Size = new System.Drawing.Size(136, 23);
             this.btnOffice2010.Tag = null;
             this.btnOffice2010.Text = "Office2010外观";
             this.btnOffice2010.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnOffice2010_MouseClick);
@@ -861,10 +929,11 @@
             this.ribbonPageItem1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonPageItem1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPageItem1.Image")));
             this.ribbonPageItem1.LineDistance = 2;
+            this.ribbonPageItem1.Location = new System.Drawing.Point(3, 49);
             this.ribbonPageItem1.Name = "ribbonPageItem1";
             this.ribbonPageItem1.RestrictItemsHeight = -1;
             this.ribbonPageItem1.RestrictItemsWidth = -1;
-            this.ribbonPageItem1.Size = new System.Drawing.Size(617, 89);
+            this.ribbonPageItem1.Size = new System.Drawing.Size(929, 89);
             this.ribbonPageItem1.Tag = null;
             this.ribbonPageItem1.Text = "图表";
             this.ribbonPageItem1.TopViewItemIndex = 0;
@@ -879,6 +948,7 @@
             this.ribbonBarItem1.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBarItem1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBarItem1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBarItem1.Image")));
+            this.ribbonBarItem1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBarItem1.LockWith = true;
             this.ribbonBarItem1.Name = "ribbonBarItem1";
             this.ribbonBarItem1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 2);
@@ -903,6 +973,7 @@
             this.ribbonSplitButtonItem1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonSplitButtonItem1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonSplitButtonItem1.Image")));
             this.ribbonSplitButtonItem1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ribbonSplitButtonItem1.Location = new System.Drawing.Point(0, 0);
             this.ribbonSplitButtonItem1.Name = "ribbonSplitButtonItem1";
             this.ribbonSplitButtonItem1.Padding = new System.Windows.Forms.Padding(8, 6, 8, 0);
             this.ribbonSplitButtonItem1.ShowNomalSplitLine = false;
@@ -914,6 +985,7 @@
             // 
             this.ribbonLabelSeparatorItem1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
             this.ribbonLabelSeparatorItem1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ribbonLabelSeparatorItem1.Location = new System.Drawing.Point(0, 0);
             this.ribbonLabelSeparatorItem1.Name = "ribbonLabelSeparatorItem1";
             this.ribbonLabelSeparatorItem1.Size = new System.Drawing.Size(56, 16);
             this.ribbonLabelSeparatorItem1.Tag = null;
@@ -930,6 +1002,7 @@
             this.ribbonBaseItemStackItem1.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseItemStackItem1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseItemStackItem1.IsStretchItems = false;
+            this.ribbonBaseItemStackItem1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseItemStackItem1.Name = "ribbonBaseItemStackItem1";
             this.ribbonBaseItemStackItem1.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
             this.ribbonBaseItemStackItem1.RestrictItemsHeight = -1;
@@ -944,6 +1017,7 @@
             this.ribbonBaseButtonItem16.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem16.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem16.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem16.Image")));
+            this.ribbonBaseButtonItem16.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem16.Name = "ribbonBaseButtonItem16";
             this.ribbonBaseButtonItem16.Padding = new System.Windows.Forms.Padding(2);
             this.ribbonBaseButtonItem16.Size = new System.Drawing.Size(60, 60);
@@ -956,6 +1030,7 @@
             this.ribbonBaseButtonItem17.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem17.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem17.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem17.Image")));
+            this.ribbonBaseButtonItem17.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem17.Name = "ribbonBaseButtonItem17";
             this.ribbonBaseButtonItem17.Padding = new System.Windows.Forms.Padding(2);
             this.ribbonBaseButtonItem17.Size = new System.Drawing.Size(60, 60);
@@ -968,6 +1043,7 @@
             this.ribbonBaseButtonItem18.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem18.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem18.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem18.Image")));
+            this.ribbonBaseButtonItem18.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem18.Name = "ribbonBaseButtonItem18";
             this.ribbonBaseButtonItem18.Padding = new System.Windows.Forms.Padding(2);
             this.ribbonBaseButtonItem18.Size = new System.Drawing.Size(60, 60);
@@ -980,6 +1056,7 @@
             this.ribbonBaseButtonItem19.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem19.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem19.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem19.Image")));
+            this.ribbonBaseButtonItem19.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem19.Name = "ribbonBaseButtonItem19";
             this.ribbonBaseButtonItem19.Padding = new System.Windows.Forms.Padding(2);
             this.ribbonBaseButtonItem19.Size = new System.Drawing.Size(60, 60);
@@ -990,6 +1067,7 @@
             // 
             this.ribbonLabelSeparatorItem2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
             this.ribbonLabelSeparatorItem2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ribbonLabelSeparatorItem2.Location = new System.Drawing.Point(0, 0);
             this.ribbonLabelSeparatorItem2.Name = "ribbonLabelSeparatorItem2";
             this.ribbonLabelSeparatorItem2.Size = new System.Drawing.Size(56, 16);
             this.ribbonLabelSeparatorItem2.Tag = null;
@@ -1006,6 +1084,7 @@
             this.ribbonBaseItemStackItem2.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseItemStackItem2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseItemStackItem2.IsStretchItems = false;
+            this.ribbonBaseItemStackItem2.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseItemStackItem2.Name = "ribbonBaseItemStackItem2";
             this.ribbonBaseItemStackItem2.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
             this.ribbonBaseItemStackItem2.RestrictItemsHeight = -1;
@@ -1020,6 +1099,7 @@
             this.ribbonBaseButtonItem20.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem20.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem20.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem20.Image")));
+            this.ribbonBaseButtonItem20.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem20.Name = "ribbonBaseButtonItem20";
             this.ribbonBaseButtonItem20.Padding = new System.Windows.Forms.Padding(2);
             this.ribbonBaseButtonItem20.Size = new System.Drawing.Size(60, 60);
@@ -1032,6 +1112,7 @@
             this.ribbonBaseButtonItem21.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem21.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem21.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem21.Image")));
+            this.ribbonBaseButtonItem21.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem21.Name = "ribbonBaseButtonItem21";
             this.ribbonBaseButtonItem21.Padding = new System.Windows.Forms.Padding(2);
             this.ribbonBaseButtonItem21.Size = new System.Drawing.Size(60, 60);
@@ -1044,6 +1125,7 @@
             this.ribbonBaseButtonItem22.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem22.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem22.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem22.Image")));
+            this.ribbonBaseButtonItem22.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem22.Name = "ribbonBaseButtonItem22";
             this.ribbonBaseButtonItem22.Padding = new System.Windows.Forms.Padding(2);
             this.ribbonBaseButtonItem22.Size = new System.Drawing.Size(60, 60);
@@ -1056,6 +1138,7 @@
             this.ribbonBaseButtonItem23.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem23.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem23.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem23.Image")));
+            this.ribbonBaseButtonItem23.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem23.Name = "ribbonBaseButtonItem23";
             this.ribbonBaseButtonItem23.Padding = new System.Windows.Forms.Padding(2);
             this.ribbonBaseButtonItem23.Size = new System.Drawing.Size(60, 60);
@@ -1066,6 +1149,7 @@
             // 
             this.ribbonLabelSeparatorItem3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
             this.ribbonLabelSeparatorItem3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ribbonLabelSeparatorItem3.Location = new System.Drawing.Point(0, 0);
             this.ribbonLabelSeparatorItem3.Name = "ribbonLabelSeparatorItem3";
             this.ribbonLabelSeparatorItem3.Size = new System.Drawing.Size(56, 16);
             this.ribbonLabelSeparatorItem3.Tag = null;
@@ -1079,6 +1163,7 @@
             this.ribbonBaseItemStackItem3.eOrientation = System.Windows.Forms.Orientation.Horizontal;
             this.ribbonBaseItemStackItem3.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseItemStackItem3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ribbonBaseItemStackItem3.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseItemStackItem3.Name = "ribbonBaseItemStackItem3";
             this.ribbonBaseItemStackItem3.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
             this.ribbonBaseItemStackItem3.RestrictItemsHeight = -1;
@@ -1093,6 +1178,7 @@
             this.ribbonBaseButtonItem24.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem24.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem24.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem24.Image")));
+            this.ribbonBaseButtonItem24.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem24.Name = "ribbonBaseButtonItem24";
             this.ribbonBaseButtonItem24.Size = new System.Drawing.Size(60, 60);
             this.ribbonBaseButtonItem24.Tag = null;
@@ -1104,6 +1190,7 @@
             this.ribbonBaseButtonItem25.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem25.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem25.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem25.Image")));
+            this.ribbonBaseButtonItem25.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem25.Name = "ribbonBaseButtonItem25";
             this.ribbonBaseButtonItem25.Size = new System.Drawing.Size(60, 60);
             this.ribbonBaseButtonItem25.Tag = null;
@@ -1116,6 +1203,7 @@
             this.ribbonGalleryItem1.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonGalleryItem1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonGalleryItem1.LineDistance = 0;
+            this.ribbonGalleryItem1.Location = new System.Drawing.Point(0, 0);
             this.ribbonGalleryItem1.LockWith = true;
             this.ribbonGalleryItem1.Name = "ribbonGalleryItem1";
             this.ribbonGalleryItem1.RestrictItemsHeight = -1;
@@ -1135,6 +1223,7 @@
             this.ribbonGalleryRowItem1.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonGalleryRowItem1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonGalleryRowItem1.IsRestrictItems = true;
+            this.ribbonGalleryRowItem1.Location = new System.Drawing.Point(0, 0);
             this.ribbonGalleryRowItem1.LockWith = true;
             this.ribbonGalleryRowItem1.Name = "ribbonGalleryRowItem1";
             this.ribbonGalleryRowItem1.RestrictItemsHeight = -1;
@@ -1149,6 +1238,7 @@
             this.ribbonBaseButtonItem6.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem6.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem6.Image")));
+            this.ribbonBaseButtonItem6.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem6.Name = "ribbonBaseButtonItem6";
             this.ribbonBaseButtonItem6.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ribbonBaseButtonItem6.Size = new System.Drawing.Size(60, 65);
@@ -1161,6 +1251,7 @@
             this.ribbonBaseButtonItem7.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem7.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem7.Image")));
+            this.ribbonBaseButtonItem7.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem7.Name = "ribbonBaseButtonItem7";
             this.ribbonBaseButtonItem7.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ribbonBaseButtonItem7.Size = new System.Drawing.Size(60, 65);
@@ -1173,6 +1264,7 @@
             this.ribbonBaseButtonItem8.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem8.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem8.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem8.Image")));
+            this.ribbonBaseButtonItem8.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem8.Name = "ribbonBaseButtonItem8";
             this.ribbonBaseButtonItem8.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ribbonBaseButtonItem8.Size = new System.Drawing.Size(60, 65);
@@ -1185,6 +1277,7 @@
             this.ribbonBaseButtonItem9.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem9.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem9.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem9.Image")));
+            this.ribbonBaseButtonItem9.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem9.Name = "ribbonBaseButtonItem9";
             this.ribbonBaseButtonItem9.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ribbonBaseButtonItem9.Size = new System.Drawing.Size(60, 65);
@@ -1197,6 +1290,7 @@
             this.ribbonBaseButtonItem10.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem10.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem10.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem10.Image")));
+            this.ribbonBaseButtonItem10.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem10.Name = "ribbonBaseButtonItem10";
             this.ribbonBaseButtonItem10.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ribbonBaseButtonItem10.Size = new System.Drawing.Size(60, 65);
@@ -1214,6 +1308,7 @@
             this.ribbonGalleryRowItem2.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonGalleryRowItem2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonGalleryRowItem2.IsRestrictItems = true;
+            this.ribbonGalleryRowItem2.Location = new System.Drawing.Point(0, 0);
             this.ribbonGalleryRowItem2.LockWith = true;
             this.ribbonGalleryRowItem2.Name = "ribbonGalleryRowItem2";
             this.ribbonGalleryRowItem2.RestrictItemsHeight = -1;
@@ -1228,6 +1323,7 @@
             this.ribbonBaseButtonItem11.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem11.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem11.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem11.Image")));
+            this.ribbonBaseButtonItem11.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem11.Name = "ribbonBaseButtonItem11";
             this.ribbonBaseButtonItem11.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ribbonBaseButtonItem11.Size = new System.Drawing.Size(60, 60);
@@ -1240,6 +1336,7 @@
             this.ribbonBaseButtonItem12.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem12.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem12.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem12.Image")));
+            this.ribbonBaseButtonItem12.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem12.Name = "ribbonBaseButtonItem12";
             this.ribbonBaseButtonItem12.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ribbonBaseButtonItem12.Size = new System.Drawing.Size(60, 60);
@@ -1252,6 +1349,7 @@
             this.ribbonBaseButtonItem13.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem13.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem13.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem13.Image")));
+            this.ribbonBaseButtonItem13.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem13.Name = "ribbonBaseButtonItem13";
             this.ribbonBaseButtonItem13.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ribbonBaseButtonItem13.Size = new System.Drawing.Size(60, 60);
@@ -1264,6 +1362,7 @@
             this.ribbonBaseButtonItem14.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem14.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem14.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem14.Image")));
+            this.ribbonBaseButtonItem14.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem14.Name = "ribbonBaseButtonItem14";
             this.ribbonBaseButtonItem14.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ribbonBaseButtonItem14.Size = new System.Drawing.Size(60, 60);
@@ -1276,6 +1375,7 @@
             this.ribbonBaseButtonItem15.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem15.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem15.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem15.Image")));
+            this.ribbonBaseButtonItem15.Location = new System.Drawing.Point(0, 0);
             this.ribbonBaseButtonItem15.Name = "ribbonBaseButtonItem15";
             this.ribbonBaseButtonItem15.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ribbonBaseButtonItem15.Size = new System.Drawing.Size(60, 60);
@@ -1291,10 +1391,11 @@
             this.ribbonPageItem3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonPageItem3.Image = null;
             this.ribbonPageItem3.LineDistance = 2;
+            this.ribbonPageItem3.Location = new System.Drawing.Point(3, 49);
             this.ribbonPageItem3.Name = "ribbonPageItem3";
             this.ribbonPageItem3.RestrictItemsHeight = -1;
             this.ribbonPageItem3.RestrictItemsWidth = -1;
-            this.ribbonPageItem3.Size = new System.Drawing.Size(617, 89);
+            this.ribbonPageItem3.Size = new System.Drawing.Size(929, 89);
             this.ribbonPageItem3.Tag = null;
             this.ribbonPageItem3.Text = "嵌入对象";
             this.ribbonPageItem3.TopViewItemIndex = 0;
@@ -1309,6 +1410,7 @@
             this.rbAddControlHost.Font = new System.Drawing.Font("宋体", 9F);
             this.rbAddControlHost.ForeColor = System.Drawing.SystemColors.ControlText;
             this.rbAddControlHost.Image = ((System.Drawing.Image)(resources.GetObject("rbAddControlHost.Image")));
+            this.rbAddControlHost.Location = new System.Drawing.Point(0, 0);
             this.rbAddControlHost.LockWith = true;
             this.rbAddControlHost.Name = "rbAddControlHost";
             this.rbAddControlHost.Padding = new System.Windows.Forms.Padding(3, 3, 3, 2);
@@ -1323,6 +1425,7 @@
             this.btnAddControlHost.Font = new System.Drawing.Font("宋体", 9F);
             this.btnAddControlHost.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnAddControlHost.Image = null;
+            this.btnAddControlHost.Location = new System.Drawing.Point(0, 0);
             this.btnAddControlHost.Name = "btnAddControlHost";
             this.btnAddControlHost.Size = new System.Drawing.Size(79, 67);
             this.btnAddControlHost.Tag = null;
@@ -1331,14 +1434,18 @@
             // 
             // ribbonSeparatorItem6
             // 
+            this.ribbonSeparatorItem6.AutoLayout = true;
             this.ribbonSeparatorItem6.eOrientation = System.Windows.Forms.Orientation.Vertical;
             this.ribbonSeparatorItem6.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonSeparatorItem6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ribbonSeparatorItem6.Location = new System.Drawing.Point(0, 0);
             this.ribbonSeparatorItem6.LockWith = true;
+            this.ribbonSeparatorItem6.MinimumSize = new System.Drawing.Size(3, 3);
             this.ribbonSeparatorItem6.Name = "ribbonSeparatorItem6";
             this.ribbonSeparatorItem6.Size = new System.Drawing.Size(3, 67);
             this.ribbonSeparatorItem6.Tag = null;
             this.ribbonSeparatorItem6.Text = "ribbonSeparatorItem6";
+            this.ribbonSeparatorItem6.Visible = false;
             // 
             // ribbonBaseButtonItem4
             // 
@@ -1347,11 +1454,13 @@
             this.ribbonBaseButtonItem4.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem4.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem4.Image")));
+            this.ribbonBaseButtonItem4.Location = new System.Drawing.Point(50, 3);
             this.ribbonBaseButtonItem4.Name = "ribbonBaseButtonItem4";
             this.ribbonBaseButtonItem4.Padding = new System.Windows.Forms.Padding(2);
-            this.ribbonBaseButtonItem4.Size = new System.Drawing.Size(19, 19);
+            this.ribbonBaseButtonItem4.Size = new System.Drawing.Size(19, 20);
             this.ribbonBaseButtonItem4.Tag = null;
             this.ribbonBaseButtonItem4.Text = "新建";
+            this.ribbonBaseButtonItem4.UsingViewOverflow = false;
             // 
             // ribbonBaseButtonItem1
             // 
@@ -1360,11 +1469,13 @@
             this.ribbonBaseButtonItem1.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem1.Image")));
+            this.ribbonBaseButtonItem1.Location = new System.Drawing.Point(69, 3);
             this.ribbonBaseButtonItem1.Name = "ribbonBaseButtonItem1";
             this.ribbonBaseButtonItem1.Padding = new System.Windows.Forms.Padding(1);
-            this.ribbonBaseButtonItem1.Size = new System.Drawing.Size(19, 19);
+            this.ribbonBaseButtonItem1.Size = new System.Drawing.Size(19, 20);
             this.ribbonBaseButtonItem1.Tag = null;
             this.ribbonBaseButtonItem1.Text = "打开";
+            this.ribbonBaseButtonItem1.UsingViewOverflow = false;
             // 
             // ribbonBaseButtonItem2
             // 
@@ -1373,22 +1484,28 @@
             this.ribbonBaseButtonItem2.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonBaseButtonItem2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonBaseButtonItem2.Image = ((System.Drawing.Image)(resources.GetObject("ribbonBaseButtonItem2.Image")));
+            this.ribbonBaseButtonItem2.Location = new System.Drawing.Point(88, 3);
             this.ribbonBaseButtonItem2.Name = "ribbonBaseButtonItem2";
             this.ribbonBaseButtonItem2.Padding = new System.Windows.Forms.Padding(1);
-            this.ribbonBaseButtonItem2.Size = new System.Drawing.Size(19, 19);
+            this.ribbonBaseButtonItem2.Size = new System.Drawing.Size(19, 20);
             this.ribbonBaseButtonItem2.Tag = null;
             this.ribbonBaseButtonItem2.Text = "保存";
+            this.ribbonBaseButtonItem2.UsingViewOverflow = false;
             // 
             // ribbonSeparatorItem1
             // 
+            this.ribbonSeparatorItem1.AutoLayout = true;
             this.ribbonSeparatorItem1.eOrientation = System.Windows.Forms.Orientation.Vertical;
             this.ribbonSeparatorItem1.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonSeparatorItem1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ribbonSeparatorItem1.Location = new System.Drawing.Point(107, 3);
             this.ribbonSeparatorItem1.LockWith = true;
+            this.ribbonSeparatorItem1.MinimumSize = new System.Drawing.Size(3, 3);
             this.ribbonSeparatorItem1.Name = "ribbonSeparatorItem1";
-            this.ribbonSeparatorItem1.Size = new System.Drawing.Size(3, 19);
+            this.ribbonSeparatorItem1.Size = new System.Drawing.Size(3, 20);
             this.ribbonSeparatorItem1.Tag = null;
             this.ribbonSeparatorItem1.Text = "ribbonSeparatorItem1";
+            this.ribbonSeparatorItem1.UsingViewOverflow = false;
             // 
             // btnExist
             // 
@@ -1397,23 +1514,29 @@
             this.btnExist.Font = new System.Drawing.Font("宋体", 9F);
             this.btnExist.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnExist.Image = ((System.Drawing.Image)(resources.GetObject("btnExist.Image")));
+            this.btnExist.Location = new System.Drawing.Point(110, 3);
             this.btnExist.Name = "btnExist";
             this.btnExist.Padding = new System.Windows.Forms.Padding(2);
-            this.btnExist.Size = new System.Drawing.Size(19, 19);
+            this.btnExist.Size = new System.Drawing.Size(19, 20);
             this.btnExist.Tag = null;
             this.btnExist.Text = "退出";
+            this.btnExist.UsingViewOverflow = false;
             this.btnExist.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnExist_MouseClick);
             // 
             // ribbonSeparatorItem2
             // 
+            this.ribbonSeparatorItem2.AutoLayout = true;
             this.ribbonSeparatorItem2.eOrientation = System.Windows.Forms.Orientation.Vertical;
             this.ribbonSeparatorItem2.Font = new System.Drawing.Font("宋体", 9F);
             this.ribbonSeparatorItem2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ribbonSeparatorItem2.Location = new System.Drawing.Point(129, 3);
             this.ribbonSeparatorItem2.LockWith = true;
+            this.ribbonSeparatorItem2.MinimumSize = new System.Drawing.Size(3, 3);
             this.ribbonSeparatorItem2.Name = "ribbonSeparatorItem2";
-            this.ribbonSeparatorItem2.Size = new System.Drawing.Size(3, 19);
+            this.ribbonSeparatorItem2.Size = new System.Drawing.Size(3, 20);
             this.ribbonSeparatorItem2.Tag = null;
             this.ribbonSeparatorItem2.Text = "ribbonSeparatorItem2";
+            this.ribbonSeparatorItem2.UsingViewOverflow = false;
             // 
             // btnInfo
             // 
@@ -1422,20 +1545,22 @@
             this.btnInfo.Font = new System.Drawing.Font("宋体", 9F);
             this.btnInfo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnInfo.Image")));
+            this.btnInfo.Location = new System.Drawing.Point(132, 3);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Padding = new System.Windows.Forms.Padding(1);
-            this.btnInfo.Size = new System.Drawing.Size(19, 19);
+            this.btnInfo.Size = new System.Drawing.Size(19, 20);
             this.btnInfo.Tag = null;
             this.btnInfo.Text = "关于";
+            this.btnInfo.UsingViewOverflow = false;
             this.btnInfo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnInfo_MouseClick);
             // 
             // ribbonStatusBar1
             // 
-            this.ribbonStatusBar1.BackColor = System.Drawing.Color.Transparent;
             this.ribbonStatusBar1.BaseItems.Add(this.lblNum);
             this.ribbonStatusBar1.BaseItems.Add(this.lblNumInfo);
-            this.ribbonStatusBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ribbonStatusBar1.eOrientation = System.Windows.Forms.Orientation.Horizontal;
+            this.ribbonStatusBar1.Font = new System.Drawing.Font("宋体", 9F);
+            this.ribbonStatusBar1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonStatusBar1.IsRestrictItems = true;
             this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 424);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
@@ -1444,33 +1569,38 @@
             this.ribbonStatusBar1.RestrictItemsWidth = -1;
             this.ribbonStatusBar1.ShowNomalState = true;
             this.ribbonStatusBar1.Size = new System.Drawing.Size(624, 23);
-            this.ribbonStatusBar1.TabIndex = 1;
+            this.ribbonStatusBar1.Tag = null;
             this.ribbonStatusBar1.Text = "ribbonStatusBar1";
             // 
             // lblNum
             // 
             this.lblNum.Font = new System.Drawing.Font("宋体", 9F);
             this.lblNum.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblNum.Location = new System.Drawing.Point(0, 0);
             this.lblNum.Name = "lblNum";
             this.lblNum.Size = new System.Drawing.Size(66, 21);
             this.lblNum.Tag = null;
             this.lblNum.Text = "当前字数：";
+            this.lblNum.UsingViewOverflow = false;
             // 
             // lblNumInfo
             // 
             this.lblNumInfo.Font = new System.Drawing.Font("宋体", 9F);
             this.lblNumInfo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblNumInfo.Location = new System.Drawing.Point(0, 0);
             this.lblNumInfo.Name = "lblNumInfo";
             this.lblNumInfo.Size = new System.Drawing.Size(11, 21);
             this.lblNumInfo.Tag = null;
             this.lblNumInfo.Text = "0";
+            this.lblNumInfo.UsingViewOverflow = false;
             // 
             // richTextBox1
             // 
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox1.Location = new System.Drawing.Point(0, 141);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(624, 283);
+            this.richTextBox1.Size = new System.Drawing.Size(936, 529);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "RibbonControl与RibbonControlEx最大的差别在于其RibbonPages集合接纳的是组件（RibbonPageItem）还是控件（Ribb" +
     "onPage）";
@@ -1478,27 +1608,27 @@
             // 
             // DemoOfRibbonControlForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 447);
+            this.ClientSize = new System.Drawing.Size(936, 670);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.ribbonStatusBar1);
-            this.Controls.Add(this.ribbonControl1);
+            this.Controls.Add(this.baseItemHost1);
             this.MainMenuStrip = this.ribbonControl1.MenuStrip;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DemoOfRibbonControlForm";
             this.RibbonControl = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RibbonControl控件";
-            //this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private GISShare.Controls.WinForm.WFNew.RibbonControl ribbonControl1;
+        private GISShare.Controls.WinForm.WFNew.RibbonControlItem ribbonControl1;
+        private GISShare.Controls.WinForm.WFNew.BaseItemHost baseItemHost1;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private GISShare.Controls.WinForm.WFNew.RibbonStatusBar ribbonStatusBar1;
+        private GISShare.Controls.WinForm.WFNew.RibbonStatusBarItem ribbonStatusBar1;
         private GISShare.Controls.WinForm.WFNew.BaseButtonItem ribbonBaseButtonItem4;
         private GISShare.Controls.WinForm.WFNew.BaseButtonItem ribbonBaseButtonItem1;
         private GISShare.Controls.WinForm.WFNew.BaseButtonItem ribbonBaseButtonItem2;

@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            GISShare.Controls.WinForm.WFNew.View.ViewItem viewItem1 = new GISShare.Controls.WinForm.WFNew.View.ViewItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DemoOfViewItemListBoxForm));
             GISShare.Controls.WinForm.WFNew.View.TextViewItem textViewItem1 = new GISShare.Controls.WinForm.WFNew.View.TextViewItem();
             GISShare.Controls.WinForm.WFNew.View.ImageViewItem imageViewItem1 = new GISShare.Controls.WinForm.WFNew.View.ImageViewItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DemoOfViewItemListBoxForm));
             GISShare.Controls.WinForm.WFNew.View.ColorViewItem colorViewItem1 = new GISShare.Controls.WinForm.WFNew.View.ColorViewItem();
-            this.viewItemListBox1 = new GISShare.Controls.WinForm.WFNew.View.ViewItemListBox();
+            this.viewItemListBox1 = new GISShare.Controls.WinForm.WFNew.View.ViewItemListBoxItem();
+            this.baseItemHost1 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
             this.SuspendLayout();
             // 
             // viewItemListBox1
             // 
+            this.viewItemListBox1.AutoGetFocus = true;
             this.viewItemListBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.viewItemListBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewItemListBox1.CanEdit = true;
+            this.viewItemListBox1.Font = new System.Drawing.Font("宋体", 9F);
+            this.viewItemListBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.viewItemListBox1.Location = new System.Drawing.Point(0, 0);
             this.viewItemListBox1.Name = "viewItemListBox1";
-            this.viewItemListBox1.Padding = new System.Windows.Forms.Padding(0);
-            this.viewItemListBox1.SelectedIndex = -1;
             this.viewItemListBox1.ShowHScrollBar = true;
-            this.viewItemListBox1.Size = new System.Drawing.Size(584, 274);
-            this.viewItemListBox1.TabIndex = 0;
+            this.viewItemListBox1.Size = new System.Drawing.Size(876, 411);
+            this.viewItemListBox1.Tag = null;
             this.viewItemListBox1.Text = "viewItemListBox1";
-            viewItem1.Text = "简单视图项（ViewItem）";
             textViewItem1.Font = new System.Drawing.Font("隶书", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             textViewItem1.ForeColor = System.Drawing.SystemColors.ControlText;
             textViewItem1.Name = null;
@@ -63,18 +63,32 @@
             colorViewItem1.ForeColor = System.Drawing.SystemColors.ControlText;
             colorViewItem1.Name = null;
             colorViewItem1.Text = "颜色视图项（ColorViewItem）";
-            this.viewItemListBox1.ViewItems.Add(viewItem1);
+            this.viewItemListBox1.ViewItems.Add(((GISShare.Controls.WinForm.WFNew.View.ViewItem)(resources.GetObject("viewItemListBox1.ViewItems"))));
             this.viewItemListBox1.ViewItems.Add(textViewItem1);
             this.viewItemListBox1.ViewItems.Add(imageViewItem1);
             this.viewItemListBox1.ViewItems.Add(colorViewItem1);
             // 
+            // baseItemHost1
+            // 
+            this.baseItemHost1.BackColor = System.Drawing.Color.White;
+            this.baseItemHost1.BaseItemObject = this.viewItemListBox1;
+            this.baseItemHost1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.baseItemHost1.Location = new System.Drawing.Point(0, 0);
+            this.baseItemHost1.Margin = new System.Windows.Forms.Padding(4);
+            this.baseItemHost1.Name = "baseItemHost1";
+            this.baseItemHost1.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost1.Size = new System.Drawing.Size(876, 411);
+            this.baseItemHost1.TabIndex = 0;
+            this.baseItemHost1.Text = "baseItemHost1";
+            // 
             // DemoOfViewItemListBoxForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 274);
-            this.Controls.Add(this.viewItemListBox1);
+            this.ClientSize = new System.Drawing.Size(876, 411);
+            this.Controls.Add(this.baseItemHost1);
             this.Location = new System.Drawing.Point(0, 0);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DemoOfViewItemListBoxForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ViewItemListBox控件";
@@ -84,6 +98,7 @@
 
         #endregion
 
-        private GISShare.Controls.WinForm.WFNew.View.ViewItemListBox viewItemListBox1;
+        private GISShare.Controls.WinForm.WFNew.View.ViewItemListBoxItem viewItemListBox1;
+        private GISShare.Controls.WinForm.WFNew.BaseItemHost baseItemHost1;
     }
 }

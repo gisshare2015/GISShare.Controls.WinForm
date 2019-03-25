@@ -1137,19 +1137,23 @@ namespace GISShare.Controls.WinForm.WFNew.View
                         IMessageChain pMessageChain = nodeViewItem as IMessageChain;
                         if (pMessageChain != null)
                         {
+                            //MessageBox.Show("A1");
                             pMessageChain.SendMessage(messageInfo);
                         }
                         //
                         if (this.ViewItemsRectangle.Contains(e.Location))
                         {
+                            //MessageBox.Show(e.Location.ToString() + " | " + nodeViewItem.PlusMinusRectangle.ToString());
                             if (nodeViewItem.NodeViewItems.Count <= 0 ||
                                 (nodeViewItem.ShowPlusMinus &&
                                 !nodeViewItem.PlusMinusRectangle.Contains(e.Location)))
                             {
+                                //MessageBox.Show("3");
                                 this.SelectedNode = nodeViewItem;
                                 ISetViewItemHelper pSetViewItemHelper = this.SelectedNode as ISetViewItemHelper;
                                 if (pSetViewItemHelper != null)
                                 {
+                                    //MessageBox.Show("4");
                                     if (pSetViewItemHelper.SetViewParameterStyle(ViewParameterStyle.eFocused)) this.Invalidate(this.m_SelectedNode.DisplayRectangle);
                                 }
                             }

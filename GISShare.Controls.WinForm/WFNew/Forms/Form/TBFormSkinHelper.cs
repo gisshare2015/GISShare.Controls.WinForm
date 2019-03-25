@@ -28,6 +28,9 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
         private Size m_CurrentCacheSize = new Size();
 
         private Form m_HostForm;
+        //
+        private SuperToolTip m_SuperToolTip;
+        //
         private WFNew.BaseItemCollection m_BaseItemCollection;
         private NCFormButtonStackItemEx m_NCFormButtonStackItemEx;
         private NCQuickAccessToolbarItemEx m_NCQuickAccessToolbarItemEx;
@@ -48,6 +51,33 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
             this.m_NCQuickAccessToolbarItemEx = new NCQuickAccessToolbarItemEx(this);
             this.m_BaseItemCollection.Add(this.m_NCQuickAccessToolbarItemEx);
             ((WFNew.ILockCollectionHelper)this.m_BaseItemCollection).SetLocked(true);//¼ÓËø
+            //
+            //
+            //
+            this.m_HostForm.BackColor = GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.WFNewColorTable.RibbonAreaDisabledBackground;
+            //
+            //
+            //
+            this.m_SuperToolTip = new SuperToolTip();
+            this.m_SuperToolTip.OffsetX = 0;
+            this.m_SuperToolTip.OffsetY = 12;
+            foreach (BaseItem one in this.m_NCFormButtonStackItemEx.BaseItems)
+            {
+                this.m_SuperToolTip.SetToolTip(one as INCBaseItem);
+            }
+            //
+            this.m_NCQuickAccessToolbarItemEx.BaseItems.ItemAdded += new ItemEventHandler(BaseItems_ItemAdded);
+            this.m_NCQuickAccessToolbarItemEx.BaseItems.ItemRemoved += new ItemEventHandler(BaseItems_ItemRemoved);
+        }
+        void BaseItems_ItemAdded(object sender, ItemEventArgs e)
+        {
+            if (e.Item is IUICollectionItem) return;
+            this.m_SuperToolTip.SetToolTip(e.Item as IBaseItem2);
+        }
+        void BaseItems_ItemRemoved(object sender, ItemEventArgs e)
+        {
+            if (e.Item is IUICollectionItem) return;
+            this.m_SuperToolTip.RemoveToolTip(e.Item as IBaseItem2);
         }
 
         #region ×¢²á
@@ -377,8 +407,8 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
         }
         #endregion
 
-        #region IFormX
-        bool m_IsMiddleCaptionText = false;
+        #region ITBForm
+        private bool m_IsMiddleCaptionText = false;
         public bool IsMiddleCaptionText
         {
             get { return m_IsMiddleCaptionText; }
@@ -685,8 +715,8 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
 
         public virtual void GetRadiusInfo(out int iLeftTopRadius, out  int iRightTopRadius, out int iLeftBottomRadius, out int iRightBottomRadius)
         {
-            iLeftTopRadius = 9;
-            iRightTopRadius = 9;
+            iLeftTopRadius = 0;
+            iRightTopRadius = 0;
             iLeftBottomRadius = 0;
             iRightBottomRadius = 0;
             //
@@ -1663,4 +1693,225 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
                 );
         }
     }
+
+    //
+    //
+    //
+
+    #region ¸¨ÖúÀà
+    class NCFormButtonStackItemEx : NCFormButtonStackItem
+    {
+        private ITBForm m_Owner;
+
+        public NCFormButtonStackItemEx(ITBForm pFormEx)
+            : base()
+        {
+            this.Padding = new Padding(1, 0, 1, 2);
+            this.m_Owner = pFormEx;
+        }
+
+        public override Rectangle DisplayRectangle
+        {
+            get
+            {
+                if (this.m_Owner == null) return base.DisplayRectangle;
+                Rectangle rectangle = this.m_Owner.CaptionRectangle;
+                return new Rectangle(rectangle.Right - this.Size.Width, rectangle.Top, this.Size.Width, rectangle.Height);
+            }
+        }
+    }
+
+    class NCQuickAccessToolbarItemEx : NCQuickAccessToolbarItem
+    {
+        private ITBForm m_Owner;
+
+        public NCQuickAccessToolbarItemEx(ITBForm pFormX)
+        {
+            this.Padding = new Padding(1, 0, 1, 1);
+            this.m_Owner = pFormX;
+        }
+
+        public override bool CancelItemsEvent
+        {
+            get
+            {
+                return !this.m_Owner.IsActive;
+            }
+        }
+
+        public override bool Visible
+        {
+            get
+            {
+                if (this.BaseItems.Count < 1 ||
+                    this.m_Owner.FormBorderStyle == FormBorderStyle.None ||
+                    this.m_Owner.WindowState == FormWindowState.Minimized ||
+                    (this.m_Owner.IsMdiChild && this.m_Owner.WindowState != FormWindowState.Normal))
+                    return false;
+                //
+                return base.Visible;
+            }
+            set
+            {
+                base.Visible = value;
+            }
+        }
+
+        //public override Size Size
+        //{
+        //    get
+        //    {
+        //        //if (this.BaseItems.Count <= 0)
+        //        if (!this.HaveVisibleBaseItem)
+        //        {
+        //            if (this.m_Owner == null) return base.Size;
+        //            Rectangle rectangle = this.m_Owner.CaptionRectangle;
+        //            return new Size(this.Padding.Left + 11 + this.Padding.Right, rectangle.Height);
+        //        }
+        //        if (base.Size.Width == 0) return new Size(1, base.Size.Height);
+        //        return base.Size;
+        //    }
+        //    set
+        //    {
+        //        base.Size = value;
+        //    }
+        //}
+
+        public override Rectangle DisplayRectangle
+        {
+            get
+            {
+                if (this.m_Owner == null) return base.DisplayRectangle;
+                //
+                int iW = this.Size.Width;
+                if (!this.HaveVisibleBaseItem)
+                {
+                    if (this.m_Owner != null)
+                    {
+                        iW = this.Padding.Left + 11 + this.Padding.Right;
+                    }
+                    else
+                    {
+                        iW = this.Size.Width;
+                    }
+                }
+                if (iW < 1) iW = 1;
+                //
+                Rectangle rectangle = this.m_Owner.CaptionRectangle;
+                if (this.m_Owner.IsDrawIcon)
+                {
+                    return new Rectangle(this.m_Owner.CaptionIconRectangle.Right + 2, rectangle.Top, iW, rectangle.Height);
+                }
+                else
+                {
+                    return new Rectangle(rectangle.Left, rectangle.Top, iW, rectangle.Height);
+                }
+            }
+        }
+
+        public override int ColumnDistance
+        {
+            get
+            {
+                return 0;
+            }
+            set
+            {
+                base.ColumnDistance = value;
+            }
+        }
+
+        public override bool ShowNomalState
+        {
+            get
+            {
+                return false;
+            }
+            set
+            {
+                base.ShowNomalState = false;
+            }
+        }
+
+        public override bool IsStretchItems
+        {
+            get
+            {
+                return true;
+            }
+            set
+            {
+                base.IsStretchItems = true;
+            }
+        }
+
+        public override bool LockWith
+        {
+            get
+            {
+                return true;
+            }
+            set
+            {
+                base.LockWith = value;
+            }
+        }
+
+        public override bool IsRestrictItems
+        {
+            get
+            {
+                return true;
+            }
+            set
+            {
+                base.IsRestrictItems = value;
+            }
+        }
+
+        public override bool Overflow
+        {
+            get
+            {
+                return false;
+            }
+        }
+
+        public override int MinSize
+        {
+            get
+            {
+                Padding p = this.Padding;
+                return p.Left + p.Right;
+            }
+            set
+            {
+                base.MinSize = 11;
+            }
+        }
+
+        public override int MaxSize
+        {
+            get
+            {
+                if (this.m_Owner == null) return base.MaxSize;
+                int iW = base.MaxSize;
+                iW = this.m_Owner.CaptionRectangle.Width - this.m_Owner.FormButtonStackItemNCWidth - this.m_Owner.MinCaptionTextWidth - 2;
+                switch (this.eQuickAccessToolbarStyle)
+                {
+                    case WFNew.QuickAccessToolbarStyle.eAllRound:
+                    case WFNew.QuickAccessToolbarStyle.eNormal:
+                        return this.MinSize < iW ? iW : this.MinSize + 30;
+                    case WFNew.QuickAccessToolbarStyle.eNone:
+                    default:
+                        return this.MinSize < iW ? iW : this.MinSize + 20;
+                }
+            }
+            set
+            {
+                base.MaxSize = 600;
+            }
+        }
+    }
+    #endregion
 }

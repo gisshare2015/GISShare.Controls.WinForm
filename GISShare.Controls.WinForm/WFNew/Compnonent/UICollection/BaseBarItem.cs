@@ -12,7 +12,6 @@ namespace GISShare.Controls.WinForm.WFNew
     /// <summary>
     /// 绘制型 基础工具条
     /// </summary>
-    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.BaseBarItemDesigner))]
     public class BaseBarItem : BaseItemStackItem, IBaseBarItem, IGetPartItemHelper
     {
         private const int OVERFLOWBUTTONSIZE = 11;//溢出项宽度

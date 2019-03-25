@@ -73,9 +73,10 @@ namespace GISShare.Controls.WinForm
             InitializeComponent();
         }
 
-        protected override void OnDraw(PaintEventArgs e)
+        protected override void OnPaint(PaintEventArgs e)
         {
-            //base.OnDraw(e);
+            base.OnPaint(e);
+            //
             Graphics gGraphics = e.Graphics;
             Brush bBrush = new SolidBrush(Color.Black);
             //

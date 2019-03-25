@@ -8,15 +8,15 @@ using System.ComponentModel;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.DescriptionMenuPopupDesigner))]
+    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.CollectionItemDesigner))]
     public class DescriptionMenuPopup : BasePopup, ISimplyPopup, ICollectionItem, ICollectionItem2, ICollectionObjectDesignHelper
     {
-        private DescriptionMenuPopupPanel m_DescriptionMenuPopupPanel = null;
+        private DescriptionMenuPopupPanelItem m_DescriptionMenuPopupPanel = null;
         private ToolStripControlHost m_ToolStripControlHost = null;
 
         public DescriptionMenuPopup()
         {
-            this.m_DescriptionMenuPopupPanel = new DescriptionMenuPopupPanel();
+            this.m_DescriptionMenuPopupPanel = new DescriptionMenuPopupPanelItem();
             this.m_DescriptionMenuPopupPanel.Padding = new Padding(2);
             this.m_DescriptionMenuPopupPanel.LeftTopRadius = 5;
             this.m_DescriptionMenuPopupPanel.LeftBottomRadius = 6;
@@ -26,13 +26,15 @@ namespace GISShare.Controls.WinForm.WFNew
             this.m_DescriptionMenuPopupPanel.IsRestrictItems = true;
             this.m_DescriptionMenuPopupPanel.PreButtonIncreaseIndex = false;
             this.m_DescriptionMenuPopupPanel.RestrictItemsHeight = 56;
+            this.m_DescriptionMenuPopupPanel.ShowOutLine = true;
             this.m_DescriptionMenuPopupPanel.MinSize = 10;
             this.m_DescriptionMenuPopupPanel.MaxSize = 20;
-            this.m_DescriptionMenuPopupPanel.Width = 10;
-            this.m_DescriptionMenuPopupPanel.Height = 20;
-            this.m_DescriptionMenuPopupPanel.ShowOutLine = true;
             //
-            this.m_ToolStripControlHost = new ToolStripControlHost(this.m_DescriptionMenuPopupPanel);
+            this.m_ToolStripControlHost = new ToolStripControlHost(new BaseItemHost(this.m_DescriptionMenuPopupPanel) {
+                Width = 10,
+                Height = 20
+            });
+            this.m_DescriptionMenuPopupPanel.Entity = this.m_ToolStripControlHost.Control;
             this.m_ToolStripControlHost.Dock = DockStyle.Fill;
             this.m_ToolStripControlHost.BackColor = base.BackColor;
             this.m_ToolStripControlHost.Margin = new Padding(0);
@@ -44,7 +46,7 @@ namespace GISShare.Controls.WinForm.WFNew
             this.DropShadowEnabled = false;
             this.ShowItemToolTips = false;
             //
-            ((ISetOwnerHelper)(this.m_DescriptionMenuPopupPanel)).SetOwner(this);
+            ((ISetOwnerHelper)(this.m_ToolStripControlHost.Control)).SetOwner(this);
         }
 
         #region ICollectionObjectDesignHelper
@@ -106,7 +108,7 @@ namespace GISShare.Controls.WinForm.WFNew
         public Size GetIdealSize()
         {
             //return this.m_DescriptionMenuPopupPanel.Size;
-            Graphics g = Graphics.FromHwnd(this.m_DescriptionMenuPopupPanel.Handle);
+            Graphics g = Graphics.FromHwnd(this.m_ToolStripControlHost.Control.Handle);
             Size size = this.m_DescriptionMenuPopupPanel.GetIdealSize(g);
             g.Dispose();
             //
@@ -158,7 +160,7 @@ namespace GISShare.Controls.WinForm.WFNew
                 this.Padding.Left + size.Width + this.Padding.Right,
                 this.Padding.Top + size.Height + this.Padding.Bottom
                 );
-            //this.m_DescriptionMenuPopupPanel.Size = size;
+            this.m_ToolStripControlHost.Control.Size = size;
         }
 
         public void RefreshPopupPanel()

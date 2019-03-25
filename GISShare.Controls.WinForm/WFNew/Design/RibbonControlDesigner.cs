@@ -874,7 +874,7 @@ namespace GISShare.Controls.WinForm.WFNew.Design
         private bool ExchangeRibbonPage(RibbonPageTabButtonItem item1, RibbonPageTabButtonItem item2)
         {
             if (item1 == null || item2 == null) return false;
-            return this.m_RibbonControl.RibbonPages.ExchangeItem(item1.pTabPageItem as RibbonPage, item2.pTabPageItem as RibbonPage);
+            return this.m_RibbonControl.RibbonPages.ExchangeItem(item1.pTabPageItem as IRibbonPageItem, item2.pTabPageItem as IRibbonPageItem);
         }
 
         //
@@ -1427,7 +1427,7 @@ namespace GISShare.Controls.WinForm.WFNew.Design
         //}
         #endregion
 
-        private class BaseItemCollectionEditerFormEx : WFNew.Design.BaseItemCollectionDesignerFormEx
+        private class BaseItemCollectionEditerFormEx : WFNew.Design.BaseItemCollectionDesignerForm
         {
             private RibbonControl m_RibbonControl = null;
 
@@ -1452,78 +1452,78 @@ namespace GISShare.Controls.WinForm.WFNew.Design
                 this.InsertTreeNode(new int[] { 0 }, 3, node2);
             }
 
-            protected override bool FiltrationShowPopup(object value)
-            {
-                if (value == null) return false;
-                //
-                if (value.GetType().Name == "RibbonControl") return false;
-                if (value.GetType().Name == "RibbonStartButtonItem2007Ex") return false;
-                if (value.GetType().Name == "RibbonStartButtonItem2010Ex") return false;
-                if (value.GetType().Name == "RibbonFormButtonStackItem") return false;
-                if (value.GetType().Name == "RibbonMdiFormButtonStackItem") return false;
-                if (value.GetType().Name == "RibbonPageTabButtonContainerItem") return false;
-                //
-                if (value.GetType().Name == "RibbonApplicationPopup")
-                {
-                    return false;
-                }
-                //
-                if (value.GetType().Name == "RibbonPageCollection")
-                {
-                    return true;
-                }
-                //
-                return base.FiltrationShowPopup(value);
-            }
+            //protected override bool FiltrationShowPopup(object value)
+            //{
+            //    if (value == null) return false;
+            //    //
+            //    if (value.GetType().Name == "RibbonControl") return false;
+            //    if (value.GetType().Name == "RibbonStartButtonItem2007Ex") return false;
+            //    if (value.GetType().Name == "RibbonStartButtonItem2010Ex") return false;
+            //    if (value.GetType().Name == "RibbonFormButtonStackItem") return false;
+            //    if (value.GetType().Name == "RibbonMdiFormButtonStackItem") return false;
+            //    if (value.GetType().Name == "RibbonPageTabButtonContainerItem") return false;
+            //    //
+            //    if (value.GetType().Name == "RibbonApplicationPopup")
+            //    {
+            //        return false;
+            //    }
+            //    //
+            //    if (value.GetType().Name == "RibbonPageCollection")
+            //    {
+            //        return true;
+            //    }
+            //    //
+            //    return base.FiltrationShowPopup(value);
+            //}
 
-            protected override bool FiltrationSelected(object value)
-            {
-                if (value == null) return false;
-                //
-                if (value.GetType().Name == "RibbonStartButtonItem2007Ex") return false;
-                if (value.GetType().Name == "RibbonStartButtonItem2010Ex") return false;
-                if (value.GetType().Name == "RibbonFormButtonStackItem") return false;
-                if (value.GetType().Name == "RibbonMdiFormButtonStackItem") return false;
-                if (value.GetType().Name == "RibbonPageTabButtonContainerItem") return false;
-                //
-                if (value.GetType().Name == "RibbonApplicationPopup") return false;
-                //if (value.GetType().Name == "RibbonApplicationPopupPanelMiddleLeftItem") return false;
-                //if (value.GetType().Name == "RibbonApplicationPopupPanelMiddleRightItem") return false;
-                //if (value.GetType().Name == "RibbonApplicationPopupPanelBottomItem") return false;
-                //
-                if (value.GetType().Name == "RibbonQuickAccessToolbarItemEx") return false;
-                if (value.GetType().Name == "RibbonPageContentContainerItem") return false;
-                //
-                return base.FiltrationSelected(value);
-            }
+            //protected override bool FiltrationSelected(object value)
+            //{
+            //    if (value == null) return false;
+            //    //
+            //    if (value.GetType().Name == "RibbonStartButtonItem2007Ex") return false;
+            //    if (value.GetType().Name == "RibbonStartButtonItem2010Ex") return false;
+            //    if (value.GetType().Name == "RibbonFormButtonStackItem") return false;
+            //    if (value.GetType().Name == "RibbonMdiFormButtonStackItem") return false;
+            //    if (value.GetType().Name == "RibbonPageTabButtonContainerItem") return false;
+            //    //
+            //    if (value.GetType().Name == "RibbonApplicationPopup") return false;
+            //    //if (value.GetType().Name == "RibbonApplicationPopupPanelMiddleLeftItem") return false;
+            //    //if (value.GetType().Name == "RibbonApplicationPopupPanelMiddleRightItem") return false;
+            //    //if (value.GetType().Name == "RibbonApplicationPopupPanelBottomItem") return false;
+            //    //
+            //    if (value.GetType().Name == "RibbonQuickAccessToolbarItemEx") return false;
+            //    if (value.GetType().Name == "RibbonPageContentContainerItem") return false;
+            //    //
+            //    return base.FiltrationSelected(value);
+            //}
 
-            protected override bool FiltrationBaseItem(object value)
-            {
-                if (value == null) return false;
-                //
-                if (value.GetType().Name == "RibbonStartButtonItem2007Ex") return false;
-                if (value.GetType().Name == "RibbonStartButtonItem2010Ex") return false;
-                if (value.GetType().Name == "RibbonFormButtonStackItem") return false;
-                if (value.GetType().Name == "RibbonMdiFormButtonStackItem") return false;
-                if (value.GetType().Name == "RibbonPageTabButtonContainerItem") return false;
-                //
-                return base.FiltrationBaseItem(value);
-            }
+            //protected override bool FiltrationBaseItem(object value)
+            //{
+            //    if (value == null) return false;
+            //    //
+            //    if (value.GetType().Name == "RibbonStartButtonItem2007Ex") return false;
+            //    if (value.GetType().Name == "RibbonStartButtonItem2010Ex") return false;
+            //    if (value.GetType().Name == "RibbonFormButtonStackItem") return false;
+            //    if (value.GetType().Name == "RibbonMdiFormButtonStackItem") return false;
+            //    if (value.GetType().Name == "RibbonPageTabButtonContainerItem") return false;
+            //    //
+            //    return base.FiltrationBaseItem(value);
+            //}
 
-            protected override string GetTypeDescription(object value)
-            {
-                if (value == null) return "null";
-                //
-                if (value.GetType().Name == "RibbonQuickAccessToolbarItemEx") return "快捷工具条";
-                if (value.GetType().Name == "RibbonPageContentContainerItem") return "功能区面板右侧按钮列表";
-                //
-                if (value.GetType().Name == "RibbonApplicationPopup") return "应用程序快捷菜单";
-                //if (value.GetType().Name == "RibbonApplicationPopupPanelMiddleLeftItem") return "菜单栏";
-                //if (value.GetType().Name == "RibbonApplicationPopupPanelMiddleRightItem") return "记录栏";
-                //if (value.GetType().Name == "RibbonApplicationPopupPanelBottomItem") return "操作栏";
-                //
-                return base.GetTypeDescription(value);
-            }
+            //protected override string GetTypeDescription(object value)
+            //{
+            //    if (value == null) return "null";
+            //    //
+            //    if (value.GetType().Name == "RibbonQuickAccessToolbarItemEx") return "快捷工具条";
+            //    if (value.GetType().Name == "RibbonPageContentContainerItem") return "功能区面板右侧按钮列表";
+            //    //
+            //    if (value.GetType().Name == "RibbonApplicationPopup") return "应用程序快捷菜单";
+            //    //if (value.GetType().Name == "RibbonApplicationPopupPanelMiddleLeftItem") return "菜单栏";
+            //    //if (value.GetType().Name == "RibbonApplicationPopupPanelMiddleRightItem") return "记录栏";
+            //    //if (value.GetType().Name == "RibbonApplicationPopupPanelBottomItem") return "操作栏";
+            //    //
+            //    return base.GetTypeDescription(value);
+            //}
 
             protected override Dictionary<string, Type[]> CreateNewItemTypesDictionary()
             {

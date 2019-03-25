@@ -34,8 +34,8 @@ namespace GISShare.Controls.Plugin.WinForm.WFNew.Ribbon
             string[] strFilterObjectNameArray,
             bool bFilterObjectNameArrayTypeRemove,
             object hook,
-            GISShare.Controls.WinForm.WFNew.RibbonControl ribbonControl,
-            GISShare.Controls.WinForm.WFNew.RibbonStatusBar ribbonStatusBar,
+            GISShare.Controls.WinForm.WFNew.IRibbonControl ribbonControl,
+            GISShare.Controls.WinForm.WFNew.IStatusBarItem ribbonStatusBar,
             GISShare.Controls.WinForm.WFNew.ContextPopupManager contextPopupManager,
             GISShare.Controls.WinForm.WFNew.DockPanel.DockPanelManager dockPanelManager)
         {

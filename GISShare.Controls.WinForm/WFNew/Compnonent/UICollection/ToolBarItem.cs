@@ -9,7 +9,6 @@ using System.ComponentModel;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    [Designer(typeof(GISShare.Controls.WinForm.WFNew.Design.BaseBarItemDesigner))]
     public class ToolBarItem : BaseBarItem, IToolBarItem
     {
         private const int GRIPREGIONSIZE = 10;//手柄宽度

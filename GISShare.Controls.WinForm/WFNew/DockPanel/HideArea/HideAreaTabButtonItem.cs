@@ -9,7 +9,6 @@ using System.Windows.Forms;
 
 namespace GISShare.Controls.WinForm.WFNew.DockPanel
 {
-    [ToolboxItem(false)]
     class HideAreaTabButtonItem : WFNew.BaseButtonExItem //RenderableButton
     {
         #region 私有变量

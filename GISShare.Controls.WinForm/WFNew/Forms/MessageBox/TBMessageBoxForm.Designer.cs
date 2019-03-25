@@ -28,72 +28,114 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnButton3 = new GISShare.Controls.WinForm.WFNew.BaseButtonN();
-            this.btnButton2 = new GISShare.Controls.WinForm.WFNew.BaseButtonN();
-            this.btnButton1 = new GISShare.Controls.WinForm.WFNew.BaseButtonN();
+            this.baseItemHost3 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.buttonItem3 = new GISShare.Controls.WinForm.WFNew.ButtonItem();
+            this.baseItemHost2 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.buttonItem2 = new GISShare.Controls.WinForm.WFNew.ButtonItem();
+            this.baseItemHost1 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.buttonItem1 = new GISShare.Controls.WinForm.WFNew.ButtonItem();
             this.SuspendLayout();
             // 
-            // btnButton3
+            // baseItemHost3
             // 
-            this.btnButton3.AutoPlanTextRectangle = false;
-            this.btnButton3.BackColor = System.Drawing.Color.Transparent;
-            this.btnButton3.Image = null;
-            this.btnButton3.Location = new System.Drawing.Point(239, 94);
-            this.btnButton3.Name = "btnButton3";
-            this.btnButton3.Padding = new System.Windows.Forms.Padding(0);
-            this.btnButton3.Size = new System.Drawing.Size(90, 26);
-            this.btnButton3.TabIndex = 0;
-            this.btnButton3.Text = "ribbonBaseButton1";
+            this.baseItemHost3.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost3.BaseItemObject = this.buttonItem3;
+            this.baseItemHost3.Location = new System.Drawing.Point(358, 141);
+            this.baseItemHost3.Margin = new System.Windows.Forms.Padding(4);
+            this.baseItemHost3.Name = "baseItemHost3";
+            this.baseItemHost3.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost3.Size = new System.Drawing.Size(135, 39);
+            this.baseItemHost3.TabIndex = 0;
+            this.baseItemHost3.Text = "ribbonBaseButton1";
             // 
-            // btnButton2
+            // buttonItem3
             // 
-            this.btnButton2.AutoPlanTextRectangle = false;
-            this.btnButton2.BackColor = System.Drawing.Color.Transparent;
-            this.btnButton2.Image = null;
-            this.btnButton2.Location = new System.Drawing.Point(134, 94);
-            this.btnButton2.Name = "btnButton2";
-            this.btnButton2.Padding = new System.Windows.Forms.Padding(0);
-            this.btnButton2.Size = new System.Drawing.Size(90, 26);
-            this.btnButton2.TabIndex = 1;
-            this.btnButton2.Text = "ribbonBaseButton2";
+            this.buttonItem3.Font = new System.Drawing.Font("宋体", 9F);
+            this.buttonItem3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonItem3.Image = null;
+            this.buttonItem3.Location = new System.Drawing.Point(0, 0);
+            this.buttonItem3.Name = "buttonItem3";
+            this.buttonItem3.ShowNomalState = true;
+            this.buttonItem3.Size = new System.Drawing.Size(135, 39);
+            this.buttonItem3.Tag = null;
+            this.buttonItem3.Text = "buttonItem3";
             // 
-            // btnButton1
+            // baseItemHost2
             // 
-            this.btnButton1.AutoPlanTextRectangle = false;
-            this.btnButton1.BackColor = System.Drawing.Color.Transparent;
-            this.btnButton1.Image = null;
-            this.btnButton1.Location = new System.Drawing.Point(26, 94);
-            this.btnButton1.Name = "btnButton1";
-            this.btnButton1.Padding = new System.Windows.Forms.Padding(0);
-            this.btnButton1.Size = new System.Drawing.Size(90, 26);
-            this.btnButton1.TabIndex = 2;
-            this.btnButton1.Text = "ribbonBaseButton3";
+            this.baseItemHost2.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost2.BaseItemObject = this.buttonItem2;
+            this.baseItemHost2.Location = new System.Drawing.Point(201, 141);
+            this.baseItemHost2.Margin = new System.Windows.Forms.Padding(4);
+            this.baseItemHost2.Name = "baseItemHost2";
+            this.baseItemHost2.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost2.Size = new System.Drawing.Size(135, 39);
+            this.baseItemHost2.TabIndex = 1;
+            this.baseItemHost2.Text = "ribbonBaseButton2";
             // 
-            // MessageBoxForm
+            // buttonItem2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.buttonItem2.Font = new System.Drawing.Font("宋体", 9F);
+            this.buttonItem2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonItem2.Image = null;
+            this.buttonItem2.Location = new System.Drawing.Point(0, 0);
+            this.buttonItem2.Name = "buttonItem2";
+            this.buttonItem2.ShowNomalState = true;
+            this.buttonItem2.Size = new System.Drawing.Size(135, 39);
+            this.buttonItem2.Tag = null;
+            this.buttonItem2.Text = "buttonItem2";
+            // 
+            // baseItemHost1
+            // 
+            this.baseItemHost1.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost1.BaseItemObject = this.buttonItem1;
+            this.baseItemHost1.Location = new System.Drawing.Point(39, 141);
+            this.baseItemHost1.Margin = new System.Windows.Forms.Padding(4);
+            this.baseItemHost1.Name = "baseItemHost1";
+            this.baseItemHost1.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost1.Size = new System.Drawing.Size(135, 39);
+            this.baseItemHost1.TabIndex = 2;
+            this.baseItemHost1.Text = "ribbonBaseButton3";
+            // 
+            // buttonItem1
+            // 
+            this.buttonItem1.Font = new System.Drawing.Font("宋体", 9F);
+            this.buttonItem1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonItem1.Image = null;
+            this.buttonItem1.Location = new System.Drawing.Point(0, 0);
+            this.buttonItem1.Name = "buttonItem1";
+            this.buttonItem1.ShowNomalState = true;
+            this.buttonItem1.Size = new System.Drawing.Size(135, 39);
+            this.buttonItem1.Tag = null;
+            this.buttonItem1.Text = "buttonItem1";
+            // 
+            // TBMessageBoxForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            //this.ClientSize = new System.Drawing.Size(341, 132);
-            this.Controls.Add(this.btnButton1);
-            this.Controls.Add(this.btnButton2);
-            this.Controls.Add(this.btnButton3);
+            this.ClientSize = new System.Drawing.Size(534, 218);
+            this.Controls.Add(this.baseItemHost1);
+            this.Controls.Add(this.baseItemHost2);
+            this.Controls.Add(this.baseItemHost3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Location = new System.Drawing.Point(0, 0);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "MessageBoxForm";
+            this.Name = "TBMessageBoxForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            //this.Text = "MessageBoxForm";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private BaseButtonN btnButton3;
-        private BaseButtonN btnButton2;
-        private BaseButtonN btnButton1;
+        private BaseItemHost baseItemHost3;
+        private BaseItemHost baseItemHost2;
+        private BaseItemHost baseItemHost1;
+        private ButtonItem buttonItem3;
+        private ButtonItem buttonItem2;
+        private ButtonItem buttonItem1;
     }
 }

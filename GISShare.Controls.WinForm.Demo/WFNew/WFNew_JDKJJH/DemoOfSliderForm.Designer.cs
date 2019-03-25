@@ -28,38 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ribbonSlider1 = new GISShare.Controls.WinForm.WFNew.Slider();
-            this.ribbonSlider2 = new GISShare.Controls.WinForm.WFNew.Slider();
+            this.ribbonSlider1 = new GISShare.Controls.WinForm.WFNew.BaseItemHostControl();
+            this.ribbonSlider2 = new GISShare.Controls.WinForm.WFNew.BaseItemHostControl();
             this.SuspendLayout();
             // 
             // ribbonSlider1
             // 
-            this.ribbonSlider1.Location = new System.Drawing.Point(12, 12);
-            this.ribbonSlider1.LockHeight = true;
-            this.ribbonSlider1.Maximum = 100;
-            this.ribbonSlider1.Minimum = 0;
-            this.ribbonSlider1.Name = "ribbonSlider1";
-            this.ribbonSlider1.Padding = new System.Windows.Forms.Padding(0);
-            this.ribbonSlider1.Size = new System.Drawing.Size(160, 20);
-            this.ribbonSlider1.Step = 1;
-            this.ribbonSlider1.TabIndex = 0;
-            this.ribbonSlider1.Text = "ribbonSlider1";
-            this.ribbonSlider1.Value = 50;
+            //this.ribbonSlider1.Location = new System.Drawing.Point(12, 12);
+            //this.ribbonSlider1.LockHeight = true;
+            //this.ribbonSlider1.Maximum = 100;
+            //this.ribbonSlider1.Minimum = 0;
+            //this.ribbonSlider1.Name = "ribbonSlider1";
+            //this.ribbonSlider1.Padding = new System.Windows.Forms.Padding(0);
+            //this.ribbonSlider1.Size = new System.Drawing.Size(160, 20);
+            //this.ribbonSlider1.Step = 1;
+            //this.ribbonSlider1.TabIndex = 0;
+            //this.ribbonSlider1.Text = "ribbonSlider1";
+            //this.ribbonSlider1.Value = 50;
             // 
             // ribbonSlider2
             // 
-            this.ribbonSlider2.eOrientation = System.Windows.Forms.Orientation.Vertical;
-            this.ribbonSlider2.Location = new System.Drawing.Point(80, 38);
-            this.ribbonSlider2.LockWith = true;
-            this.ribbonSlider2.Maximum = 100;
-            this.ribbonSlider2.Minimum = 0;
-            this.ribbonSlider2.Name = "ribbonSlider2";
-            this.ribbonSlider2.Padding = new System.Windows.Forms.Padding(0);
-            this.ribbonSlider2.Size = new System.Drawing.Size(24, 125);
-            this.ribbonSlider2.Step = 1;
-            this.ribbonSlider2.TabIndex = 1;
-            this.ribbonSlider2.Text = "ribbonSlider2";
-            this.ribbonSlider2.Value = 60;
+            //this.ribbonSlider2.eOrientation = System.Windows.Forms.Orientation.Vertical;
+            //this.ribbonSlider2.Location = new System.Drawing.Point(80, 38);
+            //this.ribbonSlider2.LockWith = true;
+            //this.ribbonSlider2.Maximum = 100;
+            //this.ribbonSlider2.Minimum = 0;
+            //this.ribbonSlider2.Name = "ribbonSlider2";
+            //this.ribbonSlider2.Padding = new System.Windows.Forms.Padding(0);
+            //this.ribbonSlider2.Size = new System.Drawing.Size(24, 125);
+            //this.ribbonSlider2.Step = 1;
+            //this.ribbonSlider2.TabIndex = 1;
+            //this.ribbonSlider2.Text = "ribbonSlider2";
+            //this.ribbonSlider2.Value = 60;
             // 
             // DemoOfSliderForm
             // 
@@ -80,7 +80,7 @@
 
         #endregion
 
-        private GISShare.Controls.WinForm.WFNew.Slider ribbonSlider1;
-        private GISShare.Controls.WinForm.WFNew.Slider ribbonSlider2;
+        private GISShare.Controls.WinForm.WFNew.BaseItemHostControl ribbonSlider1;
+        private GISShare.Controls.WinForm.WFNew.BaseItemHostControl ribbonSlider2;
     }
 }
