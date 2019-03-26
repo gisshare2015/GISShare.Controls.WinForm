@@ -29,27 +29,41 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DemoOfImageBoxForm));
-            this.imageBox1 = new GISShare.Controls.WinForm.WFNew.ImageBox();
+            this.imageBox1 = new GISShare.Controls.WinForm.WFNew.ImageBoxItem();
+            this.baseItemHost1 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
             this.SuspendLayout();
             // 
             // imageBox1
             // 
-            this.imageBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.imageBox1.Font = new System.Drawing.Font("宋体", 9F);
+            this.imageBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.imageBox1.Image = ((System.Drawing.Image)(resources.GetObject("imageBox1.Image")));
             this.imageBox1.Location = new System.Drawing.Point(0, 0);
             this.imageBox1.Name = "imageBox1";
-            this.imageBox1.Padding = new System.Windows.Forms.Padding(0);
-            this.imageBox1.Size = new System.Drawing.Size(549, 351);
-            this.imageBox1.TabIndex = 0;
+            this.imageBox1.Size = new System.Drawing.Size(824, 522);
+            this.imageBox1.Tag = null;
             this.imageBox1.Text = "imageBox1";
+            // 
+            // baseItemHost1
+            // 
+            this.baseItemHost1.BaseItemObject = this.imageBox1;
+            this.baseItemHost1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.baseItemHost1.Location = new System.Drawing.Point(0, 0);
+            this.baseItemHost1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.baseItemHost1.Name = "baseItemHost1";
+            this.baseItemHost1.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost1.Size = new System.Drawing.Size(824, 522);
+            this.baseItemHost1.TabIndex = 0;
             // 
             // DemoOfImageBoxForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(549, 351);
-            this.Controls.Add(this.imageBox1);
+            this.CancelItemsEventNC = false;
+            this.ClientSize = new System.Drawing.Size(824, 522);
+            this.Controls.Add(this.baseItemHost1);
             this.Location = new System.Drawing.Point(0, 0);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DemoOfImageBoxForm";
             this.Text = "ImageBox控件";
             this.ResumeLayout(false);
@@ -58,6 +72,7 @@
 
         #endregion
 
-        private GISShare.Controls.WinForm.WFNew.ImageBox imageBox1;
+        private GISShare.Controls.WinForm.WFNew.ImageBoxItem imageBox1;
+        private GISShare.Controls.WinForm.WFNew.BaseItemHost baseItemHost1;
     }
 }

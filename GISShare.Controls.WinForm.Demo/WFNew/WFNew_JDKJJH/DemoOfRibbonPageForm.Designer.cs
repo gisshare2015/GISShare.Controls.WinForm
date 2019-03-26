@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DemoOfRibbonPageForm));
-            this.ribbonPage1 = new GISShare.Controls.WinForm.WFNew.RibbonPage();
+            this.ribbonPage1 = new GISShare.Controls.WinForm.WFNew.RibbonPageItem();
             this.ribbonBarItem1 = new GISShare.Controls.WinForm.WFNew.RibbonBarItem();
             this.ribbonBaseButtonItem1 = new GISShare.Controls.WinForm.WFNew.BaseButtonItem();
             this.ribbonBaseButtonItem2 = new GISShare.Controls.WinForm.WFNew.BaseButtonItem();
@@ -48,14 +48,22 @@
             this.ribbonButtonGroupItem1 = new GISShare.Controls.WinForm.WFNew.ButtonGroupItem();
             this.ribbonBaseButtonItem9 = new GISShare.Controls.WinForm.WFNew.BaseButtonItem();
             this.ribbonBaseButtonItem10 = new GISShare.Controls.WinForm.WFNew.BaseButtonItem();
+            this.baseItemHost1 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
             this.SuspendLayout();
+            //
+            //
+            //
+            this.baseItemHost1.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost1.BaseItemObject = this.ribbonPage1;
+            this.baseItemHost1.Dock = System.Windows.Forms.DockStyle.None;
+            this.baseItemHost1.TabIndex = 0;
+            this.baseItemHost1.Location = new System.Drawing.Point(12, 12);
+            this.baseItemHost1.Size = new System.Drawing.Size(506, 100);
             // 
             // ribbonPage1
             // 
-            this.ribbonPage1.BackColor = System.Drawing.Color.Transparent;
             this.ribbonPage1.BaseItems.Add(this.ribbonBarItem1);
             this.ribbonPage1.BaseItems.Add(this.ribbonBarItem2);
-            this.ribbonPage1.Dock = System.Windows.Forms.DockStyle.None;
             this.ribbonPage1.eOrientation = System.Windows.Forms.Orientation.Horizontal;
             this.ribbonPage1.Image = null;
             this.ribbonPage1.Location = new System.Drawing.Point(12, 12);
@@ -64,7 +72,6 @@
             this.ribbonPage1.RestrictItemsHeight = -1;
             this.ribbonPage1.RestrictItemsWidth = -1;
             this.ribbonPage1.Size = new System.Drawing.Size(506, 100);
-            this.ribbonPage1.TabIndex = 0;
             this.ribbonPage1.Text = "ribbonPage1";
             this.ribbonPage1.TopViewItemIndex = 0;
             this.ribbonPage1.Visible = false;
@@ -310,7 +317,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(530, 125);
-            this.Controls.Add(this.ribbonPage1);
+            this.Controls.Add(this.baseItemHost1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Location = new System.Drawing.Point(0, 0);
             this.MaximizeBox = false;
@@ -323,7 +330,7 @@
 
         #endregion
 
-        private GISShare.Controls.WinForm.WFNew.RibbonPage ribbonPage1;
+        private GISShare.Controls.WinForm.WFNew.RibbonPageItem ribbonPage1;
         private GISShare.Controls.WinForm.WFNew.RibbonBarItem ribbonBarItem1;
         private GISShare.Controls.WinForm.WFNew.BaseButtonItem ribbonBaseButtonItem1;
         private GISShare.Controls.WinForm.WFNew.BaseButtonItem ribbonBaseButtonItem2;
@@ -342,5 +349,6 @@
         private GISShare.Controls.WinForm.WFNew.ButtonGroupItem ribbonButtonGroupItem1;
         private GISShare.Controls.WinForm.WFNew.BaseButtonItem ribbonBaseButtonItem9;
         private GISShare.Controls.WinForm.WFNew.BaseButtonItem ribbonBaseButtonItem10;
+        private GISShare.Controls.WinForm.WFNew.BaseItemHost baseItemHost1;
     }
 }

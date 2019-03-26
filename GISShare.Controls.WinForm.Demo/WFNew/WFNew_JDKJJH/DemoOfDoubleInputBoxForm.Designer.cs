@@ -28,44 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.doubleInputBox1 = new GISShare.Controls.WinForm.WFNew.DoubleInputBox();
-            this.doubleInputBox2 = new GISShare.Controls.WinForm.WFNew.DoubleInputBox();
+            this.doubleInputBox1 = new GISShare.Controls.WinForm.WFNew.DoubleInputBoxItem();
+            this.doubleInputBox2 = new GISShare.Controls.WinForm.WFNew.DoubleInputBoxItem();
+            this.baseItemHost1 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.baseItemHost2 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
             this.SuspendLayout();
             // 
-            // integerInputBox1
+            // doubleInputBox1
             // 
             this.doubleInputBox1.eBorderStyle = GISShare.Controls.WinForm.WFNew.BorderStyle.eNone;
-            this.doubleInputBox1.Location = new System.Drawing.Point(12, 12);
+            this.doubleInputBox1.Font = new System.Drawing.Font("宋体", 9F);
+            this.doubleInputBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.doubleInputBox1.Location = new System.Drawing.Point(0, 0);
             this.doubleInputBox1.LockHeight = true;
+            this.doubleInputBox1.Maximum = 1.7976931348623157E+308D;
+            this.doubleInputBox1.Minimum = -1.7976931348623157E+308D;
             this.doubleInputBox1.Name = "integerInputBox1";
-            this.doubleInputBox1.Padding = new System.Windows.Forms.Padding(0);
-            this.doubleInputBox1.Size = new System.Drawing.Size(260, 14);
-            this.doubleInputBox1.TabIndex = 0;
+            this.doubleInputBox1.Size = new System.Drawing.Size(390, 21);
+            this.doubleInputBox1.Step = 1D;
+            this.doubleInputBox1.Tag = null;
             this.doubleInputBox1.Text = "integerInputBox1";
-            this.doubleInputBox1.Value = 6.6;
+            this.doubleInputBox1.Value = 6.6D;
             // 
-            // integerInputBox2
+            // doubleInputBox2
             // 
-            this.doubleInputBox2.Location = new System.Drawing.Point(12, 40);
+            this.doubleInputBox2.Font = new System.Drawing.Font("宋体", 9F);
+            this.doubleInputBox2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.doubleInputBox2.Location = new System.Drawing.Point(0, 0);
             this.doubleInputBox2.LockHeight = true;
+            this.doubleInputBox2.Maximum = 1.7976931348623157E+308D;
+            this.doubleInputBox2.Minimum = -1.7976931348623157E+308D;
             this.doubleInputBox2.Name = "integerInputBox2";
-            this.doubleInputBox2.Padding = new System.Windows.Forms.Padding(0);
-            this.doubleInputBox2.Size = new System.Drawing.Size(260, 20);
-            this.doubleInputBox2.TabIndex = 1;
+            this.doubleInputBox2.Size = new System.Drawing.Size(390, 27);
+            this.doubleInputBox2.Step = 1D;
+            this.doubleInputBox2.Tag = null;
             this.doubleInputBox2.Text = "integerInputBox2";
-            this.doubleInputBox2.Value = 6.6;
+            this.doubleInputBox2.Value = 6.6D;
             // 
-            // DemoOfIntegerInputBoxForm
+            // baseItemHost1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.baseItemHost1.BaseItemObject = this.doubleInputBox1;
+            this.baseItemHost1.Location = new System.Drawing.Point(18, 18);
+            this.baseItemHost1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.baseItemHost1.Name = "baseItemHost1";
+            this.baseItemHost1.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost1.Size = new System.Drawing.Size(390, 21);
+            this.baseItemHost1.TabIndex = 0;
+            // 
+            // baseItemHost2
+            // 
+            this.baseItemHost2.BaseItemObject = this.doubleInputBox2;
+            this.baseItemHost2.Location = new System.Drawing.Point(18, 60);
+            this.baseItemHost2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.baseItemHost2.Name = "baseItemHost2";
+            this.baseItemHost2.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost2.Size = new System.Drawing.Size(390, 27);
+            this.baseItemHost2.TabIndex = 0;
+            // 
+            // DemoOfDoubleInputBoxForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 72);
-            this.Controls.Add(this.doubleInputBox2);
-            this.Controls.Add(this.doubleInputBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.ClientSize = new System.Drawing.Size(458, 136);
+            this.Controls.Add(this.baseItemHost2);
+            this.Controls.Add(this.baseItemHost1);
             this.Location = new System.Drawing.Point(0, 0);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DemoOfDoubleInputBoxForm";
             this.Text = "DoubleInputBox控件";
             this.ResumeLayout(false);
@@ -74,7 +102,9 @@
 
         #endregion
 
-        private GISShare.Controls.WinForm.WFNew.DoubleInputBox doubleInputBox1;
-        private GISShare.Controls.WinForm.WFNew.DoubleInputBox doubleInputBox2;
+        private GISShare.Controls.WinForm.WFNew.DoubleInputBoxItem doubleInputBox1;
+        private GISShare.Controls.WinForm.WFNew.DoubleInputBoxItem doubleInputBox2;
+        private GISShare.Controls.WinForm.WFNew.BaseItemHost baseItemHost1;
+        private GISShare.Controls.WinForm.WFNew.BaseItemHost baseItemHost2;
     }
 }

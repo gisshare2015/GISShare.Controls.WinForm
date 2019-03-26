@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.canvasControl1 = new GISShare.Controls.WinForm.WFNew.CanvasControl();
+            this.canvasControl1 = new GISShare.Controls.WinForm.WFNew.CanvasItem();
             this.baseButtonItem1 = new GISShare.Controls.WinForm.WFNew.BaseButtonItem();
             this.textBoxItem1 = new GISShare.Controls.WinForm.WFNew.TextBoxItem();
             this.baseItemStackItem1 = new GISShare.Controls.WinForm.WFNew.BaseItemStackItem();
@@ -42,27 +42,26 @@
             this.baseButtonItem6 = new GISShare.Controls.WinForm.WFNew.BaseButtonItem();
             this.baseButtonItem7 = new GISShare.Controls.WinForm.WFNew.BaseButtonItem();
             this.baseButtonItem8 = new GISShare.Controls.WinForm.WFNew.BaseButtonItem();
+            this.baseItemHost1 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
             this.SuspendLayout();
             // 
             // canvasControl1
             // 
-            this.canvasControl1.BackColor = System.Drawing.Color.Transparent;
             this.canvasControl1.BaseItems.Add(this.baseButtonItem1);
             this.canvasControl1.BaseItems.Add(this.textBoxItem1);
             this.canvasControl1.BaseItems.Add(this.baseItemStackItem1);
             this.canvasControl1.BaseItems.Add(this.canvasItem1);
-            this.canvasControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.canvasControl1.Font = new System.Drawing.Font("宋体", 9F);
+            this.canvasControl1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.canvasControl1.Location = new System.Drawing.Point(0, 0);
             this.canvasControl1.Name = "canvasControl1";
-            this.canvasControl1.Padding = new System.Windows.Forms.Padding(0);
             this.canvasControl1.ShowOutLine = true;
-            this.canvasControl1.Size = new System.Drawing.Size(319, 277);
-            this.canvasControl1.TabIndex = 0;
+            this.canvasControl1.Size = new System.Drawing.Size(478, 412);
+            this.canvasControl1.Tag = null;
             this.canvasControl1.Text = "canvasControl1";
             // 
             // baseButtonItem1
             // 
-            this.baseButtonItem1.Category = "默认";
             this.baseButtonItem1.Font = new System.Drawing.Font("宋体", 9F);
             this.baseButtonItem1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.baseButtonItem1.Image = null;
@@ -75,14 +74,13 @@
             // 
             // textBoxItem1
             // 
-            this.textBoxItem1.Category = "默认";
             this.textBoxItem1.Font = new System.Drawing.Font("宋体", 9F);
             this.textBoxItem1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxItem1.Location = new System.Drawing.Point(12, 13);
             this.textBoxItem1.LockHeight = true;
             this.textBoxItem1.Name = "textBoxItem1";
             this.textBoxItem1.PasswordChar = '\0';
-            this.textBoxItem1.Size = new System.Drawing.Size(120, 20);
+            this.textBoxItem1.Size = new System.Drawing.Size(120, 27);
             this.textBoxItem1.Tag = null;
             this.textBoxItem1.Text = "textBoxItem1";
             // 
@@ -91,7 +89,6 @@
             this.baseItemStackItem1.BaseItems.Add(this.baseButtonItem2);
             this.baseItemStackItem1.BaseItems.Add(this.baseButtonItem3);
             this.baseItemStackItem1.BaseItems.Add(this.baseButtonItem4);
-            this.baseItemStackItem1.Category = "默认";
             this.baseItemStackItem1.Font = new System.Drawing.Font("宋体", 9F);
             this.baseItemStackItem1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.baseItemStackItem1.LineDistance = 6;
@@ -106,7 +103,6 @@
             // 
             // baseButtonItem2
             // 
-            this.baseButtonItem2.Category = "默认";
             this.baseButtonItem2.Font = new System.Drawing.Font("宋体", 9F);
             this.baseButtonItem2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.baseButtonItem2.Image = null;
@@ -118,7 +114,6 @@
             // 
             // baseButtonItem3
             // 
-            this.baseButtonItem3.Category = "默认";
             this.baseButtonItem3.Font = new System.Drawing.Font("宋体", 9F);
             this.baseButtonItem3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.baseButtonItem3.Image = null;
@@ -130,7 +125,6 @@
             // 
             // baseButtonItem4
             // 
-            this.baseButtonItem4.Category = "默认";
             this.baseButtonItem4.Font = new System.Drawing.Font("宋体", 9F);
             this.baseButtonItem4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.baseButtonItem4.Image = null;
@@ -145,7 +139,6 @@
             this.canvasItem1.BaseItems.Add(this.textBoxItem2);
             this.canvasItem1.BaseItems.Add(this.baseButtonItem5);
             this.canvasItem1.BaseItems.Add(this.baseItemStackItem2);
-            this.canvasItem1.Category = "默认";
             this.canvasItem1.Font = new System.Drawing.Font("宋体", 9F);
             this.canvasItem1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.canvasItem1.Location = new System.Drawing.Point(142, 4);
@@ -157,20 +150,18 @@
             // 
             // textBoxItem2
             // 
-            this.textBoxItem2.Category = "默认";
             this.textBoxItem2.Font = new System.Drawing.Font("宋体", 9F);
             this.textBoxItem2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxItem2.Location = new System.Drawing.Point(160, 14);
             this.textBoxItem2.LockHeight = true;
             this.textBoxItem2.Name = "textBoxItem2";
             this.textBoxItem2.PasswordChar = '\0';
-            this.textBoxItem2.Size = new System.Drawing.Size(120, 20);
+            this.textBoxItem2.Size = new System.Drawing.Size(120, 27);
             this.textBoxItem2.Tag = null;
             this.textBoxItem2.Text = "textBoxItem2";
             // 
             // baseButtonItem5
             // 
-            this.baseButtonItem5.Category = "默认";
             this.baseButtonItem5.Font = new System.Drawing.Font("宋体", 9F);
             this.baseButtonItem5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.baseButtonItem5.Image = null;
@@ -186,7 +177,6 @@
             this.baseItemStackItem2.BaseItems.Add(this.baseButtonItem6);
             this.baseItemStackItem2.BaseItems.Add(this.baseButtonItem7);
             this.baseItemStackItem2.BaseItems.Add(this.baseButtonItem8);
-            this.baseItemStackItem2.Category = "默认";
             this.baseItemStackItem2.Font = new System.Drawing.Font("宋体", 9F);
             this.baseItemStackItem2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.baseItemStackItem2.LineDistance = 6;
@@ -201,7 +191,6 @@
             // 
             // baseButtonItem6
             // 
-            this.baseButtonItem6.Category = "默认";
             this.baseButtonItem6.Font = new System.Drawing.Font("宋体", 9F);
             this.baseButtonItem6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.baseButtonItem6.Image = null;
@@ -213,7 +202,6 @@
             // 
             // baseButtonItem7
             // 
-            this.baseButtonItem7.Category = "默认";
             this.baseButtonItem7.Font = new System.Drawing.Font("宋体", 9F);
             this.baseButtonItem7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.baseButtonItem7.Image = null;
@@ -225,7 +213,6 @@
             // 
             // baseButtonItem8
             // 
-            this.baseButtonItem8.Category = "默认";
             this.baseButtonItem8.Font = new System.Drawing.Font("宋体", 9F);
             this.baseButtonItem8.ForeColor = System.Drawing.SystemColors.ControlText;
             this.baseButtonItem8.Image = null;
@@ -235,13 +222,27 @@
             this.baseButtonItem8.Tag = null;
             this.baseButtonItem8.Text = "baseButtonItem8";
             // 
+            // baseItemHost1
+            // 
+            this.baseItemHost1.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost1.BaseItemObject = this.canvasControl1;
+            this.baseItemHost1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.baseItemHost1.Location = new System.Drawing.Point(0, 0);
+            this.baseItemHost1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.baseItemHost1.Name = "baseItemHost1";
+            this.baseItemHost1.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost1.Size = new System.Drawing.Size(478, 412);
+            this.baseItemHost1.TabIndex = 0;
+            // 
             // DemoOfCanvasControlForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(319, 277);
-            this.Controls.Add(this.canvasControl1);
+            this.CancelItemsEventNC = false;
+            this.ClientSize = new System.Drawing.Size(478, 412);
+            this.Controls.Add(this.baseItemHost1);
             this.Location = new System.Drawing.Point(0, 0);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DemoOfCanvasControlForm";
             this.Text = "CanvasControl控件";
             this.ResumeLayout(false);
@@ -250,7 +251,6 @@
 
         #endregion
 
-        private Controls.WinForm.WFNew.CanvasControl canvasControl1;
         private Controls.WinForm.WFNew.BaseButtonItem baseButtonItem1;
         private Controls.WinForm.WFNew.TextBoxItem textBoxItem1;
         private Controls.WinForm.WFNew.BaseItemStackItem baseItemStackItem1;
@@ -264,5 +264,7 @@
         private Controls.WinForm.WFNew.BaseButtonItem baseButtonItem6;
         private Controls.WinForm.WFNew.BaseButtonItem baseButtonItem7;
         private Controls.WinForm.WFNew.BaseButtonItem baseButtonItem8;
+        private Controls.WinForm.WFNew.CanvasItem canvasControl1;
+        private Controls.WinForm.WFNew.BaseItemHost baseItemHost1;
     }
 }

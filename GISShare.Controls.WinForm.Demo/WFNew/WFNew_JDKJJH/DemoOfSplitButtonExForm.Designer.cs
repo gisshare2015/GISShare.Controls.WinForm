@@ -28,48 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ribbonSplitButtonEx1 = new GISShare.Controls.WinForm.WFNew.SplitButtonEx();
-            this.ribbonSplitButtonEx2 = new GISShare.Controls.WinForm.WFNew.SplitButtonEx();
+            this.ribbonSplitButtonEx1 = new GISShare.Controls.WinForm.WFNew.SplitButtonExItem();
+            this.ribbonSplitButtonEx2 = new GISShare.Controls.WinForm.WFNew.SplitButtonExItem();
+            this.baseItemHost1 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
+            this.baseItemHost2 = new GISShare.Controls.WinForm.WFNew.BaseItemHost();
             this.SuspendLayout();
             // 
             // ribbonSplitButtonEx1
             // 
             this.ribbonSplitButtonEx1.AutoPlanTextRectangle = false;
-            this.ribbonSplitButtonEx1.BackColor = System.Drawing.Color.Transparent;
-            this.ribbonSplitButtonEx1.eArrowDock = GISShare.Controls.WinForm.WFNew.ArrowDock.eRight;
+            this.ribbonSplitButtonEx1.Font = new System.Drawing.Font("宋体", 9F);
+            this.ribbonSplitButtonEx1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonSplitButtonEx1.Image = null;
-            this.ribbonSplitButtonEx1.Location = new System.Drawing.Point(73, 12);
+            this.ribbonSplitButtonEx1.Location = new System.Drawing.Point(0, 0);
             this.ribbonSplitButtonEx1.Name = "ribbonSplitButtonEx1";
-            this.ribbonSplitButtonEx1.Padding = new System.Windows.Forms.Padding(0);
-            this.ribbonSplitButtonEx1.Size = new System.Drawing.Size(116, 29);
-            this.ribbonSplitButtonEx1.TabIndex = 0;
+            this.ribbonSplitButtonEx1.ShowNomalState = true;
+            this.ribbonSplitButtonEx1.Size = new System.Drawing.Size(174, 44);
+            this.ribbonSplitButtonEx1.Tag = null;
             this.ribbonSplitButtonEx1.Text = "水平方向布局";
             // 
             // ribbonSplitButtonEx2
             // 
             this.ribbonSplitButtonEx2.AutoPlanTextRectangle = false;
-            this.ribbonSplitButtonEx2.BackColor = System.Drawing.Color.Transparent;
             this.ribbonSplitButtonEx2.eArrowDock = GISShare.Controls.WinForm.WFNew.ArrowDock.eDown;
             this.ribbonSplitButtonEx2.eOrientation = System.Windows.Forms.Orientation.Vertical;
+            this.ribbonSplitButtonEx2.Font = new System.Drawing.Font("宋体", 9F);
+            this.ribbonSplitButtonEx2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ribbonSplitButtonEx2.Image = null;
-            this.ribbonSplitButtonEx2.Location = new System.Drawing.Point(116, 47);
+            this.ribbonSplitButtonEx2.Location = new System.Drawing.Point(0, 0);
             this.ribbonSplitButtonEx2.Name = "ribbonSplitButtonEx2";
-            this.ribbonSplitButtonEx2.Padding = new System.Windows.Forms.Padding(0);
-            this.ribbonSplitButtonEx2.Size = new System.Drawing.Size(29, 116);
-            this.ribbonSplitButtonEx2.TabIndex = 1;
+            this.ribbonSplitButtonEx2.ShowNomalState = true;
+            this.ribbonSplitButtonEx2.Size = new System.Drawing.Size(44, 174);
+            this.ribbonSplitButtonEx2.Tag = null;
             this.ribbonSplitButtonEx2.Text = "竖直方向布局";
+            // 
+            // baseItemHost1
+            // 
+            this.baseItemHost1.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost1.BaseItemObject = this.ribbonSplitButtonEx1;
+            this.baseItemHost1.Location = new System.Drawing.Point(110, 18);
+            this.baseItemHost1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.baseItemHost1.Name = "baseItemHost1";
+            this.baseItemHost1.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost1.Size = new System.Drawing.Size(174, 44);
+            this.baseItemHost1.TabIndex = 0;
+            // 
+            // baseItemHost2
+            // 
+            this.baseItemHost2.BackColor = System.Drawing.Color.Transparent;
+            this.baseItemHost2.BaseItemObject = this.ribbonSplitButtonEx2;
+            this.baseItemHost2.Location = new System.Drawing.Point(174, 70);
+            this.baseItemHost2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.baseItemHost2.Name = "baseItemHost2";
+            this.baseItemHost2.Padding = new System.Windows.Forms.Padding(0);
+            this.baseItemHost2.Size = new System.Drawing.Size(44, 174);
+            this.baseItemHost2.TabIndex = 1;
             // 
             // DemoOfSplitButtonExForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(251, 181);
-            this.Controls.Add(this.ribbonSplitButtonEx2);
-            this.Controls.Add(this.ribbonSplitButtonEx1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.ClientSize = new System.Drawing.Size(408, 300);
+            this.Controls.Add(this.baseItemHost2);
+            this.Controls.Add(this.baseItemHost1);
             this.Location = new System.Drawing.Point(0, 0);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DemoOfSplitButtonExForm";
             this.Text = "SplitButtonEx控件";
             this.ResumeLayout(false);
@@ -78,7 +101,9 @@
 
         #endregion
 
-        private GISShare.Controls.WinForm.WFNew.SplitButtonEx ribbonSplitButtonEx1;
-        private GISShare.Controls.WinForm.WFNew.SplitButtonEx ribbonSplitButtonEx2;
+        private GISShare.Controls.WinForm.WFNew.SplitButtonExItem ribbonSplitButtonEx1;
+        private GISShare.Controls.WinForm.WFNew.SplitButtonExItem ribbonSplitButtonEx2;
+        private GISShare.Controls.WinForm.WFNew.BaseItemHost baseItemHost1;
+        private GISShare.Controls.WinForm.WFNew.BaseItemHost baseItemHost2;
     }
 }
