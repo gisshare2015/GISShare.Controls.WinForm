@@ -31,8 +31,8 @@ GISShare.Controls.Plugin.WinForm.Demo.exe：示例DEMO
 ![image](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/c12d7067-f9d2-4994-b154-e6416c92f97a)  
 9.折叠面板：ExpandableCaptionPanel  
 ![image](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/02cb8ecd-2741-4f83-91a8-02b1a569a8ef)  
-10.折叠面板容器：ExpandablePanelContainer 
-![image](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/2663134a-a39e-45b8-abaf-164b673e55b9)
+10.折叠面板容器：ExpandablePanelContainer  
+![image](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/2663134a-a39e-45b8-abaf-164b673e55b9)  
 11.分割面板：CollapsableSplitPanel  
 ![image](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/a7f199ac-63c6-40b0-b99b-1683f3894ec9)  
 12.按钮类组件  
@@ -63,4 +63,4 @@ GISShare.Controls.Plugin.WinForm.Demo.exe：示例DEMO
 ![image](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/8e9bc491-245c-4146-8921-0245971a6a4b)
 
 **结语**  
-我是一位GIS方向的Coder，该项目是我在大学初识ArcEngine二次开发时设计研发。2015年之前一直有更新迭代，2015年以后偶有维护，想来已有十几年了。该控件的UI效果可能已经完全跟不上现在的系统了（当然你也可以定制自己的颜色表来修改它），可我觉得它的设计实现对于了解操作系统（如：API、消息机制、事件等），学习GUI知识，插件机制等还是有很大的帮助。所以，把它放在这里，供大家一起交流进步。
+我是一位GIS方向的Coder，该项目是我在大学初识ArcEngine二次开发时设计研发。2015年之前一直有更新迭代，2015年以后偶有维护，想来已有十几年了。该控件的UI效果可能已经完全跟不上现在的系统了（当然你也可以定制自己的颜色表来修改它），可我觉得它的设计实现对于了解操作系统（如：API、消息机制、事件等），学习GUI知识，插件机制等还是有很大的帮助。所以，把它放在这里，与大家一起交流。
