@@ -17,7 +17,7 @@ GISShare.Controls.Plugin.WinForm.Demo.exe：示例DEMO
 ![image](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/05fa9d39-df39-4607-b648-f7ab8c4348f7)  
 2.浮动工具条：DockPanelManager  
 ![image](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/00cf164b-433c-40d2-b79f-39a98047b0ac)  
-3.浮动面板：DockBarManager  
+3.浮动面板：DockBarManager（在WinForm目录）  
 ![image](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/27909308-7c4d-4fea-93dd-5a326649f55c)  
 4.功能区控件：RibbonControl  
 ![image](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/bfd8a959-637f-427d-b657-131b2e1a651f)  
