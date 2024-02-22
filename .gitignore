@@ -1,4 +1,6 @@
-﻿svn/*
+.vs/*
+
+svn/*
 
 GISShare.Controls.Plugin/bin/*
 GISShare.Controls.Plugin/obj/*
@@ -9,8 +11,8 @@ GISShare.Controls.Plugin.WinForm.Demo/obj/*
 GISShare.Controls.Plugin.WinForm.Demo.Hook/bin/*
 GISShare.Controls.Plugin.WinForm.Demo.Hook/obj/*
 
-GISShare.Controls.Plugin.WinForm.Demo.Hook.PluginDLL/bin/*
-GISShare.Controls.Plugin.WinForm.Demo.Hook.PluginDLL/obj/*
+GISShare.Controls.Plugin.WinForm.Demo.PluginDLL/bin/*
+GISShare.Controls.Plugin.WinForm.Demo.PluginDLL/obj/*
 
 GISShare.Controls.Plugin.WinForm/bin/*
 GISShare.Controls.Plugin.WinForm/obj/*
@@ -20,3 +22,9 @@ GISShare.Controls.Plugin.WinForm.Demo/obj/*
 
 GISShare.Controls.suo
 GISShare.Controls.v12.suo
+GISShare.Controls-12.v12.suo
+GISShare.Controls.v17.suo
+GISShare.Controls.WinForm/bin/*
+GISShare.Controls.WinForm/obj/*
+GISShare.Controls.WinForm.Demo/bin/*
+GISShare.Controls.WinForm.Demo/obj/*
