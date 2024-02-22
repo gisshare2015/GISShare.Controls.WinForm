@@ -1,17 +1,17 @@
-## GISShare.Controls.WinForm
+# GISShare.Controls.WinForm
 是基于.NET开发的WinForm自定义控件库，提供丰富多样的控件（如：浮动工具条、浮动面板、功能区控件、数据表、树结构数据表、列表控件、树控件、折叠面板、分割面板、自定义窗体等），有效地补充VS原生组件库的不足，也是很好地GUI学习资料。控件主要分为WFNew和WinForm两大类，其中WFNew里的控件是基于基础Control类实现（所有控件都是通过BaseItemHost来承载实现），而WinForm则是对原有VS控件的重绘。
 
-# 控件相关
+**控件相关**
 GISShare.Win32.dll：依赖DLL，Windows相关API；
 GISShare.Controls.WinForm.dll：自定义控件库（引入VS工具箱即可拖拽使用）；
 GISShare.Controls.WinForm.Demo.exe：示例DEMO；
-# 插件引擎相关
+**插件引擎相关**
 GISShare.Controls.Plugin.dll：插件接口及引擎
 GISShare.Controls.Plugin.WinForm.Demo.Hook.dll：示例DEMO：钩子
 GISShare.Controls.Plugin.WinForm.Demo.PluginDLL.dll：示例DEMO插件库
 GISShare.Controls.Plugin.WinForm.Demo.exe：示例DEMO
 
-# 控件相关贴图
+**控件相关贴图**
 示例Demo窗口
 ![image](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/05fa9d39-df39-4607-b648-f7ab8c4348f7)
 浮动工具条：DockPanelManager
@@ -33,7 +33,7 @@ GISShare.Controls.Plugin.WinForm.Demo.exe：示例DEMO
 分割面板：CollapsableSplitPanel
 ![image](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/a7f199ac-63c6-40b0-b99b-1683f3894ec9)
 
-# 插件引擎相关贴图
+**插件引擎相关贴图**
 示例Demo窗口
 ![image](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/26a3adb7-d1a4-4d5b-8c13-86d523e80367)
 功能区控件+浮动面板 插件展示
