@@ -235,7 +235,7 @@ namespace GISShare.Controls.WinForm
             GISShare.Controls.WinForm.WinFormRenderer.WinFormRendererStrategy.OnRenderRadioButton(
                 new GISShare.Controls.WinForm.ObjectRenderEventArgs(e.Graphics, this, this.DisplayRectangle));
             GISShare.Controls.WinForm.WinFormRenderer.WinFormRendererStrategy.OnRenderText(
-                new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, true, this.Text, this.ForeColor, this.Font, this.TextRectangle));
+                new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.HaveShadow, this.Text, this.ForeCustomize, this.ForeColor, this.ShadowColor, this.Font, this.TextRectangle));
         }
     }
 }

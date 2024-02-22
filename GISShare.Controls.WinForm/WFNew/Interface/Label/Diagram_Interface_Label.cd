@@ -4,28 +4,28 @@
     <Position X="0.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAQASgAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Controls\WFNew\Interface\Label\IImageLabelItem.cs</FileName>
+      <FileName>WFNew\Interface\Label\IImageLabelItem.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="GISShare.Controls.WinForm.WFNew.ILabelItem" Collapsed="true">
     <Position X="3" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAEAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Controls\WFNew\Interface\Label\ILabelItem.cs</FileName>
+      <FileName>WFNew\Interface\Label\ILabelItem.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="GISShare.Controls.WinForm.WFNew.ILinkLabelItem" Collapsed="true">
     <Position X="3" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
-      <FileName>Controls\WFNew\Interface\Label\ILinkLabelItem.cs</FileName>
+      <FileName>WFNew\Interface\Label\ILinkLabelItem.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="GISShare.Controls.WinForm.WFNew.ILabelExItem" Collapsed="true">
     <Position X="5.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Controls\WFNew\Interface\Label\ILabelExItem.cs</FileName>
+      <FileName>WFNew\Interface\Label\ILabelExItem.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="微软雅黑" Size="9" />

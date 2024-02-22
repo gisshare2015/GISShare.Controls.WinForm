@@ -34,6 +34,8 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
         private WFNew.BaseItemCollection m_BaseItemCollection;
         private NCFormButtonStackItemEx m_NCFormButtonStackItemEx;
         private NCQuickAccessToolbarItemEx m_NCQuickAccessToolbarItemEx;
+        //
+        private bool m_bCreated = false;
 
         public TBFormSkinHelper(Form hostForm)
             : base(hostForm)
@@ -68,6 +70,8 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
             //
             this.m_NCQuickAccessToolbarItemEx.BaseItems.ItemAdded += new ItemEventHandler(BaseItems_ItemAdded);
             this.m_NCQuickAccessToolbarItemEx.BaseItems.ItemRemoved += new ItemEventHandler(BaseItems_ItemRemoved);
+            //
+            this.m_bCreated = true;
         }
         void BaseItems_ItemAdded(object sender, ItemEventArgs e)
         {
@@ -309,6 +313,8 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
 
         public void RefreshNC()
         {
+            if (!this.m_bCreated) return;
+            //
             if (this.m_HostForm == null || 
                 this.m_HostForm.IsDisposed || 
                 this.m_HostForm.FormBorderStyle == FormBorderStyle.None ||
@@ -320,6 +326,8 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
 
         public bool RefreshExNC()
         {
+            if (!this.m_bCreated) return false;
+            //
             return this.WndNCPaint(true);
         }
         #endregion
@@ -582,13 +590,13 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
         {
             get
             {
-                if (this.m_HostForm == null || this.m_HostForm.IsDisposed) return SystemInformation.FrameBorderSize; 
+                if (this.m_HostForm == null || this.m_HostForm.IsDisposed) return SystemInformationX.FrameBorderSize; 
                 ////
                 //switch (this.m_HostForm.FormBorderStyle)
                 //{
                 //    case FormBorderStyle.Sizable:
                 //    case FormBorderStyle.SizableToolWindow:
-                //        return SystemInformation.FrameBorderSize;
+                //        return SystemInformationX.FrameBorderSize;
                 //    case FormBorderStyle.Fixed3D:
                 //        return SystemInformation.Border3DSize;
                 //    case FormBorderStyle.FixedDialog:
@@ -967,7 +975,7 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
         [System.Security.Permissions.PermissionSet(System.Security.Permissions.SecurityAction.Demand, Name = "FullTrust")]
         protected override void WndProc(ref Message m)
         {
-            if (this.IsProcessNCArea)
+            if (this.m_bCreated && this.IsProcessNCArea)
             {
                 switch (m.Msg)
                 {
@@ -1683,9 +1691,11 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
                 new TextRenderEventArgs
                     (
                     e.Graphics, 
-                    this, 
-                    this.Enabled,
+                    this,
+                    this.Enabled, true,
                     this.Text,
+                    false,
+                    this.m_HostForm.ForeColor,
                     this.m_HostForm.ForeColor, 
                     this.m_HostForm.Font, 
                     this.CaptionTextRectangle

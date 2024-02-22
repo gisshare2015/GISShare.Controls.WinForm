@@ -70,7 +70,7 @@ namespace GISShare.Controls.WinForm.WFNew
             this.BaseItems.Add(this.m_lblBeta);
             this.BaseItems.Add(this.m_ibRC);
             ((ILockCollectionHelper)this.BaseItems).SetLocked(true);
-            this.ShowBackgroud = false;
+            this.ShowBackground = false;
             //
             this.m_ibE.ValueChanged += new IntValueChangedHandler(IntValue_ValueChanged);
             this.m_ibAlpha.ValueChanged += new IntValueChangedHandler(IntValue_ValueChanged);

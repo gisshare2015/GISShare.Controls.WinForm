@@ -25,6 +25,8 @@ namespace GISShare.Controls.WinForm.WFNew
 
         int TabPageSelectedIndex { get; set;}
 
+        int TabButtonContainerSize { get; set; }
+
         Rectangle TabButtonContainerRectangle { get; }
 
         WFNew.ITabPageItem SelectedTabPage { get; }

@@ -211,6 +211,18 @@ namespace GISShare.Controls.WinForm
             get { return m_ForeColor; }
         }
 
+        private Color m_ShadowColor;
+        public Color ShadowColor
+        {
+            get { return m_ShadowColor; }
+        }
+
+        private bool m_ForeCustomize;
+        public bool ForeCustomize
+        {
+            get { return m_ForeCustomize; }
+        }
+
         private Font m_Font;
         public Font Font
         {
@@ -230,7 +242,7 @@ namespace GISShare.Controls.WinForm
         }
 
         public TextRenderEventArgs(Graphics graphics, object obj, bool enabled, bool haveShadow, bool isMiddle,
-            string text, Color foreColor, Font font, Rectangle textBounds, StringFormat stringFormat)
+            string text, bool foreCustomize, Color foreColor, Color shadowColor, Font font, Rectangle textBounds, StringFormat stringFormat)
         {
             this.m_Graphics = graphics;
             this.m_Object = obj;
@@ -238,55 +250,63 @@ namespace GISShare.Controls.WinForm
             this.m_HaveShadow = haveShadow;
             this.m_IsMiddle = isMiddle;
             this.m_Text = text;
+            this.m_ForeCustomize = foreCustomize;
             this.m_ForeColor = foreColor;
+            this.m_ShadowColor = shadowColor;
             this.m_Font = font;
             this.m_TextBounds = textBounds;
             this.m_StringFormat = stringFormat;
         }
 
         public TextRenderEventArgs(Graphics graphics, object obj, bool enabled, bool haveShadow,
-            string text, Color foreColor, Font font, Rectangle textBounds, StringFormat stringFormat)
+            string text, bool foreCustomize, Color foreColor, Color shadowColor, Font font, Rectangle textBounds, StringFormat stringFormat)
         {
             this.m_Graphics = graphics;
             this.m_Object = obj;
             this.m_Enabled = enabled;
             this.m_HaveShadow = haveShadow;
             this.m_Text = text;
+            this.m_ForeCustomize = foreCustomize;
             this.m_ForeColor = foreColor;
+            this.m_ShadowColor = shadowColor;
             this.m_Font = font;
             this.m_TextBounds = textBounds;
             this.m_StringFormat = stringFormat;
         }
 
         public TextRenderEventArgs(Graphics graphics, object obj, bool enabled, bool haveShadow,
-            string text, Color foreColor, Font font, Rectangle textBounds)
+            string text, bool foreCustomize, Color foreColor, Color shadowColor, Font font, Rectangle textBounds)
         {
             this.m_Graphics = graphics;
             this.m_Object = obj;
             this.m_Enabled = enabled;
             this.m_HaveShadow = haveShadow;
             this.m_Text = text;
+            this.m_ForeCustomize = foreCustomize;
             this.m_ForeColor = foreColor;
+            this.m_ShadowColor = shadowColor;
             this.m_Font = font;
             this.m_TextBounds = textBounds;
             //
             this.m_StringFormat.Trimming = StringTrimming.EllipsisCharacter;
         }
 
-        public TextRenderEventArgs(Graphics graphics, object obj, bool enabled,
-            string text, Color foreColor, Font font, Rectangle textBounds)
-        {
-            this.m_Graphics = graphics;
-            this.m_Object = obj;
-            this.m_Enabled = enabled;
-            this.m_Text = text;
-            this.m_ForeColor = foreColor;
-            this.m_Font = font;
-            this.m_TextBounds = textBounds;
-            //
-            this.m_HaveShadow = true;
-            this.m_StringFormat.Trimming = StringTrimming.EllipsisCharacter;
-        }
+        //public TextRenderEventArgs(Graphics graphics, object obj, bool enabled,
+        //    string text, bool foreCustomize, Color foreColor, Color shadowColor, Font font, Rectangle textBounds)
+        //{
+        //    this.m_Graphics = graphics;
+        //    this.m_Object = obj;
+        //    this.m_Enabled = enabled;
+        //    this.m_Text = text;
+        //    this.m_ForeCustomize = foreCustomize;
+        //    this.m_ForeColor = foreColor;
+        //    this.m_ShadowColor = shadowColor;
+        //    this.m_Font = font;
+        //    this.m_TextBounds = textBounds;
+        //    //
+        //    this.m_HaveShadow = true;
+        //    this.m_StringFormat.Trimming = StringTrimming.EllipsisCharacter;
+        //}
     }
 
     public class ArrowRenderEventArgs

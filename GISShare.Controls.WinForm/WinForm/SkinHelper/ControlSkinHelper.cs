@@ -170,6 +170,27 @@ namespace GISShare.Controls.WinForm
             }
         }
 
+        private bool m_HaveShadow = true;
+        public bool HaveShadow
+        {
+            get { return m_HaveShadow; }
+            set { m_HaveShadow = value; }
+        }
+
+        private Color m_ShadowColor = System.Drawing.SystemColors.ControlText;
+        public Color ShadowColor
+        {
+            get { return m_ShadowColor; }
+            set { m_ShadowColor = value; }
+        }
+
+        private bool m_ForeCustomize = false;
+        public bool ForeCustomize
+        {
+            get { return m_ForeCustomize; }
+            set { m_ForeCustomize = value; }
+        }
+
         public int Height
         {
             get

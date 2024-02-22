@@ -23,7 +23,7 @@ namespace GISShare.Controls.WinForm.WFNew.DockPanel
                 //        return 0;
                 //    case FormBorderStyle.Sizable:
                 //    case FormBorderStyle.SizableToolWindow:
-                //        return 2 * SystemInformation.FrameBorderSize.Width;
+                //        return 2 * SystemInformationX.FrameBorderSize.Width;
                 //    case FormBorderStyle.Fixed3D:
                 //    case FormBorderStyle.FixedDialog:
                 //    case FormBorderStyle.FixedSingle:
@@ -46,7 +46,7 @@ namespace GISShare.Controls.WinForm.WFNew.DockPanel
                 //    case FormBorderStyle.Fixed3D:
                 //    case FormBorderStyle.FixedDialog:
                 //    case FormBorderStyle.FixedSingle:
-                //        return SystemInformation.CaptionHeight + 2 * SystemInformation.FrameBorderSize.Height;
+                //        return SystemInformation.CaptionHeight + 2 * SystemInformationX.FrameBorderSize.Height;
                 //    case FormBorderStyle.FixedToolWindow:
                 //    case FormBorderStyle.SizableToolWindow:
                 //        return SystemInformation.ToolWindowCaptionHeight + 2 * SystemInformation.FixedFrameBorderSize.Height;

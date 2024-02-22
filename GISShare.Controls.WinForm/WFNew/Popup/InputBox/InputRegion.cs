@@ -168,7 +168,7 @@ namespace GISShare.Controls.WinForm.WFNew
         /// </summary>
         /// <param name="strText"></param>
         /// <returns></returns>
-        protected virtual string FilterText(string strText) 
+        protected virtual string FilterText(string strText)
         {
             return strText;
         }
@@ -224,6 +224,8 @@ namespace GISShare.Controls.WinForm.WFNew
             this.m_TextBox.Text = this.m_pInputObject.InputText;
             this.m_TextBox.Font = this.m_pInputObject.InputFont;
             this.m_TextBox.ForeColor = this.m_pInputObject.InputForeColor;
+            //
+            if (this.m_TextBox.ReadOnly && !this.m_pInputObject.CanSelect) return;
             //
             Rectangle rectangle = this.m_pInputObject.InputRegionRectangle;
             this.m_ToolStripControlHost.Size = rectangle.Size;

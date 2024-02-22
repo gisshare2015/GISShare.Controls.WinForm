@@ -133,7 +133,7 @@ namespace GISShare.Controls.WinForm.WFNew
 
         private Font m_Font = new Font("宋体", 9f);
         [Browsable(true), DefaultValue(typeof(Font), "\"宋体\", 9f"), Description("字体"), Category("外观")]
-        public Font Font
+        public virtual Font Font
         {
             get { return m_Font; }
             set { m_Font = value; }
@@ -141,10 +141,34 @@ namespace GISShare.Controls.WinForm.WFNew
 
         private Color m_ForeColor = System.Drawing.SystemColors.ControlText;
         [Browsable(true), DefaultValue(typeof(Color), "System.Drawing.SystemColors.ControlText"), Description("字体颜色"), Category("外观")]
-        public Color ForeColor
+        public virtual Color ForeColor
         {
             get { return m_ForeColor; }
             set { m_ForeColor = value; }
+        }
+
+        private bool m_HaveShadow = true;
+        [Browsable(true), DefaultValue(true), Description("是否有字体阴影"), Category("状态")]
+        public virtual bool HaveShadow
+        {
+            get { return m_HaveShadow; }
+            set { m_HaveShadow = value; }
+        }
+
+        private Color m_ShadowColor = System.Drawing.SystemColors.ControlText;
+        [Browsable(true), DefaultValue(typeof(Color), "System.Drawing.SystemColors.ControlText"), Description("字体阴影颜色"), Category("外观")]
+        public virtual Color ShadowColor
+        {
+            get { return m_ShadowColor; }
+            set { m_ShadowColor = value; }
+        }
+
+        private bool m_ForeCustomize = false;
+        [Browsable(true), DefaultValue(false), Description("自定义文本色"), Category("状态")]
+        public virtual bool ForeCustomize
+        {
+            get { return m_ForeCustomize; }
+            set { m_ForeCustomize = value; }
         }
 
         [Browsable(false), Description("高度（与Size属性有关）"), Category("布局")]

@@ -164,6 +164,8 @@ namespace GISShare.Controls.WinForm
                         this.Enabled,
                         false,
                         item.Text,
+                        false,
+                        item.ForeColor,
                         item.ForeColor,
                         item.Font,
                         rectangle
@@ -219,7 +221,7 @@ namespace GISShare.Controls.WinForm
                             this.Enabled,
                             false,
                             item.Text,
-                            item.ForeColor,
+                            false, item.ForeColor, item.ForeColor,
                             item.Font,
                             rectangle
                             )
@@ -244,7 +246,7 @@ namespace GISShare.Controls.WinForm
                             this.Enabled,
                             false,
                             item.Text,
-                            item.ForeColor,
+                            false, item.ForeColor, item.ForeColor,
                             item.Font,
                             rectangle
                             )
@@ -308,7 +310,7 @@ namespace GISShare.Controls.WinForm
                 );
             GISShare.Controls.WinForm.WinFormRenderer.WinFormRendererStrategy.OnRenderText
                 (
-                new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, false, item.Text, item.ForeColor, item.Font, rectangle)
+                new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, false, item.Text, false, item.ForeColor, item.ForeColor, item.Font, rectangle)
                 );
             //
             return true;
@@ -346,7 +348,7 @@ namespace GISShare.Controls.WinForm
                     );
                 GISShare.Controls.WinForm.WinFormRenderer.WinFormRendererStrategy.OnRenderText
                     (
-                    new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, false, item.Text, item.ForeColor, item.Font, rectangle)
+                    new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, false, item.Text, false, item.ForeColor, item.ForeColor, item.Font, rectangle)
                     );
                 #endregion
             }
@@ -377,7 +379,7 @@ namespace GISShare.Controls.WinForm
                     );
                 GISShare.Controls.WinForm.WinFormRenderer.WinFormRendererStrategy.OnRenderText
                     (
-                    new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, false, item.Text, item.ForeColor, item.Font, rectangle)
+                    new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, false, item.Text, false, item.ForeColor, item.ForeColor, item.Font, rectangle)
                     );
                 #endregion
             }
@@ -417,7 +419,7 @@ namespace GISShare.Controls.WinForm
                     );
                 GISShare.Controls.WinForm.WinFormRenderer.WinFormRendererStrategy.OnRenderText
                     (
-                    new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, false, item.Text, e.ForeColor, e.Font, rectangle)
+                    new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, false, item.Text, false, e.ForeColor, e.ForeColor, e.Font, rectangle)
                     );
                 #endregion
             }
@@ -449,7 +451,7 @@ namespace GISShare.Controls.WinForm
                     );
                 GISShare.Controls.WinForm.WinFormRenderer.WinFormRendererStrategy.OnRenderText
                     (
-                    new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, false, item.Text, e.ForeColor, e.Font, rectangle)
+                    new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, false, item.Text, false, e.ForeColor, e.ForeColor, e.Font, rectangle)
                     );
                 #endregion
             }

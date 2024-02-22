@@ -915,7 +915,7 @@ namespace GISShare.Controls.WinForm
                     new GISShare.Controls.WinForm.ImageRenderEventArgs(e.Graphics, this, this.Enabled, this.Image, this.ImageRectangle));
             }
             GISShare.Controls.WinForm.WinFormRenderer.WinFormRendererStrategy.OnRenderText(
-                new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.Text, this.ForeColor, this.Font, this.TextRectangle));
+                new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.HaveShadow, this.Text, this.ForeCustomize, this.ForeColor, this.ShadowColor, this.Font, this.TextRectangle));
         }
 
         protected virtual void OnCheckedChanged(EventArgs e)

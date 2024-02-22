@@ -5,14 +5,14 @@ using System.Text;
 
 namespace GISShare.Controls.WinForm.WFNew.View
 {
-    public interface IViewItemList : IBaseItem, IViewLayoutList
+    public interface IViewItemList : IArea, IViewLayoutList
     {
-        bool ShowOutLine { get; set; }
+        //bool ShowOutLine { get; set; }
 
-        Color BackColor { get; set; }
+        //Color BackColor { get; set; }
 
         int LeftOffset { get;  }
 
-        Rectangle FrameRectangle { get; }
+        //Rectangle FrameRectangle { get; }
     }
 }

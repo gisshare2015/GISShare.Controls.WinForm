@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace GISShare.Controls.WinForm.WFNew.View
 {
-    public class ViewItemListBoxItem : BaseItem,
+    public class ViewItemListBoxItem : AreaItem,
         ICollectionItem, ICollectionItem2, ICollectionItem3, IUICollectionItem,
         IScrollableObjectHelper,
         IViewList,
@@ -38,13 +38,14 @@ namespace GISShare.Controls.WinForm.WFNew.View
         {
             base.AutoGetFocus = true;
             //base.BackColor = System.Drawing.SystemColors.Window;
+            base.ShowOutLine = true;
             //
             this.m_BaseItemCollection = new BaseItemCollection(this);
             this.m_VScrollBarItem = new VScrollBarItem();
             this.m_BaseItemCollection.Add(this.m_VScrollBarItem);
             this.m_HScrollBarItem = new HScrollBarItem();
             this.m_BaseItemCollection.Add(this.m_HScrollBarItem);
-            ((ILockCollectionHelper)this.m_BaseItemCollection).SetLocked(false);
+            ((ILockCollectionHelper)this.m_BaseItemCollection).SetLocked(true);
             //
             this.m_ViewItemCollection = new ViewItemCollection(this);
             this.m_SelectedIndices = new SelectedIndexCollection(this);
@@ -134,7 +135,7 @@ namespace GISShare.Controls.WinForm.WFNew.View
         {
             get
             {
-                Rectangle rectangle = this.DisplayRectangle;
+                Rectangle rectangle = this.AreaRectangle;// this.DisplayRectangle;
                 if (this.ShowOutLine) return Rectangle.FromLTRB(rectangle.Left + 1, rectangle.Top + 1, rectangle.Right - 1, rectangle.Bottom - 1);
                 return rectangle;
             }
@@ -435,21 +436,21 @@ namespace GISShare.Controls.WinForm.WFNew.View
         #endregion
 
         #region IViewItemList
-        private bool m_ShowOutLine = true;
-        [Browsable(true), DefaultValue(true), Description("显示外框线"), Category("外观")]
-        public virtual bool ShowOutLine
-        {
-            get { return m_ShowOutLine; }
-            set { m_ShowOutLine = value; }
-        }
+        //private bool m_ShowOutLine = true;
+        //[Browsable(true), DefaultValue(true), Description("显示外框线"), Category("外观")]
+        //public virtual bool ShowOutLine
+        //{
+        //    get { return m_ShowOutLine; }
+        //    set { m_ShowOutLine = value; }
+        //}
 
-        private Color m_BackColor = System.Drawing.SystemColors.Window;
-        [Browsable(true), Description("背景色"), Category("外观")]
-        public Color BackColor
-        {
-            get { return m_BackColor; }
-            set { m_BackColor = value; }
-        }
+        //private Color m_BackColor = System.Drawing.SystemColors.Window;
+        //[Browsable(true), Description("背景色"), Category("外观")]
+        //public Color BackColor
+        //{
+        //    get { return m_BackColor; }
+        //    set { m_BackColor = value; }
+        //}
 
         [Browsable(false), Description("左侧偏移量"), Category("布局")]
         public int LeftOffset
@@ -457,15 +458,15 @@ namespace GISShare.Controls.WinForm.WFNew.View
             get { return this.m_HScrollBarItem.GetEffectiveValue(); }
         }
 
-        [Browsable(false), Description("框架矩形框"), Category("布局")]
-        public Rectangle FrameRectangle
-        {
-            get
-            {
-                Rectangle rectangle = this.DisplayRectangle;
-                return new Rectangle(rectangle.X, rectangle.Y, rectangle.Width - 1, rectangle.Height - 1);
-            }
-        }
+        //[Browsable(false), Description("框架矩形框"), Category("布局")]
+        //public Rectangle FrameRectangle
+        //{
+        //    get
+        //    {
+        //        Rectangle rectangle = this.DisplayRectangle;
+        //        return new Rectangle(rectangle.X, rectangle.Y, rectangle.Width - 1, rectangle.Height - 1);
+        //    }
+        //}
         #endregion
 
         #region IViewItemList2
@@ -521,6 +522,14 @@ namespace GISShare.Controls.WinForm.WFNew.View
         {
             get { return m_CanEdit; }
             set { m_CanEdit = value; }
+        }
+
+        bool m_CanSelect = false;
+        [Browsable(true), DefaultValue(false), Description("是否可以选择"), Category("状态")]
+        public virtual bool CanSelect
+        {
+            get { return m_CanSelect; }
+            set { m_CanSelect = value; }
         }
 
         [Browsable(false), DefaultValue(-1), Description("选择ViewItem索引"), Category("属性")]
@@ -1101,21 +1110,25 @@ namespace GISShare.Controls.WinForm.WFNew.View
                 //Control ctr = this.TryGetDependControl();
                 //if (ctr != null && !ctr.Focused) ctr.Focus();
                 ////
-                if (this.Enabled && this.CanEdit)
+                if (this.SelectedItem != null && this.Enabled && (this.CanEdit || this.CanSelect))
                 {
-                    ITextEditViewItem pTextEditViewItem = this.SelectedItem as ITextEditViewItem;
-                    if (pTextEditViewItem != null &&
-                        pTextEditViewItem.CanEdit &&
-                        pTextEditViewItem.InputRegionRectangle.Contains(e.Location))
+                    ISuperViewItem pSuperViewItem = this.SelectedItem as ISuperViewItem;
+                    if (pSuperViewItem == null || pSuperViewItem.BaseItemObject == null)
                     {
-                        Rectangle rectangle = ((IInputObject)this).InputRegionRectangle;
-                        if (rectangle.Width > 6 && rectangle.Height > 6)
+                        ITextEditViewItem pTextEditViewItem = this.SelectedItem as ITextEditViewItem;
+                        if (pTextEditViewItem != null &&
+                            pTextEditViewItem.CanEdit &&
+                            pTextEditViewItem.InputRegionRectangle.Contains(e.Location))
                         {
-                            this.m_InputRegion.Tag = pTextEditViewItem.EditObject;
-                            if (this.m_InputRegion.Tag is IViewItem)
+                            Rectangle rectangle = ((IInputObject)this).InputRegionRectangle;
+                            if (rectangle.Width > 6 && rectangle.Height > 6)
                             {
-                                this.m_InputRegion.ShowInputRegion();
-                                return;
+                                this.m_InputRegion.Tag = pTextEditViewItem.EditObject;
+                                if (this.m_InputRegion.Tag is IViewItem)
+                                {
+                                    this.m_InputRegion.ShowInputRegion();
+                                    return;
+                                }
                             }
                         }
                     }
@@ -1296,11 +1309,11 @@ namespace GISShare.Controls.WinForm.WFNew.View
             base.OnMouseWheel(e);
         }
 
-        protected override void OnDraw(PaintEventArgs e)
-        {
-            GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderViewItemList(
-                new ObjectRenderEventArgs(e.Graphics, this, this.DisplayRectangle));
-        }
+        //protected override void OnDraw(PaintEventArgs e)
+        //{
+        //    GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderViewItemList(
+        //        new ObjectRenderEventArgs(e.Graphics, this, this.DisplayRectangle));
+        //}
         
         //
         protected virtual void OnSelectedIndexChanged(IntValueChangedEventArgs e)

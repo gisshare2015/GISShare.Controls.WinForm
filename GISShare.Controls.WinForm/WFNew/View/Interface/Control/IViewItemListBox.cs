@@ -8,6 +8,7 @@ namespace GISShare.Controls.WinForm.WFNew.View
     public interface IViewItemListBox : IViewItemList
     {
         bool CanEdit { get; set; }
+        bool CanSelect { get; set; }
 
         int SelectedIndex { get; set; }
 

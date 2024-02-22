@@ -628,11 +628,11 @@ namespace GISShare.Controls.WinForm.WFNew.DockPanel
                     break;
                 case FormBorderStyle.Sizable:
                     iCaptionHeight = SystemInformation.CaptionHeight;
-                    borderSize = SystemInformation.FrameBorderSize;
+                    borderSize = SystemInformationX.FrameBorderSize;
                     break;
                 case FormBorderStyle.SizableToolWindow:
                     iCaptionHeight = SystemInformation.ToolWindowCaptionHeight;
-                    borderSize = SystemInformation.FrameBorderSize;
+                    borderSize = SystemInformationX.FrameBorderSize;
                     break;
                 case FormBorderStyle.Fixed3D:
                     iCaptionHeight = SystemInformation.CaptionHeight;
@@ -652,10 +652,10 @@ namespace GISShare.Controls.WinForm.WFNew.DockPanel
                     break;
                 default:
                     iCaptionHeight = SystemInformation.CaptionHeight;
-                    borderSize = SystemInformation.FrameBorderSize;
+                    borderSize = SystemInformationX.FrameBorderSize;
                     break;
             }
-            if (dockPanelForm.DockPanelManager.ParentForm is RibbonForm) borderSize = SystemInformation.FrameBorderSize;
+            if (dockPanelForm.DockPanelManager.ParentForm is RibbonForm) borderSize = SystemInformationX.FrameBorderSize;
             #region 已抛弃
             //int iCaptionHeight = 26;
             //Size borderSize = new Size(4, 4);

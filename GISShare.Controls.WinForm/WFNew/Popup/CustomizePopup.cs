@@ -22,7 +22,7 @@ namespace GISShare.Controls.WinForm.WFNew
             this.m_ToolStripControlHost.BackColor = base.BackColor;
             this.m_ToolStripControlHost.Margin = new Padding(0);
             this.m_ToolStripControlHost.Padding = new Padding(0);
-            base.Items.Add(this.m_ToolStripControlHost);
+            this.Items.Add(this.m_ToolStripControlHost);
             //
             this.Margin = new Padding(0);
             this.Padding = new Padding(1);

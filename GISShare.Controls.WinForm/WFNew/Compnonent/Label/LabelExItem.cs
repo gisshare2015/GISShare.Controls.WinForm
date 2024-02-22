@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    public class LabelExItem : BaseItem, ILabelItem, ILabelExItem//, IMeasureHelper
+    public class LabelExItem : AreaItem, ILabelItem, ILabelExItem//, IMeasureHelper
     {
         #region 构造函数
         public LabelExItem() { }
@@ -272,7 +272,7 @@ namespace GISShare.Controls.WinForm.WFNew
             GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderLabel(
                 new GISShare.Controls.WinForm.ObjectRenderEventArgs(e.Graphics, this, this.DisplayRectangle));
             GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonText(
-                new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.Text, this.ForeColor, this.Font, this.TextRectangle));
+                new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.HaveShadow, this.Text, this.ForeCustomize,  this.ForeColor, this.ShadowColor, this.Font, this.TextRectangle));
         }
     }
 }

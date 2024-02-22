@@ -179,7 +179,7 @@ namespace GISShare.Controls.WinForm.WFNew.Design
                 {
                     item.LineDistance = 2;
                     item.ColumnDistance = 2;
-                    //item.ShowBackgroud = true;
+                    //item.ShowBackground = true;
                 }
             }
             else if (pComponent is RibbonBarItem)

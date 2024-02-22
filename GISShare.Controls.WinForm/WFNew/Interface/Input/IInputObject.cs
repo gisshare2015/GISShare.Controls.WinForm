@@ -9,6 +9,8 @@ namespace GISShare.Controls.WinForm.WFNew
     {
         bool CanEdit { get; set; }
 
+        bool CanSelect { get; set; }
+
         string InputText { get; set; }
 
         Font InputFont { get; }

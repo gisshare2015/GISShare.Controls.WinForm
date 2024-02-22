@@ -11,7 +11,7 @@ namespace GISShare.Controls.WinForm.WFNew
     {
         int RoundWidth { get; set;}
 
-        bool ShowBackground { get; set;}
+        //bool ShowBackground { get; set;}
 
         QuickAccessToolbarStyle eQuickAccessToolbarStyle { get; set; }
 

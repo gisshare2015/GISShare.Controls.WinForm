@@ -29,17 +29,46 @@ namespace GISShare.Controls.WinForm.WFNew
         #region RibbonArea
         public override void OnRenderRibbonArea(ObjectRenderEventArgs e)
         {
-            WFNew.IArea pRibbonArea = e.Object as WFNew.IArea;
-            if (pRibbonArea.ShowBackgroud)
+            WFNew.IArea2 pRibbonArea = e.Object as WFNew.IArea2;
+            if (pRibbonArea.ShowBackground)
             {
-                using (SolidBrush b = new SolidBrush(this.WFNewColorTable.RibbonAreaDisabledBackground))
+                using (SolidBrush b = new SolidBrush(pRibbonArea.AreaCustomize ? pRibbonArea.BackgroundColor : this.WFNewColorTable.RibbonAreaDisabledBackground))
                 {
                     e.Graphics.FillRectangle(b, e.Bounds);
                 }
             }
+            if (pRibbonArea.BackgroundImage != null && !(pRibbonArea is Control))
+            {
+                Rectangle rectangle = pRibbonArea.FrameRectangle;
+                switch (pRibbonArea.BackgroundImageLayout)
+                {
+                    case ImageLayout.Center:
+                        rectangle = Rectangle.FromLTRB(rectangle.Left + 1, rectangle.Top + 1, rectangle.Right - 1, rectangle.Bottom - 1);
+                        rectangle = new Rectangle(rectangle.X + (rectangle.Width - pRibbonArea.BackgroundImage.Width), rectangle.Y + (rectangle.Height - pRibbonArea.BackgroundImage.Height), pRibbonArea.BackgroundImage.Width, pRibbonArea.BackgroundImage.Height);
+                        this.OnRenderRibbonImage(new ImageRenderEventArgs(e.Graphics, this, ((IBaseItem)pRibbonArea).Enabled, pRibbonArea.BackgroundImage, rectangle));
+                        break;
+                    case ImageLayout.Stretch:
+                        rectangle = Rectangle.FromLTRB(rectangle.Left + 1, rectangle.Top + 1, rectangle.Right - 1, rectangle.Bottom - 1);
+                        this.OnRenderRibbonImage(new ImageRenderEventArgs(e.Graphics, this, ((IBaseItem)pRibbonArea).Enabled, pRibbonArea.BackgroundImage, rectangle));
+                        break;
+                    case ImageLayout.Tile:
+                        rectangle = new Rectangle(rectangle.X + 1, rectangle.Y + 1, pRibbonArea.BackgroundImage.Width, pRibbonArea.BackgroundImage.Height);
+                        this.OnRenderRibbonImage(new ImageRenderEventArgs(e.Graphics, this, ((IBaseItem)pRibbonArea).Enabled, pRibbonArea.BackgroundImage, rectangle));
+                        break;
+                    case ImageLayout.Zoom:
+                        rectangle = Rectangle.FromLTRB(rectangle.Left + 1, rectangle.Top + 1, rectangle.Right - 1, rectangle.Bottom - 1);
+                        this.OnRenderRibbonImage(new ImageRenderEventArgs(e.Graphics, this, ((IBaseItem)pRibbonArea).Enabled, pRibbonArea.BackgroundImage, rectangle));
+                        break;
+                    case ImageLayout.None:
+                    default:
+                        rectangle = new Rectangle(rectangle.X + 1, rectangle.Y + 1, pRibbonArea.BackgroundImage.Width, pRibbonArea.BackgroundImage.Height);
+                        this.OnRenderRibbonImage(new ImageRenderEventArgs(e.Graphics, this, ((IBaseItem)pRibbonArea).Enabled, pRibbonArea.BackgroundImage, rectangle));
+                        break;
+                }
+            }
             if (pRibbonArea.ShowOutLine)
             {
-                using (Pen p = new Pen(this.WFNewColorTable.RibbonAreaOutLine))
+                using (Pen p = new Pen(pRibbonArea.AreaCustomize ? pRibbonArea.OutLineColor : this.WFNewColorTable.RibbonAreaOutLine))
                 {
                     e.Graphics.DrawRectangle(p, pRibbonArea.FrameRectangle);
                 }
@@ -238,19 +267,19 @@ namespace GISShare.Controls.WinForm.WFNew
                         (
                         e.Graphics,
                         e.Text,
-                        new Font(SystemFonts.CaptionFont, FontStyle.Regular),
+                        e.ForeCustomize ? e.Font : new Font(SystemFonts.CaptionFont, FontStyle.Regular),
                         e.TextBounds,
-                        this.WFNewColorTable.FormCaptionText
+                        e.ForeCustomize ? e.ForeColor : this.WFNewColorTable.FormCaptionText
                         );
                 }
                 else
                 {
-                    using (SolidBrush b = new SolidBrush(this.WFNewColorTable.FormCaptionText))
+                    using (SolidBrush b = new SolidBrush(e.ForeCustomize ? e.ForeColor : this.WFNewColorTable.FormCaptionText))
                     {
                         e.Graphics.DrawString
                             (
                             e.Text,
-                            new Font(SystemFonts.CaptionFont, FontStyle.Regular), 
+                            e.ForeCustomize ? e.Font : new Font(SystemFonts.CaptionFont, FontStyle.Regular), 
                             b, 
                             e.TextBounds,
                             e.StringFormat
@@ -266,7 +295,7 @@ namespace GISShare.Controls.WinForm.WFNew
                         (
                         e.Graphics,
                         e.Text,
-                        new Font(SystemFonts.CaptionFont, FontStyle.Regular),
+                        e.ForeCustomize ? e.Font : new Font(SystemFonts.CaptionFont, FontStyle.Regular),
                         e.TextBounds,
                         this.WFNewColorTable.FormDisabledCaptionText
                         );
@@ -278,7 +307,7 @@ namespace GISShare.Controls.WinForm.WFNew
                         e.Graphics.DrawString
                             (
                             e.Text,
-                            new Font(SystemFonts.CaptionFont, FontStyle.Regular), 
+                            e.ForeCustomize ? e.Font : new Font(SystemFonts.CaptionFont, FontStyle.Regular), 
                             b,
                             e.TextBounds, 
                             e.StringFormat
@@ -1618,7 +1647,7 @@ namespace GISShare.Controls.WinForm.WFNew
             if (pRibbonPage == null) return;
             if (pRibbonPage.Enabled)
             {
-                if (!pRibbonPage.ShowBackgroud) return;
+                if (!pRibbonPage.ShowBackground) return;
                 Rectangle rectangle = pRibbonPage.DisplayRectangle;
                 if (rectangle.Width > 0 && rectangle.Height > 0)
                 {
@@ -2879,14 +2908,14 @@ namespace GISShare.Controls.WinForm.WFNew
         #region Label
         public override void OnRenderLabel(ObjectRenderEventArgs e)
         {
-
+            this.OnRenderRibbonArea(e);
         }
         #endregion
 
         #region LinkLabel
         public override void OnRenderLinkLabel(ObjectRenderEventArgs e)
         {
-
+            this.OnRenderRibbonArea(e);
         }
         #endregion
 
@@ -3288,7 +3317,7 @@ namespace GISShare.Controls.WinForm.WFNew
             using (GraphicsPath path = GISShare.Controls.WinForm.Util.UtilTX.CreateRoundRectangle(outRectangle,
                 iLeftTopRadius, iRightTopRadius, iLeftBottomRadius, iRightBottomRadius))
             {
-                using (Pen p = new Pen(this.WFNewColorTable.ButtonomalBorderOut))
+                using (Pen p = new Pen(this.WFNewColorTable.ButtonNomalBorderOut))
                 {
                     g.DrawPath(p, path);
                 }
@@ -3304,10 +3333,10 @@ namespace GISShare.Controls.WinForm.WFNew
                 pos[2] = 0.35F;
                 pos[3] = 1.0F;
                 Color[] colors = new Color[4];
-                colors[0] = this.GetColor(this.WFNewColorTable.Buttonomal, 0, 35, 24, 9);
-                colors[1] = this.GetColor(this.WFNewColorTable.Buttonomal, 0, 13, 8, 3);
-                colors[2] = this.WFNewColorTable.Buttonomal;
-                colors[3] = this.GetColor(this.WFNewColorTable.Buttonomal, 0, 28, 29, 14);
+                colors[0] = this.GetColor(this.WFNewColorTable.ButtonNomal, 0, 35, 24, 9);
+                colors[1] = this.GetColor(this.WFNewColorTable.ButtonNomal, 0, 13, 8, 3);
+                colors[2] = this.WFNewColorTable.ButtonNomal;
+                colors[3] = this.GetColor(this.WFNewColorTable.ButtonNomal, 0, 28, 29, 14);
                 ColorBlend mix = new ColorBlend();
                 mix.Colors = colors;
                 mix.Positions = pos;
@@ -3319,7 +3348,7 @@ namespace GISShare.Controls.WinForm.WFNew
                 using (GraphicsPath path2 = GISShare.Controls.WinForm.Util.UtilTX.CreateRoundRectangle(glossyRectangle, iLeftTopRadius, iRightTopRadius, 0, 0))
                 {
                     using (LinearGradientBrush b = new LinearGradientBrush(glossyRectangle,
-                        this.WFNewColorTable.ButtonomalGlossyBegin, this.WFNewColorTable.ButtonomalGlossyEnd, 90))
+                        this.WFNewColorTable.ButtonNomalGlossyBegin, this.WFNewColorTable.ButtonNomalGlossyEnd, 90))
                     {
                         //g.FillPath(new SolidBrush(Color.FromArgb(60, 255, 255, 255)), path);
                         b.WrapMode = WrapMode.TileFlipXY;
@@ -3328,7 +3357,7 @@ namespace GISShare.Controls.WinForm.WFNew
                 }
                 #endregion
                 //
-                using (Pen p = new Pen(this.WFNewColorTable.ButtonomalBorderIn))
+                using (Pen p = new Pen(this.WFNewColorTable.ButtonNomalBorderIn))
                 {
                     g.DrawPath(p, path);
                 }
@@ -3831,6 +3860,25 @@ namespace GISShare.Controls.WinForm.WFNew
                         }
                     }
                     break;
+                case GlyphStyle.eCross:
+                    if (rectangle.Width < rectangle.Height) 
+                    {
+                        rectangle = new Rectangle(rectangle.Left, (rectangle.Top + rectangle.Bottom - rectangle.Width) / 2, rectangle.Width, rectangle.Width);
+                    }
+                    else if (rectangle.Width > rectangle.Height)
+                    {
+                        rectangle = new Rectangle((rectangle.Left + rectangle.Right - rectangle.Height) / 2, rectangle.Top, rectangle.Height, rectangle.Height);
+                    }
+                    using (Pen pen = new Pen(this.WFNewColorTable.Arrow))
+                    {
+                        e.Graphics.DrawLine(pen, rectangle.Left, rectangle.Top, rectangle.Right - 1, rectangle.Bottom);
+                        e.Graphics.DrawLine(pen, rectangle.Left + 1, rectangle.Top, rectangle.Right, rectangle.Bottom);
+                        e.Graphics.DrawLine(pen, rectangle.Right - 1, rectangle.Top, rectangle.Left, rectangle.Bottom);
+                        e.Graphics.DrawLine(pen, rectangle.Right, rectangle.Top, rectangle.Left + 1, rectangle.Bottom);
+                    }
+                    break;
+                default:
+                    break;
             }
         }
         #endregion
@@ -3928,12 +3976,12 @@ namespace GISShare.Controls.WinForm.WFNew
                     break;
                 case GISShare.Controls.WinForm.WFNew.BaseItemState.eNormal:
                 default:
-                    if (!pButtonItem.Checked) { this.DrawSplitButtonomal(e.Graphics, pButtonItem, e.Bounds, 3); }
+                    if (!pButtonItem.Checked) { this.DrawSplitButtonNomal(e.Graphics, pButtonItem, e.Bounds, 3); }
                     else if (pButtonItem.NomalChecked) { this.DrawSplitButtonChecked(e.Graphics, pButtonItem, e.Bounds, 3); }
                     break;
             }
         }
-        private void DrawSplitButtonomal(Graphics g, WFNew.ISplitButtonItem pButtonItem, Rectangle rectangle, int iSpilt)
+        private void DrawSplitButtonNomal(Graphics g, WFNew.ISplitButtonItem pButtonItem, Rectangle rectangle, int iSpilt)
         {
             if (pButtonItem.ShowNomalState)
             {
@@ -3943,12 +3991,12 @@ namespace GISShare.Controls.WinForm.WFNew
                 {
                     int oneX = 0, oneY = 0, twoX = 0, twoY = 0;
                     Rectangle splitRectangle = pButtonItem.SplitRectangle;
-                    using (Pen p = new Pen(this.WFNewColorTable.ButtonomalBorderOut))
+                    using (Pen p = new Pen(this.WFNewColorTable.ButtonNomalBorderOut))
                     {
                         this.GetSplitLine1(pButtonItem.eArrowDock, splitRectangle, ref oneX, ref oneY, ref twoX, ref twoY);
                         g.DrawLine(p, oneX, oneY, twoX, twoY);
                     }
-                    using (Pen p = new Pen(this.WFNewColorTable.ButtonomalBorderIn))
+                    using (Pen p = new Pen(this.WFNewColorTable.ButtonNomalBorderIn))
                     {
                         this.GetSplitLine2(pButtonItem.eArrowDock, splitRectangle, ref oneX, ref oneY, ref twoX, ref twoY);
                         g.DrawLine(p, oneX, oneY, twoX, twoY);
@@ -3961,7 +4009,7 @@ namespace GISShare.Controls.WinForm.WFNew
                 {
                     int oneX = 0, oneY = 0, twoX = 0, twoY = 0;
                     Rectangle splitRectangle = pButtonItem.SplitRectangle;
-                    using (Pen p = new Pen(this.WFNewColorTable.ButtonomalBorderOut))
+                    using (Pen p = new Pen(this.WFNewColorTable.ButtonNomalBorderOut))
                     {
                         this.GetSplitLine3(pButtonItem.eArrowDock, splitRectangle, ref oneX, ref oneY, ref twoX, ref twoY);
                         g.DrawLine(p, oneX, oneY, twoX, twoY);
@@ -4809,6 +4857,39 @@ namespace GISShare.Controls.WinForm.WFNew
         }
         #endregion
 
+        #region PlayProcessBar
+        public override void OnRenderPlayProcessBar(ObjectRenderEventArgs e)
+        {
+            this.OnRenderProcessBar(e);
+        }
+        #endregion
+
+        #region PlayProcessBarButton
+        public override void OnRenderPlayProcessBarButton(ObjectRenderEventArgs e)
+        {
+            IPlayProcessBarButton pPlayProcessBarButton = e.Object as IPlayProcessBarButton;
+            if (pPlayProcessBarButton == null) return;
+            //
+            switch (pPlayProcessBarButton.eBaseItemState)
+            {
+                case GISShare.Controls.WinForm.WFNew.BaseItemState.eHot:
+                    this.DrawBaseButtonSelected(e.Graphics, pPlayProcessBarButton, e.Bounds, 2);
+                    break;
+                case GISShare.Controls.WinForm.WFNew.BaseItemState.ePressed:
+                    this.DrawBaseButtonPressed(e.Graphics, pPlayProcessBarButton, e.Bounds, 2);
+                    break;
+                case GISShare.Controls.WinForm.WFNew.BaseItemState.eDisabled:
+                    this.DrawBaseButtonDisabled(e.Graphics, pPlayProcessBarButton, e.Bounds, 2);
+                    break;
+                case GISShare.Controls.WinForm.WFNew.BaseItemState.eNormal:
+                default:
+                    if (!pPlayProcessBarButton.Checked) { this.DrawBaseButtonNomal(e.Graphics, pPlayProcessBarButton, e.Bounds, 2); }
+                    else if (pPlayProcessBarButton.NomalChecked) { this.DrawBaseButtonChecked(e.Graphics, pPlayProcessBarButton, e.Bounds, 2); }
+                    break;
+            }
+        }
+        #endregion
+
         #region Slider
         public override void OnRenderSlider(ObjectRenderEventArgs e)
         {
@@ -4856,29 +4937,29 @@ namespace GISShare.Controls.WinForm.WFNew
         #region SliderButton
         public override void OnRenderSliderButton(ObjectRenderEventArgs e)
         {
-            ISliderButtonItem pSliderButtonItem = e.Object as ISliderButtonItem;
-            if (pSliderButtonItem == null) return;
+            ISliderButton pSliderButton = e.Object as ISliderButton;
+            if (pSliderButton == null) return;
             //
-            switch (pSliderButtonItem.eBaseItemState)
+            switch (pSliderButton.eBaseItemState)
             {
                 case GISShare.Controls.WinForm.WFNew.BaseItemState.eHot:
-                    this.DrawBaseButtonSelected(e.Graphics, pSliderButtonItem, e.Bounds, 2);
+                    this.DrawBaseButtonSelected(e.Graphics, pSliderButton, e.Bounds, 2);
                     break;
                 case GISShare.Controls.WinForm.WFNew.BaseItemState.ePressed:
-                    this.DrawBaseButtonPressed(e.Graphics, pSliderButtonItem, e.Bounds, 2);
+                    this.DrawBaseButtonPressed(e.Graphics, pSliderButton, e.Bounds, 2);
                     break;
                 case GISShare.Controls.WinForm.WFNew.BaseItemState.eDisabled:
-                    this.DrawBaseButtonDisabled(e.Graphics, pSliderButtonItem, e.Bounds, 2);
+                    this.DrawBaseButtonDisabled(e.Graphics, pSliderButton, e.Bounds, 2);
                     break;
                 case GISShare.Controls.WinForm.WFNew.BaseItemState.eNormal:
                 default:
-                    if (!pSliderButtonItem.Checked) { this.DrawBaseButtonNomal(e.Graphics, pSliderButtonItem, e.Bounds, 2); }
-                    else if (pSliderButtonItem.NomalChecked) { this.DrawBaseButtonChecked(e.Graphics, pSliderButtonItem, e.Bounds, 2); }
+                    if (!pSliderButton.Checked) { this.DrawBaseButtonNomal(e.Graphics, pSliderButton, e.Bounds, 2); }
+                    else if (pSliderButton.NomalChecked) { this.DrawBaseButtonChecked(e.Graphics, pSliderButton, e.Bounds, 2); }
                     break;
             }
             //
-            Rectangle rectangle = pSliderButtonItem.DisplayRectangle;
-            switch (pSliderButtonItem.eSliderButtonStyle) 
+            Rectangle rectangle = pSliderButton.DisplayRectangle;
+            switch (pSliderButton.eSliderButtonStyle) 
             {
                 case SliderButtonStyle.eMinusButton:
                     using (Pen p = new Pen(this.WFNewColorTable.ArrowLight))
@@ -4910,7 +4991,7 @@ namespace GISShare.Controls.WinForm.WFNew
                     }
                     break;
                 case SliderButtonStyle.eSliderButton:
-                    if (pSliderButtonItem.eOrientation == Orientation.Horizontal)
+                    if (pSliderButton.eOrientation == Orientation.Horizontal)
                     {
                         using (Pen p = new Pen(this.WFNewColorTable.ArrowLight))
                         {
@@ -6105,12 +6186,12 @@ namespace GISShare.Controls.WinForm.WFNew
         {
             WFNew.IBaseItemStackExItem pBaseItemStackEx = e.Object as WFNew.IBaseItemStackExItem;
             if (pBaseItemStackEx == null) return;
-            if (!pBaseItemStackEx.ShowBackgroud && !pBaseItemStackEx.ShowOutLine) return;
+            if (!pBaseItemStackEx.ShowBackground && !pBaseItemStackEx.ShowOutLine) return;
             //
             using (GraphicsPath path = GISShare.Controls.WinForm.Util.UtilTX.CreateRoundRectangle(pBaseItemStackEx.FrameRectangle,
                     pBaseItemStackEx.LeftTopRadius, pBaseItemStackEx.RightTopRadius, pBaseItemStackEx.LeftBottomRadius, pBaseItemStackEx.RightBottomRadius))
             {
-                if (pBaseItemStackEx.ShowBackgroud)
+                if (pBaseItemStackEx.ShowBackground)
                 {
                     using (SolidBrush brush = new SolidBrush(this.WFNewColorTable.BaseItemStackExNomalBackground))
                     {
@@ -6340,6 +6421,8 @@ namespace GISShare.Controls.WinForm.WFNew
         {
             if (e.Text == null) return;
             //
+            string strText = e.Text.Length > 1024 ? e.Text.Substring(0, 1024) : e.Text;
+            //
             int iOffset = 4;
             if (e.StringFormat.FormatFlags == StringFormatFlags.DirectionVertical)
             {
@@ -6347,33 +6430,32 @@ namespace GISShare.Controls.WinForm.WFNew
             }
             else
             {
-                if (System.Text.Encoding.Default.GetByteCount(e.Text) == e.Text.Length) { iOffset = 2; }
+                if (System.Text.Encoding.Default.GetByteCount(strText) == strText.Length) { iOffset = 2; }
             }
             //
             Rectangle cbr = e.TextBounds;
             if (e.Enabled)
             {
+                cbr.Y += iOffset;
                 if (e.HaveShadow)
                 {
-                    cbr.Y += iOffset;
-                    using (SolidBrush b = new SolidBrush(this.WFNewColorTable.ItemTextLight))
+                    using (SolidBrush b = new SolidBrush(e.ForeCustomize ? e.ForeColor : this.WFNewColorTable.ItemTextLight))
                     {
-                        e.Graphics.DrawString(e.Text, e.Font, b, cbr, e.StringFormat);//stringFormat
+                        e.Graphics.DrawString(strText, e.Font, b, cbr, e.StringFormat);//stringFormat
                     }
-                    //
-                    cbr.Y -= 1;
                 }
-                using (SolidBrush b = new SolidBrush(this.WFNewColorTable.ItemText))
+                cbr.Y -= 1;
+                using (SolidBrush b = new SolidBrush(e.ForeCustomize ? e.ForeColor : this.WFNewColorTable.ItemText))
                 {
-                    e.Graphics.DrawString(e.Text, e.Font, b, cbr, e.StringFormat);//stringFormat
+                    e.Graphics.DrawString(strText, e.Font, b, cbr, e.StringFormat);//stringFormat
                 }
             }
             else
             {
                 cbr.Y += --iOffset;
-                using (SolidBrush b = new SolidBrush(this.WFNewColorTable.ItemTextDisabled))
+                using (SolidBrush b = new SolidBrush(e.ForeCustomize ? e.ForeColor : this.WFNewColorTable.ItemTextDisabled))
                 {
-                    e.Graphics.DrawString(e.Text, e.Font, b, cbr, e.StringFormat);//stringFormat
+                    e.Graphics.DrawString(strText, e.Font, b, cbr, e.StringFormat);//stringFormat
                 }
             }
         }
@@ -6383,7 +6465,7 @@ namespace GISShare.Controls.WinForm.WFNew
             WFNew.ILinkLabelItem pLinkLabelItem = e.Object as WFNew.ILinkLabelItem;
             if (pLinkLabelItem == null) return;
             //
-            Color color = this.WFNewColorTable.LinkLabelomal;
+            Color color = this.WFNewColorTable.LinkLabelNomal;
             if (pLinkLabelItem.LinkVisited)
             {
                 color = this.WFNewColorTable.LinkLabelVisited;
@@ -6422,9 +6504,9 @@ namespace GISShare.Controls.WinForm.WFNew
                     break;
             }
             //
-            using (SolidBrush brush = new SolidBrush(color))
+            using (SolidBrush brush = new SolidBrush(e.ForeCustomize ? e.ForeColor : color))
             {
-                e.Graphics.DrawString(e.Text, haveUnderline ? new Font(e.Font, FontStyle.Underline) : e.Font, brush, e.TextBounds);
+                e.Graphics.DrawString(e.Text, e.ForeCustomize ? e.Font : (haveUnderline ? new Font(e.Font, FontStyle.Underline) : e.Font), brush, e.TextBounds);
             }
         }
 
@@ -6437,20 +6519,20 @@ namespace GISShare.Controls.WinForm.WFNew
             {
                 case GISShare.Controls.WinForm.WFNew.BaseItemState.eHot:
                 case GISShare.Controls.WinForm.WFNew.BaseItemState.ePressed:
-                    using (SolidBrush brush = new SolidBrush(this.WFNewColorTable.TextBoxSelectedText))
+                    using (SolidBrush brush = new SolidBrush(e.ForeCustomize ? e.ForeColor : this.WFNewColorTable.TextBoxSelectedText))
                     {
                         e.Graphics.DrawString(e.Text, e.Font, brush, e.TextBounds);
                     }
                     break;
                 case GISShare.Controls.WinForm.WFNew.BaseItemState.eDisabled:
-                    using (SolidBrush brush = new SolidBrush(this.WFNewColorTable.TextBoxDisabledText))
+                    using (SolidBrush brush = new SolidBrush(e.ForeCustomize ? e.ForeColor : this.WFNewColorTable.TextBoxDisabledText))
                     {
                         e.Graphics.DrawString(e.Text, e.Font, brush, e.TextBounds);
                     }
                     break;
                 case GISShare.Controls.WinForm.WFNew.BaseItemState.eNormal:
                 default:
-                    using (SolidBrush brush = new SolidBrush(this.WFNewColorTable.TextBoxomalText))
+                    using (SolidBrush brush = new SolidBrush(e.ForeCustomize ? e.ForeColor : this.WFNewColorTable.TextBoxomalText))
                     {
                         e.Graphics.DrawString(e.Text, e.Font, brush, e.TextBounds);
                     }
@@ -6716,20 +6798,20 @@ namespace GISShare.Controls.WinForm.WFNew
         //
         //
 
-        #region ViewItemList
-        public override void OnRenderViewItemList(ObjectRenderEventArgs e)
-        {
-            View.IViewItemList pViewItemList = e.Object as View.IViewItemList;
-            if (pViewItemList == null) return;
-            if (pViewItemList.ShowOutLine)
-            {
-                using (Pen p = new Pen(this.WFNewColorTable.RibbonAreaOutLine))
-                {
-                    e.Graphics.DrawRectangle(p, pViewItemList.FrameRectangle);
-                }
-            }
-        }
-        #endregion
+        //#region ViewItemList
+        //public override void OnRenderViewItemList(ObjectRenderEventArgs e)
+        //{
+        //    View.IViewItemList pViewItemList = e.Object as View.IViewItemList;
+        //    if (pViewItemList == null) return;
+        //    if (pViewItemList.ShowOutLine)
+        //    {
+        //        using (Pen p = new Pen(this.WFNewColorTable.RibbonAreaOutLine))
+        //        {
+        //            e.Graphics.DrawRectangle(p, pViewItemList.FrameRectangle);
+        //        }
+        //    }
+        //}
+        //#endregion
 
         #region ViewItem
         public override void OnRenderViewItem(ObjectRenderEventArgs e)
@@ -6952,11 +7034,11 @@ namespace GISShare.Controls.WinForm.WFNew
                                 {
                                     if (pNodeViewItem.SystemColor)
                                     {
-                                        using (LinearGradientBrush b = new LinearGradientBrush(rectangle, this.WFNewColorTable.ButtonomalOut, this.WFNewColorTable.ButtonomalCenter, LinearGradientMode.Vertical))
+                                        using (LinearGradientBrush b = new LinearGradientBrush(rectangle, this.WFNewColorTable.ButtonNomalOut, this.WFNewColorTable.ButtonNomalCenter, LinearGradientMode.Vertical))
                                         {
                                             e.Graphics.FillRectangle(b, rectangle);
                                         }
-                                        using (Pen p = new Pen(this.WFNewColorTable.ButtonomalBorderIn))
+                                        using (Pen p = new Pen(this.WFNewColorTable.ButtonNomalBorderIn))
                                         {
                                             e.Graphics.DrawRectangle(p, rectangle);
                                         }
@@ -7063,11 +7145,11 @@ namespace GISShare.Controls.WinForm.WFNew
                             }
                             break;
                         default:
-                            using (SolidBrush b = new SolidBrush(this.WFNewColorTable.ButtonomalCenter))
+                            using (SolidBrush b = new SolidBrush(this.WFNewColorTable.ButtonNomalCenter))
                             {
                                 e.Graphics.FillRectangle(b, rectangle);
                             }
-                            using (Pen p = new Pen(this.WFNewColorTable.ButtonomalBorderOut))
+                            using (Pen p = new Pen(this.WFNewColorTable.ButtonNomalBorderOut))
                             {
                                 e.Graphics.DrawLine(p, rectangle.Left, rectangle.Bottom, rectangle.Right, rectangle.Bottom);
                                 e.Graphics.DrawLine(p, rectangle.Right, rectangle.Top, rectangle.Right, rectangle.Bottom);
@@ -7134,11 +7216,11 @@ namespace GISShare.Controls.WinForm.WFNew
                             }
                             break;
                         default:
-                            using (LinearGradientBrush b = new LinearGradientBrush(rectangle, this.WFNewColorTable.Buttonomal, this.WFNewColorTable.ButtonomalCenter, LinearGradientMode.Vertical))
+                            using (LinearGradientBrush b = new LinearGradientBrush(rectangle, this.WFNewColorTable.ButtonNomal, this.WFNewColorTable.ButtonNomalCenter, LinearGradientMode.Vertical))
                             {
                                 e.Graphics.FillRectangle(b, rectangle);
                             }
-                            using (Pen p = new Pen(this.WFNewColorTable.ButtonomalBorderOut))
+                            using (Pen p = new Pen(this.WFNewColorTable.ButtonNomalBorderOut))
                             {
                                 e.Graphics.DrawLine(p, rectangle.Left, rectangle.Bottom, rectangle.Right, rectangle.Bottom);
                                 e.Graphics.DrawLine(p, rectangle.Right, rectangle.Top, rectangle.Right, rectangle.Bottom);
@@ -7160,7 +7242,7 @@ namespace GISShare.Controls.WinForm.WFNew
             //
             if (pViewItem.RowIndex < 0)
             {
-                using (SolidBrush b = new SolidBrush(this.WFNewColorTable.ButtonomalCenter))
+                using (SolidBrush b = new SolidBrush(this.WFNewColorTable.ButtonNomalCenter))
                 {
                     e.Graphics.FillRectangle(b, rectangle);
                 }
@@ -7190,7 +7272,7 @@ namespace GISShare.Controls.WinForm.WFNew
                         }
                         break;
                     default:
-                        using (SolidBrush b = new SolidBrush(this.WFNewColorTable.ButtonomalCenter))
+                        using (SolidBrush b = new SolidBrush(this.WFNewColorTable.ButtonNomalCenter))
                         {
                             e.Graphics.FillRectangle(b, rectangle);
                         }
@@ -7198,7 +7280,7 @@ namespace GISShare.Controls.WinForm.WFNew
                 }
             }
             //
-            using (Pen p = new Pen(this.WFNewColorTable.ButtonomalBorderOut))
+            using (Pen p = new Pen(this.WFNewColorTable.ButtonNomalBorderOut))
             {
                 e.Graphics.DrawLine(p, rectangle.Left, rectangle.Bottom, rectangle.Right, rectangle.Bottom);
                 e.Graphics.DrawLine(p, rectangle.Right, rectangle.Top, rectangle.Right, rectangle.Bottom);
@@ -7323,11 +7405,11 @@ namespace GISShare.Controls.WinForm.WFNew
                                 //{
                                 //    if (pNodeViewItem.SystemColor)
                                 //    {
-                                //        using (LinearGradientBrush b = new LinearGradientBrush(rectangle, this.WFNewColorTable.ButtonomalOut, this.WFNewColorTable.ButtonomalCenter, LinearGradientMode.Vertical))
+                                //        using (LinearGradientBrush b = new LinearGradientBrush(rectangle, this.WFNewColorTable.ButtonNomalOut, this.WFNewColorTable.ButtonNomalCenter, LinearGradientMode.Vertical))
                                 //        {
                                 //            e.Graphics.FillRectangle(b, rectangle);
                                 //        }
-                                //        using (Pen p = new Pen(this.WFNewColorTable.ButtonomalBorderIn))
+                                //        using (Pen p = new Pen(this.WFNewColorTable.ButtonNomalBorderIn))
                                 //        {
                                 //            e.Graphics.DrawRectangle(p, rectangle);
                                 //        }
@@ -7397,7 +7479,7 @@ namespace GISShare.Controls.WinForm.WFNew
                             }
                             break;
                         default:
-                            using (Pen p = new Pen(this.WFNewColorTable.ButtonomalBorderOut))
+                            using (Pen p = new Pen(this.WFNewColorTable.ButtonNomalBorderOut))
                             {
                                 e.Graphics.DrawLine(p, rectangle.Left, rectangle.Bottom, rectangle.Right, rectangle.Bottom);
                                 e.Graphics.DrawLine(p, rectangle.Right, rectangle.Top, rectangle.Right, rectangle.Bottom);
@@ -7452,7 +7534,7 @@ namespace GISShare.Controls.WinForm.WFNew
                             }
                             break;
                         default:
-                            using (Pen p = new Pen(this.WFNewColorTable.ButtonomalBorderOut))
+                            using (Pen p = new Pen(this.WFNewColorTable.ButtonNomalBorderOut))
                             {
                                 e.Graphics.DrawLine(p, rectangle.Left, rectangle.Bottom, rectangle.Right, rectangle.Bottom);
                                 e.Graphics.DrawLine(p, rectangle.Right, rectangle.Top, rectangle.Right, rectangle.Bottom);

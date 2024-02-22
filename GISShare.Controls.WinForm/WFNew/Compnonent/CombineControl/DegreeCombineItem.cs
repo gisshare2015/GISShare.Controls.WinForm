@@ -35,7 +35,7 @@ namespace GISShare.Controls.WinForm.WFNew
             this.BaseItems.Add(this.m_GlyphButtonItem);
             ((ILockCollectionHelper)this.BaseItems).SetLocked(true);
             //
-            this.ShowBackgroud = false;
+            this.ShowBackground = false;
         }
         void m_GlyphButtonItem_Click(object sender, EventArgs e)
         {

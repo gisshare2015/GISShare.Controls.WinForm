@@ -154,6 +154,18 @@ TBForm¡¢RibbonControl¡¢ViewItemListBoxµÈ£©ºÍ
             demoOfNodeViewItemTreeForm.Show();
         }
 
+        private void btnGridViewItemListBox_Click(object sender, EventArgs e)
+        {
+            GISShare.Controls.WinForm.Demo.WFNew.DemoOfGridViewItemListBoxForm demoOfGridViewItemListBoxForm = new GISShare.Controls.WinForm.Demo.WFNew.DemoOfGridViewItemListBoxForm();
+            demoOfGridViewItemListBoxForm.Show();
+        }
+
+        private void btnGridNodeViewItemTree_Click(object sender, EventArgs e)
+        {
+            GISShare.Controls.WinForm.Demo.WFNew.DemoOfGridNodeViewItemTreeForm demoOfGridNodeViewItemTreeForm = new GISShare.Controls.WinForm.Demo.WFNew.DemoOfGridNodeViewItemTreeForm();
+            demoOfGridNodeViewItemTreeForm.Show();
+        }
+
         private void btnCompnonent_MouseClick(object sender, MouseEventArgs e)
         {
             GISShare.Controls.WinForm.Demo.WFNew.DemoOfCompnonentForm demoOfCompnonentForm = new GISShare.Controls.WinForm.Demo.WFNew.DemoOfCompnonentForm();

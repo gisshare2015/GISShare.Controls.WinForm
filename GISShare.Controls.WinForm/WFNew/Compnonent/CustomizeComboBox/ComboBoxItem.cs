@@ -18,15 +18,19 @@ namespace GISShare.Controls.WinForm.WFNew
         private const int CTR_NONELEFTSPACE = 1;//
         private const int CTR_SINGLELEFTSPACE = 0;//
         private const int CTR_MIDDLESPACE = 2;//间距
-
+        //
+        bool m_IsSearchBox = false;
         GISShare.Controls.WinForm.WFNew.View.ViewItemListBoxItem m_ViewItemListBox;
 
         #region 构造函数
-        public ComboBoxItem()
+        public ComboBoxItem() : this(new View.ViewItemListBoxItem ()) { }
+
+        protected ComboBoxItem(View.ViewItemListBoxItem viewItemListBoxItem)
             : base(new GISShare.Controls.WinForm.WFNew.BaseItemHost())
         {
-            this.m_ViewItemListBox = new View.ViewItemListBoxItem();
-            this.m_ViewItemListBox.BackColor = System.Drawing.SystemColors.Window;
+            this.m_IsSearchBox = viewItemListBoxItem is View.ViewItemSearchListBoxItem;
+            this.m_ViewItemListBox = viewItemListBoxItem;
+            this.m_ViewItemListBox.BackgroundColor = System.Drawing.SystemColors.Window;
             this.m_ViewItemListBox.ShowOutLine = false;
             this.m_ViewItemListBox.MultipleSelect = false;
             this.m_ViewItemListBox.SelectedIndexChanged += new IntValueChangedHandler(ViewItemListBox_SelectedIndexChanged);
@@ -50,6 +54,7 @@ namespace GISShare.Controls.WinForm.WFNew
         }
         void ViewItemListBox_SelectedIndexChanged(object sender, IntValueChangedEventArgs e)
         {
+            if (this.SelectedItem != null) this.Text = this.SelectedItem.Text;
             this.OnSelectedIndexChanged(e);
         }
 
@@ -217,8 +222,7 @@ namespace GISShare.Controls.WinForm.WFNew
         /// <returns>返回复选框</returns>
         public ICheckBoxItem AddCheckedItem(bool bChecked, string strName, string strText, object objValue, System.Drawing.Image image)
         {
-           
-            return this.m_ViewItemListBox.AddCheckedItem(bChecked, strName, strText, objValue, image);
+            return this.m_IsSearchBox ? ((View.ViewItemSearchListBoxItem)this.m_ViewItemListBox).AddCheckedItem(bChecked, strName, strText, objValue, image) : this.m_ViewItemListBox.AddCheckedItem(bChecked, strName, strText, objValue, image);
         }
 
         /// <summary>
@@ -232,8 +236,7 @@ namespace GISShare.Controls.WinForm.WFNew
         /// <returns>返回单选框</returns>
         public IRadioButtonItem AddRadioItem(bool bChecked, string strName, string strText, object objValue, System.Drawing.Image image)
         {
-
-            return this.m_ViewItemListBox.AddRadioItem(bChecked, strName, strText, objValue, image);
+            return this.m_IsSearchBox ? ((View.ViewItemSearchListBoxItem)this.m_ViewItemListBox).AddRadioItem(bChecked, strName, strText, objValue, image) : this.m_ViewItemListBox.AddRadioItem(bChecked, strName, strText, objValue, image);
         }
 
         /// <summary>
@@ -243,7 +246,7 @@ namespace GISShare.Controls.WinForm.WFNew
         /// <returns></returns>
         public IList<ICheckBoxItem> GetCheckedItems(bool bChecked)
         {
-            return this.m_ViewItemListBox.GetCheckedItems(bChecked);
+            return this.m_IsSearchBox ? ((View.ViewItemSearchListBoxItem)this.m_ViewItemListBox).GetCheckedItems(bChecked) : this.m_ViewItemListBox.GetCheckedItems(bChecked);
         }
         #endregion
 
@@ -513,6 +516,16 @@ namespace GISShare.Controls.WinForm.WFNew
                 //if (this.SelectedItem != null) this.SelectedItem.Text = value;
                 base.Text = value;
                 this.Refresh();
+                //
+                for (int i = this.Items.Count - 1; i >= 0; i--)
+                {
+                    if (this.Items[i].Text == this.Text)
+                    {
+                        this.SelectedIndex = i;
+                        return;
+                    }
+                }
+                this.SelectedIndex = -1;
             }
         }
 
@@ -577,8 +590,12 @@ namespace GISShare.Controls.WinForm.WFNew
             //
             if (!this.IsInputing)
             {
+                int iOffsetX = this.OffsetX;
+                if (iOffsetX > 0) iOffsetX += CTR_BORDERSPASE;
+                Rectangle rectangle = this.TextRectangle;
+                rectangle = Rectangle.FromLTRB(rectangle.Left + iOffsetX, rectangle.Top, rectangle.Right, rectangle.Bottom);
                 GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderTextBoxText(
-                    new TextRenderEventArgs(e.Graphics, this, this.Enabled, this.Text, this.ForeColor, this.Font, this.TextRectangle));
+                    new TextRenderEventArgs(e.Graphics, this, this.Enabled, this.HaveShadow, this.Text, this.ForeCustomize, this.ForeColor, this.ShadowColor, this.Font, rectangle));
             }
             //
             if (this.SelectedItem is View.IColorViewItem)
@@ -623,6 +640,11 @@ namespace GISShare.Controls.WinForm.WFNew
             }
             GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonArrow(
                 new GISShare.Controls.WinForm.ArrowRenderEventArgs(e.Graphics, this, this.Enabled, ArrowStyle.eToDown, this.ForeColor, this.ArrowRectangle));
+        }
+
+        protected override void OnTextChanged(EventArgs e)
+        {
+            base.OnTextChanged(e);
         }
 
         //

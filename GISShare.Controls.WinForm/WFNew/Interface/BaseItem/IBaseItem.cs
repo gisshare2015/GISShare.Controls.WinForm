@@ -23,6 +23,12 @@ namespace GISShare.Controls.WinForm.WFNew
 
         Color ForeColor { get; set; }
 
+        bool HaveShadow { get; set; }
+
+        Color ShadowColor { get; set; }
+
+        bool ForeCustomize { get; set; }
+
         Point Location { get; }//set; 
 
         Size Size { get; }//set; 

@@ -42,6 +42,30 @@ namespace GISShare.Controls.WinForm.WFNew.View
             get { return m_ForeColor; }
             set { m_ForeColor = value; }
         }
+
+        private bool m_HaveShadow = true;
+        [Browsable(true), DefaultValue(true), Description("是否有字体阴影"), Category("状态")]
+        public bool HaveShadow
+        {
+            get { return m_HaveShadow; }
+            set { m_HaveShadow = value; }
+        }
+
+        private Color m_ShadowColor = System.Drawing.SystemColors.ControlText;
+        [Browsable(true), DefaultValue(typeof(Color), "System.Drawing.SystemColors.ControlText"), Description("字体阴影颜色"), Category("外观")]
+        public Color ShadowColor
+        {
+            get { return m_ShadowColor; }
+            set { m_ShadowColor = value; }
+        }
+
+        private bool m_ForeCustomize = false;
+        [Browsable(true), DefaultValue(false), Description("自定义文本色"), Category("状态")]
+        public bool ForeCustomize
+        {
+            get { return m_ForeCustomize; }
+            set { m_ForeCustomize = value; }
+        }
         #endregion 
 
         public override Size MeasureSize(Graphics g)
@@ -109,7 +133,7 @@ namespace GISShare.Controls.WinForm.WFNew.View
                 (
                 new ObjectRenderEventArgs(e.Graphics, this, rectangle)
                 );
-            if (this.Text.Length <= 0) return;
+            if (String.IsNullOrEmpty(this.Text)) return;
             rectangle = this.DisplayRectangle;
             int iH = (int)e.Graphics.MeasureString(this.Text, this.Font).Height + 1;
             WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonText
@@ -118,9 +142,11 @@ namespace GISShare.Controls.WinForm.WFNew.View
                     e.Graphics,
                     this,
                     true,
-                    true,
+                    this.HaveShadow,
                     this.Text,
+                    this.ForeCustomize,
                     this.ForeColor,
+                    this.ShadowColor,
                     this.Font,
                     new Rectangle(rectangle.Left, (rectangle.Top + rectangle.Bottom - iH) / 2, rectangle.Width, iH),//rectangle.Height
                     new StringFormat() { Trimming = StringTrimming.EllipsisCharacter })

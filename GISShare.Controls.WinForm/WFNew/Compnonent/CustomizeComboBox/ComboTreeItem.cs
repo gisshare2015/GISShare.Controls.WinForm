@@ -24,7 +24,7 @@ namespace GISShare.Controls.WinForm.WFNew
             : base(new GISShare.Controls.WinForm.WFNew.BaseItemHost())
         {
             this.m_NodeViewItemTree = new GISShare.Controls.WinForm.WFNew.View.NodeViewItemTreeItem();
-            this.m_NodeViewItemTree.BackColor = System.Drawing.SystemColors.Window;
+            this.m_NodeViewItemTree.BackgroundColor = System.Drawing.SystemColors.Window;
             this.m_NodeViewItemTree.ShowOutLine = false;
             this.m_NodeViewItemTree.MouseDoubleClick += new MouseEventHandler(NodeViewItemTree_MouseDoubleClick);
             this.m_NodeViewItemTree.SelectedNodeChanged += new PropertyChangedEventHandler(NodeViewItemTree_SelectedNodeChanged);
@@ -500,7 +500,7 @@ namespace GISShare.Controls.WinForm.WFNew
             if (!this.IsInputing)
             {
                 GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderTextBoxText(
-                    new TextRenderEventArgs(e.Graphics, this, this.Enabled, this.Text, this.ForeColor, this.Font, this.TextRectangle));
+                    new TextRenderEventArgs(e.Graphics, this, this.Enabled, this.HaveShadow, this.Text, this.ForeCustomize,  this.ForeColor, this.ShadowColor, this.Font, this.TextRectangle));
             }
             //
             if (this.SelectedNode is View.IImageViewItem)

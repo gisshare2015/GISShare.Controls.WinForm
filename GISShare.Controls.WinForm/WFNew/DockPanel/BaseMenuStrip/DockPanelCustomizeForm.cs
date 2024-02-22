@@ -100,7 +100,7 @@ namespace GISShare.Controls.WinForm.WFNew.DockPanel
             // checkedListBox_BasePanel
             // 
             this.checkedListBox_BasePanel.AutoGetFocus = true;
-            this.checkedListBox_BasePanel.BackColor = System.Drawing.SystemColors.Window;
+            this.checkedListBox_BasePanel.BackgroundColor = System.Drawing.SystemColors.Window;
             this.checkedListBox_BasePanel.Font = new System.Drawing.Font("宋体", 9F);
             this.checkedListBox_BasePanel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkedListBox_BasePanel.Location = new System.Drawing.Point(0, 0);
@@ -136,7 +136,7 @@ namespace GISShare.Controls.WinForm.WFNew.DockPanel
             // checkedListBox_DockPanel
             // 
             this.checkedListBox_DockPanel.AutoGetFocus = true;
-            this.checkedListBox_DockPanel.BackColor = System.Drawing.SystemColors.Window;
+            this.checkedListBox_DockPanel.BackgroundColor = System.Drawing.SystemColors.Window;
             this.checkedListBox_DockPanel.Font = new System.Drawing.Font("宋体", 9F);
             this.checkedListBox_DockPanel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkedListBox_DockPanel.Location = new System.Drawing.Point(0, 0);
@@ -173,7 +173,7 @@ namespace GISShare.Controls.WinForm.WFNew.DockPanel
             // treeView_PanelTree
             // 
             this.treeView_PanelTree.AutoGetFocus = true;
-            this.treeView_PanelTree.BackColor = System.Drawing.SystemColors.Window;
+            this.treeView_PanelTree.BackgroundColor = System.Drawing.SystemColors.Window;
             this.treeView_PanelTree.Font = new System.Drawing.Font("宋体", 9F);
             this.treeView_PanelTree.ForeColor = System.Drawing.SystemColors.ControlText;
             this.treeView_PanelTree.Location = new System.Drawing.Point(0, 0);

@@ -42,7 +42,7 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
                 case FormBorderStyle.Sizable:
                     if (IsVista)
                     {
-                        border = SystemInformation.FrameBorderSize;
+                        border = SystemInformationX.FrameBorderSize;
                     }
                     else
                     {

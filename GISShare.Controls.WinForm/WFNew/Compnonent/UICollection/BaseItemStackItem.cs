@@ -298,7 +298,7 @@ namespace GISShare.Controls.WinForm.WFNew
             baseItem.ColumnDistance = this.ColumnDistance;
             baseItem.eOrientation = this.eOrientation;
             //
-            baseItem.ShowBackgroud = this.ShowBackgroud;
+            baseItem.ShowBackground = this.ShowBackground;
             baseItem.ShowOutLine = this.ShowOutLine;
             foreach (BaseItem one in this.BaseItems)
             {

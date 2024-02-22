@@ -34,9 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GISShare.Win32">
-      <HintPath>..\DLL\GISShare.Win32.dll</HintPath>
-    </Reference>
     <Reference Include="System">
       <Private>True</Private>
     </Reference>
@@ -116,6 +113,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\GISShare.Win32\DotNet\SVN\trunk\GISShare.Win32\GISShare.Win32.csproj">
+      <Project>{02b3b59f-d2bb-4167-8747-ff2adaeab7fa}</Project>
+      <Name>GISShare.Win32</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GISShare.Controls.Plugin.WinForm.Demo.Hook\GISShare.Controls.Plugin.WinForm.Demo.Hook.csproj">
       <Project>{907D66FC-216D-43D2-9EE7-C2A2B7E59C5A}</Project>
       <Name>GISShare.Controls.Plugin.WinForm.Demo.Hook</Name>

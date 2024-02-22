@@ -38,7 +38,7 @@ namespace GISShare.Controls.WinForm.Popup
                 }
                 else
                 {
-                    if (this.BasePopupCollection[i].Bounds.Contains(e.Location))
+                    if (this.BasePopupCollection[i].BoundsContainsXY(e.X, e.Y))
                     {
                         Dismiss(i + 1, DismissReason.eItemClicked);
                         return;

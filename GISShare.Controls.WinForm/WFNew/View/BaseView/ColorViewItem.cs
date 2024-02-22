@@ -159,7 +159,7 @@ namespace GISShare.Controls.WinForm.WFNew.View
             //
             Rectangle rectangle = Rectangle.FromLTRB(e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Right - 1, e.ClipRectangle.Bottom - 1);
             WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderColorViewItem(new ObjectRenderEventArgs(e.Graphics, this, rectangle));
-            if (this.Text.Length <= 0) return;
+            if (String.IsNullOrEmpty(this.Text)) return;
             rectangle = this.DisplayRectangle;
             int iH = (int)e.Graphics.MeasureString(this.Text, this.Font).Height + 1;
             if (this.Color.IsEmpty)
@@ -170,9 +170,11 @@ namespace GISShare.Controls.WinForm.WFNew.View
                         e.Graphics,
                         this,
                         true,
-                        true,
+                        this.HaveShadow,
                         this.Text,
+                        this.ForeCustomize,
                         this.ForeColor,
+                        this.ShadowColor,
                         this.Font,
                         new Rectangle(rectangle.Left, (rectangle.Top + rectangle.Bottom - iH) / 2, rectangle.Width, iH),//rectangle.Height
                         new StringFormat())
@@ -186,9 +188,11 @@ namespace GISShare.Controls.WinForm.WFNew.View
                         e.Graphics,
                         this,
                         true,
-                        true,
+                        this.HaveShadow,
                         this.Text,
+                        this.ForeCustomize,
                         this.ForeColor,
+                        this.ShadowColor,
                         this.Font,
                         new Rectangle(rectangle.Left + CONST_COLORREGIONWIDTH, (rectangle.Top + rectangle.Bottom - iH) / 2, rectangle.Width - CONST_COLORREGIONWIDTH, iH),//rectangle.Height
                         new StringFormat())

@@ -14,6 +14,8 @@ namespace GISShare.Controls.WinForm.WFNew
 
         int OffsetY { get; set; }
 
+        IToolTipPopup ToolTipPopup { get; }
+
         bool SetToolTip(IBaseItem2 pBaseItem);
         bool SetToolTip(IBaseItem2 pBaseItem, ITipInfo pTipInfo);
         bool RemoveToolTip(IBaseItem2 pBaseItem);

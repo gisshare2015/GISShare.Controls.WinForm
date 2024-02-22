@@ -11,7 +11,7 @@ namespace GISShare.Controls.WinForm.WFNew
 
         Rectangle FrameRectangle { get; }
 
-        bool ShowBackgroud { get; }
+        bool ShowBackground { get; }
 
         Rectangle AreaRectangle { get; }
     }

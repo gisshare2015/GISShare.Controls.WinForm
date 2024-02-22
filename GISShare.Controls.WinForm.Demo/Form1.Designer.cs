@@ -48,24 +48,28 @@
             // gridViewItemListBox1
             // 
             this.gridViewItemListBox1.AutoGetFocus = true;
-            this.gridViewItemListBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.gridViewItemListBox1.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.gridViewItemListBox1.BackgroundImage = null;
             this.gridViewItemListBox1.DataSource = null;
             this.gridViewItemListBox1.Font = new System.Drawing.Font("宋体", 9F);
             this.gridViewItemListBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.gridViewItemListBox1.Location = new System.Drawing.Point(0, 0);
             this.gridViewItemListBox1.MultipleSelect = true;
             this.gridViewItemListBox1.Name = "gridViewItemListBox1";
-            this.gridViewItemListBox1.Size = new System.Drawing.Size(966, 578);
+            this.gridViewItemListBox1.OutLineColor = System.Drawing.Color.Transparent;
+            this.gridViewItemListBox1.ShadowColor = System.Drawing.SystemColors.ControlText;
+            this.gridViewItemListBox1.ShowOutLine = true;
+            this.gridViewItemListBox1.Size = new System.Drawing.Size(859, 454);
             this.gridViewItemListBox1.Tag = null;
             this.gridViewItemListBox1.Text = "gridViewItemListBox1";
             this.gridViewItemListBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gridViewItemListBox1_MouseDown);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(975, 520);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(867, 433);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 48);
+            this.button1.Size = new System.Drawing.Size(94, 40);
             this.button1.TabIndex = 3;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -73,10 +77,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(981, 434);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(872, 362);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 60);
+            this.button2.Size = new System.Drawing.Size(71, 50);
             this.button2.TabIndex = 4;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -85,13 +89,17 @@
             // viewItemListBox1
             // 
             this.viewItemListBox1.AutoGetFocus = true;
-            this.viewItemListBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.viewItemListBox1.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.viewItemListBox1.BackgroundImage = null;
             this.viewItemListBox1.Font = new System.Drawing.Font("宋体", 9F);
             this.viewItemListBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.viewItemListBox1.Location = new System.Drawing.Point(0, 0);
             this.viewItemListBox1.Name = "viewItemListBox1";
+            this.viewItemListBox1.OutLineColor = System.Drawing.Color.Transparent;
+            this.viewItemListBox1.ShadowColor = System.Drawing.SystemColors.ControlText;
             this.viewItemListBox1.ShowHScrollBar = true;
-            this.viewItemListBox1.Size = new System.Drawing.Size(370, 246);
+            this.viewItemListBox1.ShowOutLine = true;
+            this.viewItemListBox1.Size = new System.Drawing.Size(329, 205);
             this.viewItemListBox1.Tag = null;
             this.viewItemListBox1.Text = "viewItemListBox1";
             // 
@@ -102,11 +110,11 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(975, 255);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(867, 212);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(370, 140);
+            this.dataGridView1.Size = new System.Drawing.Size(329, 117);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView1_CellPainting);
             // 
@@ -133,7 +141,8 @@
             this.textBoxN1.LockHeight = true;
             this.textBoxN1.Name = "textBoxN1";
             this.textBoxN1.PasswordChar = '\0';
-            this.textBoxN1.Size = new System.Drawing.Size(219, 27);
+            this.textBoxN1.ShadowColor = System.Drawing.SystemColors.ControlText;
+            this.textBoxN1.Size = new System.Drawing.Size(195, 24);
             this.textBoxN1.Tag = null;
             this.textBoxN1.Text = "textBoxN1";
             this.textBoxN1.TextChanged += new System.EventHandler(this.textBoxN1_TextChanged);
@@ -141,13 +150,17 @@
             // 
             // buttonN1
             // 
+            this.buttonN1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.buttonN1.BackgroundImage = null;
             this.buttonN1.Font = new System.Drawing.Font("宋体", 9F);
             this.buttonN1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonN1.Image = null;
             this.buttonN1.Location = new System.Drawing.Point(0, 0);
             this.buttonN1.Name = "buttonN1";
+            this.buttonN1.OutLineColor = System.Drawing.Color.Transparent;
+            this.buttonN1.ShadowColor = System.Drawing.SystemColors.ControlText;
             this.buttonN1.ShowNomalState = true;
-            this.buttonN1.Size = new System.Drawing.Size(87, 48);
+            this.buttonN1.Size = new System.Drawing.Size(77, 40);
             this.buttonN1.Tag = null;
             this.buttonN1.Text = "buttonN1";
             this.buttonN1.Click += new System.EventHandler(this.buttonN1_Click);
@@ -158,48 +171,53 @@
             this.baseItemHost1.BaseItemObject = this.gridViewItemListBox1;
             this.baseItemHost1.Dock = System.Windows.Forms.DockStyle.Left;
             this.baseItemHost1.Location = new System.Drawing.Point(0, 0);
-            this.baseItemHost1.Margin = new System.Windows.Forms.Padding(4);
+            this.baseItemHost1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.baseItemHost1.Name = "baseItemHost1";
             this.baseItemHost1.Padding = new System.Windows.Forms.Padding(0);
-            this.baseItemHost1.Size = new System.Drawing.Size(966, 578);
+            this.baseItemHost1.ShadowColor = System.Drawing.SystemColors.ControlText;
+            this.baseItemHost1.Size = new System.Drawing.Size(859, 454);
             this.baseItemHost1.TabIndex = 2;
             // 
             // baseItemHost2
             // 
             this.baseItemHost2.BaseItemObject = this.viewItemListBox1;
-            this.baseItemHost2.Location = new System.Drawing.Point(975, 0);
-            this.baseItemHost2.Margin = new System.Windows.Forms.Padding(4);
+            this.baseItemHost2.Location = new System.Drawing.Point(867, 0);
+            this.baseItemHost2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.baseItemHost2.Name = "baseItemHost2";
             this.baseItemHost2.Padding = new System.Windows.Forms.Padding(0);
-            this.baseItemHost2.Size = new System.Drawing.Size(370, 246);
+            this.baseItemHost2.ShadowColor = System.Drawing.SystemColors.ControlText;
+            this.baseItemHost2.Size = new System.Drawing.Size(329, 205);
             this.baseItemHost2.TabIndex = 5;
             // 
             // baseItemHost3
             // 
             this.baseItemHost3.BaseItemObject = this.textBoxN1;
-            this.baseItemHost3.Location = new System.Drawing.Point(1095, 452);
-            this.baseItemHost3.Margin = new System.Windows.Forms.Padding(4);
+            this.baseItemHost3.Location = new System.Drawing.Point(973, 377);
+            this.baseItemHost3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.baseItemHost3.Name = "baseItemHost3";
             this.baseItemHost3.Padding = new System.Windows.Forms.Padding(0);
-            this.baseItemHost3.Size = new System.Drawing.Size(219, 27);
+            this.baseItemHost3.ShadowColor = System.Drawing.SystemColors.ControlText;
+            this.baseItemHost3.Size = new System.Drawing.Size(195, 24);
             this.baseItemHost3.TabIndex = 7;
             // 
             // baseItemHost4
             // 
             this.baseItemHost4.BackColor = System.Drawing.Color.Transparent;
             this.baseItemHost4.BaseItemObject = this.buttonN1;
-            this.baseItemHost4.Location = new System.Drawing.Point(1126, 506);
-            this.baseItemHost4.Margin = new System.Windows.Forms.Padding(4);
+            this.baseItemHost4.Location = new System.Drawing.Point(1001, 422);
+            this.baseItemHost4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.baseItemHost4.Name = "baseItemHost4";
             this.baseItemHost4.Padding = new System.Windows.Forms.Padding(0);
-            this.baseItemHost4.Size = new System.Drawing.Size(87, 48);
+            this.baseItemHost4.ShadowColor = System.Drawing.SystemColors.ControlText;
+            this.baseItemHost4.Size = new System.Drawing.Size(77, 40);
             this.baseItemHost4.TabIndex = 8;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1350, 578);
+            this.CancelItemsEventNC = false;
+            this.ClientSize = new System.Drawing.Size(1200, 454);
             this.Controls.Add(this.baseItemHost1);
             this.Controls.Add(this.baseItemHost2);
             this.Controls.Add(this.dataGridView1);
@@ -208,7 +226,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.baseItemHost4);
             this.Location = new System.Drawing.Point(0, 0);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

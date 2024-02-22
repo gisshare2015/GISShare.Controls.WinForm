@@ -187,7 +187,7 @@
             // nodeViewItemTree1
             // 
             this.nodeViewItemTree1.AutoGetFocus = true;
-            this.nodeViewItemTree1.BackColor = System.Drawing.SystemColors.Window;
+            this.nodeViewItemTree1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.nodeViewItemTree1.Font = new System.Drawing.Font("宋体", 9F);
             this.nodeViewItemTree1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.nodeViewItemTree1.Location = new System.Drawing.Point(0, 0);

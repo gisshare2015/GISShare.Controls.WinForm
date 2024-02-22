@@ -876,11 +876,11 @@ namespace GISShare.Controls.WinForm.WFNew.Design
         public static Type[] Catalogue_DescriptionButton = new Type[] { typeof(DescriptionButtonItem) };
         public static Type[] Catalogue_CheckBox = new Type[] { typeof(CheckBoxItem), typeof(ImageCheckBoxItem) };
         public static Type[] Catalogue_RadioButton = new Type[] { typeof(RadioButtonItem), typeof(ImageRadioButtonItem) };
-        public static Type[] Catalogue_InputBox = new Type[] { typeof(TextBoxItem), typeof(IntegerInputBoxItem), typeof(DoubleInputBoxItem), typeof(ButtonTextBoxItem) };
-        public static Type[] Catalogue_ComboBox = new Type[] { typeof(ComboBoxItem), typeof(ComboTreeItem), typeof(ComboDateItem)/*, typeof(ComboDateTimeItem)*/ };
+        public static Type[] Catalogue_InputBox = new Type[] { typeof(TextBoxItem), typeof(IntegerInputBoxItem), typeof(DoubleInputBoxItem), typeof(ButtonTextBoxItem), typeof(ButtonValueBoxItem) };
+        public static Type[] Catalogue_ComboBox = new Type[] { typeof(ComboBoxItem), typeof(ComboSearchBoxItem), typeof(ComboTreeItem), typeof(ComboDateItem), typeof(ComboDateTimeItem) };
         public static Type[] Catalogue_ProcessBar = new Type[] { typeof(ProcessBarItem) };
         public static Type[] Catalogue_RatingStar = new Type[] { typeof(RatingStarItem) };
-        public static Type[] Catalogue_ScrollBar = new Type[] { typeof(SliderItem), typeof(ScrollBarItem) };
+        public static Type[] Catalogue_ScrollBar = new Type[] { typeof(PlayProcessBarItem), typeof(SliderItem), typeof(ScrollBarItem) };
         public static Type[] Catalogue_Separator = new Type[] { typeof(SeparatorItem) };
         public static Type[] Catalogue_LabelSeparator = new Type[] { typeof(LabelSeparatorItem), typeof(ImageLabelSeparatorItem) };
         public static Type[] Catalogue_ImageBox = new Type[] { typeof(ImageBoxItem), typeof(ImageAreaBoxItem), typeof(ImageZoomableBoxItem) };
@@ -896,7 +896,7 @@ namespace GISShare.Controls.WinForm.WFNew.Design
         public static Type[] Catalogue_RibbonQuickAccessToolbar = new Type[] { typeof(RibbonQuickAccessToolbarItem) };
         public static Type[] Catalogue_RibbonStatusBar = new Type[] { typeof(RibbonStatusBarItem) };
         public static Type[] Catalogue_RibbonControl = new Type[] { typeof(RibbonControlItem) };
-        public static Type[] Catalogue_ListBox = new Type[] { typeof(View.ViewItemListBoxItem) };
+        public static Type[] Catalogue_ListBox = new Type[] { typeof(View.ViewItemListBoxItem), typeof(View.ViewItemSearchListBoxItem) };
         public static Type[] Catalogue_Tree = new Type[] { typeof(View.NodeViewItemTreeItem) };
         public static Type[] Catalogue_GridView = new Type[] { typeof(View.GridViewItemListBoxItem) };
         public static Type[] Catalogue_GridNodeView = new Type[] { typeof(View.GridNodeViewItemTreeItem) };

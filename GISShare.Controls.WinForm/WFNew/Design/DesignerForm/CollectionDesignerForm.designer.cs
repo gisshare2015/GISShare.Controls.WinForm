@@ -47,7 +47,7 @@
             // treeView1
             // 
             this.treeView1.AutoGetFocus = true;
-            this.treeView1.BackColor = System.Drawing.SystemColors.Window;
+            this.treeView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.treeView1.Font = new System.Drawing.Font("宋体", 9F);
             this.treeView1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.treeView1.Location = new System.Drawing.Point(0, 0);

@@ -117,6 +117,14 @@ namespace GISShare.Controls.WinForm.WFNew
             set { m_CanEdit = value; }
         }
 
+        bool m_CanSelect = true;
+        [Browsable(true), DefaultValue(true), Description("是否可以选择"), Category("状态")]
+        public virtual bool CanSelect
+        {
+            get { return m_CanSelect; }
+            set { m_CanSelect = value; }
+        }
+
         GISShare.Controls.WinForm.WFNew.BorderStyle m_eBorderStyle = GISShare.Controls.WinForm.WFNew.BorderStyle.eSingle;
         [Browsable(true), DefaultValue(typeof(GISShare.Controls.WinForm.WFNew.BorderStyle), "eSingle"), Description("外框类型"), Category("外观")]
         public GISShare.Controls.WinForm.WFNew.BorderStyle eBorderStyle
@@ -176,7 +184,7 @@ namespace GISShare.Controls.WinForm.WFNew
 
         #region ITextBoxItem2
         [Browsable(true), Description("掩码"), Category("外观")]
-        public char PasswordChar
+        public virtual char PasswordChar
         {
             get
             {
@@ -201,6 +209,13 @@ namespace GISShare.Controls.WinForm.WFNew
             set { this.m_TextBoxButtonItem.eGlyphStyle = value; }
         }
 
+        [Browsable(true), DefaultValue(typeof(Padding), "0,0,0,0"), Description("获取或设置控件内的空白"), Category("布局")]
+        public Padding ButtonPadding 
+        {
+            get { return this.m_TextBoxButtonItem.Padding; }
+            set { this.m_TextBoxButtonItem.Padding = value; }
+        }
+
         [Browsable(false), Description("按钮矩形框"), Category("布局")]
         public Rectangle GlyphButtonRectangle
         {
@@ -223,7 +238,22 @@ namespace GISShare.Controls.WinForm.WFNew
                 }
             }
         }
+
+        [Browsable(false), Description("X轴偏移量，用来重新规划文本输入区"), Category("布局")]
+        public virtual int OffsetX { get { return 0; } }
         #endregion
+
+        public override string Text
+        {
+            get
+            {
+                return this.IsInputing ? this.m_InputRegion.Text : base.Text;
+            }
+            set
+            {
+                base.Text = value;
+            }
+        }
 
         protected override bool RefreshBaseItemState
         {
@@ -433,8 +463,12 @@ namespace GISShare.Controls.WinForm.WFNew
             {
                 if (this.PasswordChar == '\0')
                 {
+                    int iOffsetX = this.OffsetX;
+                    if (iOffsetX > 0) iOffsetX += CTR_BORDERSPASE;
+                    Rectangle rectangle = this.TextRectangle;
+                    rectangle = Rectangle.FromLTRB(rectangle.Left + iOffsetX, rectangle.Top, rectangle.Right, rectangle.Bottom);
                     GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderTextBoxText(
-                        new TextRenderEventArgs(e.Graphics, this, this.Enabled, this.Text, this.ForeColor, this.Font, this.TextRectangle));
+                        new TextRenderEventArgs(e.Graphics, this, this.Enabled, this.HaveShadow, this.Text, this.ForeCustomize, this.ForeColor, this.ShadowColor, this.Font, rectangle));
                 }
                 else
                 {
@@ -444,7 +478,7 @@ namespace GISShare.Controls.WinForm.WFNew
                         strText += this.PasswordChar;
                     }
                     GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderTextBoxText(
-                        new TextRenderEventArgs(e.Graphics, this, this.Enabled, strText, this.ForeColor, this.Font, this.TextRectangle));
+                        new TextRenderEventArgs(e.Graphics, this, this.Enabled, this.HaveShadow, strText, this.ForeCustomize, this.ForeColor, this.ShadowColor, this.Font, this.TextRectangle));
                 }
             }
         }

@@ -39,7 +39,7 @@
             // viewItemListBox1
             // 
             this.viewItemListBox1.AutoGetFocus = true;
-            this.viewItemListBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.viewItemListBox1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.viewItemListBox1.CanEdit = true;
             this.viewItemListBox1.Font = new System.Drawing.Font("宋体", 9F);
             this.viewItemListBox1.ForeColor = System.Drawing.SystemColors.ControlText;

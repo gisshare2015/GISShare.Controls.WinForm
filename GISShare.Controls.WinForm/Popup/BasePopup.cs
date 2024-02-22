@@ -95,7 +95,14 @@ namespace GISShare.Controls.WinForm.Popup
 
         public virtual bool Filtration(System.Windows.Forms.MouseEventArgs e)
         {
-            return this.Bounds.Contains(e.Location);
+            return this.BoundsContainsXY(e.X, e.Y);
+        }
+
+        public virtual bool BoundsContainsXY(int iX, int iY)//KEY
+        {
+            iX = (int)(iX / PrimaryScreen.ScaleX);
+            iY = (int)(iY / PrimaryScreen.ScaleY);
+            return this.Bounds.Contains(iX, iY);
         }
 
         public void Close(DismissReason eDismissReason)

@@ -174,7 +174,7 @@ namespace GISShare.Controls.WinForm.WFNew
         #endregion
 
         #region LinkLabel
-        public abstract Color LinkLabelomal { get; }
+        public abstract Color LinkLabelNomal { get; }
         public abstract Color LinkLabelPressed { get; }
         public abstract Color LinkLabelSelected { get; }
         public abstract Color LinkLabelDisabled { get; }
@@ -200,13 +200,13 @@ namespace GISShare.Controls.WinForm.WFNew
         #endregion
 
         #region Button
-        public abstract Color Buttonomal { get; }
-        public abstract Color ButtonomalCenter { get; }
-        public abstract Color ButtonomalOut { get; }
-        public abstract Color ButtonomalGlossyBegin { get; }
-        public abstract Color ButtonomalGlossyEnd { get; }
-        public abstract Color ButtonomalBorderIn { get; }
-        public abstract Color ButtonomalBorderOut { get; }
+        public abstract Color ButtonNomal { get; }
+        public abstract Color ButtonNomalCenter { get; }
+        public abstract Color ButtonNomalOut { get; }
+        public abstract Color ButtonNomalGlossyBegin { get; }
+        public abstract Color ButtonNomalGlossyEnd { get; }
+        public abstract Color ButtonNomalBorderIn { get; }
+        public abstract Color ButtonNomalBorderOut { get; }
         //------------------------------------------------------
         public abstract Color ButtonChecked { get; }
         public abstract Color ButtonCheckedCenter { get; }

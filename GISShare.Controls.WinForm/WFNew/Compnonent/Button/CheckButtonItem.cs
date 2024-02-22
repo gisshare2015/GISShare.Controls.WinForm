@@ -9,7 +9,7 @@ using System.ComponentModel;
 namespace GISShare.Controls.WinForm.WFNew
 {
     [DefaultEvent("CheckedChanged")]
-    public class CheckButtonItem : BaseButtonItem
+    public class CheckButtonItem : BaseButtonItem, ICheckButtonItem
     {
         #region 构造函数
         public CheckButtonItem() { }
@@ -65,6 +65,16 @@ namespace GISShare.Controls.WinForm.WFNew
         //    this.RightTopRadius = pBaseItemP.RightTopRadius;
         //    this.ShowNomalState = pBaseItemP.ShowNomalState;
         //}
+        #endregion
+
+        #region ICheckButtonItem
+        private Image m_CheckImage = null;
+        [Browsable(true), Description("图片"), Category("外观")]
+        public virtual Image CheckImage
+        {
+            get { return m_CheckImage; }
+            set { m_CheckImage = value; }
+        }
         #endregion
 
         #region Clone
@@ -164,6 +174,11 @@ namespace GISShare.Controls.WinForm.WFNew
         }
         #endregion
 
+        protected virtual Image DisplayImage()
+        {
+            return (this.Checked && this.CheckImage != null) ? this.CheckImage : this.Image;
+        }
+
         protected override void OnMouseUp(MouseEventArgs mevent)
         {
             if (this.DisplayRectangle.Contains(mevent.Location))
@@ -197,13 +212,13 @@ namespace GISShare.Controls.WinForm.WFNew
                 {
                     case DisplayStyle.eText:
                         GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonText(
-                            new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.Text, this.ForeColor, this.Font, this.TextRectangle));
+                            new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.HaveShadow, this.Text, this.ForeCustomize,  this.ForeColor, this.ShadowColor, this.Font, this.TextRectangle));
                         break;
                     default:
                         GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonImage(
-                            new GISShare.Controls.WinForm.ImageRenderEventArgs(e.Graphics, this, this.Enabled, this.Image, this.ImageRectangle));
+                            new GISShare.Controls.WinForm.ImageRenderEventArgs(e.Graphics, this, this.Enabled, this.DisplayImage(), this.ImageRectangle));
                         GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonText(
-                            new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.Text, this.ForeColor, this.Font, this.TextRectangle));
+                            new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.HaveShadow, this.Text, this.ForeCustomize,  this.ForeColor, this.ShadowColor, this.Font, this.TextRectangle));
                         break;
                 }
             }
@@ -213,17 +228,17 @@ namespace GISShare.Controls.WinForm.WFNew
                 {
                     case DisplayStyle.eImage:
                         GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonImage(
-                            new GISShare.Controls.WinForm.ImageRenderEventArgs(e.Graphics, this, this.Enabled, this.Image, this.ImageRectangle));
+                            new GISShare.Controls.WinForm.ImageRenderEventArgs(e.Graphics, this, this.Enabled, this.DisplayImage(), this.ImageRectangle));
                         break;
                     case DisplayStyle.eText:
                         GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonText(
-                            new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.Text, this.ForeColor, this.Font, this.TextRectangle));
+                            new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.HaveShadow, this.Text, this.ForeCustomize,  this.ForeColor, this.ShadowColor, this.Font, this.TextRectangle));
                         break;
                     case DisplayStyle.eImageAndText:
                         GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonImage(
-                            new GISShare.Controls.WinForm.ImageRenderEventArgs(e.Graphics, this, this.Enabled, this.Image, this.ImageRectangle));
+                            new GISShare.Controls.WinForm.ImageRenderEventArgs(e.Graphics, this, this.Enabled, this.DisplayImage(), this.ImageRectangle));
                         GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonText(
-                            new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.Text, this.ForeColor, this.Font, this.TextRectangle));
+                            new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.HaveShadow, this.Text, this.ForeCustomize,  this.ForeColor, this.ShadowColor, this.Font, this.TextRectangle));
                         break;
                     default:
                         break;
@@ -233,7 +248,7 @@ namespace GISShare.Controls.WinForm.WFNew
             //{
             //    case DisplayStyle.eImage:
             //        GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonImage(
-            //            new GISShare.Controls.WinForm.ImageRenderEventArgs(e.Graphics, this, this.Enabled, this.Image, this.ImageRectangle));
+            //            new GISShare.Controls.WinForm.ImageRenderEventArgs(e.Graphics, this, this.Enabled, this.DisplayImage(), this.ImageRectangle));
             //        break;
             //    case DisplayStyle.eText:
             //        GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonText(
@@ -241,7 +256,7 @@ namespace GISShare.Controls.WinForm.WFNew
             //        break;
             //    case DisplayStyle.eImageAndText:
             //        GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonImage(
-            //            new GISShare.Controls.WinForm.ImageRenderEventArgs(e.Graphics, this, this.Enabled, this.Image, this.ImageRectangle));
+            //            new GISShare.Controls.WinForm.ImageRenderEventArgs(e.Graphics, this, this.Enabled, this.DisplayImage(), this.ImageRectangle));
             //        GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonText(
             //            new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.Text, this.ForeColor, this.Font, this.TextRectangle));
             //        break;

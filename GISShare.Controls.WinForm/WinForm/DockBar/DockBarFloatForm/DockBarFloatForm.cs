@@ -476,7 +476,7 @@ namespace GISShare.Controls.WinForm.DockBar
                     new ImageRenderEventArgs(e.Graphics, this, this.Enabled, this.Image, this.ImageRectangle));
             }
             GISShare.Controls.WinForm.WinFormRenderer.WinFormRendererStrategy.OnRenderText(
-                new TextRenderEventArgs(e.Graphics, this, this.Enabled, this.Text, this.ForeColor, this.Font, this.TitleRectangle));
+                new TextRenderEventArgs(e.Graphics, this, this.Enabled, this.HaveShadow, this.Text, this.ForeCustomize, this.ForeColor, this.ShadowColor, this.Font, this.TitleRectangle));
             //
             base.OnPaint(e);
         }

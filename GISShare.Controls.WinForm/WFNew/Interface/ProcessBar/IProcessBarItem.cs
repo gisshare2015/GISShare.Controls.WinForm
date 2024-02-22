@@ -9,14 +9,6 @@ namespace GISShare.Controls.WinForm.WFNew
     {
         System.Windows.Forms.Orientation eOrientation { get; set; }
 
-        int LeftTopRadius { get;set;  }
-
-        int RightTopRadius { get; set; }
-
-        int LeftBottomRadius { get;set;  }
-
-        int RightBottomRadius { get;set;  }
-
         int Value { get;set; }
 
         int Maximum { get;set; }
@@ -26,5 +18,13 @@ namespace GISShare.Controls.WinForm.WFNew
         int Percentage { get; }
 
         Rectangle FrameRectangle { get; }
+
+        int LeftTopRadius { get;set;  }
+
+        int RightTopRadius { get; set; }
+
+        int LeftBottomRadius { get;set;  }
+
+        int RightBottomRadius { get;set;  }
     }
 }

@@ -20,6 +20,7 @@ namespace GISShare.Controls.WinForm.WFNew
         public RibbonQuickAccessToolbarItem()
         {
             this.m_CustomizeButton = new CustomizeButtonItem(this);
+            this.ShowBackground = true;
         }
 
         #region IQuickAccessToolbarItem
@@ -35,13 +36,13 @@ namespace GISShare.Controls.WinForm.WFNew
             }
         }
 
-        private bool m_ShowBackground = true;
-        [Browsable(true), DefaultValue(true), Description("展现背景"), Category("状态")]
-        public bool ShowBackground
-        {
-            get { return m_ShowBackground; }
-            set { m_ShowBackground = value; }
-        }
+        //private bool m_ShowBackground = true;
+        //[Browsable(true), DefaultValue(true), Description("展现背景"), Category("状态")]
+        //public override bool ShowBackground
+        //{
+        //    get { return m_ShowBackground; }
+        //    set { m_ShowBackground = value; }
+        //}
 
         private QuickAccessToolbarStyle m_eQuickAccessToolbarStyle = QuickAccessToolbarStyle.eAllRound;
         [Browsable(true), DefaultValue(typeof(QuickAccessToolbarStyle), "eAllRound"), Description("快捷工具条的展现方式"), Category("外观")]

@@ -9,6 +9,8 @@ namespace GISShare.Controls.WinForm.WFNew
     {
         bool CanEdit { get; set; }
 
+        bool CanSelect { get; set; }
+
         BorderStyle eBorderStyle { get; set; }
 
         Rectangle FrameRectangle { get; }

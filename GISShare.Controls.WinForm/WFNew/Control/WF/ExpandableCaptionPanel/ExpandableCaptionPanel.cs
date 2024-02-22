@@ -33,7 +33,7 @@ namespace GISShare.Controls.WinForm.WFNew
             ((WFNew.ILockCollectionHelper)this.m_BaseItemCollection).SetLocked(true);
             //
             base.ShowOutLine = true;
-            base.ShowBackgroud = true;
+            base.ShowBackground = true;
             base.Dock = DockStyle.Left;
             this.m_ExpandSize = this.Size;
         }
@@ -47,10 +47,10 @@ namespace GISShare.Controls.WinForm.WFNew
         }
 
         [Browsable(true), DefaultValue(true), Description("显示背景色"), Category("外观")]
-        public override bool ShowBackgroud
+        public override bool ShowBackground
         {
-            get { return base.ShowBackgroud; }
-            set { base.ShowBackgroud = value; }
+            get { return base.ShowBackground; }
+            set { base.ShowBackground = value; }
         }
         #endregion
 
@@ -759,7 +759,7 @@ namespace GISShare.Controls.WinForm.WFNew
                 }
             }
             GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonText(
-                new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, true, this.Text, this.ForeColor, this.Font, rectangle, stringFormat));
+                new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.HaveShadow, this.Text, this.ForeCustomize, this.ForeColor, this.ShadowColor, this.Font, rectangle, stringFormat));
         }
         private Rectangle GetTextRectangle(Graphics g, StringFormat stringFormat, ref bool bDrawImage)
         {

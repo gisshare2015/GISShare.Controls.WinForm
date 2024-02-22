@@ -89,6 +89,30 @@ namespace GISShare.Controls.WinForm.WFNew
         }
         [Browsable(false), Description("修改自身所处的状态后是否刷新（SetBaseItemState）"), Category("属性")]
         protected virtual bool RefreshBaseItemState { get { return false; } }
+
+        private bool m_HaveShadow = true;
+        [Browsable(true), DefaultValue(true), Description("是否有字体阴影"), Category("状态")]
+        public virtual bool HaveShadow
+        {
+            get { return m_HaveShadow; }
+            set { m_HaveShadow = value; }
+        }
+
+        private Color m_ShadowColor = System.Drawing.SystemColors.ControlText;
+        [Browsable(true), DefaultValue(typeof(Color), "System.Drawing.SystemColors.ControlText"), Description("字体阴影颜色"), Category("外观")]
+        public virtual Color ShadowColor
+        {
+            get { return m_ShadowColor; }
+            set { m_ShadowColor = value; }
+        }
+
+        private bool m_ForeCustomize = false;
+        [Browsable(true), DefaultValue(false), Description("自定义文本色"), Category("状态")]
+        public virtual bool ForeCustomize
+        {
+            get { return m_ForeCustomize; }
+            set { m_ForeCustomize = value; }
+        }
         #endregion
 
         #region IBaseItem2
@@ -98,12 +122,22 @@ namespace GISShare.Controls.WinForm.WFNew
         [Browsable(false), Description("自身是否溢出于其所在容器的子项展现矩形"), Category("状态")]
         public bool Overflow
         { get { return false; } }
+        
+        bool m_LockWith = false;
+        [Browsable(true), DefaultValue(false), Description("自身的宽度是否被锁定，如被锁定其宽度将不会被自动拉伸"), Category("布局")]
+        public virtual bool LockWith
+        {
+            get { return this.m_LockWith; }
+            set { this.m_LockWith = value; }
+        }
 
-        [Browsable(false), Description("自身的高度是否被锁定，如被锁定其高度将不会被自动拉伸"), Category("布局")]
-        public abstract bool LockHeight { get; }
-
-        [Browsable(false), Description("自身的宽度是否被锁定，如被锁定其宽度将不会被自动拉伸"), Category("布局")]
-        public abstract bool LockWith { get; }
+        bool m_LockHeight = false;
+        [Browsable(true), DefaultValue(false), Description("自身的高度是否被锁定，如被锁定其高度将不会被自动拉伸"), Category("布局")]
+        public virtual bool LockHeight
+        {
+            get { return this.m_LockHeight; }
+            set { this.m_LockHeight = value; }
+        }
 
         bool m_Checked = false;
         [Browsable(true), DefaultValue(false), Description("选中"), Category("状态")]

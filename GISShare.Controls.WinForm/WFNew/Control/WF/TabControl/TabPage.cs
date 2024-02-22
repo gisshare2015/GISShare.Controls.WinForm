@@ -155,6 +155,66 @@ namespace GISShare.Controls.WinForm.WFNew
             public TabButtonTCItem(TabPage tabPage)
                 : base(tabPage) { }
 
+            public override Font Font
+            {
+                get
+                {
+                    return this.pTabPageItem.Font;
+                }
+                set
+                {
+                    this.pTabPageItem.Font = value;
+                }
+            }
+
+            public override bool HaveShadow
+            {
+                get
+                {
+                    return this.pTabPageItem.HaveShadow;
+                }
+                set
+                {
+                    this.pTabPageItem.HaveShadow = value;
+                }
+            }
+
+            public override Color ShadowColor
+            {
+                get
+                {
+                    return this.pTabPageItem.ShadowColor;
+                }
+                set
+                {
+                    this.pTabPageItem.ShadowColor = value;
+                }
+            }
+
+            public override bool ForeCustomize
+            {
+                get
+                {
+                    return this.pTabPageItem.ForeCustomize;
+                }
+                set
+                {
+                    this.pTabPageItem.ForeCustomize = value;
+                }
+            }
+
+            public override Color ForeColor
+            {
+                get
+                {
+                    return this.pTabPageItem.ForeColor;
+                }
+                set
+                {
+                    this.pTabPageItem.ForeColor = value;
+                }
+            }
+
             protected override void OnTabButtonMouseUp(MouseEventArgs e)
             {
                 base.OnTabButtonMouseUp(e);

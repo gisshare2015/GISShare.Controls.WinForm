@@ -236,6 +236,14 @@ namespace GISShare.Controls.WinForm.WFNew
             set { }
         }
 
+        bool m_CanSelect = true;
+        [Browsable(true), DefaultValue(true), Description("是否可以选择"), Category("状态")]
+        public virtual bool CanSelect
+        {
+            get { return m_CanSelect; }
+            set { m_CanSelect = value; }
+        }
+
         GISShare.Controls.WinForm.WFNew.BorderStyle m_eBorderStyle = GISShare.Controls.WinForm.WFNew.BorderStyle.eSingle;
         [Browsable(true), DefaultValue(typeof(GISShare.Controls.WinForm.WFNew.BorderStyle), "eSingle"), Description("外框类型"), Category("外观")]
         public GISShare.Controls.WinForm.WFNew.BorderStyle eBorderStyle
@@ -755,7 +763,7 @@ namespace GISShare.Controls.WinForm.WFNew
             if (!this.IsInputing)
             {
                 GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderTextBoxText(
-                    new TextRenderEventArgs(e.Graphics, this, this.Enabled, this.Text, this.ForeColor, this.Font, this.TextRectangle));
+                    new TextRenderEventArgs(e.Graphics, this, this.Enabled, this.HaveShadow, this.Text, this.ForeCustomize,  this.ForeColor, this.ShadowColor, this.Font, this.TextRectangle));
             }
             GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonArrow(
                 new GISShare.Controls.WinForm.ArrowRenderEventArgs(e.Graphics, this, this.Enabled, ArrowStyle.eToDown, this.ForeColor, this.ArrowRectangle));

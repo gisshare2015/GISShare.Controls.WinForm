@@ -209,12 +209,12 @@ namespace GISShare.Controls.WinForm.WFNew
             baseItem.eOrientation = this.eOrientation;
             //
             //baseItem.ShowNomalOutLineState = this.ShowNomalOutLineState;
-            //baseItem.ShowNomalBackgroudState = this.ShowNomalBackgroudState;
+            //baseItem.ShowNomalBackgroundState = this.ShowNomalBackgroundState;
             //baseItem.ShowOutLineState = this.ShowOutLineState;
-            //baseItem.ShowBackgroudState = this.ShowBackgroudState;
+            //baseItem.ShowBackgroundState = this.ShowBackgroundState;
             baseItem.PreButtonIncreaseIndex = this.PreButtonIncreaseIndex;
             //
-            baseItem.ShowBackgroud = this.ShowBackgroud;
+            baseItem.ShowBackground = this.ShowBackground;
             baseItem.ShowOutLine = this.ShowOutLine;
             foreach (BaseItem one in this.BaseItems)
             {

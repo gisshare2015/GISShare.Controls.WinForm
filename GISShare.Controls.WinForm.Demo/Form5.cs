@@ -15,7 +15,7 @@ namespace GISShare.Controls.WinForm.Demo
         {
             InitializeComponent();
             //
-            //this.baseItemHostControl1.BaseItemObject = new GISShare.Controls.WinForm.WFNew.BaseItemStackItem() { ShowBackgroud = true };
+            //this.baseItemHostControl1.BaseItemObject = new GISShare.Controls.WinForm.WFNew.BaseItemStackItem() { ShowBackground = true };
         }
     }
 }

@@ -30,6 +30,32 @@ namespace GISShare.Controls.WinForm.WFNew
             this.ShowInTaskbar = false;
         }
 
+        #region WFNew.IBaseItem
+        private bool m_HaveShadow = true;
+        [Browsable(true), DefaultValue(true), Description("是否有字体阴影"), Category("状态")]
+        public bool HaveShadow
+        {
+            get { return m_HaveShadow; }
+            set { m_HaveShadow = value; }
+        }
+
+        private Color m_ShadowColor = System.Drawing.SystemColors.ControlText;
+        [Browsable(true), DefaultValue(typeof(Color), "System.Drawing.SystemColors.ControlText"), Description("字体阴影颜色"), Category("外观")]
+        public Color ShadowColor
+        {
+            get { return m_ShadowColor; }
+            set { m_ShadowColor = value; }
+        }
+
+        private bool m_ForeCustomize = false;
+        [Browsable(true), DefaultValue(false), Description("自定义文本色"), Category("状态")]
+        public bool ForeCustomize
+        {
+            get { return m_ForeCustomize; }
+            set { m_ForeCustomize = value; }
+        }
+        #endregion
+
         #region ISplitLine
         WFNew.RenderStyle m_eRenderStyle = WFNew.RenderStyle.eSystem;
         [Browsable(true), DefaultValue(typeof(WFNew.RenderStyle), "eSystem"), Description("渲染类型"), Category("外观")]

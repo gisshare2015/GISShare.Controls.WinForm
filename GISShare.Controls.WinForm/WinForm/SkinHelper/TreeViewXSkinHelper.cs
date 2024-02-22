@@ -184,6 +184,8 @@ namespace GISShare.Controls.WinForm
                     this.Enabled,
                     false,
                     e.Node.Text,
+                    false,
+                    e.Node.ForeColor.IsEmpty ? this.ForeColor : e.Node.ForeColor,
                     e.Node.ForeColor.IsEmpty ? this.ForeColor : e.Node.ForeColor,
                     e.Node.NodeFont == null ? this.Font : e.Node.NodeFont,
                     new Rectangle(e.Node.Bounds.Left, (e.Bounds.Top + e.Bounds.Bottom - size.Height) / 2 + 2, size.Width, size.Height)

@@ -133,7 +133,7 @@
             // 
             // nodeViewItemTree1
             // 
-            this.nodeViewItemTree1.BackColor = System.Drawing.SystemColors.Window;
+            this.nodeViewItemTree1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.nodeViewItemTree1.Location = new System.Drawing.Point(0, 25);
             this.nodeViewItemTree1.Name = "nodeViewItemTree1";
             this.nodeViewItemTree1.Padding = new System.Windows.Forms.Padding(0);

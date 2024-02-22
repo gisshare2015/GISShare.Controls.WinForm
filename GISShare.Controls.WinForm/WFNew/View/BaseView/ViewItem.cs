@@ -392,7 +392,7 @@ namespace GISShare.Controls.WinForm.WFNew.View
         {
             Rectangle rectangle = Rectangle.FromLTRB(e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Right - 1, e.ClipRectangle.Bottom - 1);
             WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderViewItem(new ObjectRenderEventArgs(e.Graphics, this, rectangle));
-            if (this.Text.Length <= 0) return;
+            if (String.IsNullOrEmpty(this.Text)) return;
             Font font = new Font("ËÎÌו", 9f);
             rectangle = this.DisplayRectangle;
             int iH = (int)e.Graphics.MeasureString(this.Text, font).Height + 1;
@@ -404,6 +404,8 @@ namespace GISShare.Controls.WinForm.WFNew.View
                     true,
                     true,
                     this.Text,
+                    false,
+                    System.Drawing.SystemColors.ControlText,
                     System.Drawing.SystemColors.ControlText,
                     font,
                     new Rectangle(rectangle.Left, (rectangle.Top + rectangle.Bottom - iH) / 2, rectangle.Width, iH),//rectangle.Height

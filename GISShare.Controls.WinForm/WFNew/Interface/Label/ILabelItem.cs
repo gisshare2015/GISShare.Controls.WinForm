@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    public interface ILabelItem : IBaseItem2
+    public interface ILabelItem : IBaseItem2, IArea
     {
         ContentAlignment TextAlign { get; set; }
 

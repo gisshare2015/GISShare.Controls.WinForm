@@ -30,10 +30,10 @@ namespace GISShare.Controls.WinForm.WFNew
             //this.MaximizedBounds = SystemInformation.WorkingArea;
             this.MaximizedBounds = new Rectangle
                 (
-                -SystemInformation.FrameBorderSize.Width,
-                -SystemInformation.FrameBorderSize.Height,
-                SystemInformation.WorkingArea.Width + 2 * SystemInformation.FrameBorderSize.Width,
-                SystemInformation.WorkingArea.Height + 2 * SystemInformation.FrameBorderSize.Height
+                -SystemInformationX.FrameBorderSize.Width,
+                -SystemInformationX.FrameBorderSize.Height,
+                SystemInformation.WorkingArea.Width + 2 * SystemInformationX.FrameBorderSize.Width,
+                SystemInformation.WorkingArea.Height + 2 * SystemInformationX.FrameBorderSize.Height
                 );
         }
 
@@ -94,15 +94,14 @@ namespace GISShare.Controls.WinForm.WFNew
         {
             get { return base.FormBorderStyle; }
         }
-
+        [DllImport("user32.dll")]
+        public static extern int GetSystemMetrics(int nIndex);
         [Browsable(false), Description("框架边缘区的宽度"), Category("布局")]
         public Size FrameBorderSize
         {
             get 
             {
-                Size size = SystemInformation.FrameBorderSize;
-                //size.Width = size.Width + SystemInformation.HorizontalResizeBorderThickness;
-                //size.Height = size.Height + SystemInformation.VerticalResizeBorderThickness;
+                Size size = SystemInformationX.FrameBorderSize;
                 return size;
             }
         }

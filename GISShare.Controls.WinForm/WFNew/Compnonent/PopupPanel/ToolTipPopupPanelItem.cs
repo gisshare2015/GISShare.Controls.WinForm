@@ -46,7 +46,7 @@ namespace GISShare.Controls.WinForm.WFNew
             ((ILockCollectionHelper)this.BaseItems).SetLocked(true);
         }
 
-        public override bool ShowBackgroud
+        public override bool ShowBackground
         {
             get
             {
@@ -54,7 +54,7 @@ namespace GISShare.Controls.WinForm.WFNew
             }
             set
             {
-                base.ShowBackgroud = value;
+                base.ShowBackground = value;
             }
         }
 

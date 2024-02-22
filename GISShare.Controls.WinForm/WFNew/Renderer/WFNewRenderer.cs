@@ -139,6 +139,9 @@ namespace GISShare.Controls.WinForm.WFNew
         public abstract void OnRenderProcessBar(ObjectRenderEventArgs e);
         #endregion
 
+        public abstract void OnRenderPlayProcessBar(ObjectRenderEventArgs e);
+        public abstract void OnRenderPlayProcessBarButton(ObjectRenderEventArgs e);
+
         #region Slider
         public abstract void OnRenderSlider(ObjectRenderEventArgs e);
         #endregion
@@ -238,9 +241,9 @@ namespace GISShare.Controls.WinForm.WFNew
         //
         //
 
-        #region ViewItemList
-        public abstract void OnRenderViewItemList(ObjectRenderEventArgs e);
-        #endregion
+        //#region ViewItemList
+        //public abstract void OnRenderViewItemList(ObjectRenderEventArgs e);
+        //#endregion
 
         #region ViewItem
         public abstract void OnRenderViewItem(ObjectRenderEventArgs e);

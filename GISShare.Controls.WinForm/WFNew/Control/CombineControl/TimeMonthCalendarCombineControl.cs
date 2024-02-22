@@ -11,7 +11,7 @@ namespace GISShare.Controls.WinForm.WFNew
     public class TimeMonthCalendarCombineControl : AreaControl
     {
         MonthCalendar m_MonthCalendar = new MonthCalendar();
-        DateTimeCombineControl m_DateTimeCombineControl = new DateTimeCombineControl();
+        DateTimeCombineItem m_DateTimeCombineItem = new DateTimeCombineItem();
 
         [Browsable(true), Description("选择时间改变后触发（参数中的oldValue无效）"), Category("属性已更改")]
         public event PropertyChangedEventHandler SelectedDateTimeChanged;
@@ -26,25 +26,27 @@ namespace GISShare.Controls.WinForm.WFNew
             this.m_MonthCalendar.MaxSelectionCount = 1;
             this.m_MonthCalendar.DateSelected += new DateRangeEventHandler(MonthCalendar_DateSelected);
             //
-            this.m_DateTimeCombineControl.Height = 20;
-            this.m_DateTimeCombineControl.ShowYear = false;
-            this.m_DateTimeCombineControl.ShowMonth = false;
-            this.m_DateTimeCombineControl.ShowDay = false;
-            this.m_DateTimeCombineControl.Dock = System.Windows.Forms.DockStyle.Top;
-            ((ILockCollectionHelper)this.m_DateTimeCombineControl.BaseItems).SetLocked(false);
-            this.m_DateTimeCombineControl.BaseItems.Insert(0, new LabelItem() { Text = " 时间：" });
-            ((ILockCollectionHelper)this.m_DateTimeCombineControl.BaseItems).SetLocked(true);
-            this.m_DateTimeCombineControl.SelectedDateTimeChanged += new PropertyChangedEventHandler(DateTimeCombineControl_SelectedDateTimeChanged);
+            BaseItemHost dateTimeCombineControl = new BaseItemHost();
+            dateTimeCombineControl.Height = 20;
+            dateTimeCombineControl.Dock = System.Windows.Forms.DockStyle.Top;
+            dateTimeCombineControl.BaseItemObject = this.m_DateTimeCombineItem;
+            this.m_DateTimeCombineItem.ShowYear = false;
+            this.m_DateTimeCombineItem.ShowMonth = false;
+            this.m_DateTimeCombineItem.ShowDay = false;
+            ((ILockCollectionHelper)this.m_DateTimeCombineItem.BaseItems).SetLocked(false);
+            this.m_DateTimeCombineItem.BaseItems.Insert(0, new LabelItem() { Text = " 时间：" });
+            ((ILockCollectionHelper)this.m_DateTimeCombineItem.BaseItems).SetLocked(true);
+            this.m_DateTimeCombineItem.SelectedDateTimeChanged += new PropertyChangedEventHandler(DateTimeCombineControl_SelectedDateTimeChanged);
             //
             this.ShowOutLine = true;
             this.Width = 1 + this.m_MonthCalendar.Width + 1;
-            this.Height = 1 + this.m_MonthCalendar.Height + 1 + this.m_DateTimeCombineControl.Height + 1;
-            this.Controls.Add(this.m_DateTimeCombineControl);
+            this.Height = 1 + this.m_MonthCalendar.Height + 1 + dateTimeCombineControl.Height + 1;
+            this.Controls.Add(dateTimeCombineControl);
             this.Controls.Add(this.m_MonthCalendar);
             //
             this.DateTime = System.DateTime.Now;
             this.m_MonthCalendar.SelectionEnd = this.m_DateTime;
-            this.m_DateTimeCombineControl.DateTime = this.m_DateTime;
+            this.m_DateTimeCombineItem.DateTime = this.m_DateTime;
         }
         void MonthCalendar_DateSelected(object sender, DateRangeEventArgs e)
         {
@@ -55,7 +57,7 @@ namespace GISShare.Controls.WinForm.WFNew
         void DateTimeCombineControl_SelectedDateTimeChanged(object sender, PropertyChangedEventArgs e)
         {
             DateTime date = this.m_DateTime;
-            DateTime time = this.m_DateTimeCombineControl.DateTime;
+            DateTime time = this.m_DateTimeCombineItem.DateTime;
             this.DateTime = new DateTime(date.Year, date.Month, date.Day, time.Hour, time.Minute, time.Second, time.Millisecond);
         }
         
@@ -73,7 +75,7 @@ namespace GISShare.Controls.WinForm.WFNew
         {
             base.OnLayout(levent);
             int iW = 1 + this.m_MonthCalendar.Width + 1;
-            int iH = 1 + this.m_MonthCalendar.Height + 1 + this.m_DateTimeCombineControl.Height + 1;
+            int iH = 1 + this.m_MonthCalendar.Height + 1 + this.m_DateTimeCombineItem.Height + 1;
             if (this.Width != iW) this.Width = iW;
             if (this.Height != iH) this.Height = iH;
         }
@@ -87,7 +89,7 @@ namespace GISShare.Controls.WinForm.WFNew
                 if (this.m_DateTime == value) return;
                 DateTime dateTime = this.m_DateTime;
                 m_DateTime = value;
-                this.m_DateTimeCombineControl.DateTime = value;
+                this.m_DateTimeCombineItem.DateTime = value;
                 this.m_MonthCalendar.SelectionRange = new SelectionRange(value, value);
                 this.OnSelectedDateTimeChanged(new PropertyChangedEventArgs(typeof(DateTime), dateTime, this.m_DateTime));
             }

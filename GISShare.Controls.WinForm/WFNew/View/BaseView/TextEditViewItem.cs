@@ -30,6 +30,14 @@ namespace GISShare.Controls.WinForm.WFNew.View
             set { m_CanEdit = value; }
         }
 
+        bool m_CanSelect = true;
+        [Browsable(true), DefaultValue(true), Description("是否可以选择"), Category("状态")]
+        public virtual bool CanSelect
+        {
+            get { return m_CanSelect; }
+            set { m_CanSelect = value; }
+        }
+
         [Browsable(false), Description("当前编辑对象"), Category("属性")]
         object ITextEditViewItem.EditObject
         {

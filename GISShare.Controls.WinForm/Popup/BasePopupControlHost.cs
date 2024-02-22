@@ -10,7 +10,7 @@ namespace GISShare.Controls.WinForm.Popup
     {
         public BasePopupControlHost(Control ctr)
             : base(ctr)
-        { }
+        {  }
 
         public BasePopupControlHost(Control ctr, string name)
             : base(ctr, name)

@@ -444,18 +444,24 @@ namespace GISShare.Controls.WinForm.WFNew.View
             //
             if (this.BaseItemObject != null) return;
             //
-            if (this.Text.Length <= 0) return;
+            if (String.IsNullOrEmpty(this.Text)) return;
+            //
+            //string strText = this.Text.Length > 32767 ? this.Text.Substring(0, 32767) : this.Text;
+            string strText = this.Text.Length > 10240 ? this.Text.Substring(0, 10240) : this.Text;
+            //
             rectangle = this.DisplayRectangle;
-            int iH = (int)e.Graphics.MeasureString(this.Text, this.Font).Height + 1;
+            int iH = (int)e.Graphics.MeasureString(strText, this.Font).Height + 1;
             WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonText
                 (
                 new TextRenderEventArgs(
                     e.Graphics,
                     this,
                     true,
-                    true,
+                    this.HaveShadow,
                     this.Text,
+                    this.ForeCustomize,
                     this.ForeColor,
+                    this.ShadowColor,
                     this.Font,
                     new Rectangle(rectangle.Left, (rectangle.Top + rectangle.Bottom - iH) / 2, rectangle.Width, iH),//rectangle.Height
                     new StringFormat() { Trimming = StringTrimming.EllipsisCharacter })

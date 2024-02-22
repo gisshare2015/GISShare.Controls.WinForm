@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    interface IToolTipPopup : IPanelPopup
+    public interface IToolTipPopup : IPanelPopup
     {
         bool SetTipInfo(ITipInfo pTipInfo);
     }

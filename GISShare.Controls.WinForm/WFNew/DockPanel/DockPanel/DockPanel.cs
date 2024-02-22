@@ -190,6 +190,14 @@ namespace GISShare.Controls.WinForm.WFNew.DockPanel
         #endregion
 
         #region WFNew.ITabControl
+        private int m_TabButtonContainerSize = CRT_TABBUTTONCONTAINERHEIGHT;
+        [Browsable(true), DefaultValue(21), Description("TabButton容器区尺寸（最小值21）"), Category("布局")]
+        public int TabButtonContainerSize
+        {
+            get { return m_TabButtonContainerSize; }
+            set { m_TabButtonContainerSize = value < CRT_TABBUTTONCONTAINERHEIGHT ? CRT_TABBUTTONCONTAINERHEIGHT : value; }
+        }
+
         [Browsable(false), Description("TabButtonContainerItem矩形框"), Category("布局")]
         public Rectangle TabButtonContainerRectangle
         {
@@ -210,13 +218,13 @@ namespace GISShare.Controls.WinForm.WFNew.DockPanel
                 switch (this.m_TabButtonContainerDPItem.TabAlignment)
                 {
                     case TabAlignment.Top:
-                        return new Rectangle(rectangle.Left, rectangle.Top, rectangle.Width, CRT_TABBUTTONCONTAINERHEIGHT);
+                        return new Rectangle(rectangle.Left, rectangle.Top, rectangle.Width, this.TabButtonContainerSize);
                     case TabAlignment.Bottom:
-                        return new Rectangle(rectangle.Left, rectangle.Bottom - CRT_TABBUTTONCONTAINERHEIGHT, rectangle.Width, CRT_TABBUTTONCONTAINERHEIGHT);
+                        return new Rectangle(rectangle.Left, rectangle.Bottom - this.TabButtonContainerSize, rectangle.Width, this.TabButtonContainerSize);
                     case TabAlignment.Left:
-                        return new Rectangle(rectangle.Left, rectangle.Top, CRT_TABBUTTONCONTAINERHEIGHT, rectangle.Height);
+                        return new Rectangle(rectangle.Left, rectangle.Top, this.TabButtonContainerSize, rectangle.Height);
                     case TabAlignment.Right:
-                        return new Rectangle(rectangle.Right - CRT_TABBUTTONCONTAINERHEIGHT, rectangle.Top, CRT_TABBUTTONCONTAINERHEIGHT, rectangle.Height);
+                        return new Rectangle(rectangle.Right - this.TabButtonContainerSize, rectangle.Top, this.TabButtonContainerSize, rectangle.Height);
                     default:
                         return rectangle;
                 }
@@ -1553,13 +1561,13 @@ namespace GISShare.Controls.WinForm.WFNew.DockPanel
                 switch (this.m_TabButtonContainerDPItem.TabAlignment)
                 {
                     case TabAlignment.Top:
-                        return Rectangle.FromLTRB(rectangle.Left, rectangle.Top + CRT_TABBUTTONCONTAINERHEIGHT, rectangle.Right, rectangle.Bottom);
+                        return Rectangle.FromLTRB(rectangle.Left, rectangle.Top + this.TabButtonContainerSize, rectangle.Right, rectangle.Bottom);
                     case TabAlignment.Bottom:
-                        return Rectangle.FromLTRB(rectangle.Left, rectangle.Top, rectangle.Right, rectangle.Bottom - CRT_TABBUTTONCONTAINERHEIGHT);
+                        return Rectangle.FromLTRB(rectangle.Left, rectangle.Top, rectangle.Right, rectangle.Bottom - this.TabButtonContainerSize);
                     case TabAlignment.Left:
-                        return Rectangle.FromLTRB(rectangle.Left + CRT_TABBUTTONCONTAINERHEIGHT, rectangle.Top, rectangle.Right, rectangle.Bottom);
+                        return Rectangle.FromLTRB(rectangle.Left + this.TabButtonContainerSize, rectangle.Top, rectangle.Right, rectangle.Bottom);
                     case TabAlignment.Right:
-                        return Rectangle.FromLTRB(rectangle.Left, rectangle.Top, rectangle.Right - CRT_TABBUTTONCONTAINERHEIGHT, rectangle.Bottom);
+                        return Rectangle.FromLTRB(rectangle.Left, rectangle.Top, rectangle.Right - this.TabButtonContainerSize, rectangle.Bottom);
                     default:
                         return rectangle;
                 }
@@ -1731,7 +1739,7 @@ namespace GISShare.Controls.WinForm.WFNew.DockPanel
                 }
                 StringFormat stringFormat = new StringFormat();
                 GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonText(
-                    new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.Text, this.ForeColor, this.Font, this.TitleRectangle));
+                    new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.HaveShadow, this.Text, this.ForeCustomize, this.ForeColor, this.ShadowColor, this.Font, this.TitleRectangle));
             }
         }
 

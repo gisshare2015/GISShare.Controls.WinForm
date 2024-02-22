@@ -9,6 +9,8 @@ namespace GISShare.Controls.WinForm.WFNew.View
     {
         bool CanEdit { get; set; }
 
+        bool CanSelect { get; set; }
+
         NodeViewItem SelectedNode { get; set; }
 
         NodeViewItem TryGetNodeViewItemFromPoint(Point point);

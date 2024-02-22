@@ -14,7 +14,7 @@ namespace GISShare.Controls.WinForm.Demo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form5());
+            //Application.Run(new Form6());
             Application.Run(new DemoCenterForm());
             //Application.Run(new RibbonControlForm());
         }

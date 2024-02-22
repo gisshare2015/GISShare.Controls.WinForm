@@ -10,7 +10,7 @@ using System.Collections;
 
 namespace GISShare.Controls.WinForm.WFNew.View
 {
-    public class GridViewItemListBoxItem : BaseItem,
+    public class GridViewItemListBoxItem : AreaItem,
         ICollectionItem, ICollectionItem2, ICollectionItem3, IUICollectionItem,
         IScrollableObjectHelper,
         IViewList,
@@ -59,13 +59,14 @@ namespace GISShare.Controls.WinForm.WFNew.View
         {
             base.AutoGetFocus = true;
             //base.BackColor = System.Drawing.SystemColors.Window;
+            base.ShowOutLine = true;
             //
             this.m_BaseItemCollection = new BaseItemCollection(this);
             this.m_VScrollBarItem = new VScrollBarItem();
             this.m_BaseItemCollection.Add(this.m_VScrollBarItem);
             this.m_HScrollBarItem = new HScrollBarItem();
             this.m_BaseItemCollection.Add(this.m_HScrollBarItem);
-            ((ILockCollectionHelper)this.m_BaseItemCollection).SetLocked(false);
+            ((ILockCollectionHelper)this.m_BaseItemCollection).SetLocked(true);
             //
             this.m_ViewItemCollection = new RowCellViewItemCollection(this);
             this.m_SelectedIndices = new SelectedIndexCollection(this);
@@ -174,7 +175,7 @@ namespace GISShare.Controls.WinForm.WFNew.View
         {
             get
             {
-                Rectangle rectangle = this.DisplayRectangle;
+                Rectangle rectangle = this.AreaRectangle;// this.DisplayRectangle;
                 if (this.ShowOutLine) return Rectangle.FromLTRB(rectangle.Left + 1, rectangle.Top + 1, rectangle.Right - 1, rectangle.Bottom - 1);
                 return rectangle;
             }
@@ -472,13 +473,13 @@ namespace GISShare.Controls.WinForm.WFNew.View
         #endregion
 
         #region IViewItemList
-        private bool m_ShowOutLine = true;
-        [Browsable(true), DefaultValue(true), Description("显示外框线"), Category("外观")]
-        public virtual bool ShowOutLine
-        {
-            get { return m_ShowOutLine; }
-            set { m_ShowOutLine = value; }
-        }
+        //private bool m_ShowOutLine = true;
+        //[Browsable(true), DefaultValue(true), Description("显示外框线"), Category("外观")]
+        //public virtual bool ShowOutLine
+        //{
+        //    get { return m_ShowOutLine; }
+        //    set { m_ShowOutLine = value; }
+        //}
 
         [Browsable(false), Description("左侧偏移量"), Category("布局")]
         public int LeftOffset
@@ -486,23 +487,23 @@ namespace GISShare.Controls.WinForm.WFNew.View
             get { return this.m_HScrollBarItem.GetEffectiveValue(); }
         }
 
-        private Color m_BackColor = System.Drawing.SystemColors.Window;
-        [Browsable(true), Description("背景色"), Category("外观")]
-        public Color BackColor
-        {
-            get { return m_BackColor; }
-            set { m_BackColor = value; }
-        }
+        //private Color m_BackColor = System.Drawing.SystemColors.Window;
+        //[Browsable(true), Description("背景色"), Category("外观")]
+        //public Color BackColor
+        //{
+        //    get { return m_BackColor; }
+        //    set { m_BackColor = value; }
+        //}
 
-        [Browsable(false), Description("框架矩形框"), Category("布局")]
-        public Rectangle FrameRectangle
-        {
-            get
-            {
-                Rectangle rectangle = this.DisplayRectangle;
-                return new Rectangle(rectangle.X, rectangle.Y, rectangle.Width - 1, rectangle.Height - 1);
-            }
-        }
+        //[Browsable(false), Description("框架矩形框"), Category("布局")]
+        //public Rectangle FrameRectangle
+        //{
+        //    get
+        //    {
+        //        Rectangle rectangle = this.DisplayRectangle;
+        //        return new Rectangle(rectangle.X, rectangle.Y, rectangle.Width - 1, rectangle.Height - 1);
+        //    }
+        //}
         #endregion
 
         #region IViewItemList2
@@ -550,6 +551,14 @@ namespace GISShare.Controls.WinForm.WFNew.View
         {
             get { return m_CanEdit; }
             set { m_CanEdit = value; }
+        }
+
+        bool m_CanSelect = false;
+        [Browsable(true), DefaultValue(false), Description("是否可以选择"), Category("状态")]
+        public virtual bool CanSelect
+        {
+            get { return m_CanSelect; }
+            set { m_CanSelect = value; }
         }
 
         [Browsable(false), DefaultValue(-1), Description("选择ViewItem索引"), Category("属性")]
@@ -776,6 +785,10 @@ namespace GISShare.Controls.WinForm.WFNew.View
         {
             this.AddRowViewItem(eRowCellViewStyle, this.DefaultRowHeight, argsobj);
         }
+        public void AddRowViewItem2(RowCellViewStyle eRowCellViewStyle, params object[] argsobj)
+        {
+            this.AddRowViewItem2(eRowCellViewStyle, this.DefaultRowHeight, argsobj);
+        }
 
         /// <summary>
         /// 添加行
@@ -787,17 +800,29 @@ namespace GISShare.Controls.WinForm.WFNew.View
         {
             DataRowCellViewItem rowViewItem = new DataRowCellViewItem(eRowCellViewStyle, null);
             rowViewItem.Height = iRowHeight;
+            rowViewItem.ForeCustomize = this.ForeCustomize;
+            rowViewItem.HaveShadow = this.HaveShadow;
+            rowViewItem.Font = this.Font;
+            rowViewItem.ForeColor = this.ForeColor;
+            rowViewItem.ShadowColor = this.ShadowColor;
             if (argsobj == null || argsobj.Length <= 0)
             {
                 switch (rowViewItem.eRowCellViewStyle)
                 {
                     case RowCellViewStyle.eSystemRow:
-                        for (int i = 0; i < this.ColumnViewItems.Count; i++)
+                        CellViewItem cellViewItem;
+                        foreach (ColumnViewItem one in this.ColumnViewItems)
                         {
-                            CellViewItem cellViewItem = this.CreateCellViewItem(CellViewStyle.eSystem);
-                            cellViewItem.Name = this.ColumnViewItems[i].FieldName;
+                            cellViewItem = this.CreateCellViewItem(CellViewStyle.eSystem);
+                            cellViewItem.Name = one.FieldName;
                             rowViewItem.ViewItems.Add(cellViewItem);
                         }
+                        //for (int i = 0; i < this.ColumnViewItems.Count; i++)
+                        //{
+                        //    cellViewItem = this.CreateCellViewItem(CellViewStyle.eSystem);
+                        //    cellViewItem.Name = this.ColumnViewItems[i].FieldName;
+                        //    rowViewItem.ViewItems.Add(cellViewItem);
+                        //}
                         break;
                     case RowCellViewStyle.eSingleCellRow:
                         rowViewItem.ViewItems.Add(this.CreateCellViewItem(CellViewStyle.eSingleCell));
@@ -812,16 +837,30 @@ namespace GISShare.Controls.WinForm.WFNew.View
                 {
                     case RowCellViewStyle.eSystemRow:
                         {
-                            for (int i = 0; i < this.ColumnViewItems.Count; i++)
+                            CellViewItem cellViewItem;
+                            int i = 0;
+                            int iLen = argsobj.Length;
+                            foreach (ColumnViewItem one in this.ColumnViewItems)
                             {
-                                CellViewItem cellViewItem = this.CreateCellViewItem(CellViewStyle.eSystem);
-                                cellViewItem.Name = this.ColumnViewItems[i].FieldName;
-                                if (i < argsobj.Length)
+                                cellViewItem = this.CreateCellViewItem(CellViewStyle.eSystem);
+                                cellViewItem.Name = one.FieldName;
+                                if (i < iLen)
                                 {
                                     cellViewItem.Value = argsobj[i];
                                 }
                                 rowViewItem.ViewItems.Add(cellViewItem);
+                                i++;
                             }
+                            //for (int i = 0; i < this.ColumnViewItems.Count; i++)
+                            //{
+                            //    cellViewItem = this.CreateCellViewItem(CellViewStyle.eSystem);
+                            //    cellViewItem.Name = this.ColumnViewItems[i].FieldName;
+                            //    if (i < argsobj.Length)
+                            //    {
+                            //        cellViewItem.Value = argsobj[i];
+                            //    }
+                            //    rowViewItem.ViewItems.Add(cellViewItem);
+                            //}
                         }
                         break;
                     case RowCellViewStyle.eSingleCellRow:
@@ -836,6 +875,70 @@ namespace GISShare.Controls.WinForm.WFNew.View
                 }
             }
             this.m_ViewItemCollection.Add(rowViewItem);
+        }
+        public void AddRowViewItem2(RowCellViewStyle eRowCellViewStyle, int iRowHeight, params object[] argsobj)
+        {
+            DataRowCellViewItem rowViewItem = new DataRowCellViewItem(eRowCellViewStyle, null);
+            rowViewItem.Height = iRowHeight;
+            rowViewItem.ForeCustomize = this.ForeCustomize;
+            rowViewItem.HaveShadow = this.HaveShadow;
+            rowViewItem.Font = this.Font;
+            rowViewItem.ForeColor = this.ForeColor;
+            rowViewItem.ShadowColor = this.ShadowColor;
+            if (argsobj == null || argsobj.Length <= 0)
+            {
+                switch (rowViewItem.eRowCellViewStyle)
+                {
+                    case RowCellViewStyle.eSystemRow:
+                        CellViewItem cellViewItem;
+                        foreach (ColumnViewItem one in this.ColumnViewItems)
+                        {
+                            cellViewItem = this.CreateCellViewItem(CellViewStyle.eSystem);
+                            cellViewItem.Name = one.FieldName;
+                            rowViewItem.ViewItems.Add2(cellViewItem);
+                        }
+                        break;
+                    case RowCellViewStyle.eSingleCellRow:
+                        rowViewItem.ViewItems.Add2(this.CreateCellViewItem(CellViewStyle.eSingleCell));
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                switch (rowViewItem.eRowCellViewStyle)
+                {
+                    case RowCellViewStyle.eSystemRow:
+                        {
+                            CellViewItem cellViewItem;
+                            int i = 0;
+                            int iLen = argsobj.Length;
+                            foreach (ColumnViewItem one in this.ColumnViewItems)
+                            {
+                                cellViewItem = this.CreateCellViewItem(CellViewStyle.eSystem);
+                                cellViewItem.Name = one.FieldName;
+                                if (i < iLen)
+                                {
+                                    cellViewItem.Value = argsobj[i];
+                                }
+                                rowViewItem.ViewItems.Add2(cellViewItem);
+                                i++;
+                            }
+                        }
+                        break;
+                    case RowCellViewStyle.eSingleCellRow:
+                        {
+                            CellViewItem cellViewItem = this.CreateCellViewItem(CellViewStyle.eSingleCell);
+                            if (0 < argsobj.Length) cellViewItem.Value = argsobj[0];
+                            rowViewItem.ViewItems.Add2(cellViewItem);
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+            this.m_ViewItemCollection.Add2(rowViewItem);
         }
 
         /// <summary>
@@ -859,6 +962,12 @@ namespace GISShare.Controls.WinForm.WFNew.View
         public void InsertRowViewItem(int index, RowCellViewStyle eRowCellViewStyle, int iRowHeight, params object[] argsobj)
         {
             DataRowCellViewItem rowViewItem = new DataRowCellViewItem(eRowCellViewStyle, null);
+            rowViewItem.Height = iRowHeight;
+            rowViewItem.ForeCustomize = this.ForeCustomize;
+            rowViewItem.HaveShadow = this.HaveShadow;
+            rowViewItem.Font = this.Font;
+            rowViewItem.ForeColor = this.ForeColor;
+            rowViewItem.ShadowColor = this.ShadowColor;
             if (argsobj == null || argsobj.Length <= 0)
             {
                 switch (rowViewItem.eRowCellViewStyle)
@@ -979,6 +1088,15 @@ namespace GISShare.Controls.WinForm.WFNew.View
             RowCellViewItem viewItem = this.m_ViewItemCollection[index];
             if (viewItem == null) return -1;
             return viewItem.Height;
+        }
+
+        /// <summary>
+        /// 获取行
+        /// </summary>
+        /// <param name="iRowIndex">行索引</param>
+        public IRowCellViewItem GetRow(int iRowIndex)
+        {
+            return this.m_ViewItemCollection[iRowIndex];
         }
 
         /// <summary>
@@ -1383,18 +1501,28 @@ namespace GISShare.Controls.WinForm.WFNew.View
             {
                 DataRowCellViewItem rowViewItem = new DataRowCellViewItem(RowCellViewStyle.eSystemRow, one);
                 rowViewItem.Height = this.DefaultRowHeight;
+                rowViewItem.ForeCustomize = this.ForeCustomize;
+                rowViewItem.HaveShadow = this.HaveShadow;
+                rowViewItem.Font = this.Font;
+                rowViewItem.ForeColor = this.ForeColor;
+                rowViewItem.ShadowColor = this.ShadowColor;
                 foreach (ColumnViewItem one2 in this.ColumnViewItems)
                 {
-                    if (dataTable.Columns.Contains(one2.FieldName))
+                    CellViewItem cellViewItem = this.CreateCellViewItem(CellViewStyle.eSystem);
+                    if (!String.IsNullOrEmpty(one2.FieldName))
                     {
-                        CellViewItem cellViewItem = this.CreateCellViewItem(CellViewStyle.eSystem);
-                        cellViewItem.Name = one2.FieldName;
-                        cellViewItem.Value = one[one2.FieldName];
-                        rowViewItem.ViewItems.Add(cellViewItem);
+                        if (dataTable.Columns.Contains(one2.FieldName))
+                        {
+                            cellViewItem.Name = one2.FieldName;
+                            cellViewItem.Value = one[one2.FieldName];
+                        }
                     }
+                    rowViewItem.ViewItems.Add2(cellViewItem);
                 }
-                this.m_ViewItemCollection.Add(rowViewItem);
+                this.m_ViewItemCollection.Add2(rowViewItem);
             }
+            //
+            this.Refresh();
             //
             return true;
         }
@@ -1406,9 +1534,9 @@ namespace GISShare.Controls.WinForm.WFNew.View
             if (typeArray.Length > 0)
             {
                 Type type = typeArray[0];
-                PropertyInfo[] propertyInfoArray = type.GetProperties();
                 if (this.ColumnViewItems.Count <= 0)
                 {
+                    PropertyInfo[] propertyInfoArray = type.GetProperties();
                     foreach (PropertyInfo one in propertyInfoArray)
                     {
                         this.ColumnViewItems.Add(
@@ -1427,20 +1555,31 @@ namespace GISShare.Controls.WinForm.WFNew.View
                 {
                     DataRowCellViewItem rowViewItem = new DataRowCellViewItem(RowCellViewStyle.eSystemRow, one);
                     rowViewItem.Height = this.DefaultRowHeight;
+                    rowViewItem.ForeCustomize = this.ForeCustomize;
+                    rowViewItem.HaveShadow = this.HaveShadow;
+                    rowViewItem.Font = this.Font;
+                    rowViewItem.ForeColor = this.ForeColor;
+                    rowViewItem.ShadowColor = this.ShadowColor;
                     foreach (ColumnViewItem one2 in this.ColumnViewItems)
                     {
-                        PropertyInfo propertyInfo = type.GetProperty(one2.FieldName);
-                        if (propertyInfo != null)
+                        CellViewItem cellViewItem = this.CreateCellViewItem(CellViewStyle.eSystem);
+                        if (!String.IsNullOrEmpty(one2.FieldName))
                         {
-                            CellViewItem cellViewItem = this.CreateCellViewItem(CellViewStyle.eSystem);
-                            cellViewItem.Name = one2.FieldName;
-                            cellViewItem.Value = propertyInfo.GetValue(one, null);
-                            rowViewItem.ViewItems.Add(cellViewItem);
+                            PropertyInfo propertyInfo = type.GetProperty(one2.FieldName);
+                            if (propertyInfo != null)
+                            {
+                                cellViewItem.Name = one2.FieldName;
+                                cellViewItem.Value = propertyInfo.GetValue(one, null);
+                            }
                         }
+                        rowViewItem.ViewItems.Add2(cellViewItem);
                     }
-                    this.m_ViewItemCollection.Add(rowViewItem);
+                    this.m_ViewItemCollection.Add2(rowViewItem);
                 }
             }
+            //
+            this.Refresh();
+            //
             return true;
         }
 
@@ -1476,15 +1615,23 @@ namespace GISShare.Controls.WinForm.WFNew.View
                 {
                     DataRowCellViewItem rowViewItem = new DataRowCellViewItem(RowCellViewStyle.eSystemRow, dataRow);
                     rowViewItem.Height = this.DefaultRowHeight;
+                    rowViewItem.ForeCustomize = this.ForeCustomize;
+                    rowViewItem.HaveShadow = this.HaveShadow;
+                    rowViewItem.Font = this.Font;
+                    rowViewItem.ForeColor = this.ForeColor;
+                    rowViewItem.ShadowColor = this.ShadowColor;
                     foreach (ColumnViewItem one2 in this.ColumnViewItems)
                     {
-                        if (dataTable.Columns.Contains(one2.FieldName))
+                        CellViewItem cellViewItem = this.CreateCellViewItem(CellViewStyle.eSystem);
+                        if (!String.IsNullOrEmpty(one2.FieldName))
                         {
-                            CellViewItem cellViewItem = this.CreateCellViewItem(CellViewStyle.eSystem);
-                            cellViewItem.Name = one2.FieldName;
-                            cellViewItem.Value = dataRow[one2.FieldName];
-                            rowViewItem.ViewItems.Add(cellViewItem);
+                            if (dataTable.Columns.Contains(one2.FieldName))
+                            {
+                                cellViewItem.Name = one2.FieldName;
+                                cellViewItem.Value = dataRow[one2.FieldName];
+                            }
                         }
+                        rowViewItem.ViewItems.Add(cellViewItem);
                     }
                     this.m_ViewItemCollection.Insert(i, rowViewItem);
                 }
@@ -1557,16 +1704,24 @@ namespace GISShare.Controls.WinForm.WFNew.View
                     {
                         DataRowCellViewItem rowViewItem = new DataRowCellViewItem(RowCellViewStyle.eSystemRow, obj);
                         rowViewItem.Height = this.DefaultRowHeight;
+                        rowViewItem.ForeCustomize = this.ForeCustomize;
+                        rowViewItem.HaveShadow = this.HaveShadow;
+                        rowViewItem.Font = this.Font;
+                        rowViewItem.ForeColor = this.ForeColor;
+                        rowViewItem.ShadowColor = this.ShadowColor;
                         foreach (ColumnViewItem one2 in this.ColumnViewItems)
                         {
-                            PropertyInfo propertyInfo = type.GetProperty(one2.FieldName);
-                            if (propertyInfo != null)
+                            CellViewItem cellViewItem = this.CreateCellViewItem(CellViewStyle.eSystem);
+                            if (!String.IsNullOrEmpty(one2.FieldName))
                             {
-                                CellViewItem cellViewItem = this.CreateCellViewItem(CellViewStyle.eSystem);
-                                cellViewItem.Name = one2.FieldName;
-                                cellViewItem.Value = propertyInfo.GetValue(obj, null);
-                                rowViewItem.ViewItems.Add(cellViewItem);
+                                PropertyInfo propertyInfo = type.GetProperty(one2.FieldName);
+                                if (propertyInfo != null)
+                                {
+                                    cellViewItem.Name = one2.FieldName;
+                                    cellViewItem.Value = propertyInfo.GetValue(obj, null);
+                                }
                             }
+                            rowViewItem.ViewItems.Add(cellViewItem);
                         }
                         this.m_ViewItemCollection.Insert(i, rowViewItem);
                     }
@@ -1597,6 +1752,7 @@ namespace GISShare.Controls.WinForm.WFNew.View
                     {
                         foreach (ColumnViewItem one2 in this.ColumnViewItems)
                         {
+                            if (String.IsNullOrEmpty(one2.FieldName)) continue;
                             PropertyInfo propertyInfo = type.GetProperty(one2.FieldName);
                             if (propertyInfo != null)
                             {
@@ -1617,7 +1773,13 @@ namespace GISShare.Controls.WinForm.WFNew.View
 
         protected CellViewItem CreateCellViewItem(CellViewStyle eCellViewStyle)
         {
-            return new CellViewItem(eCellViewStyle);
+            CellViewItem cellViewItem = new CellViewItem(eCellViewStyle);
+            cellViewItem.ForeCustomize = this.ForeCustomize;
+            cellViewItem.HaveShadow = this.HaveShadow;
+            cellViewItem.Font = this.Font;
+            cellViewItem.ForeColor = this.ForeColor;
+            cellViewItem.ShadowColor = this.ShadowColor;
+            return cellViewItem;
         }
         
         #region 修改消息链条
@@ -2324,21 +2486,29 @@ namespace GISShare.Controls.WinForm.WFNew.View
                 return;
             }
             //
-            if (this.Enabled && this.CanEdit)
+            if (this.SelectedIndex >= 0 && this.Enabled && (this.CanEdit || this.CanSelect))
             {
-                ITextEditViewItem pTextEditViewItem = this.m_ViewItemCollection[this.SelectedIndex];
-                if (pTextEditViewItem != null &&
-                    pTextEditViewItem.CanEdit &&
-                    pTextEditViewItem.InputRegionRectangle.Contains(e.Location))
+                RowCellViewItem rowCellViewItem = this.m_ViewItemCollection[this.SelectedIndex];
+                if (rowCellViewItem != null && rowCellViewItem.SelectedIndex >= 0)
                 {
-                    rectangle = ((IInputObject)this).InputRegionRectangle;
-                    if (rectangle.Width > 6 && rectangle.Height > 6)
+                    CellViewItem cellViewItem = rowCellViewItem.ViewItems[rowCellViewItem.SelectedIndex];
+                    if (cellViewItem.BaseItemObject == null)
                     {
-                        this.m_InputRegion.Tag = pTextEditViewItem.EditObject;
-                        if (this.m_InputRegion.Tag is IViewItem)
+                        ITextEditViewItem pTextEditViewItem = rowCellViewItem;
+                        if (pTextEditViewItem != null &&
+                            pTextEditViewItem.CanEdit &&
+                            pTextEditViewItem.InputRegionRectangle.Contains(e.Location))
                         {
-                            this.m_InputRegion.ShowInputRegion();
-                            return;
+                            rectangle = ((IInputObject)this).InputRegionRectangle;
+                            if (rectangle.Width > 6 && rectangle.Height > 6)
+                            {
+                                this.m_InputRegion.Tag = pTextEditViewItem.EditObject;
+                                if (this.m_InputRegion.Tag is IViewItem)
+                                {
+                                    this.m_InputRegion.ShowInputRegion();
+                                    return;
+                                }
+                            }
                         }
                     }
                 }
@@ -3118,11 +3288,11 @@ namespace GISShare.Controls.WinForm.WFNew.View
             base.OnMouseWheel(e);
         }
 
-        protected override void OnDraw(PaintEventArgs e)
-        {
-            GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderViewItemList(
-                new ObjectRenderEventArgs(e.Graphics, this, this.DisplayRectangle));
-        }
+        //protected override void OnDraw(PaintEventArgs e)
+        //{
+        //    GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderViewItemList(
+        //        new ObjectRenderEventArgs(e.Graphics, this, this.DisplayRectangle));
+        //}
 
         //
         protected virtual void OnSelectedIndexChanged(IntValueChangedEventArgs e)

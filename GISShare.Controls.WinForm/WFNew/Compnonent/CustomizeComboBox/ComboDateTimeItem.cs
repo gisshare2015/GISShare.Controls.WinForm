@@ -7,7 +7,7 @@ using System.ComponentModel;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    class ComboDateTimeItem : CustomizeComboBoxItem, IComboDateTimeItem
+    public class ComboDateTimeItem : CustomizeComboBoxItem, IComboDateTimeItem
     {
         TimeMonthCalendarCombineControl m_TimeMonthCalendarCombineControl;
 

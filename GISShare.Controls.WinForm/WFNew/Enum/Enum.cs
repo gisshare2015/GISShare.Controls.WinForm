@@ -252,7 +252,8 @@ namespace GISShare.Controls.WinForm.WFNew
         ePlus,
         eMinus,
         ePointsHorizontal,
-        ePointsVertical
+        ePointsVertical,
+        eCross
     }
 
     /// <summary>

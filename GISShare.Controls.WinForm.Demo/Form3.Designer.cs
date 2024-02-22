@@ -35,7 +35,7 @@
             // viewItemListBox1
             // 
             this.viewItemListBox1.AutoGetFocus = true;
-            this.viewItemListBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.viewItemListBox1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.viewItemListBox1.Location = new System.Drawing.Point(18, 18);
             this.viewItemListBox1.Margin = new System.Windows.Forms.Padding(4);
             this.viewItemListBox1.Name = "viewItemListBox1";

@@ -10,5 +10,11 @@ namespace GISShare.Controls.WinForm.WFNew.View
         Font Font { get; set; }
 
         Color ForeColor { get; set; }
+
+        bool HaveShadow { get; set; }
+
+        Color ShadowColor { get; set; }
+
+        bool ForeCustomize { get; set; }
     }
 }

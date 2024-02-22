@@ -5,7 +5,7 @@ using System.ComponentModel;
 
 namespace GISShare.Controls.WinForm.WFNew
 {
-    class SliderButtonItem : BaseButtonItem, ISliderButtonItem, IBaseItemProperty
+    class SliderButtonItem : BaseButtonItem, ISliderButton, IBaseItemProperty
     {
         private readonly int READONLY_TimerInterval;
         private System.Windows.Forms.Timer m_Timer;

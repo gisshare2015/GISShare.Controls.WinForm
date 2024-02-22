@@ -560,6 +560,8 @@ namespace GISShare.Controls.WinForm
                     this.Enabled,
                     false,
                     tabPage.Text,
+                    false,
+                    tabPage.ForeColor,
                     tabPage.ForeColor,
                     tabPage.Font,
                     rectangleT,

@@ -38,6 +38,19 @@ namespace GISShare.Controls.WinForm.WFNew.View
             if (pSetViewItemHelper != null) pSetViewItemHelper.SetViewParameterStyle(ViewParameterStyle.eNone);
             return true;
         }
+        /// <summary>
+        /// 快速注入但是不稳定
+        /// </summary>
+        /// <param name="value"></param>
+        protected void SetItemAttribute2(ViewItem value)
+        {
+            //((ISetOwnerHelper)value).SetOwner(this.m_Owner);
+            //((ISetViewItemHelper)value).SetViewParameterStyle(ViewParameterStyle.eNone);
+            ISetOwnerHelper pSetOwnerHelper = value as ISetOwnerHelper;
+            if (pSetOwnerHelper != null) pSetOwnerHelper.SetOwner(this.m_Owner);
+            ISetViewItemHelper pSetViewItemHelper = value as ISetViewItemHelper;
+            if (pSetViewItemHelper != null) pSetViewItemHelper.SetViewParameterStyle(ViewParameterStyle.eNone);
+        }
 
         /// <summary>
         /// 在移除项时将添加时的部分属性还原，成功返回true。如果成功则移除该项
@@ -73,6 +86,13 @@ namespace GISShare.Controls.WinForm.WFNew.View
             this.RefreshOwner(index, value);
             //
             return index;
+        }
+        public void Add2(ViewItem value)
+        {
+            if (this.Locked) return;
+            //
+            this.SetItemAttribute2(value);
+            this.innerList.Add(value);
         }
 
         public override void Insert(int index, ViewItem value)

@@ -412,7 +412,7 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
             if (this.ShowTextInfo)
             {
                 GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonText(
-                    new TextRenderEventArgs(e.Graphics, this, this.Enabled, this.m_strTextInfo, this.ForeColor, this.Font, this.m_DrawTextRectangle));
+                    new TextRenderEventArgs(e.Graphics, this, this.Enabled, this.HaveShadow, this.Text, this.ForeCustomize, this.ForeColor, this.ShadowColor, this.Font, this.m_DrawTextRectangle));
             }
             //
             if (this.ShowImage) 

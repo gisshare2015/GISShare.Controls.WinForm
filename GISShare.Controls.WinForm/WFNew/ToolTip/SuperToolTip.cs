@@ -85,6 +85,11 @@ namespace GISShare.Controls.WinForm.WFNew
             set { m_OffsetY = value; }
         }
 
+        public IToolTipPopup ToolTipPopup
+        {
+            get { return m_pToolTipPopup; }
+        }
+
         public bool SetToolTip(IBaseItem2 pBaseItem)
         {
             if (pBaseItem == null ||

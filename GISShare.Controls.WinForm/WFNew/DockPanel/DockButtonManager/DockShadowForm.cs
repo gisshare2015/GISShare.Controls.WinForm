@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace GISShare.Controls.WinForm.WFNew.DockPanel
 {
-    sealed class DockShadowForm : Form, WFNew.IArea
+    sealed class DockShadowForm : Form, IArea, IArea2
     {
         public DockShadowForm()
         {
@@ -44,7 +44,7 @@ namespace GISShare.Controls.WinForm.WFNew.DockPanel
         }
 
         [Browsable(false), Description("显示背景色"), Category("外观")]
-        public bool ShowBackgroud
+        public bool ShowBackground
         {
             get { return false; }
         }
@@ -64,6 +64,32 @@ namespace GISShare.Controls.WinForm.WFNew.DockPanel
             {
                 return new Rectangle(0, 0, this.Width, this.Height);
             }
+        }
+        #endregion
+
+        #region IArea2
+        private bool m_AreaCustomize = false;
+        [Browsable(true), DefaultValue(false), Description("自定义区域"), Category("状态")]
+        public bool AreaCustomize
+        {
+            get { return m_AreaCustomize; }
+            set { m_AreaCustomize = value; }
+        }
+
+        private Color m_OutLineColor = System.Drawing.Color.Transparent;
+        [Browsable(true), DefaultValue(typeof(Color), "System.Drawing.Color.Transparent"), Description("外框线颜色"), Category("外观")]
+        public Color OutLineColor
+        {
+            get { return m_OutLineColor; }
+            set { m_OutLineColor = value; }
+        }
+
+        private Color m_BackgroundColor = System.Drawing.Color.Transparent;
+        [Browsable(true), DefaultValue(typeof(Color), "System.Drawing.Color.Transparent"), Description("背景颜色"), Category("外观")]
+        public Color BackgroundColor
+        {
+            get { return m_BackgroundColor; }
+            set { m_BackgroundColor = value; }
         }
         #endregion
 

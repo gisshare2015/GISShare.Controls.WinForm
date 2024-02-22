@@ -349,6 +349,13 @@ namespace GISShare.Controls.WinForm.WFNew
             set { }
         }
 
+        [Browsable(false), DefaultValue(22), Description("TabButton容器区尺寸（最小值22）"), Category("布局")]
+        public int TabButtonContainerSize
+        {
+            get { return CRT_TABBUTTONCONTAINERHEIGHT; }
+            set {   }
+        }
+
         [Browsable(false), Description("TabButtonContainerItem矩形框"), Category("布局")]
         Rectangle ITabControl.TabButtonContainerRectangle
         {
@@ -359,7 +366,7 @@ namespace GISShare.Controls.WinForm.WFNew
                     rectangle.Left,
                     rectangle.Bottom + 1,
                     rectangle.Width - (this.RibbonMdiFormButtonStackItemVisible ? this.RibbonPageContentContainerItemWidth + this.RibbonMdiFormButtonStackItemWidth : this.RibbonPageContentContainerItemWidth),
-                    CRT_TABBUTTONCONTAINERHEIGHT);
+                    this.TabButtonContainerSize);
             }
         }
 
@@ -953,7 +960,7 @@ namespace GISShare.Controls.WinForm.WFNew
             GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonControl(
                 new GISShare.Controls.WinForm.ObjectRenderEventArgs(e.Graphics, this, this.UsingRectangle));
             GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderFormNCCaptionText(
-                new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled && this.IsActive, false, true, this.Text, this.ForeColor, this.Font, this.CaptionTextRectangle, new StringFormat()));
+                new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled && this.IsActive, false, this.HaveShadow, this.Text, this.ForeCustomize, this.ForeColor, this.ShadowColor, this.Font, this.CaptionTextRectangle, new StringFormat()));
             //
             if (this.RibbonStartButtonItem2007Visible) return;
             GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderFormNCIcon(

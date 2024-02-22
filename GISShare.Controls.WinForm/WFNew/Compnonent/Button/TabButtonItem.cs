@@ -788,7 +788,7 @@ namespace GISShare.Controls.WinForm.WFNew
                     if (this.eOrientation == Orientation.Vertical) stringFormat.FormatFlags = StringFormatFlags.DirectionVertical;
                     stringFormat.Trimming = StringTrimming.EllipsisCharacter;
                     GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonText(
-                        new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, true, this.Text, this.ForeColor, this.Font, this.TextRectangle, stringFormat));
+                        new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.HaveShadow, this.Text, this.ForeCustomize, this.ForeColor, this.ShadowColor, this.Font, this.TextRectangle, stringFormat));
                     break;
                 case DisplayStyle.eImageAndText:
                     StringFormat stringFormat2 = new StringFormat();
@@ -797,7 +797,7 @@ namespace GISShare.Controls.WinForm.WFNew
                     GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonImage(
                         new GISShare.Controls.WinForm.ImageRenderEventArgs(e.Graphics, this, this.Enabled, this.Image, this.ImageRectangle));
                     GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonText(
-                        new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, true, this.Text, this.ForeColor, this.Font, this.TextRectangle, stringFormat2));
+                        new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.HaveShadow, this.Text, this.ForeCustomize, this.ForeColor, this.ShadowColor, this.Font, this.TextRectangle, stringFormat2));
                     break;
                 default:
                     break;

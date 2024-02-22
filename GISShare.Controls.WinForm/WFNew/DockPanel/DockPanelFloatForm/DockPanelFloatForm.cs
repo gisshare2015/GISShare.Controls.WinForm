@@ -593,7 +593,7 @@ namespace GISShare.Controls.WinForm.WFNew.DockPanel
             WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderDockPanelFloatForm(
                 new ObjectRenderEventArgs(e.Graphics, this, this.FrameRectangle));
             GISShare.Controls.WinForm.WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonText(
-                new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.Text, this.ForeColor, this.Font, this.TitleRectangle));
+                new GISShare.Controls.WinForm.TextRenderEventArgs(e.Graphics, this, this.Enabled, this.HaveShadow, this.Text, this.ForeCustomize, this.ForeColor, this.ShadowColor, this.Font, this.TitleRectangle));
         }
         #endregion
 

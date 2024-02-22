@@ -233,6 +233,8 @@ namespace GISShare.Controls.WinForm.WFNew.View
                         true,
                         false,
                         strID,
+                        false,
+                        this.ForeColor,
                         this.ForeColor,
                         this.Font,
                         new Rectangle(((IViewItem)this).eViewParameterStyle == ViewParameterStyle.eFocused ? CONST_ROWIDOFFSET_X + (e.ClipRectangle.Left + e.ClipRectangle.Right - iW) / 2 : (e.ClipRectangle.Left + e.ClipRectangle.Right - iW) / 2, (e.ClipRectangle.Top + e.ClipRectangle.Bottom - iH) / 2, iW, iH),

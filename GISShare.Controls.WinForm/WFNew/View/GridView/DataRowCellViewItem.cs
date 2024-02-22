@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GISShare.Controls.WinForm.WFNew.View
 {
-    class DataRowCellViewItem : RowCellViewItem
+    class DataRowCellViewItem : RowCellViewItem, IDataRowCellViewItem
     {
         internal DataRowCellViewItem(RowCellViewStyle rowCellViewStyle, object objDataItem)
             : base(rowCellViewStyle)
@@ -13,10 +13,12 @@ namespace GISShare.Controls.WinForm.WFNew.View
             this.m_DataItem = objDataItem;
         }
 
+        #region IDataRowCellViewItem
         object m_DataItem;
         public object DataItem
         {
             get { return m_DataItem; }
         }
+        #endregion
     }
 }

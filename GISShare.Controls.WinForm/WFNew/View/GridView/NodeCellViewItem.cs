@@ -94,7 +94,7 @@ namespace GISShare.Controls.WinForm.WFNew.View
             //
             if (this.BaseItemObject != null) return;
             //
-            if (this.Text.Length <= 0) return;
+            if (String.IsNullOrEmpty(this.Text)) return;
             rectangle = this.DisplayRectangle;
             int iH = (int)e.Graphics.MeasureString(this.Text, this.Font).Height + 1;
             WFNew.WFNewRenderer.WFNewRendererStrategy.OnRenderRibbonText
@@ -103,9 +103,11 @@ namespace GISShare.Controls.WinForm.WFNew.View
                     e.Graphics,
                     this,
                     true,
-                    true,
+                    this.HaveShadow,
                     this.Text,
+                    this.ForeCustomize,
                     this.ForeColor,
+                    this.ShadowColor,
                     this.Font,
                     new Rectangle(rectangle.Left, (rectangle.Top + rectangle.Bottom - iH) / 2, rectangle.Width, iH),//rectangle.Height
                     new StringFormat() { Trimming = StringTrimming.EllipsisCharacter })

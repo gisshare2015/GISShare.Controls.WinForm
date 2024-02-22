@@ -47,7 +47,7 @@ namespace GISShare.Controls.WinForm.WFNew
             this.BaseItems.Add(this.m_lblSecond);
             ((ILockCollectionHelper)this.BaseItems).SetLocked(true);
             //
-            this.ShowBackgroud = false;
+            this.ShowBackground = false;
             this.DateTime = System.DateTime.Now;
         }
         void IntValue_ValueChanged(object sender, IntValueChangedEventArgs e)

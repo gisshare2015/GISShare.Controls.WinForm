@@ -24,6 +24,7 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
             this.m_OverflowButton = new NCOverflowButtonItem(this);
             this.m_CustomizeButton = new NCCustomizeButtonItem(this);
             this.UsingViewOverflow = false;
+            this.ShowBackground = true;
         }
 
         #region IOffsetNC
@@ -174,13 +175,13 @@ namespace GISShare.Controls.WinForm.WFNew.Forms
             }
         }
 
-        private bool m_ShowBackground = true;
-        [Browsable(true), DefaultValue(true), Description("展现背景"), Category("状态")]
-        public bool ShowBackground
-        {
-            get { return m_ShowBackground; }
-            set { m_ShowBackground = value; }
-        }
+        //private bool m_ShowBackground = true;
+        //[Browsable(true), DefaultValue(true), Description("展现背景"), Category("状态")]
+        //public override bool ShowBackground
+        //{
+        //    get { return m_ShowBackground; }
+        //    set { m_ShowBackground = value; }
+        //}
 
         private WFNew.QuickAccessToolbarStyle m_eQuickAccessToolbarStyle = WFNew.QuickAccessToolbarStyle.eNormal;
         [Browsable(true), DefaultValue(typeof(WFNew.QuickAccessToolbarStyle), "eNormal"), Description("快捷工具条的展现方式"), Category("外观")]

@@ -3,24 +3,32 @@
   <Class Name="GISShare.Controls.WinForm.WFNew.TextBoxItem" Collapsed="true">
     <Position X="0.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>FAAAgAAAAEEAEwAAAkFESCAgAYgoCEIAMAIJAoAkBBE=</HashCode>
-      <FileName>Controls\WFNew\Compnonent\InputText\TextBoxItem.cs</FileName>
+      <HashCode>FAQAgAAAAEEAEwAAAkFESCAgAYgoCEIAMAKJAoAkBBE=</HashCode>
+      <FileName>WFNew\Compnonent\InputText\TextBoxItem.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="GISShare.Controls.WinForm.WFNew.IntegerInputBoxItem" Collapsed="true">
     <Position X="2.75" Y="1.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>nQGEggCQAEUAGwQQFkFESDAgA8goSUMAMAorQoAkBBE=</HashCode>
-      <FileName>Controls\WFNew\Compnonent\InputText\IntegerInputBoxItem.cs</FileName>
+      <HashCode>nRGEggCQAEUAGwQQFkFESDAgA8goSUMAMAqrQoAkBBE=</HashCode>
+      <FileName>WFNew\Compnonent\InputText\IntegerInputBoxItem.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="GISShare.Controls.WinForm.WFNew.DoubleInputBoxItem" Collapsed="true">
     <Position X="5.5" Y="1.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>nQGEggCQAEUAGwQQFkFESDAgA8goSUMAMAorQoAkBBU=</HashCode>
-      <FileName>Controls\WFNew\Compnonent\InputText\DoubleInputBoxItem.cs</FileName>
+      <HashCode>nRGEggCQCEUAGwQQFkFESDAgA8goSUMAMAqrQoAkFBU=</HashCode>
+      <FileName>WFNew\Compnonent\InputText\DoubleInputBoxItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GISShare.Controls.WinForm.WFNew.ButtonTextBoxItem" Collapsed="true">
+    <Position X="8.5" Y="1.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>FQQAggAAAEEAGyQAAkFESCAgIYgoGEICMAKJAsAkBBE=</HashCode>
+      <FileName>WFNew\Compnonent\InputText\ButtonTextBoxItem.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>

@@ -56,6 +56,29 @@ namespace GISShare.Controls.WinForm
                 return m_eBaseItemState;
             }
         }
+        private bool m_HaveShadow = true;
+        [Browsable(true), DefaultValue(true), Description("是否有字体阴影"), Category("状态")]
+        public bool HaveShadow
+        {
+            get { return m_HaveShadow; }
+            set { m_HaveShadow = value; }
+        }
+
+        private Color m_ShadowColor = System.Drawing.SystemColors.ControlText;
+        [Browsable(true), DefaultValue(typeof(Color), "System.Drawing.SystemColors.ControlText"), Description("字体阴影颜色"), Category("外观")]
+        public Color ShadowColor
+        {
+            get { return m_ShadowColor; }
+            set { m_ShadowColor = value; }
+        }
+
+        private bool m_ForeCustomize = false;
+        [Browsable(true), DefaultValue(false), Description("自定义文本色"), Category("状态")]
+        public bool ForeCustomize
+        {
+            get { return m_ForeCustomize; }
+            set { m_ForeCustomize = value; }
+        }
         #endregion
 
         #region IOwner
@@ -374,6 +397,8 @@ namespace GISShare.Controls.WinForm
                             this.Enabled,
                             false,
                             e.Header.Text,
+                            false,
+                            this.ForeColor,
                             this.ForeColor,
                             this.Font,
                             rectangleText
@@ -519,6 +544,8 @@ namespace GISShare.Controls.WinForm
                     this.Enabled,
                     false,
                     e.Item.Text,
+                    false,
+                    e.Item.ForeColor.IsEmpty ? this.ForeColor : e.Item.ForeColor,
                     e.Item.ForeColor.IsEmpty ? this.ForeColor : e.Item.ForeColor,
                     e.Item.Font == null ? this.Font : e.Item.Font,
                     Rectangle.FromLTRB(iLeft, iTop, iRight, iBottom)
@@ -604,6 +631,8 @@ namespace GISShare.Controls.WinForm
                         this.Enabled,
                         false,
                         e.Item.Text,
+                        false,
+                        e.Item.ForeColor.IsEmpty ? this.ForeColor : e.Item.ForeColor,
                         e.Item.ForeColor.IsEmpty ? this.ForeColor : e.Item.ForeColor,
                         e.Item.Font == null ? this.Font : e.Item.Font,
                         rectangleText
@@ -619,6 +648,8 @@ namespace GISShare.Controls.WinForm
                         false,
                         false,
                         subItem.Text,
+                        false,
+                        subItem.ForeColor.IsEmpty ? this.ForeColor : subItem.ForeColor,
                         subItem.ForeColor.IsEmpty ? this.ForeColor : subItem.ForeColor,
                         subItem.Font == null ? this.Font : subItem.Font,
                         new Rectangle(rectangleText.Left, rectangleText.Bottom, size2.Width, size2.Height)
@@ -636,6 +667,8 @@ namespace GISShare.Controls.WinForm
                         this.Enabled,
                         false,
                         e.Item.Text,
+                        false,
+                        e.Item.ForeColor.IsEmpty ? this.ForeColor : e.Item.ForeColor,
                         e.Item.ForeColor.IsEmpty ? this.ForeColor : e.Item.ForeColor,
                         e.Item.Font == null ? this.Font : e.Item.Font,
                         new Rectangle(rectangleImageGrip.Right, (e.Bounds.Top + e.Bounds.Bottom - size.Height) / 2 + 2, size.Width, size.Height)
@@ -740,7 +773,9 @@ namespace GISShare.Controls.WinForm
                     this.Enabled,
                     false,
                     e.Item.Text,
-                    e.Item.ForeColor.IsEmpty ? this.ForeColor : e.Item.ForeColor,
+                        false,
+                        e.Item.ForeColor.IsEmpty ? this.ForeColor : e.Item.ForeColor,
+                        e.Item.ForeColor.IsEmpty ? this.ForeColor : e.Item.ForeColor,
                     e.Item.Font == null ? this.Font : e.Item.Font,
                     Rectangle.FromLTRB(iLeft, iTop, iRight, iBottom)
                     )
@@ -817,7 +852,9 @@ namespace GISShare.Controls.WinForm
                     this.Enabled,
                     false,
                     e.Item.Text,
-                    e.Item.ForeColor.IsEmpty ? this.ForeColor : e.Item.ForeColor,
+                        false,
+                        e.Item.ForeColor.IsEmpty ? this.ForeColor : e.Item.ForeColor,
+                        e.Item.ForeColor.IsEmpty ? this.ForeColor : e.Item.ForeColor,
                     e.Item.Font == null ? this.Font : e.Item.Font,
                     new Rectangle(rectangleImageGrip.Right, (e.Bounds.Top + e.Bounds.Bottom - size.Height) / 2 + 2, size.Width, size.Height)
                     )
@@ -894,7 +931,9 @@ namespace GISShare.Controls.WinForm
                     this.Enabled,
                     false,
                     e.Item.Text,
-                    e.Item.ForeColor.IsEmpty ? this.ForeColor : e.Item.ForeColor,
+                        false,
+                        e.Item.ForeColor.IsEmpty ? this.ForeColor : e.Item.ForeColor,
+                        e.Item.ForeColor.IsEmpty ? this.ForeColor : e.Item.ForeColor,
                     e.Item.Font == null ? this.Font : e.Item.Font,
                     new Rectangle(rectangleImageGrip.Right, (e.Bounds.Top + e.Bounds.Bottom - size.Height) / 2 + 2, size.Width, size.Height)
                     )
@@ -961,6 +1000,8 @@ namespace GISShare.Controls.WinForm
                         this.Enabled,
                         false,
                         e.SubItem.Text,
+                        false,
+                        e.SubItem.ForeColor.IsEmpty ? this.ForeColor : e.SubItem.ForeColor,
                         e.SubItem.ForeColor.IsEmpty ? this.ForeColor : e.SubItem.ForeColor,
                         e.SubItem.Font == null ? this.Font : e.SubItem.Font,
                         new Rectangle(e.SubItem.Bounds.Left, (e.SubItem.Bounds.Top + e.SubItem.Bounds.Bottom - iH) / 2 + 2, e.SubItem.Bounds.Width, iH)

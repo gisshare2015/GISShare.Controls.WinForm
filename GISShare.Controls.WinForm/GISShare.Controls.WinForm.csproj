@@ -55,7 +55,8 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GISShare.Win32">
+    <Reference Include="GISShare.Win32, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLL\GISShare.Win32.dll</HintPath>
     </Reference>
     <Reference Include="System">
@@ -104,10 +105,22 @@
     <Compile Include="WFNew\Compnonent\CombineControl\VersionCombineItem.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="WFNew\Compnonent\Compnonent_ZJ\PlayProcessBar_ZJ\PlayProcessBarButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="WFNew\Compnonent\Compnonent_ZJ\StatusBar_ZJ\StatusBarRightBaseItemStackItem.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="WFNew\Compnonent\CustomizeComboBox\ComboDateTimeItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\CustomizeComboBox\ComboSearchBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="WFNew\Compnonent\ImageBox\ImageZoomableBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\InputText\ButtonValueBoxItem.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="WFNew\Compnonent\PopupPanel\ContextPopupPanelItem.cs">
@@ -126,6 +139,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="WFNew\Compnonent\PopupPanel\ToolTipPopupPanelItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Compnonent\Slider\PlayProcessBarItem.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="WFNew\Compnonent\UICollection\RibbonControlItem.cs">
@@ -156,6 +172,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="WFNew\Compnonent\InputText\DoubleInputBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\CombineControl\TimeMonthCalendarCombineControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WFNew\Control\PanelControl.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="WFNew\Design\BaseItemHostDesigner.cs" />
@@ -373,13 +395,20 @@
     <Compile Include="WFNew\Compnonent\ImageBox\ImageAreaBoxItem.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="WFNew\Interface\Area\IArea2.cs" />
+    <Compile Include="WFNew\Interface\Button\ICheckButtonItem.cs" />
     <Compile Include="WFNew\Interface\CustomizeComboBox\ICheckedComboBoxItem.cs" />
     <Compile Include="WFNew\Interface\CustomizeComboBox\IComboDateTimeItem.cs" />
     <Compile Include="WFNew\Interface\BaseItemHost\IBaseItemHost.cs" />
+    <Compile Include="WFNew\Interface\CustomizeComboBox\IComboSearchBoxItem.cs" />
     <Compile Include="WFNew\Interface\Helper\DesignHelper\IRibbonApplicationObjectDesignHelper.cs" />
     <Compile Include="WFNew\Interface\ImageBox\IImageZoomableBoxItem.cs" />
+    <Compile Include="WFNew\Interface\Input\IButtonValueBoxItem.cs" />
+    <Compile Include="WFNew\Interface\Interface_ZJ\IPlayProcessBarButton.cs" />
     <Compile Include="WFNew\Interface\IRenderable.cs" />
     <Compile Include="WFNew\Interface\IViewItemRenderable.cs" />
+    <Compile Include="WFNew\Interface\Slider\IPlayProcessBarItem.cs" />
+    <Compile Include="WFNew\Interface\Slider\IPlayProcessBarItemEvent.cs" />
     <Compile Include="WFNew\Interface\UICollection\ICanvasItem.cs" />
     <Compile Include="WFNew\Interface\BaseItem\IBaseItemProperty.cs" />
     <Compile Include="WFNew\Interface\MessageChain\IMessagePermeate.cs" />
@@ -460,6 +489,9 @@
     <Compile Include="WFNew\View\Compnonent\GridViewItemListBoxItem.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="WFNew\View\Compnonent\ViewItemSearchListBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="WFNew\View\GridView\DataRowCellViewItem.cs" />
     <Compile Include="WFNew\View\GridView\DataRowNodeCellViewItem.cs" />
     <Compile Include="WFNew\View\GridView\IRowNodeCellViewItem.cs" />
@@ -476,7 +508,9 @@
     <Compile Include="WFNew\View\Design\CollectionEditer\SizeViewItemCollectionEditer.cs" />
     <Compile Include="WFNew\View\Interface\Control\IGridNodeViewItemTree.cs" />
     <Compile Include="WFNew\View\Interface\Control\IGridNodeViewItemTreeEvent.cs" />
+    <Compile Include="WFNew\View\Interface\Control\IViewItemSearchListBox.cs" />
     <Compile Include="WFNew\View\Interface\GridView\IColumnTitleViewObject.cs" />
+    <Compile Include="WFNew\View\Interface\GridView\IDataRowCellViewItem.cs" />
     <Compile Include="WFNew\View\Interface\GridView\INodeCellViewItem.cs" />
     <Compile Include="WFNew\View\NodeView\FlexibleVRowImageNodeViewItem.cs" />
     <Compile Include="WFNew\View\NodeView\FlexibleRowImageNodeViewItem.cs" />
@@ -604,7 +638,7 @@
     <Compile Include="WFNew\Compnonent\ProcessBar\ProcessBarItem.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="WFNew\Interface\Interface_ZJ\ISliderButtonItem.cs" />
+    <Compile Include="WFNew\Interface\Interface_ZJ\ISliderButton.cs" />
     <Compile Include="WFNew\Interface\Slider\ISliderItem.cs" />
     <Compile Include="WFNew\Compnonent\Slider\SliderItem.cs">
       <SubType>Component</SubType>
@@ -1430,7 +1464,6 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -303,7 +303,7 @@ namespace GISShare.Controls.WinForm.WFNew
         #endregion
 
         #region LinkLabel
-        public override Color LinkLabelomal
+        public override Color LinkLabelNomal
         { get { return Color.FromArgb(0, 0, 255); } }//1
         public override Color LinkLabelPressed
         { get { return Color.Red; } }//
@@ -343,19 +343,19 @@ namespace GISShare.Controls.WinForm.WFNew
         #endregion
 
         #region Button
-        public override Color Buttonomal
+        public override Color ButtonNomal
         { get { return Color.FromArgb(250, 186, 209, 240); } }//
-        public override Color ButtonomalCenter
+        public override Color ButtonNomalCenter
         { get { return Color.FromArgb(255, 207, 224, 247); } }//
-        public override Color ButtonomalOut
+        public override Color ButtonNomalOut
         { get { return Color.FromArgb(255, 193, 213, 241); } }//
-        public override Color ButtonomalGlossyBegin
+        public override Color ButtonNomalGlossyBegin
         { get { return Color.FromArgb(160, 222, 235, 254); } }//
-        public override Color ButtonomalGlossyEnd
+        public override Color ButtonNomalGlossyEnd
         { get { return Color.FromArgb(160, 203, 222, 246); } }//
-        public override Color ButtonomalBorderIn
+        public override Color ButtonNomalBorderIn
         { get { return Color.FromArgb(255, 227, 237, 251); } }//
-        public override Color ButtonomalBorderOut
+        public override Color ButtonNomalBorderOut
         { get { return Color.FromArgb(255, 185, 208, 237); } }//
         //------------------------------------------------------
         public override Color ButtonChecked

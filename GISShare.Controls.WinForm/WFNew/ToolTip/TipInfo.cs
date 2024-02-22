@@ -11,7 +11,7 @@ namespace GISShare.Controls.WinForm.WFNew
             : this(null, null, strTipInfoText) { }
 
         public TipInfo(string strTitleText, string strTipInfoText)
-            : this(null, strTipInfoText, strTipInfoText) { }
+            : this(null, strTitleText, strTipInfoText) { }
 
         public TipInfo(Image imgTitleImage, string strTitleText, string strTipInfoText)
         {

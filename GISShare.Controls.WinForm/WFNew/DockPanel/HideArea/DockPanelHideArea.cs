@@ -129,7 +129,7 @@ namespace GISShare.Controls.WinForm.WFNew.DockPanel
 
             public DockPanelHideAreaItem(DockPanelManager dockPanelManager)
             {
-                this.ShowBackgroud = true;
+                this.ShowBackground = true;
                 this.m_DockPanelManager = dockPanelManager;
             }
 
