@@ -1,6 +1,6 @@
 # GISShare.Controls.WinForm & GISShare.Controls.Plugin
 **GISShare.Controls.WinForm：** 是基于.NET开发的WinForm自定义控件库，提供丰富多样的控件（如：浮动工具条、浮动面板、功能区控件、数据表、树结构数据表、列表控件、树控件、折叠面板、分割面板、自定义窗体等），有效地补充VS原生组件库的不足，也是很好地GUI学习资料。控件主要分为WFNew和WinForm两大类，其中WFNew里的控件是基于基础Control类实现（所有控件都是通过BaseItemHost来承载实现），而WinForm则是对原有VS控件的重绘。  
-**GISShare.Controls.Plugin：** 是一个UI插件引擎库，设计结构模仿“ArcGIS Desktop”产品，便于大家学习研究。
+**GISShare.Controls.Plugin：** 是一个UI插件引擎库，设计结构模仿“ArcGIS Desktop”产品，便于大家交流应用。
 
 **控件相关**  
 GISShare.Win32.dll：依赖DLL，Windows相关API；  
