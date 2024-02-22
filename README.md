@@ -34,9 +34,11 @@ GISShare.Controls.Plugin.WinForm.Demo.exe：示例DEMO
 分割面板：CollapsableSplitPanel  
 ![image](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/a7f199ac-63c6-40b0-b99b-1683f3894ec9)  
 按钮类组件  
-![image](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/016927cb-4e5a-4da1-bd29-4799c593f13c)
+![image](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/016927cb-4e5a-4da1-bd29-4799c593f13c)  
 标签&输入框类组件  
-![QQ截图20240222165619副本](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/e7316c75-500a-4418-99a6-fb480f0e40a5)
+![QQ截图20240222165619副本](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/e7316c75-500a-4418-99a6-fb480f0e40a5)  
+功能区相关组件  
+![QQ截图20240222170522副本](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/9eb9685a-a240-418f-93f7-ef9e31257f8e)  
 
 
 **插件引擎相关贴图**  
