@@ -44,5 +44,11 @@ GISShare.Controls.Plugin.WinForm.Demo.exe：示例DEMO
 自定义窗体+浮动工具条+浮动面板插件展示  
 ![image](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/9f6f6f56-d868-4805-aeb9-7bd30e80af80)  
 
+**VS应用**  
+1.在工具箱右击“添加选项卡”名为“GISShare.Controls.WinForm 组件”，效果图如下：  
+![image](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/c7adbdce-e16d-4478-81f3-77f6fe765315)  
+2.常规继承Control的控件直接拖入即可，特别介绍一下“WFNew”命名空间下的绘制类组件（优势：共用一个句柄效率高，多控件不卡顿）的应用：直接拖入“BaseItemHost”控件，点击右上角的箭头，在弹框内点击“关系树设计器”，在弹出的“集合控制设计器”内选择对应节点右击，在弹出的右击菜单内选择对应的操作即可（如：添加子项、清除子项、刷新等，不同的节点内容不通），如下图：  
+![image](https://github.com/gisshare2015/GISShare.Controls.WinForm/assets/20768620/cca4ccc5-964d-4069-b936-7088ccceabaa)
+
 **结语**  
 我是一位GIS方向的Coder，该项目是我在大学初识ArcEngine二次开发时设计研发。2015年之前一直有更新迭代，2015年以后偶有维护，想来已有十几年了。该控件的UI效果可能已经完全跟不上现在的系统了（当然你也可以定制自己的颜色表来修改它），可我觉得它的设计实现对于了解操作系统（如：API、消息机制、事件等），学习GUI知识，插件机制等还是有很大的帮助。所以，把它放在这里，供大家一起交流学习。
